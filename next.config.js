@@ -26,6 +26,7 @@ const fallbackDefaultExports = {
 
 module.exports = withBundleAnalyzer({
   pageExtensions: ['js', 'jsx', 'mdx'],
+  basePath: '/tailwindcss-cn',
   experimental: {
     modern: true,
   },
