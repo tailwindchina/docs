@@ -5,13 +5,13 @@ Tailwind CSS uses [Next.js](https://nextjs.org/) for its documentation. Here is 
 1. Clone this repo
 
     ```sh
-    git clone https://github.com/tailwindlabs/tailwindcss.com.git
+    git clone https://github.com/jscsscom/tailwindcss-cn.git
     ```
 
 2. Go into the project root directory
 
     ```sh
-    cd tailwindcss.com
+    cd tailwindcss-cn
     ```
 
 3. Install JS dependencies
