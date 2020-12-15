@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export",
+    "export": "next build && next export -o docs",
     "format": "prettier '{src,remark,scripts}/**/*.{css,js,mdx}' --write"
   },
   "browserslist": [
