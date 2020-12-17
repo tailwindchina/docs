@@ -211,7 +211,7 @@ export default function DocsLandingPage() {
           <p className="flex-auto text-white text-lg font-medium">
             <Widont>
               {/* Beautiful UI components, crafted by the creators of Tailwind CSS */}
-              由 Tailwind CSS 的创造们用心打造的精美 UI 组件库
+              由 Tailwind CSS 的创造者们用心打造的精美 UI 组件库
             </Widont>
           </p>
           <a
