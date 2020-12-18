@@ -23,7 +23,7 @@ const whatsNew = [
   },
   {
     // title: 'Dark Mode',
-    title: '夜间模式',
+    title: '深色模式',
     version: '2.0+',
     image: require('@/img/docs/dark-mode.svg').ReactComponent,
     href: '/docs/dark-mode',
@@ -76,7 +76,7 @@ const latestUpdates = [
     url: 'https://blog.tailwindcss.com/tailwindcss-v2',
     description:
       // "Today we're finally releasing Tailwind CSS v2.0, including an all-new color palette, dark mode support, and tons more!",
-    "今天我们终于发布了 Tailwind CSS v2.0，包含一个全新的调色板，夜间模式支持等等很多更新！",
+    "今天我们终于发布了 Tailwind CSS v2.0，包含一个全新的调色板，深色模式支持等等很多更新！",
   },
   {
     title: 'Tailwind CSS v1.9.0',
