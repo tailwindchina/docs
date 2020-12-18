@@ -685,18 +685,22 @@ export function ComponentDriven() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-amber-500 mb-3">
-          Component-driven
+          组件驱动
         </Caption>
         <BigText className="mb-8">
-          <Widont>Worried about duplication? Don’t be.</Widont>
+          {/*<Widont>Worried about duplication? Don’t be.</Widont>*/}
+          <Widont>担心复用性问题？大可不必</Widont>
         </BigText>
+        {/*<Paragraph className="mb-6">*/}
+        {/*  If you're repeating the same utilities over and over and over again, all you have to do is*/}
+        {/*  extract them into a component or template partial and boom — you've got a single source of*/}
+        {/*  truth so you can make changes in one place.*/}
+        {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          If you're repeating the same utilities over and over and over again, all you have to do is
-          extract them into a component or template partial and boom — you've got a single source of
-          truth so you can make changes in one place.
+          如果你在一遍又一遍的重复着相同的工具类，那么你最好将他们提取到一个组件或者模板片断，这样就会得到一个单一的源文件，因此可以在一个地方对他们修改。
         </Paragraph>
         <Link href="/docs/extracting-components" className="text-amber-500 hover:text-amber-700">
-          Learn more -&gt;
+          了解更多 -&gt;
         </Link>
       </div>
       <GradientLockup
@@ -801,13 +805,16 @@ export function ComponentDriven() {
         right={<ComponentExample framework={framework} />}
       />
       <div className="px-4 sm:px-6 md:px-8 mt-16 sm:mt-24 md:mt-32 mb-10 sm:mb-16 md:mb-20 lg:mb-8">
+        {/*<Paragraph className="mb-6">*/}
+        {/*  Not into component frameworks and like to keep it old school? Use Tailwind's @apply*/}
+        {/*  directive to extract repeated utility patterns into custom CSS classes just by copying and*/}
+        {/*  pasting the list of class names.*/}
+        {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          Not into component frameworks and like to keep it old school? Use Tailwind's @apply
-          directive to extract repeated utility patterns into custom CSS classes just by copying and
-          pasting the list of class names.
+          想保持原来的使用习惯而不是组件框架模式？使用 Tailwind 的 @apply 指令，复制和粘贴那些类名列表，就可以把重复的工具类抽取到一个自定义的 CSS 类中。
         </Paragraph>
         <Link href="/docs/extracting-components" className="text-orange-500 hover:text-orange-700">
-          Learn more -&gt;
+          了解更多 -&gt;
         </Link>
       </div>
       <AtApplySection />

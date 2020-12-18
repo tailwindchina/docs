@@ -140,24 +140,32 @@ export function ModernFeatures() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-purple-600 mb-3">
-          Modern features
+          现代特性
         </Caption>
         <BigText className="mb-8">
-          <Widont>Cutting-edge is our comfort zone.</Widont>
+          <Widont>前沿特性带来舒服体验</Widont>
         </BigText>
+        {/*<Paragraph as="div" className="mb-6">*/}
+        {/*  <p>*/}
+        {/*    Tailwind is unapologetically modern, and takes advantage of all the latest and greatest*/}
+        {/*    CSS features to make the developer experience as enjoyable as possible.*/}
+        {/*  </p>*/}
+        {/*  <p>*/}
+        {/*    We've got first-class CSS grid support, composable transforms and gradients powered by*/}
+        {/*    CSS variables, support for modern state selectors like <code>:focus-visible</code>, and*/}
+        {/*    tons more.*/}
+        {/*  </p>*/}
+        {/*</Paragraph>*/}
         <Paragraph as="div" className="mb-6">
           <p>
-            Tailwind is unapologetically modern, and takes advantage of all the latest and greatest
-            CSS features to make the developer experience as enjoyable as possible.
+            Tailwind 具有绝对的现代性，它利用所有最新和最优秀的 CSS 特性为开发者带来尽可能愉悦的体验。
           </p>
           <p>
-            We've got first-class CSS grid support, composable transforms and gradients powered by
-            CSS variables, support for modern state selectors like <code>:focus-visible</code>, and
-            tons more.
+            我们提供了一流的 CSS grid 支持，由 CSS 变量支撑的可组合的转换和渐变色，对诸如 <code>:focus-visible</code> 等现代状态选择器的支持，以及其它更多的功能。
           </p>
         </Paragraph>
         <Link href="/docs/grid-template-columns" className="text-purple-600 hover:text-purple-800">
-          Learn more -&gt;
+          了解更多 -&gt;
         </Link>
       </div>
       <GradientLockup

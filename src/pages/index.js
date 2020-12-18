@@ -74,14 +74,14 @@ export default function Home() {
         <meta
           key="twitter:title"
           name="twitter:title"
-          content="Tailwind CSS - Rapidly build modern websites without ever leaving your HTML."
+          content="Tailwind CSS - 快速构建现代网站，而无需离开您的HTML。"
         />
         <meta
           key="og:title"
           property="og:title"
-          content="Tailwind CSS - Rapidly build modern websites without ever leaving your HTML."
+          content="Tailwind CSS - 快速构建现代网站，而无需离开您的HTML。"
         />
-        <title>Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.</title>
+        <title>Tailwind CSS - 快速构建现代网站，而无需离开您的HTML。</title>
       </Head>
       <header className="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
@@ -110,18 +110,21 @@ export default function Home() {
           </div>
           <Logo className="w-auto h-7 sm:h-8" />
           <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10">
-            Rapidly build modern websites without ever leaving your HTML.
+            快速构建现代网站，而无需离开您的HTML。
           </h1>
+          {/*<p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">*/}
+          {/*  A utility-first CSS framework packed with classes like <InlineCode>flex</InlineCode>,{' '}*/}
+          {/*  <InlineCode>pt-4</InlineCode>, <InlineCode>text-center</InlineCode> and{' '}*/}
+          {/*  <InlineCode>rotate-90</InlineCode> that can be composed to build any design, directly in*/}
+          {/*  your markup.*/}
+          {/*</p>          */}
           <p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">
-            A utility-first CSS framework packed with classes like <InlineCode>flex</InlineCode>,{' '}
-            <InlineCode>pt-4</InlineCode>, <InlineCode>text-center</InlineCode> and{' '}
-            <InlineCode>rotate-90</InlineCode> that can be composed to build any design, directly in
-            your markup.
+            Tailwind CSS 是一个功能类优先的 CSS 框架，它集成了诸如 <InlineCode>flex</InlineCode>,{' '}<InlineCode>pt-4</InlineCode>, <InlineCode>text-center</InlineCode> 和{' '}<InlineCode>rotate-90</InlineCode> 的类，这些类能直接在你的标记语言中组合起来，构建出任何设计。
           </p>
           <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
             <NextLink href="/docs">
               <a className="w-full sm:w-auto flex-none bg-gray-900 hover:bg-gray-700 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">
-                Get started
+                开始使用
               </a>
             </NextLink>
             <NpmInstallButton />
@@ -132,12 +135,13 @@ export default function Home() {
       <section className="relative z-10 text-center max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8">
           <BigText as="h2" className="mb-8">
-            <Widont>“Best practices” don’t actually work.</Widont>
+            {/*<Widont>“Best practices” don’t actually work.</Widont>*/}
+            <Widont>“最佳实践”实际上并不起作用。</Widont>
           </BigText>
           <figure>
             <blockquote>
               <Paragraph className="max-w-4xl mx-auto mb-6">
-                I’ve written{' '}
+                我曾经写过{' '}
                 <a
                   href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/"
                   className="text-light-blue-600 font-semibold"
@@ -146,12 +150,12 @@ export default function Home() {
                       'inset 0 -0.1666666667em 0 0 #fff, inset 0 -0.3333333333em 0 0 #bae6fd',
                   }}
                 >
-                  a few thousand words
+                  几千字的文章
                 </a>{' '}
                 <Widont>
-                  on why traditional “semantic class names” are the reason CSS is hard to maintain,
-                  but the truth is you’re never going to believe me until you actually try it. If
-                  you can suppress the urge to retch long enough to give it a chance, I really think
+                  来说明为什么传统的 “语义化类名” 是 CSS 难以维护的原因，
+                  但事实是除非你实际尝试过，你永远不会相信我。
+                   If you can suppress the urge to retch long enough to give it a chance, I really think
                   you'll wonder how you ever worked with CSS any other way.
                 </Widont>
               </Paragraph>
@@ -166,7 +170,7 @@ export default function Home() {
                 />
               </div>
               <div className="text-gray-900">Adam Wathan</div>
-              <div className="text-light-blue-600">Creator of Tailwind CSS</div>
+              <div className="text-light-blue-600">Tailwind CSS 创始人</div>
             </figcaption>
           </figure>
         </div>

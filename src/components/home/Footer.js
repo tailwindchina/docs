@@ -5,19 +5,19 @@ import styles from './Footer.module.css'
 import { Logo } from '@/components/Logo'
 
 const footerNav = {
-  'Getting started': {
+  '入门': {
     className: 'row-span-2',
     items: documentationNav['Getting started'],
   },
-  'Core concepts': {
+  '核心概念': {
     className: 'row-span-2',
     items: documentationNav['Core Concepts'],
   },
-  Customization: {
+  '定制': {
     className: 'row-span-2',
     items: documentationNav['Customization'],
   },
-  Community: {
+  '社区': {
     items: [
       { title: 'GitHub', href: 'https://github.com/tailwindlabs/tailwindcss' },
       { title: 'Discord', href: '/discord' },

@@ -18,7 +18,8 @@ const rotation = [-2, 1, -1, 2, -1, 1]
 
 const testimonials = [
   {
-    content: 'I feel like an idiot for not using Tailwind CSS until now.',
+    // content: 'I feel like an idiot for not using Tailwind CSS until now.',
+    content: '我直到现在才开始使用 Tailwind CSS，真是个白痴。',
     tweetUrl: 'https://twitter.com/ryanflorence/status/1187951799442886656',
     author: {
       name: 'Ryan Florence',
@@ -27,8 +28,10 @@ const testimonials = [
     },
   },
   {
+    // content:
+    //   'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.',
     content:
-      'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.',
+      '如果我今天不得不推荐一种编程方法，那就是使用 Tailwind CSS 的 HTML + CSS。',
     tweetUrl: 'https://twitter.com/rauchg/status/1225611926320738304',
     author: {
       name: 'Guillermo Rauch',
@@ -37,7 +40,8 @@ const testimonials = [
     },
   },
   {
-    content: `I have no design skills and with Tailwind I can actually make good looking websites with ease and it's everything I ever wanted in a CSS framework.`,
+    // content: `I have no design skills and with Tailwind I can actually make good looking websites with ease and it's everything I ever wanted in a CSS framework.`,
+      content: `我没有任何设计技能，但使用 Tailwind 可以轻松创建美观的网站，而这正是我在 CSS 框架中想要的一切。`,
     author: {
       name: 'Sara Vieira',
       role: 'CodeSandbox',
@@ -45,8 +49,8 @@ const testimonials = [
     },
   },
   {
-    content:
-      "I used Tailwind to redesign feltpresence.com the other day. It's fantastic! I only gave myself a few hours to hack it together and it made a huge difference.",
+    // content: "I used Tailwind to redesign feltpresence.com the other day. It's fantastic! I only gave myself a few hours to hack it together and it made a huge difference.",
+    content: "前几天，我用 Tailwind 重新设计了 feltpresence.com 。 真是太神奇了！ 我只花了几个小时就让他产生了巨大的变化。",
     author: {
       name: 'Ryan Singer',
       role: 'Basecamp',
@@ -54,43 +58,44 @@ const testimonials = [
     },
   },
   {
-    content: `I started using @tailwindcss. I instantly fell in love with their responsive modifiers, thorough documentation, and how easy it was customizing color palettes.`,
+    // content: `I started using @tailwindcss. I instantly fell in love with their responsive modifiers, thorough documentation, and how easy it was customizing color palettes.`,
+    content: `开始使用 @tailwindcss。我立即爱上了他们的自适应修饰符，详尽的文档以及自定义调色板的简易性。`,
     tweetUrl: 'https://twitter.com/dacey_nolan/status/1303744545587441666',
     author: {
       name: 'Dacey Nolan',
-      role: 'Software Engineer',
+      role: '软件工程师',
       avatar: require('@/img/avatars/dacey-nolan.jpg').default,
     },
   },
 
   {
-    content: 'Loved it the very moment I used it.',
+    // content: 'Loved it the very moment I used it.',
+    content: '使用它的那一刻我就爱上了它。',
     tweetUrl: 'Gilbert Rabut Tsurwa',
     author: {
       name: 'Gilbert Rabut Tsurwa',
-      role: 'Web Developer',
+      role: '网页设计师',
       avatar: require('@/img/avatars/gilbert-rabut-tsurwa.jpg').default,
     },
   },
 
   {
-    content:
-      'I came into my job wondering why the last dev would ever implement Tailwind into our projects, within days I was a Tailwind convert and use it for all of my personal projects.',
+    // content: 'I came into my job wondering why the last dev would ever implement Tailwind into our projects, within days I was a Tailwind convert and use it for all of my personal projects.',
+    content: '我刚开始接手我的工作的时候很好奇为什么上一个开发者在我们的项目中使用了 Tailwind，但几天之内，我便开始在我所有的个人项目中使用 Tailwind 了。',
     tweetUrl: 'https://twitter.com/maddiexcampbell/status/1303752658029740032',
     author: {
       name: 'Madeline Campbell',
-      role: 'Full-Stack Developer',
+      role: '全栈开发人员',
       avatar: require('@/img/avatars/madeline-campbell.jpg').default,
     },
   },
 
   {
-    content:
-      'There’s one thing that sucks about @tailwindcss - once you’ve used it on a handful of projects it is a real pain in the ass to write normal CSS again.',
+    content: 'There’s one thing that sucks about @tailwindcss - once you’ve used it on a handful of projects it is a real pain in the ass to write normal CSS again.',
     tweetUrl: 'https://twitter.com/iamgraem_e/status/1322861404781748228?s=21',
     author: {
       name: 'Graeme Houston',
-      role: 'JavaScript Developer',
+      role: 'JavaScript 开发人员',
       avatar: require('@/img/avatars/graeme-houston.jpg').default,
     },
   },
@@ -106,58 +111,62 @@ const testimonials = [
   },
 
   {
-    content:
-      'Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex, grid, etc. but just quicker to write and maintain.',
+    // content: 'Have been working with CSS for over ten years and Tailwind just makes my life easier. It is still CSS and you use flex, grid, etc. but just quicker to write and maintain.',
+    content: '使用 CSS 已有十多年了，Tailwind 使我的生活更加轻松。它仍然是CSS，您可以使用 flex，grid 等，但是编写和维护起来更快。',
     tweetUrl: 'https://twitter.com/debs_obrien/status/1243255468241420288',
     author: {
       name: `Head of Learning @ Nuxt.js`,
-      role: 'Full-Stack Developer',
+      role: '全栈开发人员',
       avatar: require('@/img/avatars/debbie-obrien.jpg').default,
     },
   },
   {
-    content: 'Okay, @tailwindcss just clicked for me and now I feel like a #!@%&$% idiot.',
+    // content: 'Okay, @tailwindcss just clicked for me and now I feel like a #!@%&$% idiot.',
+    content: '好的，@tailwindcss 震惊了我，现在我感觉就像是个白痴。Okay, @tailwindcss just clicked for me and now I feel like a #!@%&$% idiot.',
     tweetUrl: 'https://twitter.com/ken_wheeler/status/1225373231139475458',
     author: {
       name: 'Ken Wheeler',
-      role: `React Engineer`,
+      role: `React 工程师`,
       avatar: require('@/img/avatars/ken-wheeler.jpg').default,
     },
   },
   {
-    content: `I've been using @tailwindcss the past few months and it's amazing. I already used some utility classes before, but going utility-first... this is the way.`,
+    // content: `I've been using @tailwindcss the past few months and it's amazing. I already used some utility classes before, but going utility-first... this is the way.`,
+    content: `过去几个月我一直在使用 @tailwindcss，真是太神奇了。我之前已经使用过一些功能类，但 Tailwind 是功能类优先的最正确的方式。`,
     tweetUrl: 'https://twitter.com/JadLimcaco/status/1327417021915561984',
     author: {
       name: 'Jad Limcaco',
-      role: 'Designer',
+      role: '设计师',
       avatar: require('@/img/avatars/jad-limcaco.jpg').default,
     },
   },
   {
-    content: `After finally getting to use @tailwindcss on a real client project in the last two weeks I never want to write CSS by hand again. I was a skeptic, but the hype is real.`,
+    // content: `After finally getting to use @tailwindcss on a real client project in the last two weeks I never want to write CSS by hand again. I was a skeptic, but the hype is real.`,
+    content: `在过去的两周中终于在实际的客户端项目上使用@tailwindcss之后，我再也不想手动编写 CSS 了。我是一个怀疑论者，但这想法是真实的。`,
     tweetUrl: 'https://twitter.com/lukeredpath/status/1316543571684663298?s=21',
     author: {
       name: 'Luke Redpath',
-      role: 'Ruby & iOS Developer',
+      role: 'Ruby & iOS 开发者',
       avatar: require('@/img/avatars/luke-redpath.jpg').default,
     },
   },
   {
-    content:
-      "I didn't think I was going to like @tailwindcss... spent a day using it for a POC, love it! I wish this had been around when we started our company design system, seriously considering a complete rebuild",
+    // content: "I didn't think I was going to like @tailwindcss... spent a day using it for a POC, love it! I wish this had been around when we started our company design system, seriously considering a complete rebuild",
+    content: "我不认为我会喜欢 @tailwindcss... 但花了一天时间将其用于 POC 后，我开始喜欢它！我希望当我们启动公司设计系统时就已经意识到这个问题，并认真考虑进行彻底的重建。",
     tweetUrl: 'https://twitter.com/JonBloomer/status/1300923818622377984',
     author: {
       name: 'Jon Bloomer',
-      role: 'Front-End Developer',
+      role: '前端开发人员',
       avatar: require('@/img/avatars/jon-bloomer.jpg').default,
     },
   },
   {
-    content: '@tailwindcss looked unpleasant at first, but now I’m hooked on it.',
+    // content: '@tailwindcss looked unpleasant at first, but now I’m hooked on it.',
+    content: '起初 @tailwindcss 看起来很不愉快，但是现在我迷上了它。',
     tweetUrl: 'https://twitter.com/droidgilliland/status/1222733372855848961',
     author: {
       name: 'Andrew Gilliland',
-      role: 'Front-End Developer',
+      role: '前端开发人员',
       avatar: require('@/img/avatars/andrew-gilliland.jpg').default,
     },
   },
