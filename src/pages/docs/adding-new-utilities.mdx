@@ -1,19 +1,22 @@
 ---
-title: Adding New Utilities
-description: Extending Tailwind with your own custom utility classes.
+title: 添加新的功能类
+description: 使用你的自定义功能类来扩展 Tailwind。
 ---
 
 import { TipGood, TipBad } from '@/components/Tip'
 
-Although Tailwind provides a pretty comprehensive set of utility classes out of the box, you may run into situations where you need to add a few of your own.
+<!-- Although Tailwind provides a pretty comprehensive set of utility classes out of the box, you may run into situations where you need to add a few of your own. -->
+尽管 Tailwind 提供了相当全面的开箱即用的功能类集，您仍可能会遇到需要添加一些自己的功能类的情况。
 
-Deciding on the best way to extend a framework can be paralyzing, so here are some best practices to help you add your own utilities in the most idiomatic way possible.
+<!-- Deciding on the best way to extend a framework can be paralyzing, so here are some best practices to help you add your own utilities in the most idiomatic way possible. -->
+确定扩展框架的最佳方法非常不易，因此这里有一些最佳实践，可以帮助你以最惯用的方式添加自己的功能类。
 
 ---
 
-## Using CSS
+## 使用 CSS
 
-The easiest way to add your own utilities to Tailwind is to simply add them to your CSS.
+<!-- The easiest way to add your own utilities to Tailwind is to simply add them to your CSS. -->
+将自己的功能类添加到 Tailwind 的最简单的方式是直接添加到你的 CSS 中。
 
 ```css
 @tailwind base;
@@ -33,13 +36,16 @@ The easiest way to add your own utilities to Tailwind is to simply add them to y
 }
 ```
 
-By using the `@layer` directive, Tailwind will automatically move those styles to the same place as `@tailwind utilities` to avoid unintended specificity issues.
+<!-- By using the `@layer` directive, Tailwind will automatically move those styles to the same place as `@tailwind utilities` to avoid unintended specificity issues. -->
+通过使用 `@layer` 指令， Tailwind 将自动把这些样式移动到 `@tailwind utilities` 相同的位置，以避免出现意外的未知问题。
 
-Using the `@layer` directive will also instruct Tailwind to consider those styles for purging when purging the `utilities` layer. Read our [documentation on optimizing for production](/docs/optimizing-for-production) for more details.
+<!-- Using the `@layer` directive will also instruct Tailwind to consider those styles for purging when purging the `utilities` layer. Read our [documentation on optimizing for production](/docs/optimizing-for-production) for more details. -->
+使用 `@layer` 指令也会指示 Tailwind 在清除 `功能类` 层时使用哪些样式。阅读我们的 [生产优化文档](/docs/optimizing-for-production)以了解更多信息。
 
-### Generating responsive variants
+### 生成响应式变体
 
-If you'd like to generate [responsive variants](/docs/responsive-design) of your own utilities based on the breakpoints defined in your `tailwind.config.js` file, wrap your utilities in the `@variants` directive and add `responsive` to the list of variants:
+<!-- If you'd like to generate [responsive variants](/docs/responsive-design) of your own utilities based on the breakpoints defined in your `tailwind.config.js` file, wrap your utilities in the `@variants` directive and add `responsive` to the list of variants: -->
+如果你想根据你的 `tailwind.config.js` 定义的断点创建功能类的变体，请将你的功能类放在  `@variants` 指令中，并把 `responsive` 添加到变体列表中。
 
 ```css
 @tailwind base;
@@ -61,18 +67,20 @@ If you'd like to generate [responsive variants](/docs/responsive-design) of your
 }
 ```
 
-Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different breakpoints:
+<!-- Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different breakpoints: -->
+Tailwind 将自动生成每个自定义功能类的前缀版本，您可以有条件地应用这些样式到不同的断点上：
 
 ```html
 <!-- Use `scroll-snap-type: none` by default, then use `scroll-snap-type: x` on medium screens and up -->
 <div class="scroll-snap-none **md:scroll-snap-x**"></div>
 ```
 
-Learn more about responsive utilities in the [responsive design documentation](/docs/responsive-design).
+在 [响应式设计文档](/docs/responsive-design) 了解更多响应式功能类的信息。
 
-### Generating dark mode variants
+### 生成深色模式变体
 
-If you'd like to generate [dark mode variants](/docs/dark-mode) of your own utilities, first make sure `darkMode` is set to either `media` or `class` in your `tailwind.config.js` file:
+<!-- If you'd like to generate [dark mode variants](/docs/dark-mode) of your own utilities, first make sure `darkMode` is set to either `media` or `class` in your `tailwind.config.js` file: -->
+如果你想生成你自己的功能类的 [dark mode variants](/docs/dark-mode)，首先确保在你的 `tailwind.config.js` 文件中 `darkMode` 被设置为 `media` 或者 `class`。
 
 ```js
 // tailwind.config.js
@@ -82,7 +90,8 @@ module.exports = {
 }
 ```
 
-Next, wrap your utilities in the `@variants` directive and add `dark` to the list of variants:
+<!-- Next, wrap your utilities in the `@variants` directive and add `dark` to the list of variants: -->
+下一步，将你的功能类放在 `@variants` 指令中，并且把 `dark` 添加到变体列表中。
 
 ```css
 @tailwind base;
@@ -101,17 +110,19 @@ Next, wrap your utilities in the `@variants` directive and add `dark` to the lis
 }
 ```
 
-Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different states:
+<!-- Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different states: -->
+Tailwind 将自动生成每个自定义功能类的前缀版本，您可以有条件地应用这些样式到不同的状态上：
 
 ```html
 <div class="filter-grayscale **dark:filter-none**"></div>
 ```
 
-Learn more about responsive utilities in the [responsive design documentation](/docs/responsive-design).
+在 [响应式设计文档](/docs/responsive-design) 中了解更多关于响应式功能类的信息。
 
-### Generating state variants
+### 生成状态变体
 
-If you'd like to create [state variants](/docs/hover-focus-and-other-states) for your own utilities, wrap your utilities in the `@variants` directive and list the variants you'd like to enable:
+<!-- If you'd like to create [state variants](/docs/hover-focus-and-other-states) for your own utilities, wrap your utilities in the `@variants` directive and list the variants you'd like to enable: -->
+如果你想为你的功能类生成 [状态变体](/docs/hover-focus-and-other-states)，请将你的功能类放在 `@variants` 指令中，并列出你想启用的变体：
 
 ```css
 @tailwind base;
@@ -130,13 +141,15 @@ If you'd like to create [state variants](/docs/hover-focus-and-other-states) for
 }
 ```
 
-Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different states:
+<!-- Tailwind will automatically generate prefixed versions of each custom utility that you can use to conditionally apply those styles at different states: -->
+Tailwind 将自动生成每个自定义功能类的前缀版本，您可以有条件地应用这些样式到不同的状态上：
 
 ```html
 <div class="filter-grayscale **hover:filter-none**"></div>
 ```
 
-State variants are generated in the same order you list them in the `@variants` directive, so if you'd like one variant to take precedence over another, make sure you list that one last:
+<!-- State variants are generated in the same order you list them in the `@variants` directive, so if you'd like one variant to take precedence over another, make sure you list that one last: -->
+状态变体的生成顺序与您在 `@variants` 指令中列出的顺序相同，因此，如果您希望一个变体优先于另一个变体，请确保这个变体最后被列出：
 
 ```css
 /* Focus will take precedence over hover */
@@ -156,13 +169,14 @@ State variants are generated in the same order you list them in the `@variants` 
 }
 ```
 
-Learn more about state variants in the [state variants documentation](/docs/hover-focus-and-other-states).
+在 [状态变体文档](/docs/hover-focus-and-other-states) 中了解更多关于状态变体的信息。
 
 ---
 
-## Using a plugin
+## 使用插件
 
-In addition to adding new utility classes directly in your CSS files, you can also add utilities to Tailwind by writing your own plugin:
+<!-- In addition to adding new utility classes directly in your CSS files, you can also add utilities to Tailwind by writing your own plugin: -->
+除了直接在 CSS 文件中添加新的功能类外，您还可以通过编写自己的插件将功能类添加到 Tailwind ：
 
 ```js
 // tailwind.config.js
@@ -187,6 +201,7 @@ module.exports = {
 
 ```
 
-This can be a good choice if you want to publish your custom utilities as a library or make it easier to share them across multiple projects.
+<!-- This can be a good choice if you want to publish your custom utilities as a library or make it easier to share them across multiple projects. -->
+如果你想把你的自定义功能类作为一个库发布，或者使其更容易跨项目分享，这是一个不错的选择。
 
-Learn more in the [utility plugin documentation](/docs/plugins#adding-utilities).
+在 [功能插件文档](/docs/plugins#adding-utilities) 中了解更多信息。
