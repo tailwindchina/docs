@@ -140,23 +140,29 @@ export function StateVariants() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-light-blue-500 mb-3">
-          State variants
+          状态变体
         </Caption>
         <BigText className="mb-8">
-          <Widont>Hover and focus states? We got ’em.</Widont>
+          {/*<Widont>Hover and focus states? We got ’em.</Widont>*/}
+          <Widont>支持 hover 和 focus 状态</Widont>
         </BigText>
+        {/*<Paragraph className="mb-6">*/}
+        {/*  Want to style something on hover? Stick <InlineCode>hover:</InlineCode> at the beginning*/}
+        {/*  of the class you want to add. Works for <InlineCode>focus</InlineCode>,{' '}*/}
+        {/*  <InlineCode>active</InlineCode>, <InlineCode>disabled</InlineCode>,{' '}*/}
+        {/*  <InlineCode>focus-within</InlineCode>, <InlineCode>focus-visible</InlineCode>, and even*/}
+        {/*  fancy states we invented ourselves like <InlineCode>group-hover</InlineCode>.*/}
+        {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          Want to style something on hover? Stick <InlineCode>hover:</InlineCode> at the beginning
-          of the class you want to add. Works for <InlineCode>focus</InlineCode>,{' '}
+          想要设置 hover 样式吗？在你想要添加的类前面添加 <InlineCode>hover:</InlineCode>。可以这样使用的状态还有 <InlineCode>focus</InlineCode>,{' '}
           <InlineCode>active</InlineCode>, <InlineCode>disabled</InlineCode>,{' '}
-          <InlineCode>focus-within</InlineCode>, <InlineCode>focus-visible</InlineCode>, and even
-          fancy states we invented ourselves like <InlineCode>group-hover</InlineCode>.
+          <InlineCode>focus-within</InlineCode>, <InlineCode>focus-visible</InlineCode> , 甚至还有像 <InlineCode>group-hover</InlineCode> 这样的我们自己发明的复杂的状态。
         </Paragraph>
         <Link
           href="/docs/hover-focus-and-other-states"
           className="text-light-blue-500 hover:text-light-blue-700"
         >
-          Learn more -&gt;
+          学习更多 -&gt;
         </Link>
       </div>
       <GradientLockup

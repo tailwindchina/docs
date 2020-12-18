@@ -1,5 +1,7 @@
 # Tailwind CSS 中文文档
 
+[Tailwind CSS 中文文档](http://docs.tailwindchina.com/)
+
 Tailwind CSS uses [Next.js](https://nextjs.org/) for its documentation. Here is how you can run the project locally:
 
 1. Clone this repo

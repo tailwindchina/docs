@@ -243,18 +243,21 @@ export function BuildAnything() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-orange-600 mb-3">
-          Build anything
+          构建任何东西
         </Caption>
         <BigText className="mb-8">
-          <Widont>Build whatever you want, seriously.</Widont>
+          <Widont>构建你想要的任何东西。</Widont>
         </BigText>
+        {/*<Paragraph className="mb-6">*/}
+        {/*  Because Tailwind is so low-level, it never encourages you to design the same site twice.*/}
+        {/*  Even with the same color palette and sizing scale, it's easy to build the same component*/}
+        {/*  with a completely different look in the next project.*/}
+        {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          Because Tailwind is so low-level, it never encourages you to design the same site twice.
-          Even with the same color palette and sizing scale, it's easy to build the same component
-          with a completely different look in the next project.
+          由于 Tailwind 是非常底层的，因此它从不鼓励你设计相同的站点。即使使用相同的调色板和大小比例，也可以轻松的在下个项目中为同一个组件设计出完全不同的外观。
         </Paragraph>
         <Link href="/docs" className="text-orange-600 hover:text-orange-800">
-          Get started -&gt;
+          开始 -&gt;
         </Link>
       </div>
       <GradientLockup

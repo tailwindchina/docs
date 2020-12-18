@@ -311,21 +311,29 @@ export function EditorTools() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-light-blue-600 mb-3">
-          Editor tools
+          编辑器工具
         </Caption>
-        <BigText className="mb-8">World-class IDE integration.</BigText>
+        <BigText className="mb-8">世界一流的 IDE 集成。</BigText>
+        {/*<Paragraph as="div" className="mb-6">*/}
+        {/*  <p>*/}
+        {/*    Worried about remembering all of these class names? The Tailwind CSS IntelliSense*/}
+        {/*    extension for VS Code has you covered.*/}
+        {/*  </p>*/}
+        {/*  <p>*/}
+        {/*    Get intelligent autocomplete suggestions, linting, class definitions and more, all*/}
+        {/*    within your editor and with no configuration required.*/}
+        {/*  </p>*/}
+        {/*</Paragraph>*/}
         <Paragraph as="div" className="mb-6">
           <p>
-            Worried about remembering all of these class names? The Tailwind CSS IntelliSense
-            extension for VS Code has you covered.
+            担心记不住所有的类名吗？VS Code 的 Tailwind CSS 智能提示扩展涵盖了所有的类。
           </p>
           <p>
-            Get intelligent autocomplete suggestions, linting, class definitions and more, all
-            within your editor and with no configuration required.
+            在编辑器内既可得到智能的自动完成建议、提示及类定义等功能，而且无需配置。
           </p>
         </Paragraph>
         <Link href="/docs/intellisense" className="text-light-blue-600 hover:text-light-blue-800">
-          Learn more -&gt;
+          了解更多 -&gt;
         </Link>
       </div>
       <GradientLockup

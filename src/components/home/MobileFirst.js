@@ -269,21 +269,29 @@ export function MobileFirst() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-violet-600 mb-3">
-          Mobile-first
+          移动优先
         </Caption>
-        <BigText className="mb-8">Responsive everything.</BigText>
+        <BigText className="mb-8">一切皆是响应式的。</BigText>
+        {/*<Paragraph as="div" className="mb-6">*/}
+        {/*  <p>*/}
+        {/*    Wrestling with a bunch of complex media queries in your CSS sucks, so Tailwind lets you*/}
+        {/*    build responsive designs right in your HTML instead.*/}
+        {/*  </p>*/}
+        {/*  <p>*/}
+        {/*    Throw a screen size in front of literally any utility class and watch it magically apply*/}
+        {/*    at a specific breakpoint.*/}
+        {/*  </p>*/}
+        {/*</Paragraph>*/}
         <Paragraph as="div" className="mb-6">
           <p>
-            Wrestling with a bunch of complex media queries in your CSS sucks, so Tailwind lets you
-            build responsive designs right in your HTML instead.
+            在你的 CSS 中使用大量复杂的媒体查询非常糟糕，因此 Tailwind 可以让你直接在 HTML 中构建响应式的设计。
           </p>
           <p>
-            Throw a screen size in front of literally any utility class and watch it magically apply
-            at a specific breakpoint.
+            在功能类前面加上屏幕大小标记，就可以查看在指定断点处的神奇表现。
           </p>
         </Paragraph>
         <Link href="/docs/responsive-design" className="text-violet-600 hover:text-violet-800">
-          Learn more -&gt;
+          了解更多 -&gt;
         </Link>
       </div>
       <GradientLockup

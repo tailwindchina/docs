@@ -111,24 +111,33 @@ export function Customization() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-rose-600 mb-3">
-          Customization
+          定制化
         </Caption>
         <BigText className="mb-8">
-          <Widont>Extend it, tweak it, change it.</Widont>
+          {/*<Widont>Extend it, tweak it, change it.</Widont>*/}
+          <Widont>易于扩展、调整和改变。</Widont>
         </BigText>
+        {/*<Paragraph as="div" className="mb-6">*/}
+        {/*  <p>*/}
+        {/*    Tailwind includes an expertly crafted set of defaults out-of-the-box, but literally*/}
+        {/*    everything can be customized — from the color palette to the spacing scale to the box*/}
+        {/*    shadows to the mouse cursor.*/}
+        {/*  </p>*/}
+        {/*  <p>*/}
+        {/*    Use the tailwind.config.js file to craft your own design system, then let Tailwind*/}
+        {/*    transform it into your own custom CSS framework.*/}
+        {/*  </p>*/}
+        {/*</Paragraph>*/}
         <Paragraph as="div" className="mb-6">
           <p>
-            Tailwind includes an expertly crafted set of defaults out-of-the-box, but literally
-            everything can be customized — from the color palette to the spacing scale to the box
-            shadows to the mouse cursor.
+            Tailwind 包含一组精心设计的开箱即用的默认值，但实际上，所有内容都可定制，比如调色板、间距比例、盒子阴影以及鼠标光标样式。
           </p>
           <p>
-            Use the tailwind.config.js file to craft your own design system, then let Tailwind
-            transform it into your own custom CSS framework.
+            使用 tailwind.config.js 文件构建你自己的设计系统，然后让 Tailwind 将其转换成你自己的定制 CSS 框架。
           </p>
         </Paragraph>
         <Link href="/docs/configuration" className="text-rose-600 hover:text-rose-800">
-          Learn more -&gt;
+          了解更多 -&gt;
         </Link>
       </div>
       <GradientLockup

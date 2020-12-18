@@ -189,19 +189,22 @@ export function ConstraintBased() {
           <Icon />
         </IconContainer>
         <Caption as="h2" className="text-purple-600 mb-3">
-          Constraint-based
+          基于约束
         </Caption>
         <BigText className="mb-8">
-          <Widont>An API for your design system.</Widont>
+          <Widont>您设计系统的API。</Widont>
         </BigText>
+        {/*<Paragraph className="mb-6">*/}
+        {/*  Utility classes help you work within the constraints of a system instead of littering your*/}
+        {/*  stylesheets with arbitrary values. They make it easy to be consistent with color choices,*/}
+        {/*  spacing, typography, shadows, and everything else that makes up a well-engineered design*/}
+        {/*  system.*/}
+        {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          Utility classes help you work within the constraints of a system instead of littering your
-          stylesheets with arbitrary values. They make it easy to be consistent with color choices,
-          spacing, typography, shadows, and everything else that makes up a well-engineered design
-          system.
+          功能类能帮助您在系统的约束内工作，而不是用杂乱的值填写样式表。它们使得在与颜色选择、间距、排版、阴影以及所有其它的组成一个优秀的设计系统的内容保持一致性变得容易。
         </Paragraph>
         <Link href="/docs/utility-first" className="text-purple-600 hover:text-purple-800">
-          Learn more -&gt;
+          了解更多 -&gt;
         </Link>
       </div>
       <GradientLockup
