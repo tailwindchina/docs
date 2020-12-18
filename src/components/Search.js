@@ -83,7 +83,7 @@ export function Search() {
           />
         </svg>
         <span>
-          Quick search<span className="hidden sm:inline"> for anything</span>
+          快速搜索<span className="hidden sm:inline"> 一切</span>
         </span>
         {actionKey && (
           <span className="hidden sm:block text-gray-400 text-sm leading-5 py-0.5 px-1.5 border border-gray-300 rounded-md">

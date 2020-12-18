@@ -91,7 +91,7 @@ export default function Home() {
               <NextLink href="/docs">
                 <a className="text-base leading-6 font-medium hover:text-gray-600 transition-colors duration-200">
                   <span className="sm:hidden">Docs</span>
-                  <span className="hidden sm:inline">Documentation</span>
+                  <span className="hidden sm:inline">中文文档</span>
                 </a>
               </NextLink>
               <a
@@ -155,8 +155,7 @@ export default function Home() {
                 <Widont>
                   来说明为什么传统的 “语义化类名” 是 CSS 难以维护的原因，
                   但事实是除非你实际尝试过，你永远不会相信我。
-                   If you can suppress the urge to retch long enough to give it a chance, I really think
-                  you'll wonder how you ever worked with CSS any other way.
+                  如果你能耐心的去尝试一下 Tailwind，我想你会惊讶过去使用 CSS 的方式。
                 </Widont>
               </Paragraph>
             </blockquote>
