@@ -175,7 +175,7 @@ export function DarkMode() {
           <Widont>支持深色模式</Widont>
         </BigText>
         <Paragraph className="mb-6">
-            难道想成为当人们在凌晨2占打开手机时眼睛被闪瞎的网站吗？在任何颜色工具类前面添加 <InlineCode>dark:</InlineCode>，就可以在深色默认激活时使用它。深色模式适用于背景色、文本颜色、边框颜色、甚至渐变色。深色模式开箱即用，无需配置。
+            难道想成为当人们在凌晨2点打开手机时眼睛被闪瞎的网站吗？在任何颜色工具类前面添加 <InlineCode>dark:</InlineCode>，就可以在深色默认激活时使用它。深色模式适用于背景色、文本颜色、边框颜色、甚至渐变色。深色模式开箱即用，无需配置。
         </Paragraph>
         <Link href="/docs/dark-mode" className="text-green-600 hover:text-green-800">
           了解更多 -&gt;
