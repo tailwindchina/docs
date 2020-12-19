@@ -1,13 +1,14 @@
 ---
-title: Functions & Directives
-description: A reference for the custom functions and directives Tailwind exposes to your CSS.
+title: 函数与指令
+description: Tailwind 向你的 CSS 的暴露的函数和指令的参考说明。
 ---
 
 import { TipGood, TipBad } from '@/components/Tip'
 
 ## @tailwind
 
-Use the `@tailwind` directive to insert Tailwind's `base`, `components`, `utilities` and `screens` styles into your CSS.
+<!-- Use the `@tailwind` directive to insert Tailwind's `base`, `components`, `utilities` and `screens` styles into your CSS. -->
+使用 `@tailwind` 指令向你的 CSS 添加 Tailwind 的 `base`, `components`, `utilities` 和 `screens` 样式。
 
 ```css
 /**
@@ -42,9 +43,11 @@ Use the `@tailwind` directive to insert Tailwind's `base`, `components`, `utilit
 
 ## @apply
 
-Use `@apply` to inline any existing utility classes into your own custom CSS.
+<!-- Use `@apply` to inline any existing utility classes into your own custom CSS. -->
+使用 `@apply` 将任何现存的功能类内联到你的自定义 CSS 中。
 
-This is useful when you find a common utility pattern in your HTML that you'd like to extract to a new component.
+<!-- This is useful when you find a common utility pattern in your HTML that you'd like to extract to a new component. -->
+当你在你的 HTML 里找到你想要提取到一个新组件的通用的功能模式时，这非常有用。
 
 ```css
 .btn {
@@ -55,7 +58,8 @@ This is useful when you find a common utility pattern in your HTML that you'd li
 }
 ```
 
-Note that classes are applied based on their location in your original CSS, not based on the order you list them after the `@apply` directive. This is to ensure that the behavior you get when extracting a list of classes with `@apply` matches how those classes behave when listed directly in your HTML.
+<!-- Note that classes are applied based on their location in your original CSS, not based on the order you list them after the `@apply` directive. This is to ensure that the behavior you get when extracting a list of classes with `@apply` matches how those classes behave when listed directly in your HTML. -->
+注意，类是根据其在原始 CSS 中的位置而不是根据在 `@apply` 指令之后列出它们的顺序来应用的。这是为了确保使用 `@apply` 提取类列表时得到的行为与直接在 HTML 中列出的类的行为相匹配。
 
 ```css
 /* Input */
@@ -71,7 +75,8 @@ Note that classes are applied based on their location in your original CSS, not 
 }
 ```
 
-If you want fine-grained control over the order in which classes are applied, use multiple `@apply` statements:
+<!-- If you want fine-grained control over the order in which classes are applied, use multiple `@apply` statements: -->
+如果你要对功能类的应用顺序进行细粒度的控制，请使用多个 `@apply` 语句：
 
 ```css
 /* Input */
@@ -88,7 +93,8 @@ If you want fine-grained control over the order in which classes are applied, us
 }
 ```
 
-You can also mix `@apply` declarations with normal CSS declarations:
+<!-- You can also mix `@apply` declarations with normal CSS declarations: -->
+您还可以将 `@apply` 声明与常规 CSS 声明混合使用：
 
 ```css
 /* Input */
@@ -104,7 +110,8 @@ You can also mix `@apply` declarations with normal CSS declarations:
 }
 ```
 
-Any rules inlined with `@apply` will have `!important` **removed** by default to avoid specificity issues:
+<!-- Any rules inlined with `@apply` will have `!important` **removed** by default to avoid specificity issues: -->
+默认情况下，任何使用 `@apply` 内联的规则中的 `!important` 将被删除，以避免出现特异性问题。
 
 ```css
 /* Input */
@@ -126,8 +133,8 @@ Any rules inlined with `@apply` will have `!important` **removed** by default to
 }
 ```
 
-If you'd like to `@apply` an existing class and make it `!important`, simply add `!important` to the end of the declaration:
-
+<!-- If you'd like to `@apply` an existing class and make it `!important`, simply add `!important` to the end of the declaration: -->
+如果你想使用  `@apply` 内联一个已经存在的类，并且为其设置 `!important`，只需要把 `!important` 添加到声明的结尾即可。
 
 ```css
 /* Input */
@@ -146,7 +153,8 @@ If you'd like to `@apply` an existing class and make it `!important`, simply add
 }
 ```
 
-Note that if you're using Sass/SCSS, you'll need to use Sass' interpolation feature to get this to work:
+<!-- Note that if you're using Sass/SCSS, you'll need to use Sass' interpolation feature to get this to work: -->
+注意，如果你使用的是 Sass/SCSS，则你需要使用 Sass 的插值功能才能使其正常工作。
 
 ```css
 .btn {
@@ -158,7 +166,8 @@ Note that if you're using Sass/SCSS, you'll need to use Sass' interpolation feat
 
 ## @layer
 
-Use the `@layer` directive to tell Tailwind which "bucket" a set of custom styles belong to. Valid layers are a `base`, `components`, and `utilities`.
+<!-- Use the `@layer` directive to tell Tailwind which "bucket" a set of custom styles belong to. Valid layers are a `base`, `components`, and `utilities`. -->
+使用 `@layer` 指令告诉 Tailwind 一组自定义样式应该属于哪个 "bucket"。可用的层有 `base`, `components` 和 `utilities`。
 
 ```css
 @tailwind base;
@@ -192,16 +201,19 @@ Use the `@layer` directive to tell Tailwind which "bucket" a set of custom style
 }
 ```
 
-Tailwind will automatically move any CSS within a `@layer` directive to the same place as the corresponding `@tailwind` rule, so you don't have to worry as much about authoring your CSS in a specific order to avoid specificity issues.
+<!-- Tailwind will automatically move any CSS within a `@layer` directive to the same place as the corresponding `@tailwind` rule, so you don't have to worry as much about authoring your CSS in a specific order to avoid specificity issues. -->
+Tailwind会自动将 `@layer` 指令中的所有 CSS 移至与相应 `@tailwind` 规则相同的位置，因此您不必担心以特定顺序编写 CSS 来避免特定性问题。
 
-Wrapping any custom CSS in a `@layer` directive also tells Tailwind to consider those styles for purging when purging that layer. Read our [documentation on optimizing for production](/docs/optimizing-for-production) for more details.
+<!-- Wrapping any custom CSS in a `@layer` directive also tells Tailwind to consider those styles for purging when purging that layer. Read our [documentation on optimizing for production](/docs/optimizing-for-production) for more details. -->
+在 `@layer` 指令中包装的任何自定义 CSS 也会告诉 Tailwind 在清除该层时考虑使用哪些样式进行清除。阅读 [关于生产优化的文档](/docs/optimizing-for-production) 来了解更多详情。
 
 ---
 
 
 ## @variants
 
-You can generate `responsive`, `hover`, `focus`, `active`, and other [variants](/docs/hover-focus-and-other-states) of your own utilities by wrapping their definitions in the `@variants` directive.
+<!-- You can generate `responsive`, `hover`, `focus`, `active`, and other [variants](/docs/hover-focus-and-other-states) of your own utilities by wrapping their definitions in the `@variants` directive. -->
+你可以通过在 `@variants` 指令中声明自己的功能类来生成他们的 `responsive`, `hover`, `focus`, `active` 及其它 [变体](/docs/hover-focus-and-other-states)。
 
 ```css
 @variants focus, hover {
@@ -214,7 +226,8 @@ You can generate `responsive`, `hover`, `focus`, `active`, and other [variants](
 }
 ```
 
-This will generate the following CSS:
+<!-- This will generate the following CSS: -->
+这将生成以下 CSS：
 
 ```css
 .rotate-0 {
@@ -239,9 +252,11 @@ This will generate the following CSS:
 }
 ```
 
-It's important to note that **variants are generated in the order you specify them**.
+<!-- It's important to note that **variants are generated in the order you specify them**. -->
+请务必注意，变体是按照您指定的顺序生成的。
 
-So if you want focus utilities to take priority over hover utilities for example, make sure focus comes *after* hover in the list:
+<!-- So if you want focus utilities to take priority over hover utilities for example, make sure focus comes *after* hover in the list: -->
+例如，如果您希望 focus 功能类优先于 hover 功能类，请确保列表中的 focus 应该在 hover 之后：
 
 ```css
 /* Input */
@@ -263,13 +278,15 @@ So if you want focus utilities to take priority over hover utilities for example
 }
 ```
 
-The `@variants` at-rule supports all of the values that are supported in the `variants` section of your config file, as well as any [custom variants](/docs/plugins#adding-variants) added through plugins.
+<!-- The `@variants` at-rule supports all of the values that are supported in the `variants` section of your config file, as well as any [custom variants](/docs/plugins#adding-variants) added through plugins. -->
+该 `@variants` 规则支持你配置文件中 `variants` 部分支持的所有值，以及通过插件添加的 [自定义变体](/docs/plugins#adding-variants)。
 
 ---
 
 ## @responsive
 
-You can generate responsive variants of your own classes by wrapping their definitions in the `@responsive` directive:
+<!-- You can generate responsive variants of your own classes by wrapping their definitions in the `@responsive` directive: -->
+你可以通过在 `@responsive` 指令中声明他们的定义来生成你自己的类的响应式变体。
 
 ```css
 @responsive {
@@ -279,9 +296,11 @@ You can generate responsive variants of your own classes by wrapping their defin
 }
 ```
 
-This is a shortcut for writing out `@variants responsive { ... }` which works as well.
+<!-- This is a shortcut for writing out `@variants responsive { ... }` which works as well. -->
+这是 `@variants responsive { ... }` 的简写方式，同样起作用。
 
-Using the default breakpoints, this would generate these classes:
+<!-- Using the default breakpoints, this would generate these classes: -->
+使用默认断点，这将生成以下类：
 
 ```css
 .bg-gradient-brand {
@@ -319,17 +338,21 @@ Using the default breakpoints, this would generate these classes:
 }
 ```
 
-The responsive variants will be added to Tailwind's existing media queries at the end of your stylesheet. This makes sure that classes with a responsive prefix always defeat non-responsive classes that are targeting the same CSS property.
+<!-- The responsive variants will be added to Tailwind's existing media queries at the end of your stylesheet. This makes sure that classes with a responsive prefix always defeat non-responsive classes that are targeting the same CSS property. -->
+响应式变体将在你的样式表的结尾被添加到 Tailwind 的已经存在的媒体查询中。这将确保那些带有响应式前缀的类优先级会高于同样 CSS 属性的非响应式的类。
 
 ---
 
 ## @screen
 
-The `@screen` directive allows you to create media queries that reference your breakpoints by name instead of duplicating their values in your own CSS.
+<!-- The `@screen` directive allows you to create media queries that reference your breakpoints by name instead of duplicating their values in your own CSS. -->
+`@screen` 指令允许你创建通过名称引用断点的媒体查询，而不是在你的 CSS 中复制他们的值。
 
-For example, say you have a `sm` breakpoint at `640px` and you need to write some custom CSS that references this breakpoint.
+<!-- For example, say you have a `sm` breakpoint at `640px` and you need to write some custom CSS that references this breakpoint. -->
+例如，假设有一个名为 `sm` 的 `640px` 的断点，你只需要写一些自定义的指向这个断点的 CSS。
 
-Instead of writing a raw media query that duplicates that value like this:
+<!-- Instead of writing a raw media query that duplicates that value like this: -->
+而不是编写一个复制那些值的原始的媒体查询，如下所示：
 
 ```css
 @media (min-width: 640px) {
@@ -337,7 +360,8 @@ Instead of writing a raw media query that duplicates that value like this:
 }
 ```
 
-...you can use the `@screen` directive and reference the breakpoint by name:
+<!-- ...you can use the `@screen` directive and reference the breakpoint by name: -->
+...你可以使用 `@screen` 指令，然后根据名称引用这个断点：
 
 ```css
 @screen sm {
@@ -349,9 +373,11 @@ Instead of writing a raw media query that duplicates that value like this:
 
 ## theme()
 
-Use the `theme()` function to access your Tailwind config values using dot notation.
+<!-- Use the `theme()` function to access your Tailwind config values using dot notation. -->
+使用  `theme()` 函数可以通过点符号来获取 Tailwind 配置的值。
 
-This can be a useful alternative to `@apply` when you want to reference a value from your theme configuration for only part of a declaration:
+<!-- This can be a useful alternative to `@apply` when you want to reference a value from your theme configuration for only part of a declaration: -->
+当你想要引用一个你主题配置中的一部分声明的值时，这是一个 `@apply` 的有用的替代方式。
 
 ```css
 .content-area {
@@ -359,7 +385,8 @@ This can be a useful alternative to `@apply` when you want to reference a value 
 }
 ```
 
-If you need to access a value that contains a dot (like the `2.5` value in the spacing scale), you can use square bracket notation:
+<!-- If you need to access a value that contains a dot (like the `2.5` value in the spacing scale), you can use square bracket notation: -->
+如果你想获取一个含有点的值（像间距比例中的 `2.5`），则可以使用方括号。
 
 ```css
 .content-area {
@@ -367,9 +394,11 @@ If you need to access a value that contains a dot (like the `2.5` value in the s
 }
 ```
 
-Since Tailwind uses a [nested object syntax](/docs/colors#nested-object-syntax) to define its default color palette, make sure to use dot notation to access the nested colors.
+<!-- Since Tailwind uses a [nested object syntax](/docs/colors#nested-object-syntax) to define its default color palette, make sure to use dot notation to access the nested colors. -->
+因为 Tailwind 使用 [嵌套对象语法](/docs/colors#nested-object-syntax) 来定义其默认调色板，因此请确保使用点符号来访问嵌套的颜色。
 
-<TipBad>Don't use the dash syntax when accessing nested color values</TipBad>
+<!-- <TipBad>Don't use the dash syntax when accessing nested color values</TipBad> -->
+<TipBad>获取嵌套的颜色值时不要使用破折号语法</TipBad>
 
 ```css
 .btn-blue {
@@ -377,7 +406,8 @@ Since Tailwind uses a [nested object syntax](/docs/colors#nested-object-syntax) 
 }
 ```
 
-<TipGood>Use dot notation to access nested color values</TipGood>
+<!-- <TipGood>Use dot notation to access nested color values</TipGood> -->
+<TipGood>使用点符号获取嵌套的颜色值</TipGood>
 
 ```css
 .btn-blue {
