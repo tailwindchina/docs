@@ -1,13 +1,14 @@
 ---
-title: Theme Configuration
-shortTitle: Theme
-description: Customizing the default theme for your project.
+title: 主题配置
+shortTitle: 主题
+description: 为您的项目定制默认主题。
 ---
 
 import { TipGood, TipBad } from '@/components/Tip'
 import { ThemeReference } from '@/components/ThemeReference'
 
 The `theme` section of your `tailwind.config.js` file is where you define your project's color palette, type scale, fonts, breakpoints, border radius values, and more.
+在`tailwind.config.js` 文件的 `theme` 部分，你可以定义你项目的调色板、类型比例、字体、断点、边框半径值等。
 
 ```js
 // tailwind.config.js
@@ -44,19 +45,24 @@ module.exports = {
 }
 ```
 
-We provide a sensible [default theme](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) with a very generous set of values to get you started, but don't be afraid to change it or extend; you're encouraged to customize it as much as you need to fit the goals of your design.
+<!-- We provide a sensible [default theme](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) with a very generous set of values to get you started, but don't be afraid to change it or extend; you're encouraged to customize it as much as you need to fit the goals of your design. -->
+我们提供了一个合理的 [默认主题](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7)，并提供了一套非常通用的值来让你开始使用，但不要害怕改变或扩展；我们鼓励你根据你的设计目标来定制它。
 
 ---
 
-## Theme structure
+## 主题结构
 
-The `theme` object contains keys for `screens`, `colors`, and `spacing`, as well as a key for each customizable [core plugin](/docs/configuration#core-plugins).
+<!-- The `theme` object contains keys for `screens`, `colors`, and `spacing`, as well as a key for each customizable [core plugin](/docs/configuration#core-plugins). -->
+`theme` 对象包含 `screens`、`colors` 和 `spacing` 的键，以及每一个可定制的 [核心插件](/docs/configuration#core-plugins) 的键。
 
-See the [theme configuration reference](#configuration-reference) or the [default theme](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) for a complete list of theme options.
 
-### Screens
+<!-- See the [theme configuration reference](#configuration-reference) or the [default theme](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) for a complete list of theme options. -->
+请参阅 [主题配置参考](#configuration-reference) 或 [默认主题] (https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) 获取完整的主题选项列表。
 
-The `screens` key allows you to customize the responsive breakpoints in your project.
+### 屏幕
+
+<!-- The `screens` key allows you to customize the responsive breakpoints in your project. -->
+`screens`键允许你自定义项目中的响应断点。
 
 ```js
 // tailwind.config.js
@@ -73,11 +79,13 @@ module.exports = {
 }
 ```
 
-To learn more, see the [breakpoint customization documentation](/docs/breakpoints).
+<!-- To learn more, see the [breakpoint customization documentation](/docs/breakpoints). -->
+要了解更多信息，请参见[断点自定义文档](/docs/breakpoints)。
 
-### Colors
+### 颜色
 
-The `colors` key allows you to customize the global color palette for your project.
+<!-- The `colors` key allows you to customize the global color palette for your project. -->
+`colors` 键允许你为你的项目定制全局调色板。
 
 ```js
 // tailwind.config.js
@@ -99,13 +107,16 @@ module.exports = {
 }
 ```
 
-By default, these colors are inherited by all color-related core plugins, like `backgroundColor`, `borderColor`, `textColor`, and others.
+<!-- By default, these colors are inherited by all color-related core plugins, like `backgroundColor`, `borderColor`, `textColor`, and others. -->
+默认情况下，这些颜色会被所有与颜色相关的核心插件继承，比如 `backgroundColor`、`borderColor`、`textColor` 等。
 
-To learn more, see the [color customization documentation](/docs/colors).
+<!-- To learn more, see the [color customization documentation](/docs/colors). -->
+要了解更多信息，请参见 [颜色自定义文档](/docs/colors)。
 
-### Spacing
+### 间距
 
-The `spacing` key allows you to customize the global spacing and sizing scale for your project.
+<!-- The `spacing` key allows you to customize the global spacing and sizing scale for your project. -->
+`spacing` 键允许你为你的项目定制全局的间距和大小比例。
 
 ```js
 // tailwind.config.js
@@ -152,15 +163,19 @@ module.exports = {
 }
 ```
 
-By default, these values are inherited by the `padding`, `margin`, `width`, `height`, `maxHeight`, `gap`, `inset`, `space`, and `translate` core plugins.
+<!-- By default, these values are inherited by the `padding`, `margin`, `width`, `height`, `maxHeight`, `gap`, `inset`, `space`, and `translate` core plugins. -->
+默认情况下，这些值会被 `padding`、 `margin`、 `width`、 `height`、 `maxHeight`、 `gap`、 `inset`、 `space`以及 `translate` 核心插件继承。
 
-To learn more, see the [spacing customization documentation](/docs/customizing-spacing).
+<!-- To learn more, see the [spacing customization documentation](/docs/customizing-spacing). -->
+要了解更多信息，请参见 [间距自定义文档](/docs/customizing-spacing)。
 
-### Core plugins
+### 核心插件
 
-The rest of the `theme` section is used to configure which values are available for each individual core plugin.
+<!-- The rest of the `theme` section is used to configure which values are available for each individual core plugin. -->
+其余的 `theme` 部分用于配置每个核心插件的可用值。
 
-For example, the `borderRadius` key lets you customize which border radius utilities will be generated:
+<!-- For example, the `borderRadius` key lets you customize which border radius utilities will be generated: -->
+例如， `borderRadius` 键可以让你自定义将生成哪些边框半径功能类。
 
 ```js
 module.exports = {
@@ -176,9 +191,11 @@ module.exports = {
 }
 ```
 
-The keys determine the suffix for the generated classes, and the values determine the value of the actual CSS declaration.
+<!-- The keys determine the suffix for the generated classes, and the values determine the value of the actual CSS declaration. -->
+键决定了生成类的后缀，值决定了实际 CSS 声明的值。
 
-The example `borderRadius` configuration above would generate the following CSS classes:
+<!-- The example `borderRadius` configuration above would generate the following CSS classes: -->
+上面的 `borderRadius` 配置示例将生成以下 CSS 类：
 
 ```css
 .rounded-none { border-radius: 0 }
@@ -188,21 +205,27 @@ The example `borderRadius` configuration above would generate the following CSS 
 .rounded-full { border-radius: 9999px }
 ```
 
-You'll notice that using a key of `DEFAULT` in the theme configuration created the class `rounded` with no suffix. This is a common convention in Tailwind and is supported by all core plugins.
+<!-- You'll notice that using a key of `DEFAULT` in the theme configuration created the class `rounded` with no suffix. This is a common convention in Tailwind and is supported by all core plugins. -->
+你会注意到，在主题配置中使用 `DEFAULT` 键创建了一个没有后缀的 `rounded` 类。这是一个常见的惯例，在 Tailwind 中，所有的核心插件都支持这样的用法。
 
-To learn more about customizing a specific core plugin, visit the documentation for that plugin.
+<!-- To learn more about customizing a specific core plugin, visit the documentation for that plugin. -->
+要了解更多关于定制特定核心插件的信息，请访问该插件的文档。
 
-For a complete reference of available theme properties and their default values, [see the default theme configuration](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5).
+<!-- For a complete reference of available theme properties and their default values, [see the default theme configuration](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5). -->
+关于可用的主题属性及其默认值的完整参考，[参见默认主题配置](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5)。
 
-## Customizing the default theme
+## 定制默认主体
 
-Out of the box, your project will automatically inherit the values from [the default theme configuration](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5). If you would like to customize the default theme, you have a few different options depending on your goals.
+<!-- Out of the box, your project will automatically inherit the values from [the default theme configuration](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5). If you would like to customize the default theme, you have a few different options depending on your goals. -->
+开箱即用，您的项目将自动继承 [默认主题配置] (https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5)中的值。如果你想自定义默认主题，你有几个不同的选项，取决于你的目标。
 
-### Extending the default theme
+### 扩展默认主题
 
-If you'd like to preserve the default values for a theme option but also add new values, add your extensions under the `extend` key in the `theme` section of your configuration file.
+<!-- If you'd like to preserve the default values for a theme option but also add new values, add your extensions under the `extend` key in the `theme` section of your configuration file. -->
+如果你想保留一个主题选项的默认值，但也要添加新的值，在配置文件的 `theme` 部分的 `extend` 键下添加你的扩展。
 
-For example, if you wanted to add an extra breakpoint but preserve the existing ones, you could extend the `screens` property:
+<!-- For example, if you wanted to add an extra breakpoint but preserve the existing ones, you could extend the `screens` property: -->
+例如，如果你想增加一个额外的断点，但保留现有的断点，你可以扩展 `screens` 属性。
 
 ```js
 // tailwind.config.js
@@ -218,9 +241,10 @@ module.exports = {
 }
 ```
 
-### Overriding the default theme
+### 覆盖默认主题
 
-To override an option in the default theme, add your overrides directly under the `theme` section of your `tailwind.config.js`:
+<!-- To override an option in the default theme, add your overrides directly under the `theme` section of your `tailwind.config.js`: -->
+要覆盖默认主题中的一个选项，直接在你的 `tailwind.config.js` 文件的 `theme`部分添加你的覆盖。
 
 ```js
 // tailwind.config.js
@@ -239,11 +263,14 @@ module.exports = {
 }
 ```
 
-This will completely replace Tailwind's default configuration for that key, so in the example above none of the default opacity utilities would be generated.
+<!-- This will completely replace Tailwind's default configuration for that key, so in the example above none of the default opacity utilities would be generated. -->
+这将完全替换 Tailwind 中该键的默认配置，所以在上面的例子中，没有一个默认的透明度类将被生成。
 
-Any keys you **do not** provide will be inherited from the default theme, so in the above example, the default theme configuration for things like colors, spacing, border-radius, background-position, etc. would be preserved.
+<!-- Any keys you **do not** provide will be inherited from the default theme, so in the above example, the default theme configuration for things like colors, spacing, border-radius, background-position, etc. would be preserved. -->
+任何你**没有**提供的键都将从默认主题中继承，所以在上面的例子中，默认的主题配置，如颜色，间距，边框半径，背景位置等将被保留。
 
-You can of course both override some parts of the default theme and extend other parts of the default theme within the same configuration:
+<!-- You can of course both override some parts of the default theme and extend other parts of the default theme within the same configuration: -->
+当然，在同一配置下，你既可以覆盖默认主题的一部分，也可以扩展默认主题的另一部分。
 
 ```js
 // tailwind.config.js
@@ -266,11 +293,13 @@ module.exports = {
 }
 ```
 
-### Referencing other values
+### 引用其它值
 
-If you need to reference another value in your theme, you can do so by providing a closure instead of a static value. The closure will receive a `theme()` function that you can use to look up other values in your theme using dot notation.
+<!-- If you need to reference another value in your theme, you can do so by providing a closure instead of a static value. The closure will receive a `theme()` function that you can use to look up other values in your theme using dot notation. -->
+如果你需要在你的主题中引用另一个值，你可以通过提供一个闭包而不是一个静态值来实现。该闭包将收到一个 `theme()` 函数，你可以使用点符号来查找你主题中的其他值。
 
-For example, you could generate `fill` utilities for every color in your color palette by referencing `theme('colors')` in your `fill` configuration:
+<!-- For example, you could generate `fill` utilities for every color in your color palette by referencing `theme('colors')` in your `fill` configuration: -->
+例如，你可以通过在你的 `fill` 配置中引用 `theme('colors')` 来为你的调色板中的每一种颜色生成 `fill` 功能类。
 
 ```js
 // tailwind.config.js
@@ -284,13 +313,16 @@ module.exports = {
 }
 ```
 
-The `theme()` function attempts to find the value you are looking for from the fully merged theme object, so it can reference your own customizations as well as the default theme values. It also works recursively, so as long as there is a static value at the end of the chain it will be able to resolve the value you are looking for.
+<!-- The `theme()` function attempts to find the value you are looking for from the fully merged theme object, so it can reference your own customizations as well as the default theme values. It also works recursively, so as long as there is a static value at the end of the chain it will be able to resolve the value you are looking for. -->
+`theme()` 函数试图从完全合并的主题对象中找到你正在寻找的值，因此它可以引用你自己的定制以及默认的主题值。它也是递归工作的，所以只要在链的最后有一个静态值，它就能解析出你要找的值。
 
-### Referencing the default theme
+### 引用默认主题
 
-If you'd like to reference a value in the default theme for any reason, you can import it from `tailwindcss/defaultTheme`.
+<!-- If you'd like to reference a value in the default theme for any reason, you can import it from `tailwindcss/defaultTheme`. -->
+如果你想在默认主题中出于任何原因引用一个值，你可以从 `tailwindcss/defaultTheme` 中导入它。
 
-One example of where this is useful is if you'd like to add a font family to one of Tailwind's default font stacks:
+<!-- One example of where this is useful is if you'd like to add a font family to one of Tailwind's default font stacks: -->
+一个有用的例子是，如果你想添加一个字体家族到 Tailwind 的默认字体堆栈中。
 
 ```js
 // tailwind.config.js
@@ -310,11 +342,13 @@ module.exports = {
 }
 ```
 
-### Disabling an entire core plugin
+### 禁用全部核心插件
 
-If you don't want to generate any classes for a certain core plugin, it's better to set that plugin to false in your `corePlugins` configuration than to provide an empty object for that key in your `theme` configuration.
+<!-- If you don't want to generate any classes for a certain core plugin, it's better to set that plugin to false in your `corePlugins` configuration than to provide an empty object for that key in your `theme` configuration. -->
+如果你不想为某个核心插件生成任何类，最好在你的 `corePlugins` 配置中把该插件设置为 false，而不是在你的 `theme` 配置中为该键提供一个空对象。
 
-<TipBad>Don't assign an empty object in your theme configuration</TipBad>
+<!-- <TipBad>Don't assign an empty object in your theme configuration</TipBad> -->
+<TipBad>不要在你的主题配置中赋值一个空对象。</TipBad>
 
 ```js
 // tailwind.config.js
@@ -325,7 +359,8 @@ module.exports = {
 }
 ```
 
-<TipGood>Do disable the plugin in your corePlugins configuration</TipGood>
+<!-- <TipGood>Do disable the plugin in your corePlugins configuration</TipGood> -->
+<TipGood>请在你的 corePlugins 配置中禁用该插件。</TipGood>
 
 ```js
 // tailwind.config.js
@@ -336,13 +371,16 @@ module.exports = {
 }
 ```
 
-The end result is the same, but since many core plugins expose no configuration they can only be disabled using `corePlugins` anyways, so it's better to be consistent.
+<!-- The end result is the same, but since many core plugins expose no configuration they can only be disabled using `corePlugins` anyways, so it's better to be consistent. -->
+最终的结果是一样的，但既然很多核心插件没有暴露配置，只能用 `corePlugins` 来禁用，所以最好保持一致。
 
-### Adding your own keys
+### 添加自己的键
 
-There are a number of situations where it can be useful to add your own keys to the `theme` object.
+<!-- There are a number of situations where it can be useful to add your own keys to the `theme` object. -->
+在一些情况下，向 `theme` 对象添加自己的键是有用的。
 
-One example of this is adding new keys to create a single source of truth for values that are common between multiple core plugins. For example, you could extract a shared `positions` object that could be referenced by both the `backgroundPosition` and `objectPosition` plugins:
+<!-- One example of this is adding new keys to create a single source of truth for values that are common between multiple core plugins. For example, you could extract a shared `positions` object that could be referenced by both the `backgroundPosition` and `objectPosition` plugins: -->
+其中一个例子是添加新的键，为多个核心插件之间的共同值创建一个单一的真实来源。例如，你可以提取一个共享的 `positions` 对象，它可以被 `backgroundPosition` 和 `objectPosition` 插件引用。
 
 ```js
 // tailwind.config.js
@@ -365,7 +403,8 @@ module.exports = {
 }
 ```
 
-Another example is adding a new key to reference inside a custom plugin. For example, if you've written a `filters` plugin for your project, you might add a `filters` key to your `theme` object that the plugin references:
+<!-- Another example is adding a new key to reference inside a custom plugin. For example, if you've written a `filters` plugin for your project, you might add a `filters` key to your `theme` object that the plugin references: -->
+另一个例子是在自定义插件内部添加一个新的键来引用。例如，如果你为你的项目编写了一个 `filters` 插件，你可以在你的 `theme` 对象中添加一个 `filters` 键，让插件引用。
 
 ```js
 // tailwind.config.js
@@ -384,12 +423,15 @@ module.exports = {
 }
 ```
 
-Since the entire `theme` object is available in your CSS using the [theme function](/docs/functions-and-directives#theme), you might also add a key just to be able to reference it in your CSS.
+<!-- Since the entire `theme` object is available in your CSS using the [theme function](/docs/functions-and-directives#theme), you might also add a key just to be able to reference it in your CSS. -->
+由于整个 `theme` 对象可以通过[theme 函数](/docs/functions-and-directives#theme) 在你的 CSS 中使用，你也可以添加一个键来在你的 CSS 中引用它。
 
-## Configuration reference
+## 配置参考
 
-Except for `screens`, `colors`, and `spacing`, all of the keys in the `theme` object map to one of Tailwind's [core plugins](/docs/configuration#core-plugins). Since many plugins are responsible for CSS properties that only accept a static set of values (like `float` for example), note that not every plugin has a corresponding key in the `theme` object.
+<!-- Except for `screens`, `colors`, and `spacing`, all of the keys in the `theme` object map to one of Tailwind's [core plugins](/docs/configuration#core-plugins). Since many plugins are responsible for CSS properties that only accept a static set of values (like `float` for example), note that not every plugin has a corresponding key in the `theme` object. -->
+除了 `screens`、`colors` 和 `spacing`， `theme` 对象中的所有的键都映射到 Tailwind 的一个 [核心插件](/docs/configuration#core-plugins)。由于许多插件负责的 CSS 属性只接受一组静态的值（例如 `float`），所以请注意，不是每个插件在 `theme` 对象中都有一个对应的键。
 
-All of these keys are also available under the `theme.extend` key to enable [extending the default theme](#extending-the-default-theme).
+<!-- All of these keys are also available under the `theme.extend` key to enable [extending the default theme](#extending-the-default-theme). -->
+所有这些键在 `theme.extend` 键下也是可用的，用来启用 [扩展默认主题](#extending-the-default-theme)。
 
 <ThemeReference />
