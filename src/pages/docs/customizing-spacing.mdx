@@ -1,12 +1,13 @@
 ---
-title: Customizing Spacing
-shortTitle: Spacing
-description: Customizing the default spacing and sizing scale for your project.
+title: 定制间距
+shortTitle: 间距
+description: 为你的项目定制默认间距和大小比例。
 ---
 
 import { SpacingScale } from '@/components/SpacingScale'
 
-Use the `spacing` key in the `theme` section of your `tailwind.config.js` file to customize Tailwind's [default spacing/sizing scale](#default-spacing-scale).
+<!-- Use the `spacing` key in the `theme` section of your `tailwind.config.js` file to customize Tailwind's [default spacing/sizing scale](#default-spacing-scale). -->
+在你的 `tailwind.config.js` 文件的 `theme` 部分使用 `spacing` 键来定制 Tailwind 的[默认间距/大小比例](#default-spacing-scale)。
 
 ```js
 // tailwind.config.js
@@ -24,14 +25,17 @@ module.exports = {
 }
 ```
 
-By default the spacing scale is inherited by the `padding`, `margin`, `width`, `height`, `maxHeight`, `gap`, `inset`, `space`, and `translate` core plugins.
+<!-- By default the spacing scale is inherited by the `padding`, `margin`, `width`, `height`, `maxHeight`, `gap`, `inset`, `space`, and `translate` core plugins. -->
+默认情况下，间距比例由 `padding`、 `margin`、 `width`、 `height`、 `maxHeight`、 `gap`、 `inset`、 `space` 和 `translate` 核心插件继承。
 
 ---
 
-## Extending the default spacing scale
+## 扩展默认的间距比例
 
 
-As described in the [theme documentation](/docs/theme#extending-the-default-theme), if you'd like to extend the default spacing scale, you can do so using the `theme.extend.spacing` section of your `tailwind.config.js` file:
+<!-- As described in the [theme documentation](/docs/theme#extending-the-default-theme), if you'd like to extend the default spacing scale, you can do so using the `theme.extend.spacing` section of your `tailwind.config.js` file: -->
+正如 [主题文档](/docs/theme#extending-the-default-theme) 中所描述的那样，如果你想扩展默认的间距，你可以使用你的 `tailwind.config.js` 文件中的 `theme.extend.spacing` 部分来实现。
+
 
 ```js
 // tailwind.config.js
@@ -49,13 +53,15 @@ module.exports = {
 }
 ```
 
-This will generate classes like `p-13`, `m-15`, and `h-128` in addition to all of Tailwind's default spacing/sizing utilities.
+<!-- This will generate classes like `p-13`, `m-15`, and `h-128` in addition to all of Tailwind's default spacing/sizing utilities. -->
+这将生成像 `p-13`、`m-15` 和 `h-128` 这样的类，除了所有 Tailwind 的默认间距/大小工具类。
 
 ---
 
-## Overriding the default spacing scale
+## 覆盖默认间距比例
 
-As described in the [theme documentation](/docs/theme#overriding-the-default-theme), if you'd like to override the default spacing scale, you can do so using the `theme.spacing` section of your `tailwind.config.js` file:
+<!-- As described in the [theme documentation](/docs/theme#overriding-the-default-theme), if you'd like to override the default spacing scale, you can do so using the `theme.spacing` section of your `tailwind.config.js` file: -->
+正如 [主题文档](/docs/theme#overriding-the-default-theme) 中所描述的，如果你想覆盖默认的间距，你可以使用你的 `tailwind.config.js` 文件中的 `theme.spacing` 部分来实现。
 
 ```js
 // tailwind.config.js
@@ -71,12 +77,14 @@ module.exports = {
 }
 ```
 
-This will disable Tailwind's default spacing scale and generate classes like `p-sm`, `m-md`, `w-lg`, and `h-xl` instead.
+<!-- This will disable Tailwind's default spacing scale and generate classes like `p-sm`, `m-md`, `w-lg`, and `h-xl` instead. -->
+这将禁用 Tailwind 的默认间距比例，并生成像 `p-sm`、`m-md`、`w-lg` 和 `h-xl` 这样的类。
 
 ---
 
-## Default spacing scale
+## 默认间距比例
 
-By default, Tailwind includes a generous and comprehensive numeric spacing scale. The values are proportional, so `16` is twice as much spacing as `8` for example. One spacing unit is equal to `0.25rem`, which translates to `4px` by default in common browsers.
+<!-- By default, Tailwind includes a generous and comprehensive numeric spacing scale. The values are proportional, so `16` is twice as much spacing as `8` for example. One spacing unit is equal to `0.25rem`, which translates to `4px` by default in common browsers. -->
+默认情况下，Tailwind 包括一个丰富和全面的数字间隔比例。这些值是成比例的，所以 `16` 是 `8` 的两倍。一个间距单位等于 `0.25rem`，在通用浏览器中默认为 `4px`。
 
 <SpacingScale />
