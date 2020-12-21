@@ -1,21 +1,35 @@
 ---
-title: Browser Support
-description: Understanding which browsers Tailwind supports and how to manage vendor prefixes.
+# title: Browser Support
+# description: Understanding which browsers Tailwind supports and how to manage vendor prefixes.
+title: 浏览器支持
+description: 了解 Tailwind 支持哪些浏览器以及如何管理浏览器引擎前缀。
 ---
 
-As of v2.0, Tailwind CSS is designed for and tested on the latest stable versions of Chrome, Firefox, Edge, and Safari. Tailwind CSS v2.0 does not support any version of IE, including IE 11.
+<!-- As of v2.0, Tailwind CSS is designed for and tested on the latest stable versions of Chrome, Firefox, Edge, and Safari. Tailwind CSS v2.0 does not support any version of IE, including IE 11.
 
 If you need to support IE 11, we recommend using Tailwind CSS v1.9, which is still an excellent and very productive framework.
 
-Certain features such as `focus-visible` are included but not supported natively by all modern browsers. We've included information about recommended polyfills for those features directly alongside the documentation for the features themselves.
+Certain features such as `focus-visible` are included but not supported natively by all modern browsers. We've included information about recommended polyfills for those features directly alongside the documentation for the features themselves. -->
 
-## Vendor Prefixes
+从 v2.0 开始，Tailwind CSS 专为 Chrome，Firefox，Edge 和 Safari 的最新稳定版本设计并在其上经过了测试。  Tailwind CSS v2.0 不支持任何版本的 IE，包括 IE 11。
 
-If you're compiling your CSS using the `tailwindcss` CLI tool, vendor prefixes will be added automatically.
+如果您需要支持 IE11，我们建议您使用 Tailwind CSS v1.9，它仍然是一个优秀的、非常有生产力的框架。
 
-If not, we recommend that you use [Autoprefixer](https://github.com/postcss/autoprefixer).
+某些功能，如 `focus-visible` 都包含，但不是被所有现代浏览器所原生支持。我们已经将这些功能推荐的 polyfills 信息直接包括在功能本身的文档中。
 
-To use it, install it via npm:
+<!-- # Vendor Prefixes -->
+# 浏览器引擎前缀
+
+<!-- If you're compiling your CSS using the `tailwindcss` CLI tool, vendor prefixes will be added automatically.
+
+If not, we recommend that you use [Autoprefixer](https://github.com/postcss/autoprefixer). -->
+
+如果您正在使用 `tailwindcss` CLI 工具，浏览器引擎前缀将自动添加。
+
+如果没有，我们建议您使用 [Autoprefixer](https://github.com/postcss/autoprefixer)。
+
+<!-- To use it, install it via npm: -->
+要使用它，请通过 npm：
 
 ```shell
 # Using npm
@@ -25,7 +39,8 @@ npm install autoprefixer
 yarn add autoprefixer
 ```
 
-Then add it to the very end of your plugin list in your PostCSS configuration:
+<!-- Then add it to the very end of your plugin list in your PostCSS configuration: -->
+然后将其添加到您的 PostCSS 配置插件列表的末尾：
 
 ```js
 module.exports = {
