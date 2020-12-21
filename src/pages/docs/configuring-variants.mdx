@@ -1,16 +1,18 @@
 ---
-title: Configuring Variants
-shortTitle: Variants
-description: Configuring which utility variants are enabled in your project.
+title: 配置变体
+shortTitle: 变体
+<!-- description: Configuring which utility variants are enabled in your project. -->
+description: 配置你的项目中启用哪些功能变体。
 ---
 
 import { Heading } from '@/components/Heading'
 import { DefaultVariantsConfig } from '@/components/DefaultVariantsConfig'
 import { TipGood, TipBad } from '@/components/Tip'
 
-## <Heading hidden>Overview</Heading>
+## <Heading hidden>概述</Heading>
 
-The `variants` section of your `tailwind.config.js` file is where you control which variants should be enabled for each core plugin:
+<!-- The `variants` section of your `tailwind.config.js` file is where you control which variants should be enabled for each core plugin: -->
+`tailwind.config.js` 文件中的 `variants` 部分是你控制每个核心插件应该启用哪些变体的地方。
 
 ```js
 // tailwind.config.js
@@ -27,11 +29,13 @@ module.exports = {
 }
 ```
 
-Each property is a core plugin name pointing to an array of variants to generate for that plugin.
+<!-- Each property is a core plugin name pointing to an array of variants to generate for that plugin. -->
+每个属性都是一个核心插件名称，指向一个要为该插件生成的变体数组。
 
-The following variants are supported out of the box:
+<!-- The following variants are supported out of the box: -->
+以下是支持的开箱即用的变体：
 
-| Variant | Description |
+| 变体 | 描述 |
 | --- | --- |
 | `responsive` | Responsive variants like `sm`, `md`, `lg`, and `xl`. |
 | `dark` | Targets dark mode. |
@@ -52,14 +56,17 @@ The following variants are supported out of the box:
 | `active` | Targets the `active` pseudo-class. |
 | `disabled` | Targets the `disabled` pseudo-class. |
 
-For more information about how variants work, read our documentation on [responsive variants](/docs/responsive-design), [dark mode variants](/docs/dark-mode), and [hover, focus and other state variants](/docs/hover-focus-and-other-states).
+<!-- For more information about how variants work, read our documentation on [responsive variants](/docs/responsive-design), [dark mode variants](/docs/dark-mode), and [hover, focus and other state variants](/docs/hover-focus-and-other-states). -->
+关于变体如何工作的更多信息，请阅读我们的文档 [响应式变体](/docs/responsive-design)、[深色模式变体](/docs/dark-mode) 和 [悬停、焦点和其他状态变体](/docs/hover-focus-and-other-states)。
 
 ---
 
 
-## Enabling extra variants
+<!-- ## Enabling extra variants -->
+## 启用额外变体
 
-If you'd like to enable extra variants for a plugin in addition to the defaults, you can configure your variants using the `extend` keyword, similar to how you can use extend inside of the `theme` section:
+<!-- If you'd like to enable extra variants for a plugin in addition to the defaults, you can configure your variants using the `extend` keyword, similar to how you can use extend inside of the `theme` section: -->
+如果你想在默认值之外为插件启用额外的变体，你可以使用 `extend` 关键字来配置你的变体，类似于你如何在 `theme` 部分使用 extend。
 
 ```js
 // tailwind.config.js
@@ -73,13 +80,16 @@ module.exports = {
 }
 ```
 
-Because [the order of variants is important](/docs/configuring-variants#ordering-variants), any variants added under the `extend` key are automatically ordered for you using a sensible default variant order. You can customize this order using the [variantOrder](/docs/configuration#variant-order) option if necessary.
+<!-- Because [the order of variants is important](/docs/configuring-variants#ordering-variants), any variants added under the `extend` key are automatically ordered for you using a sensible default variant order. You can customize this order using the [variantOrder](/docs/configuration#variant-order) option if necessary. -->
+因为 [变体的顺序很重要](/docs/configuring-variants#ordering-variants)，在 `extend` 键下添加的任何变体都会使用合理的默认变体顺序自动为您排序。如果有必要，你可以使用 [variantOrder](/docs/configuration#variant-order) 选项自定义这个顺序。
 
 ---
 
-## Overriding default variants
+<!-- ## Overriding default variants -->
+## 覆盖默认变体
 
-Any variants configured directly under the `variants` key will **override** the default variants for that plugin.
+<!-- Any variants configured directly under the `variants` key will **override** the default variants for that plugin. -->
+任何直接在 `variants` 键下配置的变体将**覆盖**该插件的默认变体。
 
 ```js
 // tailwind.config.js
@@ -91,13 +101,17 @@ module.exports = {
 }
 ```
 
-When overriding the default variants, make sure you always specify _all_ the variants you'd like to enable, not just the new ones you'd like to add.
+<!-- When overriding the default variants, make sure you always specify _all_ the variants you'd like to enable, not just the new ones you'd like to add. -->
+当覆盖默认变体时，确保你总是指定_所有_你想启用的变体，而不仅仅是你想添加的新变体。
 
-### Ordering variants
+<!-- ### Ordering variants -->
+### 为变体排序
 
-It's important to note that when overriding variants, **variants are generated in the order you specify them**, so variants at the end of the list will take precedence over variants at the beginning of the list.
+<!-- It's important to note that when overriding variants, **variants are generated in the order you specify them**, so variants at the end of the list will take precedence over variants at the beginning of the list. -->
+需要注意的是，当覆盖变体时，**变体会按照您指定的顺序生成**，因此列表末尾的变体将优先于列表开头的变体。
 
-For example, here `focus` variants have the highest precedence for `backgroundColor` utilities, but `hover` variants have the highest precedence for `borderColor` utilities:
+<!-- For example, here `focus` variants have the highest precedence for `backgroundColor` utilities, but `hover` variants have the highest precedence for `borderColor` utilities: -->
+例如，在这里，`focus` 变体对 `backgroundColor` 功能类具有最高优先级，但 `hover` 变体对 `borderColor` 功能类具有最高优先级。
 
 ```js
 // tailwind.config.js
@@ -137,25 +151,32 @@ module.exports = {
 /* ... */
 ```
 
-This means that given the following HTML:
+<!-- This means that given the following HTML: -->
+这意味着，给定以下HTML：
 
 ```html
 <input class="focus:bg-white hover:bg-black focus:border-white hover:border-black">
 ```
 
-...if the input was hovered _and_ focused at the same time, the background would be white but the border would be black.
+<!-- ...if the input was hovered _and_ focused at the same time, the background would be white but the border would be black. -->
+...如果输入框同时悬停_和_聚焦，背景将是白色的，但边框将是黑色的。
 
-Generating variants in order this way gives you the most flexibility as an end-user, but it's also a sharp tool and can have unintended consequences if you aren't careful. We recommend [enabling extra variants](#enabling-extra-variants) instead of overriding the defaults whenever possible, and using this feature only as an escape hatch.
+<!-- Generating variants in order this way gives you the most flexibility as an end-user, but it's also a sharp tool and can have unintended consequences if you aren't careful. We recommend [enabling extra variants](#enabling-extra-variants) instead of overriding the defaults whenever possible, and using this feature only as an escape hatch. -->
+作为终端用户，这样按顺序生成变体能给你带来最大的灵活性，但它也是一个利器，如果你不小心，可能会产生意想不到的后果。我们建议 [启用额外的变体](#enabling-extra-variants)，而不是尽可能地覆盖默认值，并且只把这个功能作为一个逃生通道。
 
 ---
 
-## Special variants
+<!-- ## Special variants -->
+## 特殊变体
 
 ### Responsive
+### 响应式
 
-The `responsive` variant is a special case in Tailwind and is _not_ impacted by the order you list in your variants configuration.
+<!-- The `responsive` variant is a special case in Tailwind and is _not_ impacted by the order you list in your variants configuration. -->
+`responsive` 变体在 Tailwind 中是一个特殊的情况，并且_不会_受到你在变体配置中列出的顺序的影响。
 
-This is because the `responsive` variant automatically _stacks_ with other variants, meaning that if you specify both `responsive` and `hover` variants for a utility, Tailwind will generate _responsive hover_ variants as well:
+<!-- This is because the `responsive` variant automatically _stacks_ with other variants, meaning that if you specify both `responsive` and `hover` variants for a utility, Tailwind will generate _responsive hover_ variants as well: -->
+这是因为 `responsive` 变体会自动与其他变体_堆叠_在一起，这意味着如果你为一个功能指定了 `responsive` 和 `hover` 变体，Tailwind 也会生成 _responsive hover_ 变体。
 
 ```js
 // tailwind.config.js
@@ -167,23 +188,30 @@ module.exports = {
 }
 ```
 
-Responsive variants are grouped together and inserted at the end of your stylesheet by default to avoid specificity issues, regardless of where `responsive` appears in your `variants` list.
+<!-- Responsive variants are grouped together and inserted at the end of your stylesheet by default to avoid specificity issues, regardless of where `responsive` appears in your `variants` list. -->
+无论 `responsive` 出现在你的 `variants` 列表中的哪个位置，响应式变体都会被归为一组，并默认插入到你的样式表的最后，以避免特定性问题。
 
-If you'd like to customize this behavior for whatever reason, you can use the [@tailwind screens](/docs/functions-and-directives#tailwind) directive to specify where responsive variants should be inserted.
+<!-- If you'd like to customize this behavior for whatever reason, you can use the [@tailwind screens](/docs/functions-and-directives#tailwind) directive to specify where responsive variants should be inserted. -->
+如果你出于任何原因想定制这种行为，你可以使用 [@tailwind screens](/docs/functions-and-directives#tailwind) 指令来指定响应的变体应该插入的位置。
 
 ### Dark, motion-safe, and motion-reduce
 
-The `dark`, `motion-safe`, and `motion-reduce` variants also stack with other variants, but unlike `responsive`, they stack in the same "slot", so you can combine them with both `responsive` and simple state variants, but not with each other.
+<!-- The `dark`, `motion-safe`, and `motion-reduce` variants also stack with other variants, but unlike `responsive`, they stack in the same "slot", so you can combine them with both `responsive` and simple state variants, but not with each other. -->
+`dark`、`motion-safe` 和 `motion-reduce` 变体也会与其他变体叠加，但与 `responsive` 不同的是，它们叠加在同一个 "slot" 中，所以你可以将它们与 `responsive` 和简单状态变体结合起来，但不能相互结合。
 
-The order of these variants matter relative to each other, but not relative to other variants. There is just about no situation imaginable where these would conflict with each other in practice, so this ends up being a non-issue anyways.
+<!-- The order of these variants matter relative to each other, but not relative to other variants. There is just about no situation imaginable where these would conflict with each other in practice, so this ends up being a non-issue anyways. -->
+这些变体的顺序相对于他们相互之间来说很重要，但相对于其他变体来说不重要。几乎无法想象到这些变体在实践中会相互冲突的情况，所以无论如何，这最终都不是问题。
 
-You can include these variants in any order in your `variants` configuration and never notice the difference.
+<!-- You can include these variants in any order in your `variants` configuration and never notice the difference. -->
+你可以在你的 `variants` 配置中以任何顺序包含这些变种，而且永远不会注意到区别。
 
-### Default
+### 默认
 
-You can use the special `DEFAULT` variant to control where the normal, non-prefixed version of a utility is generated relative to the other variants.
+<!-- You can use the special `DEFAULT` variant to control where the normal, non-prefixed version of a utility is generated relative to the other variants. -->
+您可以使用特殊的 `DEFAULT` 变体来控制相对于其他变体而言，一个功能的普通、无前缀的版本生成的地方。
 
-This is an advanced feature and only really useful if you have a custom variant (like `children` in the example below) that should have a lower precedence than the normal version of a utility.
+<!-- This is an advanced feature and only really useful if you have a custom variant (like `children` in the example below) that should have a lower precedence than the normal version of a utility. -->
+这是一个高级特性，只有当你有一个自定义的变体（比如下面例子中的 `children`），它的优先级应该比普通版本的功能低时才会真正有用。
 
 ```js
 // tailwind.config.js
@@ -213,15 +241,19 @@ module.exports = {
 /* ... */
 ```
 
-Learn more about creating custom variants in the [variant plugin documentation](/docs/plugins#adding-variants).
+<!-- Learn more about creating custom variants in the [variant plugin documentation](/docs/plugins#adding-variants). -->
+在 [变体插件文档](/docs/plugins#adding-variants) 中了解更多关于创建自定义变体的信息。
 
 ---
 
-## Using custom variants
+<!-- ## Using custom variants -->
+## 使用自定义变体
 
-If you've written or installed a [plugin](/docs/plugins) that adds a new variant, you can enable that variant by including it in your variants configuration just like if it were a built-in variant.
+<!-- If you've written or installed a [plugin](/docs/plugins) that adds a new variant, you can enable that variant by including it in your variants configuration just like if it were a built-in variant. -->
+如果你编写或安装了一个 [插件](/docs/plugins)，这个插件增加了一个新的变体，你可以通过在你的变体配置中加入它来启用这个变体，就像它是一个内置变体一样。
 
-For example, the [tailwindcss-interaction-variants plugin](https://github.com/benface/tailwindcss-interaction-variants) adds a `group-disabled` variant (among others):
+<!-- For example, the [tailwindcss-interaction-variants plugin](https://github.com/benface/tailwindcss-interaction-variants) adds a `group-disabled` variant (among others): -->
+例如，[tailwindcss-interaction-variants 插件](https://github.com/benface/tailwindcss-interaction-variants) 增加了一个 `group-disabled` 变体(其中之一)。
 
 ```js
 // tailwind.config.js
@@ -235,11 +267,14 @@ For example, the [tailwindcss-interaction-variants plugin](https://github.com/be
 }
 ```
 
-Learn more about creating custom variants in the [variant plugin documentation](/docs/plugins#adding-variants).
+<!-- Learn more about creating custom variants in the [variant plugin documentation](/docs/plugins#adding-variants). -->
+在【变体插件文档】(/docs/plugins#adding-variants) 中了解更多关于创建自定义变体的信息。
 
-### Ordering custom variants
+<!-- ### Ordering custom variants -->
+### 给自定义变体排序
 
-If you'd like to specify a default sort position for a custom variant, override your `variantOrder` to include the custom variant:
+<!-- If you'd like to specify a default sort position for a custom variant, override your `variantOrder` to include the custom variant: -->
+如果你想为一个自定义变量指定一个默认的排序位置，覆盖你的 `variantOrder` 来包含自定义变体。
 
 ```js
 // tailwind.config.js
@@ -270,12 +305,15 @@ module.exports = {
 }
 ```
 
-You'll need to specify the entire list when overriding the `variantOrder` to include any custom variants.
+<!-- You'll need to specify the entire list when overriding the `variantOrder` to include any custom variants. -->
+你需要在覆盖 `variantOrder` 时指定整个列表，以包含任何自定义变体。
 
 ---
 
-## Default variants reference
+<!-- ## Default variants reference -->
+## 默认变体参考
 
-Here is a complete reference of Tailwind's default variants configuration, which can be useful when you'd like to add a new variant while preserving the defaults.
+<!-- Here is a complete reference of Tailwind's default variants configuration, which can be useful when you'd like to add a new variant while preserving the defaults. -->
+这里是一个 Tailwind 的默认变体配置的完整参考，当你想添加一个新的变体，同时保留默认值时，它会很有用。
 
 <DefaultVariantsConfig />
