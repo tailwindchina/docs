@@ -1,14 +1,17 @@
 ---
-title: Presets
-description: Creating your own reusable configuration presets.
+title: 预设
+<!-- description: Creating your own reusable configuration presets. -->
+description: 创建自己的可复用配置预设。
 ---
 
 import { TipGood, TipBad } from '@/components/Tip'
 import { ThemeReference } from '@/components/ThemeReference'
 
-By default, any configuration you add in your own `tailwind.config.js` file is intelligently merged with the [default configuration](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js), with your own configuration acting as a set of overrides and extensions.
+<!-- By default, any configuration you add in your own `tailwind.config.js` file is intelligently merged with the [default configuration](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js), with your own configuration acting as a set of overrides and extensions. -->
+默认情况下，你的 `tailwind.config.js` 文件中添加的任何配置将被智能的与 [默认配置](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js) 合并，你自己的配置则作为一组覆盖与扩展。
 
-The `presets` option lets you specify a _different_ configuration to use as your base, making it easy to package up a set of customizations that you'd like to reuse across projects.
+<!-- The `presets` option lets you specify a _different_ configuration to use as your base, making it easy to package up a set of customizations that you'd like to reuse across projects. -->
+`presets` 选项允许你指定一个_不同_的配置来用作你的基本配置，这使得打包一组跨项目复用的配置非常简单。
 
 ```js
 // tailwind.config.js
@@ -20,13 +23,16 @@ module.exports = {
 }
 ```
 
-This can be very useful for teams that manage multiple Tailwind projects for the same brand where they want a single source of truth for colors, fonts, and other common customizations.
+<!-- This can be very useful for teams that manage multiple Tailwind projects for the same brand where they want a single source of truth for colors, fonts, and other common customizations. -->
+这对于为同一品牌管理多个 Tailwind 项目的团队来说是非常有用的，他们希望有一个单一的颜色、字体和其他通用定制的源。
 
 ---
 
-## Creating a preset
+<!-- ## Creating a preset -->
+## 创建预设
 
-Presets are just regular Tailwind configuration objects, taking the exact same shape as the configuration you would add in your `tailwind.config.js` file.
+<!-- Presets are just regular Tailwind configuration objects, taking the exact same shape as the configuration you would add in your `tailwind.config.js` file. -->
+预设就是常规的 Tailwind 配置对象，与你的 `tailwind.config.js` 文件里添加的配置毫无二致。
 
 ```js
 // Example preset
@@ -75,9 +81,11 @@ module.exports = {
 }
 ```
 
-As you can see, presets can contain all of the configuration options you're used to, including theme overrides and extensions, adding plugins, configuring a prefix, and so on. Read about [how configurations are merged](#how-configurations-are-merged) for more details.
+<!-- As you can see, presets can contain all of the configuration options you're used to, including theme overrides and extensions, adding plugins, configuring a prefix, and so on. Read about [how configurations are merged](#how-configurations-are-merged) for more details. -->
+如您所见，预设可以包含您习惯使用的所有配置选项，包括主题覆盖和扩展、添加插件、配置前缀等等。阅读 [如何合并配置](#how-configurations-are-merged) 了解更多信息。
 
-Assuming this preset was saved at `./tailwind-preset.js`, you would use it by adding it to the `tailwind.config.js` file in your actual project under the `presets` key:
+<!-- Assuming this preset was saved at `./tailwind-preset.js`, you would use it by adding it to the `tailwind.config.js` file in your actual project under the `presets` key: -->
+假设此预设保存在 `./tailwind-preset.js`，您可以通过将其添加到您实际项目中的 `tailwind.config.js` 文件中的 `presets` 键下来使用它：
 
 ```js
 // tailwind.config.js
@@ -101,7 +109,8 @@ module.exports = {
 }
 ```
 
-**By default, presets themselves extend Tailwind's [default configuration](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js) just like your own configuration would**. If you'd like to create a preset that completely replaces the default configuration, include an empty `presets` key in the preset itself:
+<!-- **By default, presets themselves extend Tailwind's [default configuration](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js) just like your own configuration would**. If you'd like to create a preset that completely replaces the default configuration, include an empty `presets` key in the preset itself: -->
+**默认情况下，预设本身会扩展 Tailwind 的 [默认配置](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js)，就像你自己的配置一样**。如果你想创建一个预设来完全代替默认配置，在预设本身中包含一个空的 `presets` 键。
 
 ```js
 // Example preset
@@ -116,15 +125,19 @@ module.exports = {
 }
 ```
 
-For more information, read about [disabling the default configuration](#disabling-the-default-configuration).
+<!-- For more information, read about [disabling the default configuration](#disabling-the-default-configuration). -->
+了解更多信息，阅读  [禁用默认配置](#disabling-the-default-configuration)。
 
 ---
 
-## How configurations are merged
+<!-- ## How configurations are merged -->
+## 如何合并配置
 
-Project-specific configurations (those found in your `tailwind.config.js` file) are merged against presets the same way they are merged against the default configuration.
+<!-- Project-specific configurations (those found in your `tailwind.config.js` file) are merged against presets the same way they are merged against the default configuration. -->
+项目特定的配置（那些在你的 `tailwind.config.js` 文件中找到的配置）与预设配置合并的方式与默认配置合并的方式相同。
 
-The following options in `tailwind.config.js` simply **replace** the same option if present in a preset:
+<!-- The following options in `tailwind.config.js` simply **replace** the same option if present in a preset: -->
+`tailwind.config.js` 中的以下选项只是**替换**了预设中存在的相同选项：
 
 - `purge`
 - `darkMode`
@@ -133,35 +146,50 @@ The following options in `tailwind.config.js` simply **replace** the same option
 - `variantOrder`
 - `separator`
 
-The remaining options are each carefully merged in the way that makes the most sense for that option, explained in more detail next.
+<!-- The remaining options are each carefully merged in the way that makes the most sense for that option, explained in more detail next. -->
+其余的选项都是以该选项最合理的方式仔细合并的，接下来详细解释。
 
-### Theme
+<!-- ### Theme -->
+### 主题
 
-The `theme` object is merged shallowly, with top-level keys in `tailwind.config.js` replacing the same top-level keys in any presets. The exception to this is the `extend` key, which is collected across all configurations and applied on top of the rest of the theme configuration.
+<!-- The `theme` object is merged shallowly, with top-level keys in `tailwind.config.js` replacing the same top-level keys in any presets. The exception to this is the `extend` key, which is collected across all configurations and applied on top of the rest of the theme configuration. -->
+`theme` 对象被浅合并，`tailwind.config.js` 中的顶层键替换了任何预设中相同的顶层键。唯一的例外是 `extend` 键，它在所有配置中被收集，并应用在主题配置的其余部分之上。
 
-Learn more about how the `theme` option works in the [theme configuration documentation](/docs/theme).
+<!-- Learn more about how the `theme` option works in the [theme configuration documentation](/docs/theme). -->
+在 [主题配置文档](/docs/theme) 中了解更多关于 `theme` 选项如何工作的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
-The `variants` object is merged shallowly just like the `theme` object, with top-level keys replacing the same top-level keys in any presets. The `extend` key is the only exception, and is collected across all configurations, just like with `theme`.
+<!-- The `variants` object is merged shallowly just like the `theme` object, with top-level keys replacing the same top-level keys in any presets. The `extend` key is the only exception, and is collected across all configurations, just like with `theme`. -->
+`variants` 对象和 `theme` 对象一样，是浅合并的，用顶层键替换任何预设中的相同顶层键。`extend` 键是唯一的例外，和 `theme` 一样，在所有配置中收集。
 
-Learn more about how the `variants` option works in the [variants configuration documentation](/docs/configuring-variants).
+<!-- Learn more about how the `variants` option works in the [variants configuration documentation](/docs/configuring-variants). -->
+在 [variants 配置文档](/docs/configuring-variants) 中了解更多关于 `variants` 选项如何工作的内容。
 
-### Presets
+<!-- ### Presets -->
+### 预设
 
-The `presets` array is merged across configurations, allowing presets to include their own presets, which can also include their own presets.
+<!-- The `presets` array is merged across configurations, allowing presets to include their own presets, which can also include their own presets. -->
+`presets` 数组是跨配置合并的，允许预设引入自己的预设，被引入的预设也可以引入自己的预设。
 
-### Plugins
+<!-- ### Plugins -->
+### 插件
 
-The `plugins` array is merged across configurations to make it possible for a preset to register plugins while also allowing you to add additional plugins at the project-level.
+<!-- The `plugins` array is merged across configurations to make it possible for a preset to register plugins while also allowing you to add additional plugins at the project-level. -->
+`plugins` 数组在不同的配置中被合并，使预设可以注册插件，同时也允许你添加额外的项目级插件。
 
-This means it's not possible to disable a plugin that has been added by a preset. If you find yourself wanting to disable a plugin in a preset, it's a sign that you should probably remove that plugin from the preset and include it on a project-by-project basis instead, or [split your preset into two presets](#extending-multiple-presets).
+<!-- This means it's not possible to disable a plugin that has been added by a preset. If you find yourself wanting to disable a plugin in a preset, it's a sign that you should probably remove that plugin from the preset and include it on a project-by-project basis instead, or [split your preset into two presets](#extending-multiple-presets). -->
+这意味着不可能禁用一个预设所添加的插件。如果你发现自己想要禁用预设中的某个插件，这说明你可能应该将该插件从预设中移除，并逐个项目地将其引用，或者 [把预设拆分为两个](#extending-multiple-presets)。
 
-### Core plugins
+<!-- ### Core plugins -->
+### 核心插件
 
-The `corePlugins` option behaves differently depending on whether you configure it as an object or as an array.
+<!-- The `corePlugins` option behaves differently depending on whether you configure it as an object or as an array. -->
+`corePlugins` 选项根据你是将其配置为对象还是数组而表现不同。
 
-If you configure `corePlugins` as an object, it is merged across configurations.
+<!-- If you configure `corePlugins` as an object, it is merged across configurations. -->
+如果你把 `corePlugins` 配置为一个对象，那么它就会被跨配置合并。
 
 ```js
 // ./example-preset.js
@@ -184,7 +212,8 @@ module.exports = {
 }
 ```
 
-If you configure `corePlugins` as an array, it replaces any `corePlugins` configuration provided by your configured preset(s).
+<!-- If you configure `corePlugins` as an array, it replaces any `corePlugins` configuration provided by your configured preset(s). -->
+如果你把 `corePlugins` 配置为一个数组，它就会取代你配置的预设所提供的任何 `corePlugins` 配置。
 
 ```js
 // ./example-preset.js
@@ -207,9 +236,11 @@ module.exports = {
 
 ---
 
-## Extending multiple presets
+<!-- ## Extending multiple presets -->
+## 扩展多个预设
 
-The `presets` option is an array and can accept multiple presets. This is useful if you want to split your reusable customizations up into composable chunks that can be imported independently.
+<!-- The `presets` option is an array and can accept multiple presets. This is useful if you want to split your reusable customizations up into composable chunks that can be imported independently. -->
+`presets` 选项是一个数组，可以接受多个预设。如果你想把你的可重复使用的定制拆分成可以独立导入的组合块，这很有用。
 
 ```js
 // tailwind.config.js
@@ -222,9 +253,11 @@ module.exports = {
 }
 ```
 
-When adding multiple presets, it's important to note that if they overlap in any way, they are resolved the same way your own customizations are resolved against a preset, and the last configuration wins.
+<!-- When adding multiple presets, it's important to note that if they overlap in any way, they are resolved the same way your own customizations are resolved against a preset, and the last configuration wins. -->
+在添加多个预设时，需要注意的是，如果它们以任何方式重叠，它们的解析方式和你自己的自定义与预设的解析方式是一样的，最后的配置获胜。
 
-For example, if both of these configurations provided a custom color palette (and were not using `extend`), the color palette from `configuration-b` would be used:
+<!-- For example, if both of these configurations provided a custom color palette (and were not using `extend`), the color palette from `configuration-b` would be used: -->
+例如，如果这两个配置都提供了一个自定义调色板（并且没有使用 `extend`），则会使用 `configuration-b` 的调色板。
 
 ```js
 // tailwind.config.js
@@ -238,9 +271,11 @@ module.exports = {
 
 ---
 
-## Disabling the default configuration
+<!-- ## Disabling the default configuration -->
+## 禁用默认配置
 
-If you'd like to completely disable the default configuration and start with no base configuration at all, set `presets` to an empty array:
+<!-- If you'd like to completely disable the default configuration and start with no base configuration at all, set `presets` to an empty array: -->
+如果你想完全禁用默认配置并且不使用任何基础配置，请将 `presets` 设置为一个空数组。
 
 ```js
 // tailwind.config.js
@@ -250,9 +285,11 @@ module.exports = {
 }
 ```
 
-This will completely disable all of Tailwind's defaults, so no colors, font families, font sizes, spacing values, etc. will be generated at all.
+<!-- This will completely disable all of Tailwind's defaults, so no colors, font families, font sizes, spacing values, etc. will be generated at all. -->
+这将完全禁用所有 Tailwind 的默认设置，因此根本不会生成颜色、字体系列、字体大小、间距值等。
 
-You can also do this from within a preset if you'd like your preset to provide a complete design system on its own that doesn't extend Tailwind's defaults:
+<!-- You can also do this from within a preset if you'd like your preset to provide a complete design system on its own that doesn't extend Tailwind's defaults: -->
+如果你想让你的预设提供一个完整的设计系统，而不是扩展 Tailwind 的默认值，你也可以在预设中这样做。
 
 ```js
 // ./example-preset.js
