@@ -1,12 +1,12 @@
 import { createPageList } from '@/utils/createPageList'
 
 const pages = createPageList(
-  require.context(`../pages/docs/?meta=title,shortTitle,published`, false, /\.mdx$/),
-  'docs'
+    require.context(`../pages/docs/?meta=title,shortTitle,published`, false, /\.mdx$/),
+    'docs'
 )
 
 export const documentationNav = {
-  '快速入门': [
+  'Getting started': [
     pages['installation'],
     {
       title: 'Release Notes',
@@ -18,7 +18,7 @@ export const documentationNav = {
     pages['browser-support'],
     pages['intellisense'],
   ],
-  '核心概念': [
+  'Core Concepts': [
     pages['utility-first'],
     pages['responsive-design'],
     pages['hover-focus-and-other-states'],
@@ -28,7 +28,7 @@ export const documentationNav = {
     pages['adding-new-utilities'],
     pages['functions-and-directives'],
   ],
-  '定制': [
+  Customization: [
     pages['configuration'],
     pages['theme'],
     pages['breakpoints'],
@@ -38,8 +38,8 @@ export const documentationNav = {
     pages['plugins'],
     pages['presets'],
   ],
-  '基础样式': [pages['preflight']],
-  '布局': [
+  'Base Styles': [pages['preflight']],
+  Layout: [
     pages['container'],
     pages['box-sizing'],
     pages['display'],
@@ -83,8 +83,8 @@ export const documentationNav = {
     pages['place-items'],
     pages['place-self'],
   ],
-  '间距': [pages['padding'], pages['margin'], pages['space']],
-  '尺寸': [
+  Spacing: [pages['padding'], pages['margin'], pages['space']],
+  Sizing: [
     pages['width'],
     pages['min-width'],
     pages['max-width'],
@@ -92,7 +92,7 @@ export const documentationNav = {
     pages['min-height'],
     pages['max-height'],
   ],
-  '排版': [
+  Typography: [
     pages['font-family'],
     pages['font-size'],
     pages['font-smoothing'],
@@ -115,7 +115,7 @@ export const documentationNav = {
     pages['whitespace'],
     pages['word-break'],
   ],
-  '背景': [
+  Backgrounds: [
     pages['background-attachment'],
     pages['background-clip'],
     pages['background-color'],
@@ -126,7 +126,7 @@ export const documentationNav = {
     pages['background-image'],
     pages['gradient-color-stops'],
   ],
-  '边框': [
+  Borders: [
     pages['border-radius'],
     pages['border-width'],
     pages['border-color'],
@@ -143,7 +143,7 @@ export const documentationNav = {
     pages['ring-offset-color'],
   ],
   Effects: [pages['box-shadow'], pages['opacity']],
-  '表格': [pages['border-collapse'], pages['table-layout']],
+  Tables: [pages['border-collapse'], pages['table-layout']],
   'Transitions and Animation': [
     pages['transition-property'],
     pages['transition-duration'],
