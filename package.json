@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export -o docs && echo 'docs.tailwindchina.com' > docs/CNAME && echo '' > docs/_next/.nojekyll",
+    "export": "next build && next export -o docs && echo 'docs.tailwindchina.com' > docs/CNAME && echo '' > docs/.nojekyll && echo '' > docs/_next/.nojekyll",
     "format": "prettier '{src,remark,scripts}/**/*.{css,js,mdx}' --write"
   },
   "browserslist": [
