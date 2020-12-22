@@ -1,6 +1,6 @@
 ---
 title: "Clear"
-description: "Utilities for controlling the wrapping of content around an element."
+description: "清除元素周围内容的浮动"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/clear'
@@ -11,7 +11,8 @@ export const classes = { plugin }
 
 ## Clear left
 
-Use `clear-left` to position an element below any preceding left-floated elements.
+<!-- Use `clear-left` to position an element below any preceding left-floated elements. -->
+用 `clear-left` 将元素放置在任何先前的左浮动元素的下方。
 
 ```html fuchsia
 <template preview>
@@ -27,7 +28,8 @@ Use `clear-left` to position an element below any preceding left-floated element
 
 ## Clear right
 
-Use `clear-right` to position an element below any preceding right-floated elements.
+<!-- Use `clear-right` to position an element below any preceding right-floated elements. -->
+用 `clear-right` 将元素放置在任何先前的右浮动元素下方。
 
 ```html lightBlue
 <template preview>
@@ -43,7 +45,8 @@ Use `clear-right` to position an element below any preceding right-floated eleme
 
 ## Clear both
 
-Use `clear-both` to position an element below all preceding floated elements.
+<!-- Use `clear-both` to position an element below all preceding floated elements. -->
+用 `clear-both` 将元素放置在所有之前的浮动元素下方。
 
 ```html emerald
 <template preview>
@@ -59,7 +62,8 @@ Use `clear-both` to position an element below all preceding floated elements.
 
 ## Don't clear
 
-Use `clear-none` to reset any clears that are applied to an element. This is the default value for the clear property.
+<!-- Use `clear-none` to reset any clears that are applied to an element. This is the default value for the clear property. -->
+使用 `clear-none` 重置应用到元素上的任何清除浮动的行为。这是 clear 属性的默认值。
 
 ```html amber
 <template preview>
@@ -73,9 +77,10 @@ Use `clear-none` to reset any clears that are applied to an element. This is the
 <p class="**clear-none** ...">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
 ```
 
-## Responsive
+## 响应式
 
-To control the clear property of an element at a specific breakpoint, add a `{screen}:` prefix to any existing clear utility. For example, use `md:clear-left` to apply the `clear-left` utility at only medium screen sizes and above.
+<!-- To control the clear property of an element at a specific breakpoint, add a `{screen}:` prefix to any existing clear utility. For example, use `md:clear-left` to apply the `clear-left` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的 clear 属性，请将 `{screen}:` 前缀添加到任何现有的 clear 功能类上。例如，使用 `md:clear-left`，用于仅在中等屏幕尺寸及以上的屏幕上应用 `clear-left`。
 
 ```html
 <p class="clear-right **md:clear-left** ...">
@@ -83,14 +88,15 @@ To control the clear property of an element at a specific breakpoint, add a `{sc
 </p>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="clear" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="clear" />
