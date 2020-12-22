@@ -1,1 +1,1 @@
-self.__BUILD_MANIFEST = {__rewrites:[],sortedPages:["\u002F","\u002F_app","\u002F_error","\u002Fdocs"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
+self.__BUILD_MANIFEST = {__rewrites:[],sortedPages:["\u002F_app","\u002F_error","\u002Fdocs\u002Fclear","\u002Fdocs\u002Finstallation"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
