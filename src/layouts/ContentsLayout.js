@@ -29,7 +29,7 @@ function TableOfContents({ tableOfContents, currentSection }) {
   return (
     <>
       <h5 className="text-gray-900 uppercase tracking-wide font-semibold mb-3 text-sm lg:text-xs">
-        On this page
+        本页目录
       </h5>
       <ul className="overflow-x-hidden text-gray-500 font-medium">
         {tableOfContents.map((section) => {
