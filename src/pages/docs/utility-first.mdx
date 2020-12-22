@@ -1,17 +1,20 @@
 ---
-title: Utility-First
-description: Building complex components from a constrained set of primitive utilities.
+title: 功能优先
+description: 在一组受约束的原始功能类的基础上构建复杂的组件。
 ---
 
 import { Heading } from '@/components/Heading'
 import { TipGood, TipBad } from '@/components/Tip'
 import { CodeSample } from '@/components/CodeSample'
 
-## <Heading hidden>Overview</Heading>
+## <Heading hidden>概述</Heading>
 
-Traditionally, whenever you need to style something on the web, you write CSS.
+<!-- Traditionally, whenever you need to style something on the web, you write CSS. -->
+传统情况下，当你需要在网页上设置样式时，都需要编写 CSS。
 
-<TipBad>Using a traditional approach where custom designs require custom CSS</TipBad>
+<TipBad>
+使用传统方式时，定制的设计需要定制的 CSS
+</TipBad>
 
 ```html lightBlue
 <template preview class="px-6 py-12">
@@ -70,9 +73,12 @@ Traditionally, whenever you need to style something on the web, you write CSS.
 </style>
 ```
 
-With Tailwind, you style elements by applying pre-existing classes directly in your HTML.
-
-<TipGood>Using utility classes to build custom designs without writing CSS</TipGood>
+<!-- With Tailwind, you style elements by applying pre-existing classes directly in your HTML. -->
+使用 Tailwind，您可以通过直接在 HTML 中应用预先存在的类来设置元素的样式。
+<TipGood>
+{/* Using utility classes to build custom designs without writing CSS */}
+使用功能类构建自定义设计而无需编写 CSS
+</TipGood>
 
 ```html lightBlue
 <template preview class="px-6 py-12">
@@ -98,40 +104,40 @@ With Tailwind, you style elements by applying pre-existing classes directly in y
 </div>
 ```
 
-In the example above, we've used:
+在上面的示例中，我们使用了：
 
-- Tailwind's [flexbox](/docs/display#flex) and [padding](/docs/padding) utilities (`flex`, `flex-shrink-0`, and `p-6`) to control the overall card layout
-- The [max-width](/docs/max-width) and [margin](/docs/margin) utilities (`max-w-sm` and `mx-auto`) to constrain the card width and center it horizontally
-- The [background color](/docs/background-color), [border radius](/docs/border-radius), and [box-shadow](/docs/box-shadow) utilities (`bg-white`, `rounded-xl`, and `shadow-md`) to style the card's appearance
-- The [width](/docs/width) and [height](/docs/height) utilities (`w-12` and `h-12`) to size the logo image
-- The [space-between](/docs/space) utilities (`space-x-4`) to handle the spacing between the logo and the text
-- The [font size](/docs/font-size), [text color](/docs/text-color), and [font-weight](/docs/font-weight) utilities (`text-xl`, `text-black`, `font-medium`, etc.) to style the card text
+- 使用 Tailwind 的 [flexbox](/docs/display#flex) 和 [padding](/docs/padding) 功能类 (`flex`, `flex-shrink-0`, and `p-6`) 来控制整体的卡片布局
+- 使用 [max-width](/docs/max-width) 和 [margin](/docs/margin) 功能类 (`max-w-sm` and `mx-auto`) 来设置卡片的宽度和水平居中
+- 使用 [background color](/docs/background-color), [border radius](/docs/border-radius), 和 [box-shadow](/docs/box-shadow) 功能类 (`bg-white`, `rounded-xl`, and `shadow-md`) 设置卡片的外观样式
+- 使用 [width](/docs/width) 和 [height](/docs/height) 功能类 (`w-12` and `h-12`) 来设置 logo 图片的大小
+- 使用 [space-between](/docs/space) 功能类 (`space-x-4`) 来处理 logo 和文本之间的间距
+- 使用 [font size](/docs/font-size), [text color](/docs/text-color), 和 [font-weight](/docs/font-weight) 功能类 (`text-xl`, `text-black`, `font-medium`, etc.) 给卡片文字设置样式
 
-This approach allows us to implement a completely custom component design without writing a single line of custom CSS.
+这种方法使我们无需编写一行自定义的CSS即可实现一个完全定制的组件设计。
 
-Now I know what you're thinking, _"this is an atrocity, what a horrible mess!"_ and you're right, it's kind of ugly. In fact it's just about impossible to think this is a good idea the first time you see it — **you have to actually try it**.
+我知道你在想："这太繁琐了，真是一团糟！" 你是对的，这有点丑陋。实际上，当你第一次看到它时，几乎不可能认为这是一个好主意--你必须实际尝试一下。
 
-But once you've actually built something this way, you'll quickly notice some really important benefits:
+但是，一旦你以这种方式实际构建了一些东西，您就会很快注意到一些真正重要的优点：
 
-- **You aren't wasting energy inventing class names**. No more adding silly class names like `sidebar-inner-wrapper` just to be able to style something, and no more agonizing over the perfect abstract name for something that's really just a flex container.
-- **Your CSS stops growing**. Using a traditional approach, your CSS files get bigger every time you add a new feature. With utilities, everything is reusable so you rarely need to write new CSS.
-- **Making changes feels safer**. CSS is global and you never know what you're breaking when you make a change. Classes in your HTML are local, so you can change them without worrying about something else breaking.
+- **你没有为了给类命名而浪费精力**. 不需要仅仅为了设置一些样式而额外添加一些像 `sidebar-inner-wrapper` 这样愚蠢的类名，不必再为了一个 flex 容器的完美抽象命名而倍受折磨。
+- **你的 CSS 停止增长**. 使用传统方法，每次添加新功能时 CSS 文件都会变大。使用功能类，所有内容都是可重用的，因此您几乎不需要编写新的CSS。
+- **更改会更安全**. CSS 是全局性的，你永远不知道当你进行更改时会破坏掉什么。你 HTML 中的类是本地的，因此您可以更改它们而不必担心其他问题。
 
-When you realize how productive you can be working exclusively in HTML with predefined utility classes, working any other way will feel like torture.
+当您意识到在 HTML 中使用预定义的工具类是多么的富有成效时，以任何其他方式工作都感觉像是折磨。
 
 ---
 
-## Why not just use inline styles?
+## 为什么不使用内联样式？
 
-A common reaction to this approach is wondering, "isn't this just inline styles?" and in some ways it is — you're applying styles directly to elements instead of assigning them a class name and then styling that class.
+对这种方式的一个普遍反应是, "这不就是内联样式吗？" 在某些方面是 — 你是将样式直接应用于元素，而不是为元素分配一个类，然后在这个类中设置样式。
 
-But using utility classes has a few important advantages over inline styles:
+但是使用功能类比内联样式具有一些重要的优点：
 
-- **Designing with constraints**. Using inline styles, every value is a magic number. With utilities, you're choosing styles from a predefined [design system](/docs/theme), which makes it much easier to build visually consistent UIs.
-- **Responsive design**. You can't use media queries in inline styles, but you can use Tailwind's [responsive utilities](/docs/responsive-design) to build fully responsive interfaces easily.
-- **Hover, focus, and other states**. Inline styles can't target states like hover or focus, but Tailwind's [state variants](/docs/hover-focus-and-other-states) make it easy to style those states with utility classes.
+- **基于约束的设计**. 使用内联样式, 每个值都是一个魔术数字。 使用功能类, 你是从预定义的[设计系统](/docs/theme)中选择样式，这使得构建统一的UI变得更加容易。
+- **响应式的设计**. 在内联样式中你不能使用媒体查询, 但你可以使用 Tailwind 的 [响应式功能类](/docs/responsive-design) 非常容易的构建完全响应式的界面。
+- **Hover, focus, 以及其它状态**. 内联样式无法设置 hover 或者 focus 这样的状态, 但 Tailwind 的 [状态变体](/docs/hover-focus-and-other-states) 使用功能类可以非常容易的为这些状态设置样式。
 
-This component is fully responsive and includes a button with hover and focus styles, and is built entirely with utility classes:
+该组件完全响应，并包括具有 hover 和 focus 样式的按钮，完全由功能类构建：
 
 ```html purple
 <template preview class="px-6 py-12">
@@ -169,11 +175,11 @@ This component is fully responsive and includes a button with hover and focus st
 
 ---
 
-## Maintainability concerns
+## 可维护性问题
 
-The biggest maintainability concern when using a utility-first approach is managing commonly repeated utility combinations.
+在使用功能优先的方式时，最大的可维护性问题是管理通用的可重复使用的功能类组合。
 
-This is easily solved by [extracting components](/docs/extracting-components), usually as template partials or components.
+通过 [提取组件](/docs/extracting-components)（通常做为模板片断或者组件）， 可以轻松解决此问题。
 
 ```html
 <!-- PrimaryButton.vue -->
@@ -185,6 +191,7 @@ This is easily solved by [extracting components](/docs/extracting-components), u
 ```
 
 You can also use Tailwind's `@apply` feature to create CSS abstractions around common utility patterns.
+你也可以使用 Tailwind 的 `@apply` 功能创建抽象的 CSS 类。
 
 ```html emerald
 <template preview>
@@ -215,9 +222,9 @@ You can also use Tailwind's `@apply` feature to create CSS abstractions around c
 </style>
 ```
 
-Aside from that, maintaining a utility-first CSS project turns out to be a lot easier than maintaining a large CSS codebase, simply because HTML is so much easier to maintain than CSS. Large companies like GitHub, Heroku, Kickstarter, Twitch, Segment, and more are using this approach with great success.
+除此之外，维护功能优先的 CSS 项目比维护大型 CSS 代码库要容易得多，因为 HTML 比 CSS 维护容易得多。诸如 GitHub，Heroku，Kickstarter，Twitch，Segment等大型公司都在使用这种方法，且取得巨大成功。
 
-If you'd like to hear about others' experiences with this approach, check out the following resources:
+如果您想了解其他人使用此方法的经验，请查看以下资源：
 
 - [By The Numbers: A Year and a Half with Atomic CSS](https://medium.com/@johnpolacek/by-the-numbers-a-year-and-half-with-atomic-css-39d75b1263b4) by John Polacek
 - [Building a Scalable CSS Architecture](https://blog.algolia.com/redesigning-our-docs-part-4-building-a-scalable-css-architecture/) by Sarah Dayan of Algolia

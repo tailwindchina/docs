@@ -6,7 +6,7 @@ const pages = createPageList(
 )
 
 export const documentationNav = {
-  'Getting started': [
+  '快速入门': [
     pages['installation'],
     {
       title: 'Release Notes',
@@ -18,7 +18,7 @@ export const documentationNav = {
     pages['browser-support'],
     pages['intellisense'],
   ],
-  'Core Concepts': [
+  '核心概念': [
     pages['utility-first'],
     pages['responsive-design'],
     pages['hover-focus-and-other-states'],
@@ -28,7 +28,7 @@ export const documentationNav = {
     pages['adding-new-utilities'],
     pages['functions-and-directives'],
   ],
-  Customization: [
+  '定制': [
     pages['configuration'],
     pages['theme'],
     pages['breakpoints'],
@@ -38,8 +38,8 @@ export const documentationNav = {
     pages['plugins'],
     pages['presets'],
   ],
-  'Base Styles': [pages['preflight']],
-  Layout: [
+  '基础样式': [pages['preflight']],
+  '布局': [
     pages['container'],
     pages['box-sizing'],
     pages['display'],
@@ -83,8 +83,8 @@ export const documentationNav = {
     pages['place-items'],
     pages['place-self'],
   ],
-  Spacing: [pages['padding'], pages['margin'], pages['space']],
-  Sizing: [
+  '间距': [pages['padding'], pages['margin'], pages['space']],
+  '尺寸': [
     pages['width'],
     pages['min-width'],
     pages['max-width'],
@@ -92,7 +92,7 @@ export const documentationNav = {
     pages['min-height'],
     pages['max-height'],
   ],
-  Typography: [
+  '排版': [
     pages['font-family'],
     pages['font-size'],
     pages['font-smoothing'],
@@ -115,7 +115,7 @@ export const documentationNav = {
     pages['whitespace'],
     pages['word-break'],
   ],
-  Backgrounds: [
+  '背景': [
     pages['background-attachment'],
     pages['background-clip'],
     pages['background-color'],
@@ -126,7 +126,7 @@ export const documentationNav = {
     pages['background-image'],
     pages['gradient-color-stops'],
   ],
-  Borders: [
+  '边框': [
     pages['border-radius'],
     pages['border-width'],
     pages['border-color'],
@@ -143,7 +143,7 @@ export const documentationNav = {
     pages['ring-offset-color'],
   ],
   Effects: [pages['box-shadow'], pages['opacity']],
-  Tables: [pages['border-collapse'], pages['table-layout']],
+  '表格': [pages['border-collapse'], pages['table-layout']],
   'Transitions and Animation': [
     pages['transition-property'],
     pages['transition-duration'],

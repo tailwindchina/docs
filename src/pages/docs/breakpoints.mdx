@@ -1,15 +1,17 @@
 ---
-title: Breakpoints
-description: Customizing the default breakpoints for your project.
+title: 断点
+description: 自定义项目的默认断点。
 ---
 
 import { Heading } from '@/components/Heading'
 
-## <Heading hidden>Basic customization</Heading>
+## <Heading hidden>基础的定制</Heading>
 
-You define your project's breakpoints in the `theme.screens` section of your `tailwind.config.js` file. The keys are your screen names (used as the prefix for the responsive utility variants Tailwind generates, like `md:text-center`), and the values are the `min-width` where that breakpoint should start.
+<!-- You define your project's breakpoints in the `theme.screens` section of your `tailwind.config.js` file. The keys are your screen names (used as the prefix for the responsive utility variants Tailwind generates, like `md:text-center`), and the values are the `min-width` where that breakpoint should start. -->
+你的 `tailwind.config.js` 文件的 `theme.screens` 部分定义你项目的断点。键是您的屏幕名称（用于 Tailwind 生成的响应工具类变体的前缀，如`md:text-center`），值是 `min-width`，该断点应该开始的地方。
 
-The default breakpoints are inspired by common device resolutions:
+<!-- The default breakpoints are inspired by common device resolutions: -->
+默认断点的设置来自于常见的设备分辨率。
 
 ```js
 // tailwind.config.js
@@ -35,9 +37,11 @@ module.exports = {
 }
 ```
 
-Feel free to have as few or as many screens as you want, naming them in whatever way you'd prefer for your project.
+<!-- Feel free to have as few or as many screens as you want, naming them in whatever way you'd prefer for your project. -->
+你可以自由地拥有你想要的多的屏幕，以任何你喜欢的方式为他们命名。
 
-For example, you could use device names instead of sizes:
+<!-- For example, you could use device names instead of sizes: -->
+例如，你可以使用设备名称代替尺寸。
 
 ```js
 // tailwind.config.js
@@ -57,7 +61,8 @@ module.exports = {
 }
 ```
 
-These screen names will be reflected in your utilities, so your `text-center` utilities would now look like this:
+<!-- These screen names will be reflected in your utilities, so your `text-center` utilities would now look like this: -->
+这些屏幕名称将反映在你的功能类中，所以你的 `text-center` 功能类现在看起来像这样：
 
 ```css
 .text-center { text-align: center }
@@ -75,9 +80,10 @@ These screen names will be reflected in your utilities, so your `text-center` ut
 }
 ```
 
-## Max-width breakpoints
+## 最大宽度断点
 
-If you want to work with max-width breakpoints instead of min-width, you can specify your screens as objects with a `max` key:
+<!-- If you want to work with max-width breakpoints instead of min-width, you can specify your screens as objects with a `max` key: -->
+如果你想使用最大宽度断点而不是最小宽度断点，你可以指定你的屏幕为具有 `max` 键的对象。
 
 ```js
 // tailwind.config.js
@@ -103,9 +109,11 @@ module.exports = {
 }
 ```
 
-Make sure to list them in reverse order as compared to min-width breakpoints so that they override each other as expected.
+<!-- Make sure to list them in reverse order as compared to min-width breakpoints so that they override each other as expected. -->
+与最小宽度断点相比，确保以相反的顺序列出它们，以便它们按照预期的方式相互覆盖。
 
-You can even create breakpoints with both `min-width` and `max-width` definitions if necessary, for example:
+<!-- You can even create breakpoints with both `min-width` and `max-width` definitions if necessary, for example: -->
+例如，如果有必要，你甚至可以同时用 `min-width` 和 `max-width` 定义创建断点。
 
 ```js
 // tailwind.config.js
@@ -122,11 +130,13 @@ module.exports = {
 }
 ```
 
-## Multi-range breakpoints
+## 多范围断点
 
-Sometimes it can be useful to have a single breakpoint definition apply in multiple ranges.
+<!-- Sometimes it can be useful to have a single breakpoint definition apply in multiple ranges. -->
+有时，一个断点定义适用于多个范围可能很有用。
 
-For example, say you have a sidebar and want your breakpoints to be based on the content-area width rather than the entire viewport. You can simulate this having one of your breakpoints fall back to a smaller breakpoint when the sidebar becomes visible and shrinks the content area:
+<!-- For example, say you have a sidebar and want your breakpoints to be based on the content-area width rather than the entire viewport. You can simulate this having one of your breakpoints fall back to a smaller breakpoint when the sidebar becomes visible and shrinks the content area: -->
+例如，假设你有一个侧边栏，并希望你的断点是基于内容区域的宽度，而不是整个视口。您可以模拟这种情况，当侧边栏变得可见并缩小内容区域时，您的一个断点会回到一个较小的断点。
 
 ```js
 // tailwind.config.js
@@ -148,9 +158,10 @@ module.exports = {
 }
 ```
 
-## Custom media queries
+## 自定义媒体查询
 
-If you need to provide a completely custom media query for a breakpoint, you can do so using an object with a `raw` key:
+<!-- If you need to provide a completely custom media query for a breakpoint, you can do so using an object with a `raw` key: -->
+如果你需要为断点提供一个完全自定义的媒体查询，你可以使用一个带有 `raw` 键的对象来实现。
 
 ```js
 // tailwind.config.js
@@ -166,11 +177,13 @@ module.exports = {
 }
 ```
 
-### Styling for print
+### 为打印设置风格
 
-The `raw` option can be particularly useful if you need to apply different styles specifically for print.
+<!-- The `raw` option can be particularly useful if you need to apply different styles specifically for print. -->
+如果你需要专门为打印应用不同的风格，`raw` 选项可能特别有用。
 
-All you need to do is add a `print` screen under `theme.extend.screens`:
+<!-- All you need to do is add a `print` screen under `theme.extend.screens`: -->
+你需要做的就是在 `theme.extend.screens` 下添加一个 `print` 屏幕：
 
 ```js
 // tailwind.config.js
@@ -186,7 +199,8 @@ module.exports = {
 }
 ```
 
-Then you can use classes like `print:text-black` to specify styles that should only be applied when someone tries to print the page you're working on:
+<!-- Then you can use classes like `print:text-black` to specify styles that should only be applied when someone tries to print the page you're working on: -->
+然后，你可以使用像 `print:text-black` 这样的类来指定只有当有人试图打印你正在处理的页面时才会应用的样式：
 
 ```html
 <div class="text-gray-700 print:text-black">

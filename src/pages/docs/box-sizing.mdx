@@ -1,6 +1,6 @@
 ---
 title: "Box Sizing"
-description: "Utilities for controlling how the browser should calculate an element's total size."
+description: "控制浏览器如何计算元素的总大小的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/boxSizing'
@@ -9,13 +9,17 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Include borders and padding
+<!-- ## Include borders and padding -->
+## 包括边框和内边距
 
-Use `box-border` to set an element's `box-sizing` to `border-box`, telling the browser to include the element's borders and padding when you give it a height or width.
+<!-- Use `box-border` to set an element's `box-sizing` to `border-box`, telling the browser to include the element's borders and padding when you give it a height or width. -->
+使用 `box-border` 将元素的 `box-sizing` 设置为 `border-box`，告诉浏览器，当你给它一个高度或宽度时，它将包括元素的边框和内边距。
 
-This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will be rendered as 100px &times; 100px, with an internal content area of 88px &times; 88px.
+<!-- This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will be rendered as 100px &times; 100px, with an internal content area of 88px &times; 88px. -->
+这意味着一个 100px &times; 100px 的元素，边框为 2px，四边有 4px 的内边距，将渲染为 100px &times; 100px，内部内容区域为 88px &times; 88px。
 
-Tailwind makes this the default for all elements in our [preflight base styles](/docs/preflight).
+<!-- Tailwind makes this the default for all elements in our [preflight base styles](/docs/preflight). -->
+Tailwind 在 [preflight基础样式](/docs/preflight) 中针对所有元素把这做为默认设置。
 
 ```html lightBlue
 <template preview>
@@ -31,11 +35,14 @@ Tailwind makes this the default for all elements in our [preflight base styles](
 </div>
 ```
 
-## Exclude borders and padding
+<!-- ## Exclude borders and padding -->
+## 不包括边框和内边距
 
-Use `box-content` to set an element's `box-sizing` to `content-box`, telling the browser to add borders and padding on top of the element's specified width or height.
+<!-- Use `box-content` to set an element's `box-sizing` to `content-box`, telling the browser to add borders and padding on top of the element's specified width or height. -->
+使用 `box-content` 将元素的 `box-sizing` 设置为 `content-box`，告诉浏览器在元素的指定宽度或高度的基础上添加边框和内边距。
 
-This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will actually be rendered as 112px &times; 112px, with an internal content area of 100px &times; 100px.
+<!-- This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will actually be rendered as 112px &times; 112px, with an internal content area of 100px &times; 100px. -->
+这意味着一个 100px &times; 100px 的元素，如果有 2px 的边框，四边有 4px 的内边距，实际上会渲染为 112px &times; 112px，内部内容区域为 100px &times; 100px。
 
 ```html emerald
 <template preview>
@@ -51,9 +58,11 @@ This means a 100px &times; 100px element with a 2px border and 4px of padding on
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the box-sizing at a specific breakpoint, add a `{screen}:` prefix to any existing box-sizing utility. For example, use `md:box-content` to apply the `box-content` utility at only medium screen sizes and above.
+<!-- To control the box-sizing at a specific breakpoint, add a `{screen}:` prefix to any existing box-sizing utility. For example, use `md:box-content` to apply the `box-content` utility at only medium screen sizes and above. -->
+要控制特定断点处的 box-sizing，可为任何现有的 box-sizing 功能类添加 `{screen}:` 前缀。例如，使用 `md:box-content` 只给中等以上的屏幕尺寸应用 `box-content` 功能类。
 
 ```html
 <div class="box-border **md:box-content** ...">
@@ -61,14 +70,15 @@ To control the box-sizing at a specific breakpoint, add a `{screen}:` prefix to 
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="boxSizing" name="box-sizing" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="boxSizing" name="box-sizing" />

@@ -21,28 +21,40 @@ function Logo({ title, component: Component }) {
 export default function Resources() {
   return (
     <div className="px-4 sm:px-6 md:px-8 pt-10 pb-16">
-      <h1 className="text-3xl text-gray-900 font-extrabold mb-4">Resources</h1>
+      <h1 className="text-3xl text-gray-900 font-extrabold mb-4">资源</h1>
       <div className="max-w-3xl">
         <div className="text-lg mb-5 space-y-5">
+          {/*<p>*/}
+          {/*  We think Tailwind is an amazing CSS framework, but you need more than just a CSS*/}
+          {/*  framework to produce visually awesome work.*/}
+          {/*</p>*/}
           <p>
-            We think Tailwind is an amazing CSS framework, but you need more than just a CSS
-            framework to produce visually awesome work.
+            我们认为 Tailwind 是一个了不起的 CSS 框架，但你需要的不仅仅是一个生产优秀的视觉产品的 CSS 框架。
           </p>
           <p>
-            Here are some resources that can help you take your Tailwind projects to the next level.
+            {/*Here are some resources that can help you take your Tailwind projects to the next level.*/}
+            这里有一些资源，可以帮助你把你的 Tailwind 项目提升到一个新的水平。
           </p>
         </div>
+        {/*<p>*/}
+        {/*  For Tailwind CSS brand assets and usage guidelines, please visit our{' '}*/}
+        {/*  <Link href="/brand">*/}
+        {/*    <a className="text-cyan-700 font-medium shadow-link">Brand page</a>*/}
+        {/*  </Link>*/}
+        {/*  .*/}
+        {/*</p>*/}
         <p>
-          For Tailwind CSS brand assets and usage guidelines, please visit our{' '}
+          关于 Tailwind CSS 品牌资产和使用指南，请访问{' '}
           <Link href="/brand">
-            <a className="text-cyan-700 font-medium shadow-link">Brand page</a>
+            <a className="text-cyan-700 font-medium shadow-link">品牌页面</a>
           </Link>
           .
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-8 md:gap-6 xl:gap-8 my-8 sm:my-12">
         <section>
-          <h2 className="text-xl text-gray-900 font-bold mb-4">Learn UI Design</h2>
+          {/*<h2 className="text-xl text-gray-900 font-bold mb-4">Learn UI Design</h2>*/}
+          <h2 className="text-xl text-gray-900 font-bold mb-4">学习 UI 设计</h2>
           <a
             href="https://refactoringui.com/book"
             className="h-40 sm:h-56 xl:h-64 bg-gray-900 bg-cover rounded-3xl mb-6 flex items-center justify-center"
@@ -54,18 +66,21 @@ export default function Resources() {
           </a>
           <div className="space-y-5">
             <p>
-              Refactoring UI is a design-for-developers book + video series put together by Adam
-              Wathan and Steve Schoger. It covers literally everything we know about making things
-              look awesome.
+              {/*Refactoring UI is a design-for-developers book + video series put together by Adam*/}
+              {/*Wathan and Steve Schoger. It covers literally everything we know about making things*/}
+              {/*look awesome.*/}
+              Refactoring UI 是由 Adam Wathan 和 Steve Schoger 共同编写的《面向开发者的设计》一书+视频系列。它几乎涵盖了我们所知道的关于设计优秀作品一切。
             </p>
             <p>
-              Almost 10,000 people have picked it up so far and have all sorts of awesome things to
-              say about how it helped them improve their work.
+              {/*Almost 10,000 people have picked it up so far and have all sorts of awesome things to*/}
+              {/*say about how it helped them improve their work.*/}
+              到目前为止，已经有近一万人选择了它，并对它如何帮助他们改进工作大加赞美。
             </p>
           </div>
         </section>
         <section>
-          <h2 className="text-xl text-gray-900 font-bold mb-4">Official Tailwind CSS Components</h2>
+          {/*<h2 className="text-xl text-gray-900 font-bold mb-4">Official Tailwind CSS Components</h2>*/}
+          <h2 className="text-xl text-gray-900 font-bold mb-4">Tailwind CSS 官方组件</h2>
           <a
             href="https://tailwindui.com/"
             className="h-40 sm:h-56 xl:h-64 bg-gray-300 rounded-3xl mb-6 overflow-hidden flex"
@@ -83,12 +98,14 @@ export default function Resources() {
           </a>
           <div className="space-y-5">
             <p>
-              Tailwind UI is a collection of professionally designed, pre-built, fully responsive
-              HTML snippets you can drop into your Tailwind projects.
+              {/*Tailwind UI is a collection of professionally designed, pre-built, fully responsive*/}
+              {/*HTML snippets you can drop into your Tailwind projects.*/}
+              Tailwind UI 是一个专业设计的、预建的、完全响应的HTML片段的精选，您可以把它应用到您的 Tailwind 项目中。
             </p>
             <p>
-              There are currently over 350 components available in two different categories
-              (Marketing and Application UI) and we’re always adding more.
+              {/*There are currently over 350 components available in two different categories*/}
+              {/*(Marketing and Application UI) and we’re always adding more.*/}
+              目前在两个不同的类别（营销和应用 UI）有超过 350 个组件可以使用，并且我们一直在增加更多的组件。
             </p>
           </div>
         </section>
@@ -155,7 +172,7 @@ export default function Resources() {
       </div>
       <section>
         <h2 className="text-2xl tracking-tight font-extrabold text-gray-900 mt-10 mb-8">
-          Get involved
+          参与讨论
         </h2>
         <Community />
       </section>
@@ -165,7 +182,7 @@ export default function Resources() {
 
 Resources.layoutProps = {
   meta: {
-    title: 'Resources',
+    title: '资源',
   },
   Layout: DocumentationLayout,
 }

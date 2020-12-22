@@ -1,18 +1,20 @@
 ---
-title: Responsive Design
-description: Using responsive utility variants to build adaptive user interfaces.
+title: 响应式设计
+description: 使用响应式功能变体构建自适应的用户界面。
 ---
 
 import { Heading } from '@/components/Heading'
 import { TipGood, TipBad } from '@/components/Tip'
 
-## <Heading hidden>Overview</Heading>
+## <Heading hidden>概述</Heading>
 
-Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a piece of cake to build complex responsive interfaces without ever leaving your HTML.
+<!-- Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a piece of cake to build complex responsive interfaces without ever leaving your HTML. -->
+Tailwind 中的每个功能类都可以有条件的应用于不同的断点，这使得你可以轻松的构建复杂的响应式界面而不用离开 HTML。
 
-There are five breakpoints by default, inspired by common device resolutions:
+<!-- There are five breakpoints by default, inspired by common device resolutions: -->
+根据常用的设置分辨率方案，默认内置了 5 个断点：
 
-| Breakpoint prefix | Minimum width | CSS |
+| 断点前缀 | 最小宽度 | CSS |
 | --- | --- | --- |
 | `sm` | 640px | `@media (min-width: 640px) { ... }` |
 | `md` | 768px | `@media (min-width: 768px) { ... }` |
@@ -20,16 +22,19 @@ There are five breakpoints by default, inspired by common device resolutions:
 | `xl` | 1280px | `@media (min-width: 1280px) { ... }` |
 | `2xl` | 1536px | `@media (min-width: 1536px) { ... }` |
 
-To add a utility but only have it take effect at a certain breakpoint, all you need to do is prefix the utility with the breakpoint name, followed by the `:` character:
+<!-- To add a utility but only have it take effect at a certain breakpoint, all you need to do is prefix the utility with the breakpoint name, followed by the `:` character: -->
+要添加一个仅在特定断点生效的工具类，只需要在该功能类前加上断点名称，后面跟 `:` 字符。
 
 ```html
 <!-- Width of 16 by default, 32 on medium screens, and 48 on large screens -->
 <img class="w-16 **md:w-32** **lg:w-48**" src="...">
 ```
 
-This works for **every utility class in the framework**, which means you can change literally anything at a given breakpoint — even things like letter spacing or cursor styles.
+<!-- This works for **every utility class in the framework**, which means you can change literally anything at a given breakpoint — even things like letter spacing or cursor styles. -->
+这适用于**框架中的每一个功能类**，这意味着你可以在给定的断点更改任何东西，甚至包括字符间距和光标样式之类的内容。
 
-Here's a simple example of a marketing page component that uses a stacked layout on small screens, and a side-by-side layout on larger screens *(resize your browser to see it in action)*:
+<!-- Here's a simple example of a marketing page component that uses a stacked layout on small screens, and a side-by-side layout on larger screens *(resize your browser to see it in action)*: -->
+这是一个简单的营销页面组件的示例，该组件在小屏上使用堆叠式布局，在大屏上使用并排布局。*(调整浏览器大小以查看实际效果)*：
 
 ```html indigo
 <template preview class="px-6 py-8">
@@ -61,49 +66,63 @@ Here's a simple example of a marketing page component that uses a stacked layout
 </div>
 ```
 
-Here's how the example above works:
+<!-- Here's how the example above works: -->
+我们看一下上面的示例是如何工作的：
 
-- By default, the outer `div` is `display: block`, but by adding the `md:flex` utility, it becomes `display: flex` on medium screens and larger.
-- When the parent is a flex container, we want to make sure the image never shrinks, so we've added `md:flex-shrink-0` to prevent shrinking on medium screens and larger. Technically we could have just used `flex-shrink-0` since it would do nothing on smaller screens, but since it only matters on `md` screens, it's a good idea to make that clear in the class name.
-- On small screens the image is automatically full width by default. On medium screens and up, we've constrained that width to a fixed size using `md:w-48`.
+<!-- - By default, the outer `div` is `display: block`, but by adding the `md:flex` utility, it becomes `display: flex` on medium screens and larger. -->
+- 默认情况下，外部 `div` 采用了 `display: block`，但是通过添加 `md:flex` 功能类，它在中等及以上屏幕会应用 `display: flex` 样式。
+<!-- - When the parent is a flex container, we want to make sure the image never shrinks, so we've added `md:flex-shrink-0` to prevent shrinking on medium screens and larger. Technically we could have just used `flex-shrink-0` since it would do nothing on smaller screens, but since it only matters on `md` screens, it's a good idea to make that clear in the class name. -->
+- 当父级元素是一个 flex 容器时，我们想确保图片不会缩小，因此我们添加了 `md:flex-shrink-0`，以防止在中型和更大尺寸的屏幕上缩小。 从技术上讲，我们本可以使用 `flex-shrink-0`，因为它在较小的屏幕上什么也不做，但是由于只和 `md` 屏幕有关, 因此最好在类名中注明。
+<!-- - On small screens the image is automatically full width by default. On medium screens and up, we've constrained that width to a fixed size using `md:w-48`. -->
+默认情况下在小屏幕上图片会自动设置为全屏宽度。在中等及以上屏幕，我们限制他的宽度为一个固定的大小 `md:w-48`。
 
-We've only used one breakpoint in this example, but you could easily customize this component at other sizes using the `sm`, `lg`, or `xl` responsive prefixes as well.
+<!-- We've only used one breakpoint in this example, but you could easily customize this component at other sizes using the `sm`, `lg`, or `xl` responsive prefixes as well. -->
+在这个示例中，我们仅使用了一个断点，但是你也可以非常容易的使用其它 `sm`, `lg`, 或者 `xl`等响应式前缀来定制这个组件。
 
 ---
 
-## Mobile First
+## 移动优先
 
-By default, Tailwind uses a mobile first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap.
+<!-- By default, Tailwind uses a mobile first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap. -->
+默认情况下，Tailwind 使用移动优先的断点系统，类似于 Bootstrap 这些其它框架中的用法。
 
-What this means is that unprefixed utilities (like `uppercase`) take effect on all screen sizes, while prefixed utilities (like `md:uppercase`) only take effect at the specified breakpoint *and above*.
+<!-- What this means is that unprefixed utilities (like `uppercase`) take effect on all screen sizes, while prefixed utilities (like `md:uppercase`) only take effect at the specified breakpoint *and above*. -->
+这意味着未加前缀的功能类 (像 `uppercase`) 在所有的屏幕上都有效，而加了前缀的功能类（如 `md:uppercase`）仅在指定断点及以上的屏幕上生效。
 
-### Targeting mobile screens
+### 定位手机屏幕
 
-Where this approach surprises people most often is that to style something for mobile, you need to use the unprefixed version of a utility, not the `sm:` prefixed version. Don't think of `sm:` as meaning "on small screens", think of it as "at the small *breakpoint*".
+<!-- Where this approach surprises people most often is that to style something for mobile, you need to use the unprefixed version of a utility, not the `sm:` prefixed version. Don't think of `sm:` as meaning "on small screens", think of it as "at the small *breakpoint*". -->
+这种方式最令人们惊讶的地方是，要为移动设备设计样式，您需要使用无前缀的功能类，而不是带 `sm:` 前缀的版本。不要将 `sm:` 理解为"在小屏幕上"，而应将其视为"在小*断点*处"。
 
-<TipBad>Don't use <code className="text-sm font-bold text-gray-800">sm:</code> to target mobile devices</TipBad>
+<!-- <TipBad>Don't use <code className="text-sm font-bold text-gray-800">sm:</code> to target mobile devices</TipBad> -->
+<TipBad>不要使用 <code className="text-sm font-bold text-gray-800">sm:</code> 来定位移动设备</TipBad>
 
 ```html
 <!-- This will only center text on screens 640px and wider, not on small screens -->
 <div class="sm:text-center"></div>
 ```
 
-<TipGood>Use unprefixed utilities to target mobile, and override them at larger breakpoints</TipGood>
+<!-- <TipGood>Use unprefixed utilities to target mobile, and override them at larger breakpoints</TipGood> -->
+<TipGood>使用无前缀的功能类来定位移动设备，并在较大的断点处覆盖它们</TipGood>
 
 ```html
 <!-- This will center text on mobile, and left align it on screens 640px and wider -->
 <div class="text-center sm:text-left"></div>
 ```
 
-For this reason, it's often a good idea to implement the mobile layout for a design first, then layer on any changes that make sense for `sm` screens, followed by `md` screens, etc.
+<!-- For this reason, it's often a good idea to implement the mobile layout for a design first, then layer on any changes that make sense for `sm` screens, followed by `md` screens, etc. -->
+因此，通常最好先为移动设备设计布局，接着在 `sm` 屏幕上进行更改，然后是 `md` 屏幕，以此类推。
 
-### Targeting a single breakpoint
+### 定位单个断点
 
-Tailwind's breakpoints only include a `min-width` and don't include a `max-width`, which means any utilities you add at a smaller breakpoint will also be applied at larger breakpoints.
+<!-- Tailwind's breakpoints only include a `min-width` and don't include a `max-width`, which means any utilities you add at a smaller breakpoint will also be applied at larger breakpoints. -->
+Tailwind 的断点仅包括 `min-width` 而没有 `max-width`, 这意味着你在较小的断点上添加的任何功能类都将应用在更大的断点上。
 
-If you'd like to apply a utility at one breakpoint only, the solution is to *undo* that utility at larger sizes by adding another utility that counteracts it.
+<!-- If you'd like to apply a utility at one breakpoint only, the solution is to *undo* that utility at larger sizes by adding another utility that counteracts it. -->
+如果你只想在一个断点上应用某个功能类，解决方案是在更大的断点上添加另一个功能类，用来抵消前一个功能类的效果。
 
-Here is an example where the background color is red at the `md` breakpoint, but teal at every other breakpoint:
+<!-- Here is an example where the background color is red at the `md` breakpoint, but teal at every other breakpoint: -->
+这是一个示例，其中背景颜色仅在 `md` 断点处是红色，在其它断点处皆为青绿色：
 
 ```html
 <div class="bg-teal-500 md:bg-red-500 lg:bg-teal-500">
@@ -111,13 +130,15 @@ Here is an example where the background color is red at the `md` breakpoint, but
 </div>
 ```
 
-Notice that **we did not** have to specify a background color for the `sm` breakpoint or the `xl` breakpoint — you only need to specify when a utility should *start* taking effect, not when it should stop.
+<!-- Notice that **we did not** have to specify a background color for the `sm` breakpoint or the `xl` breakpoint — you only need to specify when a utility should *start* taking effect, not when it should stop. -->
+请注意，**我们不必**为 `sm` 断点或 `xl` 断点指定背景色，您只需要指定一个功能类何时开始生效，而不是何时结束。
 
 ---
 
-## Customizing breakpoints
+## 自定义断点
 
 You can completely customize your breakpoints in your `tailwind.config.js` file:
+你可以在 `tailwind.config.js` 文件中完全自定义你的断点：
 
 ```js
 // tailwind.config.js
@@ -137,4 +158,4 @@ module.exports = {
 }
 ```
 
-Learn more in the [customizing breakpoints documentation](/docs/breakpoints).
+在 [自定义断点文档](/docs/breakpoints) 中了解更多.

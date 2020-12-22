@@ -1,13 +1,15 @@
 ---
-title: Dark Mode
-description: Using Tailwind CSS to style your site in dark mode.
+title: 深色模式
+description: 使用 Tailwind CSS 在深色模式下为你的网站设置样式。
 ---
 
-## <Heading hidden>Basic usage</Heading>
+## <Heading hidden>基础用法</Heading>
 
-Now that dark mode is a first-class feature of many operating systems, it's becoming more and more common to design a dark version of your website to go along with the default design.
+<!-- Now that dark mode is a first-class feature of many operating systems, it's becoming more and more common to design a dark version of your website to go along with the default design. -->
+现在深色功能是很多操作系统的首要功能，因此与默认设计同时设计一个深色模式已变得越来越普遍。
 
-To make this as easy as possible, Tailwind includes a `dark` variant that lets you style your site differently when dark mode is enabled:
+<!-- To make this as easy as possible, Tailwind includes a `dark` variant that lets you style your site differently when dark mode is enabled: -->
+为了使此操作尽可能简单，Tailwind 包含一个 `dark` 变体，当启用深色模式时，你可以为你的网站设置不同的样式。
 
 ```html
 <div class="bg-white **dark:bg-gray-800**">
@@ -18,9 +20,11 @@ To make this as easy as possible, Tailwind includes a `dark` variant that lets y
 </div>
 ```
 
-It's important to note that because of file size considerations, **the dark mode variant is not enabled in Tailwind by default**.
+<!-- It's important to note that because of file size considerations, **the dark mode variant is not enabled in Tailwind by default**. -->
+请务必注意，出于文件大小的考虑，**默认情况下，Tailwind 未开启深色模式变体**。
 
 To enable it, set the `darkMode` option in your `tailwind.config.js` file to `media`:
+要启用深色模式，请在 `tailwind.config.js` 文件中把 `darkMode` 选项设置为 `media`：
 
 ```js
 // tailwind.config.js
@@ -30,15 +34,21 @@ module.exports = {
 }
 ```
 
-Now whenever dark mode is enabled on the user's operating system, `dark:{class}` classes will take precedence over unprefixed classes. The `media` strategy uses the `prefers-color-scheme` media feature under the hood, but if you'd like to support toggling dark mode manually, you can also [use the 'class' strategy](#toggling-dark-mode-manually) for more control.
+<!-- Now whenever dark mode is enabled on the user's operating system, `dark:{class}` classes will take precedence over unprefixed classes.
+The `media` strategy uses the `prefers-color-scheme` media feature under the hood, but if you'd like to support toggling dark mode manually,
+you can also [use the 'class' strategy](#toggling-dark-mode-manually) for more control. -->
+现在，只要用户的操作系统开启了深色模式，`dark:{class}` 类离将优先于无前缀的类。`media` 策略在底层使用 `prefers-color-scheme` 媒体功能，但是，如果你想支持手动切换深色模式，你也可以 [使用 'class' 策略](#toggling-dark-mode-manually) 进行更多控制。
 
-By default, when `darkMode` is enabled `dark` variants are only generated for color-related classes, which includes text color, background color, border color, gradients, and placeholder color.
+<!-- By default, when `darkMode` is enabled `dark` variants are only generated for color-related classes, which includes text color, background color, border color, gradients, and placeholder color. -->
+默认情况下，当 `darkMode` 启用时，只会为颜色相关的类生成 `dark` 变体，包括文本颜色、背景颜色、边框颜色、渐变色以及点位符颜色。
 
 ---
 
-## Stacking with other variants
+<!-- ## Stacking with other variants -->
+## 与其它变体堆叠
 
-The `dark` variant can be combined with both [responsive](https://tailwindcss.com/docs/responsive-design) variants and [state variants](https://tailwindcss.com/docs/hover-focus-and-other-states) (like hover and focus):
+<!-- The `dark` variant can be combined with both [responsive](https://tailwindcss.com/docs/responsive-design) variants and [state variants](https://tailwindcss.com/docs/hover-focus-and-other-states) (like hover and focus): -->
+`dark` 变体可以与 [响应式](https://tailwindcss.com/docs/responsive-design) 变体和 [状态](https://tailwindcss.com/docs/hover-focus-and-other-states) 变体结合使用：
 
 ```html
 <button class="lg:dark:hover:bg-white ...">
@@ -46,13 +56,16 @@ The `dark` variant can be combined with both [responsive](https://tailwindcss.co
 </button>
 ```
 
-The responsive variant needs to come first, then `dark`, then the state variant for this to work.
+<!-- The responsive variant needs to come first, then `dark`, then the state variant for this to work. -->
+为了使其正常工作，你必须把响应式变体要在最前面，然后是 `dark` 变体，最后是状态变体。
 
 ---
 
-## Enabling for other utilities
+<!-- ## Enabling for other utilities -->
+## 为其它功能类启用深色模式
 
-To enable the `dark` variant for other utilities, add `dark` to the the variants list for whatever utility you'd like to enable it for:
+<!-- To enable the `dark` variant for other utilities, add `dark` to the the variants list for whatever utility you'd like to enable it for: -->
+要想为其它功能启用 `dark` 变体，把 `dark` 添加到你想要启用的任何功能的变体列表中。
 
 ```js
 // tailwind.config.js
@@ -66,13 +79,16 @@ module.exports = {
 }
 ```
 
-By default, the `dark` variant is enabled for `backgroundColor`, `borderColor`, `gradientColorStops`, `placeholderColor`, and `textColor`.
+<!-- By default, the `dark` variant is enabled for `backgroundColor`, `borderColor`, `gradientColorStops`, `placeholderColor`, and `textColor`. -->
+默认情况下，`dark` 变体只对 `backgroundColor`, `borderColor`, `gradientColorStops`, `placeholderColor`, 和 `textColor` 有效。
 
 ---
 
-## Toggling dark mode manually
+<!-- ## Toggling dark mode manually -->
+## 手动切换深色模式
 
-If you want to support toggling dark mode manually instead of relying on the operating system preference, use the `class` strategy instead of the `media` strategy:
+<!-- If you want to support toggling dark mode manually instead of relying on the operating system preference, use the `class` strategy instead of the `media` strategy: -->
+如果要支持手动切换深色模式而不是依赖于操作系统首选项，请使用 `class` 策略代替 `media` 策略：
 
 ```js
 // tailwind.config.js
@@ -82,7 +98,8 @@ module.exports = {
 }
 ```
 
-Now instead of `dark:{class}` classes being applied based on `prefers-color-scheme`, they will be applied whenever `dark` class is present earlier in the HTML tree.
+<!-- Now instead of `dark:{class}` classes being applied based on `prefers-color-scheme`, they will be applied whenever `dark` class is present earlier in the HTML tree. -->
+现在，`dark:{class}` 类将不再根据 `prefers-color-scheme` 起作用，而是当在 HTML 树中出现 `dark` 类时起作用。
 
 ```html
 <!-- Dark mode not enabled -->
@@ -106,9 +123,11 @@ Now instead of `dark:{class}` classes being applied based on `prefers-color-sche
 </html>
 ```
 
-How you add the `dark` class to the `html` element is up to you, but a common approach is to use a bit of JS that reads a preference from somewhere (like `localStorage`) and updates the DOM accordingly.
+<!-- How you add the `dark` class to the `html` element is up to you, but a common approach is to use a bit of JS that reads a preference from somewhere (like `localStorage`) and updates the DOM accordingly. -->
+如何将 `dark` 类添加到 `html` 元素中取决于你，但是一种常见的方式是使用 JS 从某个地方（如 `localStorage`）读取首选项并相应的更新 DOM。
 
-Here's a simple example of how you can support light mode, dark mode, as well as respecting the operating system preference:
+<!-- Here's a simple example of how you can support light mode, dark mode, as well as respecting the operating system preference: -->
+这是一个简单的示例，说明如何支持浅色模式、深色模式，以及如何遵守操作系统的首选项。
 
 ```js
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -128,4 +147,5 @@ localStorage.theme = 'dark'
 localStorage.removeItem('theme')
 ```
 
-Again you can manage this however you like, even storing the preference server-side in a database and rendering the class on the server — it's totally up to you.
+<!-- Again you can manage this however you like, even storing the preference server-side in a database and rendering the class on the server — it's totally up to you. -->
+同样，你可以根据自己的喜好进行管理，甚至可以将偏好存储在服务端数据库中并在服务器上渲染出相应的类，这完全取决于你。

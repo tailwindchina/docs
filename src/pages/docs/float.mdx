@@ -1,6 +1,6 @@
 ---
-title: "Floats"
-description: "Utilities for controlling the wrapping of content around an element."
+title: "浮动 Floats"
+description: "控制元素周围内容浮动"
 features:
   responsive: true
   customizable: false
@@ -14,9 +14,10 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Float right
+## 向右浮动
 
-Use `float-right` to float an element to the right of its container.
+<!-- Use `float-right` to float an element to the right of its container. -->
+使用 `float-right` 将一个元素浮动到其容器的右边。
 
 ```html emerald
 <template preview>
@@ -28,9 +29,10 @@ Use `float-right` to float an element to the right of its container.
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
 ```
 
-## Float left
+## 向左浮动
 
-Use `float-left` to float an element to the left of its container.
+<!-- Use `float-left` to float an element to the left of its container. -->
+使用 `float-left` 将一个元素浮动到其容器的左边。
 
 ```html indigo
 <template preview>
@@ -42,9 +44,10 @@ Use `float-left` to float an element to the left of its container.
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
 ```
 
-## Don't float
+## 不浮动
 
-Use `float-none` to reset any floats that are applied to an element. This is the default value for the float property.
+<!-- Use `float-none` to reset any floats that are applied to an element. This is the default value for the float property. -->
+使用 `float-none` 重置任何应用于元素的浮动。这是 float 属性的默认值。
 
 ```html purple
 <template preview>
@@ -56,9 +59,10 @@ Use `float-none` to reset any floats that are applied to an element. This is the
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus justo. Etiam eu vehicula felis.</p>
 ```
 
-## Responsive
+## 响应式
 
-To control the float of an element at a specific breakpoint, add a `{screen}:` prefix to any existing float utility class. For example, use `md:float-left` to apply the `float-left` utility at only medium screen sizes and above.
+<!-- To control the float of an element at a specific breakpoint, add a `{screen}:` prefix to any existing float utility class. For example, use `md:float-left` to apply the `float-left` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的浮动，请在任何现有的浮动工具类中前添加 `{screen}:` 前缀。例如，使用 `md:float-left`  来给中等大小的屏幕及以上应用 `float-left` 功能。
 
 ```html
 <div class="bg-gray-200 p-4">
@@ -67,14 +71,15 @@ To control the float of an element at a specific breakpoint, add a `{screen}:` p
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="float" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="float" />

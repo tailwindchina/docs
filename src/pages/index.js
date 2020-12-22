@@ -74,14 +74,14 @@ export default function Home() {
         <meta
           key="twitter:title"
           name="twitter:title"
-          content="Tailwind CSS - 快速构建现代网站，而无需离开您的HTML。"
+          content="Tailwind CSS - 无需离开您的HTML，即可快速建立现代网站。"
         />
         <meta
           key="og:title"
           property="og:title"
-          content="Tailwind CSS - 快速构建现代网站，而无需离开您的HTML。"
+          content="Tailwind CSS - 无需离开您的HTML，即可快速建立现代网站。"
         />
-        <title>Tailwind CSS - 快速构建现代网站，而无需离开您的HTML。</title>
+        <title>Tailwind CSS - 无需离开您的HTML，即可快速建立现代网站。</title>
       </Head>
       <header className="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
           <Logo className="w-auto h-7 sm:h-8" />
           <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-none font-extrabold tracking-tight text-gray-900 mt-10 mb-8 sm:mt-14 sm:mb-10">
-            快速构建现代网站，而无需离开您的HTML。
+            无需离开您的HTML，即可快速建立现代网站。
           </h1>
           {/*<p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">*/}
           {/*  A utility-first CSS framework packed with classes like <InlineCode>flex</InlineCode>,{' '}*/}
@@ -155,7 +155,7 @@ export default function Home() {
                 <Widont>
                   来说明为什么传统的 “语义化类名” 是 CSS 难以维护的原因，
                   但事实是除非你实际尝试过，你永远不会相信我。
-                  如果你能耐心的去尝试一下 Tailwind，我想你会惊讶过去使用 CSS 的方式。
+                  如果你能抑制住想吐槽的冲动，给它一个机会，我真的觉得你会怀疑你是怎么用其他方式来使用CSS的。
                 </Widont>
               </Paragraph>
             </blockquote>
