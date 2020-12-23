@@ -1,6 +1,6 @@
 ---
 title: "Object Fit"
-description: "Utilities for controlling how a replaced element's content should be resized."
+description: "用于控制被替换元素的内容如何调整大小的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/objectFit'
@@ -11,7 +11,8 @@ export const classes = { plugin }
 
 ## Contain
 
-Resize an element's content to stay contained within its container using `.object-contain`.
+<!-- Resize an element's content to stay contained within its container using `.object-contain`. -->
+使用 `.object-contain` 调整元素内容的大小，使其保持在容器内。
 
 ```html rose
 <template preview>
@@ -27,7 +28,8 @@ Resize an element's content to stay contained within its container using `.objec
 
 ## Cover
 
-Resize an element's content to cover its container using `.object-cover`.
+<!-- Resize an element's content to cover its container using `.object-cover`. -->
+使用 `.object-cover` 调整元素内容的大小以覆盖其容器。
 
 ```html indigo
 <template preview>
@@ -43,7 +45,8 @@ Resize an element's content to cover its container using `.object-cover`.
 
 ## Fill
 
-Stretch an element's content to fit its container using `.object-fill`.
+<!-- Stretch an element's content to fit its container using `.object-fill`. -->
+使用 `.object-fill` 拉伸元素的内容以适应其容器。
 
 ```html lightBlue
 <template preview>
@@ -59,7 +62,8 @@ Stretch an element's content to fit its container using `.object-fill`.
 
 ## None
 
-Display an element's content at its original size ignoring the container size using `.object-none`.
+<!-- Display an element's content at its original size ignoring the container size using `.object-none`. -->
+使用 `.object-none` 以原始大小显示元素的内容，忽略容器大小。
 
 ```html amber
 <template preview>
@@ -75,7 +79,8 @@ Display an element's content at its original size ignoring the container size us
 
 ## Scale Down
 
-Display an element's content at its original size but scale it down to fit its container if necessary using `.object-scale-down`.
+<!-- Display an element's content at its original size but scale it down to fit its container if necessary using `.object-scale-down`. -->
+以原始大小显示元素的内容，但必要时使用 `.object-scale-down` 将其缩小以适应其容器。
 
 ```html emerald
 <template preview>
@@ -89,9 +94,10 @@ Display an element's content at its original size but scale it down to fit its c
 </div>
 ```
 
-## Responsive
+## 响应式
 
-To control how a replaced element's content should be resized only at a specific breakpoint, add a `{screen}:` prefix to any existing object fit utility. For example, adding the class `md:object-scale-down` to an element would apply the `object-scale-down` utility at medium screen sizes and above.
+<!-- To control how a replaced element's content should be resized only at a specific breakpoint, add a `{screen}:` prefix to any existing object fit utility. For example, adding the class `md:object-scale-down` to an element would apply the `object-scale-down` utility at medium screen sizes and above. -->
+要控制被替换的元素的内容如何只在特定的断点处调整大小，可以在任何现有的 object fit 功能类前添加 `{screen}:` 前缀。例如，将类 `md:object-scale-down` 添加到元素中，将在中等尺寸及以上屏幕上应用 `object-scale-down` 功能。
 
 ```html
 <div>
@@ -99,14 +105,15 @@ To control how a replaced element's content should be resized only at a specific
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="objectFit" name="object-fit" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="objectFit" name="object-fit" />
