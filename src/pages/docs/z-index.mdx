@@ -1,6 +1,7 @@
 ---
 title: "Z-Index"
-description: "Utilities for controlling the stack order of an element."
+# description: "Utilities for controlling the stack order of an element."
+description: "用于控制元素的堆栈顺序的工具。"
 features:
   responsive: true
   customizable: true
@@ -14,9 +15,10 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+## 使用方法
 
-Control the stack order (or three-dimensional positioning) of an element in Tailwind, regardless of order it has been displayed, using the `z-{index}` utilities.
+<!-- Control the stack order (or three-dimensional positioning) of an element in Tailwind, regardless of order it has been displayed, using the `z-{index}` utilities. -->
+在 Tailwind 中使用 `z-{index}` 工具控制一个元素的堆栈顺序（或三维定位），使得与其显示顺序无关。
 
 ```html fuchsia
 <template preview class="p-4">
@@ -36,9 +38,10 @@ Control the stack order (or three-dimensional positioning) of an element in Tail
 <div class="**z-0** ...">1</div>
 ```
 
-## Responsive
+## 响应式
 
-To control the z-index of an element at a specific breakpoint, add a `{screen}:` prefix to any existing z-index utility. For example, use `md:z-50` to apply the `z-50` utility at only medium screen sizes and above.
+<!-- To control the z-index of an element at a specific breakpoint, add a `{screen}:` prefix to any existing z-index utility. For example, use `md:z-50` to apply the `z-50` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的 z-index，可在任何现有的 z-index 功能类前添加 `{screen}:` 前缀。例如，使用 `md:z-50` 来只在中等尺寸及以上的屏幕应用 `z-50` 功能类。
 
 ```html
 <div class="z-0 **md:z-50** ...">
@@ -46,13 +49,15 @@ To control the z-index of an element at a specific breakpoint, add a `{screen}:`
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+了解更多关于 Tailwind 响应式设计功能的信息，查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Z-Index scale
+### Z-Index 范围
 
-By default Tailwind provides six numeric `z-index` utilities and an `auto` utility. You change, add, or remove these by editing the `theme.zIndex` section of your Tailwind config.
+<!-- By default Tailwind provides six numeric `z-index` utilities and an `auto` utility. You change, add, or remove these by editing the `theme.zIndex` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了六个数值的 `z-index` 工具和一个 `auto` 工具。您可以通过编辑您的 Tailwind 配置中的 `theme.zIndex` 部分来改变、添加或删除这些工具。
 
 ```diff-js
   // tailwind.config.js
@@ -75,9 +80,10 @@ By default Tailwind provides six numeric `z-index` utilities and an `auto` utili
   }
 ```
 
-### Negative values
+### 负值
 
-If you'd like to add any negative z-index classes that take the same form as Tailwind's [negative margin](/docs/margin#negative-margins) classes, prefix the keys in your config file with a dash:
+<!-- If you'd like to add any negative z-index classes that take the same form as Tailwind's [negative margin](/docs/margin#negative-margins) classes, prefix the keys in your config file with a dash: -->
+如果你想添加任何负的 z-index 类，在配置文件中的键前加上破折号，其形式与 Tailwind 的 [负外边距](/docs/margin#negative-margins) 类相同。
 
 ```diff-js
   // tailwind.config.js
@@ -92,12 +98,13 @@ If you'd like to add any negative z-index classes that take the same form as Tai
   }
 ```
 
-Tailwind is smart enough to generate classes like `-z-10` when it sees the leading dash, not `z--10` like you might expect.
+<!-- Tailwind is smart enough to generate classes like `-z-10` when it sees the leading dash, not `z--10` like you might expect. -->
+尾风很聪明，当它看到前面的破折号时，会生成像 `-z-10` 这样的类，而不是像你可能期望的 `z--10`。
 
-### Variants
+### 变体
 
 <Variants plugin="zIndex" name="z-index" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="zIndex" name="z-index" />
