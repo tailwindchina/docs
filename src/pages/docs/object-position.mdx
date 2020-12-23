@@ -1,6 +1,6 @@
 ---
 title: "Object Position"
-description: "Utilities for controlling how a replaced element's content should be positioned within its container."
+description: "用于控制被替换元素的内容在其容器中的位置。"
 features:
   responsive: true
   customizable: true
@@ -14,9 +14,10 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+## 使用方法
 
-Use the `object-{side}` utilities to specify how a replaced element's content should be positioned within its container.
+<!-- Use the `object-{side}` utilities to specify how a replaced element's content should be positioned within its container. -->
+使用 `object-{side}` 功能来指定被替换的元素的内容在其容器中的位置。
 
 ```html amber
 <template preview>
@@ -71,21 +72,24 @@ Use the `object-{side}` utilities to specify how a replaced element's content sh
 <img class="object-none **object-right-bottom** bg-yellow-300 w-24 h-24 ..." src="...">
 ```
 
-## Responsive
+## 响应式
 
-To position an object only at a specific breakpoint, add a `{screen}:` prefix to any existing object position utility. For example, adding the class `md:object-top` to an element would apply the `object-top` utility at medium screen sizes and above.
+<!-- To position an object only at a specific breakpoint, add a `{screen}:` prefix to any existing object position utility. For example, adding the class `md:object-top` to an element would apply the `object-top` utility at medium screen sizes and above. -->
+要仅在特定的断点处定位对象，请在任何现有的对象定位工具前添加 `{screen}:` 前缀。例如，将 `md:object-top` 类添加到一个元素中，就可以在中等大小和更大的屏幕上应用 `object-top` 功能类。
 
 ```html
 <img class="object-center **md:object-top** ..." src="...">
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Object Positioning
+### 对象定位
 
-By default Tailwind provides nine object position utilities. You can change, add, or remove these by editing the `theme.objectPosition` section of your Tailwind config.
+<!-- By default Tailwind provides nine object position utilities. You can change, add, or remove these by editing the `theme.objectPosition` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了九个对象位置工具。您可以通过编辑您的 Tailwind 配置的 `theme.objectPosition` 部分来改变、添加或删除它们。
 
 ```diff-js
   // tailwind.config.js
@@ -108,10 +112,10 @@ By default Tailwind provides nine object position utilities. You can change, add
   }
 ```
 
-### Variants
+### 变体
 
 <Variants plugin="objectPosition" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="objectPosition" />
