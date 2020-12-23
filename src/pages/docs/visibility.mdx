@@ -1,6 +1,8 @@
 ---
-title: "Visibility"
+# title: "Visibility"
+title: "可见性 Visibility"
 description: "Utilities for controlling the visibility of an element."
+# description: "控制元素可见性的工具"
 features:
   responsive: true
   customizable: false
@@ -14,9 +16,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Invisible
+<!-- ## Invisible -->
+## 不可见
 
-Use `invisible` to hide an element, but still maintain its place in the DOM, affecting the layout of other elements (compare with `.hidden` from the [display](/docs/display#hidden) documentation).
+<!-- Use `invisible` to hide an element, but still maintain its place in the DOM, affecting the layout of other elements (compare with `.hidden` from the [display](/docs/display#hidden) documentation). -->
+使用 `invisible` 隐藏一个元素，但仍然保持它在 DOM 中的位置，影响其他元素的布局（与 [display](/docs/display#hidden) 文档中的 `.hidden` 比较）。
 
 ```html indigo
 <template preview class="flex justify-center p-10 space-x-4">
@@ -32,9 +36,10 @@ Use `invisible` to hide an element, but still maintain its place in the DOM, aff
 </div>
 ```
 
-## Visible
+## 可见
 
-Use `visible` to make an element visible. This is mostly useful for undoing the `invisible` utility at different screen sizes.
+<!-- Use `visible` to make an element visible. This is mostly useful for undoing the `invisible` utility at different screen sizes. -->
+使用 `visible` 使一个元素可见。这对于在不同的屏幕尺寸下撤销 `invisible` 工具非常有用。
 
 ```html purple
 <template preview class="flex justify-center p-10 space-x-4">
@@ -50,22 +55,24 @@ Use `visible` to make an element visible. This is mostly useful for undoing the 
 </div>
 ```
 
-## Responsive
+## 响应式
 
 To apply a visibility utility only at a specific breakpoint, add a `{screen}:` prefix to the existing class name. For example, adding the class `md:invisible` to an element would apply the `invisible` utility at medium screen sizes and above.
+要仅在一个特定断点应用 visibility 功能，请在现有的类名前 添加 `{screen}:` 前缀。例如，将类 `md:invisisible` 添加到一个元素上，就可以在中等大小和更大的屏幕上应用 `invisible` 功能类。
 
 ```html
 <div class="visible **md:invisible** ..."></div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+了解更多关于 Tailwind 响应式设计功能的信息，查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="visibility" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="visibility" />
