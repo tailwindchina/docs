@@ -9,7 +9,7 @@ export const documentationNav = {
   'Getting started': [
     pages['installation'],
     {
-      title: 'Release Notes',
+      title: '发布说明',
       href: 'https://blog.tailwindcss.com/tailwindcss-v2',
     },
     pages['upgrading-to-v2'],
