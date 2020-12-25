@@ -1,6 +1,7 @@
 ---
 title: "Flex Direction"
-description: "Utilities for controlling the direction of flex items."
+# description: "Utilities for controlling the direction of flex items."
+description: "控制 Flex 子项的方向的工具"
 features:
   responsive: true
   customizable: false
@@ -14,9 +15,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Row
+<!-- ## Row -->
+## 横向
 
-Use `flex-row` to position flex items horizontally in the same direction as text:
+<!-- Use `flex-row` to position flex items horizontally in the same direction as text: -->
+使用 `flex-row` 用来沿与文本相同的方向水平放置 flex 子项。
 
 ```html amber
 <template preview class="p-4">
@@ -34,9 +37,11 @@ Use `flex-row` to position flex items horizontally in the same direction as text
 </div>
 ```
 
-## Row reversed
+<!-- ## Row reversed -->
+## 横向反向
 
-Use `flex-row-reverse` to position flex items horizontally in the opposite direction:
+<!-- Use `flex-row-reverse` to position flex items horizontally in the opposite direction: -->
+使用 `flex-row` 用来沿与文本相反的方向水平放置 flex 子项。
 
 ```html lightBlue
 <template preview class="p-4">
@@ -54,9 +59,11 @@ Use `flex-row-reverse` to position flex items horizontally in the opposite direc
 </div>
 ```
 
-## Column
+<!-- ## Column -->
+## 纵向
 
-Use `flex-col` to position flex items vertically:
+<!-- Use `flex-col` to position flex items vertically: -->
+使用 `flex-col` 用来沿垂直方向放置 flex 子项。
 
 ```html emerald
 <template preview class="p-4">
@@ -74,9 +81,11 @@ Use `flex-col` to position flex items vertically:
 </div>
 ```
 
-## Column reversed
+<!-- ## Column reversed -->
+## 纵向反向
 
-Use `flex-col-reverse` to position flex items vertically in the opposite direction:
+<!-- Use `flex-col-reverse` to position flex items vertically in the opposite direction: -->
+使用 `flex-col-reverse` 用来沿垂直方向反向放置 flex 子项。
 
 ```html rose
 <template preview class="p-4">
@@ -94,12 +103,14 @@ Use `flex-col-reverse` to position flex items vertically in the opposite directi
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To apply a flex direction utility only at a specific breakpoint, add a `{screen}:` prefix to the existing class name. For example, adding the class `md:flex-row` to an element would apply the `flex-row` utility at medium screen sizes and above.
+<!-- To apply a flex direction utility only at a specific breakpoint, add a `{screen}:` prefix to the existing class name. For example, adding the class `md:flex-row` to an element would apply the `flex-row` utility at medium screen sizes and above. -->
+要仅在特定的断点处应用 flex direction 工具，请在现有的类名称上添加 `{screen}:` 前缀。例如，将类 `md:flex-row` 添加到元素上，将在中等尺寸及以上的屏幕上应用 `flex-row` 功能类。
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
-
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+有关 Tailwind 的响应式设计功能的更多信息，查看 [响应式设计](/docs/responsive-design) 文档。
 
 ```html
   <div class="flex flex-col **md:flex-row** ...">
@@ -107,12 +118,12 @@ For more information about Tailwind's responsive design features, check out the 
   </div>
 ```
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="flexDirection" name="flex-direction" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="flexDirection" name="flex-direction" />
