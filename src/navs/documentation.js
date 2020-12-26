@@ -169,5 +169,6 @@ export const documentationNav = {
   ],
   SVG: [pages['fill'], pages['stroke'], pages['stroke-width']],
   Accessibility: [pages['screen-readers']],
-  'Official Plugins': [pages['typography-plugin']],
+  // 'Official Plugins': [pages['typography-plugin']],
+  '官方插件': [pages['typography-plugin']],
 }
