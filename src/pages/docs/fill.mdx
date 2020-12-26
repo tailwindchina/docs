@@ -1,6 +1,7 @@
 ---
 title: "Fill"
-description: "Utilities for styling the fill of SVG elements."
+# description: "Utilities for styling the fill of SVG elements."
+description: "用于SVG元素填充(fill)样式的功能类"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/fill'
@@ -9,11 +10,15 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Use `fill-current` to set the fill color of an SVG to the current text color. This makes it easy to set an element's fill color by combining this class with an existing [text color utility](/docs/text-color).
+<!-- Use `fill-current` to set the fill color of an SVG to the current text color. This makes it easy to set an element's fill color by combining this class with an existing [text color utility](/docs/text-color). -->
 
-Useful for styling icon sets like [Zondicons](http://www.zondicons.com/) that are drawn entirely with fills.
+<!-- Useful for styling icon sets like [Zondicons](http://www.zondicons.com/) that are drawn entirely with fills. -->
+使用 `fill-current`将 SVG 的填充色设置为当前的文本颜色。通过将该类与现有的[文本颜色功能类](/docs/text-color)相结合，可以轻松设置元素的填充颜色。
+
+对于像 [Zondicons](http://www.zondicons.com/) 这样完全用填充色绘制的图标集来说是很有用的：
 
 ```html emerald
 <template preview>
@@ -27,9 +32,11 @@ Useful for styling icon sets like [Zondicons](http://www.zondicons.com/) that ar
 <svg class="**fill-current text-green-600** ..."></svg>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义 
 
-Control which fill utilities Tailwind generates by customizing the `theme.fill` section of your `tailwind.config.js` file:
+<!-- Control which fill utilities Tailwind generates by customizing the `theme.fill` section of your `tailwind.config.js` file: -->
+通过自定义您的 `tailwind.config.js` 文件的 `theme.fill` 部分来控制 Tailwind 生成哪些 `fill` 功能类。
 
 ```diff-js
   // tailwind.config.js
@@ -47,10 +54,12 @@ Control which fill utilities Tailwind generates by customizing the `theme.fill` 
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="fill" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="fill" />
