@@ -1,6 +1,8 @@
 ---
-title: "Cursor"
-description: "Utilities for controlling the cursor style when hovering over an element."
+# title: "Cursor"
+title: "光标效果"
+# description: "Utilities for controlling the cursor style when hovering over an element."
+description: "当鼠标悬停在一个元素上时，用于控制光标样式的功能类。"
 features:
   responsive: true
   customizable: true
@@ -14,9 +16,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Auto
+<!-- ## Auto -->
+## 自动
 
-Use `cursor-auto` to allow the browser to change the cursor based on the current content (e.g. automatically change to `text` cursor when hovering over text).
+<!-- Use `cursor-auto` to allow the browser to change the cursor based on the current content (e.g. automatically change to `text` cursor when hovering over text). -->
+使用 `cursor-auto` 允许浏览器根据当前的内容改变光标（例如，当鼠标悬停在文本上时，自动变为 `text` 光标）。
 
 ```html rose
 <template preview>
@@ -30,9 +34,11 @@ Use `cursor-auto` to allow the browser to change the cursor based on the current
 </div>
 ```
 
-## Default
+<!-- ## Default -->
+## 默认
 
-Use `cursor-default` to change the mouse cursor to always use the platform-dependent default cursor (usually an arrow).
+<!-- Use `cursor-default` to change the mouse cursor to always use the platform-dependent default cursor (usually an arrow). -->
+使用 `cursor-default` 来改变鼠标光标，使其始终使用依赖于平台的默认光标（通常是一个箭头）。
 
 ```html amber
 <template preview>
@@ -46,9 +52,11 @@ Use `cursor-default` to change the mouse cursor to always use the platform-depen
 </div>
 ```
 
-## Pointer
+<!-- ## Pointer -->
+## 指向
 
-Use `cursor-pointer` to change the mouse cursor to indicate an interactive element (usually a pointing hand).
+<!-- Use `cursor-pointer` to change the mouse cursor to indicate an interactive element (usually a pointing hand). -->
+使用 `cursor-pointer` 来改变鼠标光标来表示一个交互式元素（通常是一个指向性的手）。
 
 ```html purple
 <template preview>
@@ -62,9 +70,11 @@ Use `cursor-pointer` to change the mouse cursor to indicate an interactive eleme
 </div>
 ```
 
-## Wait
+<!-- ## Wait -->
+## 等待
 
-Use `cursor-wait` to change the mouse cursor to indicate something is happening in the background (usually an hourglass or watch).
+<!-- Use `cursor-wait` to change the mouse cursor to indicate something is happening in the background (usually an hourglass or watch). -->
+使用 `cursor-wait` 来改变鼠标光标，以表示背景中正在发生的事情（通常是沙漏或手表）。
 
 ```html emerald
 <template preview>
@@ -78,9 +88,11 @@ Use `cursor-wait` to change the mouse cursor to indicate something is happening 
 </div>
 ```
 
-## Text
+<!-- ## Text -->
+## 文本
 
-Use `cursor-text` to change the mouse cursor to indicate the text can be selected (usually an I-beam shape).
+<!-- Use `cursor-text` to change the mouse cursor to indicate the text can be selected (usually an I-beam shape). -->
+使用 `cursor-text` 来改变鼠标光标，表示可以选择文本（通常是一个 I 字形）。
 
 ```html fuchsia
 <template preview>
@@ -94,9 +106,11 @@ Use `cursor-text` to change the mouse cursor to indicate the text can be selecte
 </div>
 ```
 
-## Move
+<!-- ## Move -->
+## 移动
 
-Use `cursor-move` to change the mouse cursor to indicate something that can be moved.
+<!-- Use `cursor-move` to change the mouse cursor to indicate something that can be moved. -->
+使用 `cursor-move` 来改变鼠标光标，表示可以移动的东西。
 
 ```html indigo
 <template preview>
@@ -110,9 +124,11 @@ Use `cursor-move` to change the mouse cursor to indicate something that can be m
 </div>
 ```
 
-## Not Allowed
+<!-- ## Not Allowed -->
+## 不允许
 
-Use `cursor-not-allowed` to change the mouse cursor to indicate something can not be interacted with or clicked.
+<!-- Use `cursor-not-allowed` to change the mouse cursor to indicate something can not be interacted with or clicked. -->
+使用 `cursor-not-allowed` 来改变鼠标光标，表示不能与之交互或点击。
 
 ```html lightBlue
 <template preview>
@@ -126,11 +142,13 @@ Use `cursor-not-allowed` to change the mouse cursor to indicate something can no
 </div>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
 ### Cursors
 
-By default Tailwind provides six `cursor` utilities. You change, add, or remove these by editing the `theme.cursor` section of your Tailwind config.
+<!-- By default Tailwind provides six `cursor` utilities. You change, add, or remove these by editing the `theme.cursor` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了六个 `cursor` 功能。您可以通过编辑您的 Tailwind 配置中的 `theme.cursor` 部分来改变，添加或删除这些功能。
 
 ```diff-js
   // tailwind.config.js
@@ -151,10 +169,12 @@ By default Tailwind provides six `cursor` utilities. You change, add, or remove 
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="cursor" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="cursor" />

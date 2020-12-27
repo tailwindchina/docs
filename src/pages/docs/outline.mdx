@@ -1,6 +1,8 @@
 ---
-title: "Outline"
-description: "Utilities for controlling an element's outline."
+# title: "Outline"
+title: "轮廓"
+# description: "Utilities for controlling an element's outline."
+description: "用于控制元素轮廓的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/outline'
@@ -10,11 +12,16 @@ import { Heading } from '@/components/Heading'
 
 export const classes = { plugin }
 
-## Remove outlines
+<!-- ## Remove outlines -->
+## 移除轮廓
 
-Use `outline-none` to hide the default browser outline on focused elements.
+<!-- Use `outline-none` to hide the default browser outline on focused elements. -->
 
-It is highly recommended to apply your own focus styling for accessibility when using this utility.
+<!-- It is highly recommended to apply your own focus styling for accessibility when using this utility. -->
+
+使用 `outline-none` 来隐藏焦点元素的默认浏览器轮廓。
+
+强烈建议在使用这个功能时，应用您自己的焦点样式来实现可访问性。
 
 ```html amber
 <template preview>
@@ -33,11 +40,15 @@ It is highly recommended to apply your own focus styling for accessibility when 
   class="**focus:outline-none focus:ring focus:border-blue-300** ..." />
 ```
 
-The `outline-none` utility is implemented using a transparent outline under the hood to ensure elements are still visibly focused to [Windows high contrast mode](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/) users.
+<!-- The `outline-none` utility is implemented using a transparent outline under the hood to ensure elements are still visibly focused to [Windows high contrast mode](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/) users. -->
+`outline-none` 功能类是使用透明的轮廓（transparent outline）来实现的，以确保元素在[ Windows 高对比度模式](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)用户看来仍有明显的焦点。
 
-## Dotted outlines
+<!-- ## Dotted outlines -->
 
-Use the `outline-white` and `outline-black` utilities to add a 2px dotted border around an element with a 2px offset. These are useful as an accessible general purpose custom focus style if you don't want to design your own.
+<!-- Use the `outline-white` and `outline-black` utilities to add a 2px dotted border around an element with a 2px offset. These are useful as an accessible general purpose custom focus style if you don't want to design your own. -->
+## 点状轮廓
+
+使用 `outline-white` 和 `outline-black` 功能类在元素周围添加一个 2px 的点状边框，并有 2px 的偏移。如果您不想设计自己的风格，这些功能类可以作为一种通用的自定义焦点风格。
 
 ```html
 <template preview class="flex">
@@ -53,11 +64,13 @@ Use the `outline-white` and `outline-black` utilities to add a 2px dotted border
 <button class="**focus:outline-white** ...">Button B</button>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
 ### Outlines
 
-By default Tailwind provides three outline utilities. You can customize these by editing the `theme.outline` section of your `tailwind.config.js` file.
+<!-- By default Tailwind provides three outline utilities. You can customize these by editing the `theme.outline` section of your `tailwind.config.js` file. -->
+默认情况下，Tailwind 提供了三个 outline 功能类。您可以通过编辑您的 `tailwind.config.js` 文件中的 `theme.outline` 部分来定制这些工具。
 
 ```js
   // tailwind.config.js
@@ -72,7 +85,8 @@ By default Tailwind provides three outline utilities. You can customize these by
   }
 ```
 
-You can also provide an `outline-offset` value for any custom outline utilities using a tuple of the form `[outline, outlineOffset]`:
+<!-- You can also provide an `outline-offset` value for any custom outline utilities using a tuple of the form `[outline, outlineOffset]`: -->
+您也可以使用 `[outline, outlineOffset]` 形式的元组为任何自定义的大纲工具提供一个 `outlineOffset` (偏移)值。
 
 ```js
   // tailwind.config.js
