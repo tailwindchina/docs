@@ -1,7 +1,7 @@
 ---
 title: "Flex"
 # description: "Utilities for controlling how flex items both grow and shrink."
-description: "用于控制 flex 项目放大和收缩的工具。"
+description: "用于控制 flex 项目放大和缩小的工具。"
 features:
   responsive: true
   customizable: true
@@ -18,7 +18,7 @@ export const classes = { plugin }
 ## Initial
 
 <!-- Use `flex-initial` to allow a flex item to shrink but not grow, taking into account its initial size: -->
-使用 `flex-initial` 允许 flex 项目在考虑到其初始尺寸的情况下收缩但不放大：
+使用 `flex-initial` 允许 flex 项目在考虑到其初始尺寸的情况下缩小但不放大：
 
 ```html indigo
 <template preview>
@@ -62,7 +62,7 @@ export const classes = { plugin }
 ## Flex 1
 
 <!-- Use `flex-1` to allow a flex item to grow and shrink as needed, ignoring its initial size: -->
-使用 `flex-1` 允许 flex 项目根据需要放大和收缩，忽略其初始尺寸。
+使用 `flex-1` 允许 flex 项目根据需要放大和缩小，忽略其初始尺寸。
 
 ```html fuchsia
 <template preview>
@@ -109,7 +109,7 @@ export const classes = { plugin }
 ## Auto
 
 <!-- Use `flex-auto` to allow a flex item to grow and shrink, taking into account its initial size: -->
-使用 `flex-auto` 允许一个 flex 项目在考虑到其初始大小的情况下放大和收缩：
+使用 `flex-auto` 允许一个 flex 项目在考虑到其初始大小的情况下放大和缩小：
 
 ```html lightBlue
 <template preview>
@@ -156,7 +156,7 @@ export const classes = { plugin }
 ## None
 
 <!-- Use `flex-none` to prevent a flex item from growing or shrinking: -->
-使用 `flex-none` 来阻止一个 flex 项目的放大和收缩：
+使用 `flex-none` 来阻止一个 flex 项目的放大和缩小：
 
 ```html emerald
 <template preview>
@@ -190,7 +190,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control how a flex item both grows and shrinks at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:flex-1` to apply the `flex-1` utility at only medium screen sizes and above. -->
-要控制 flex 项目在特定断点处的放大和收缩方式，可在任何现有的功能类产添加 `{screen}:` 前缀。例如，使用 `md:flex-1` 仅在中等尺寸及以上的屏幕应用 `flex-1` 功能。
+要控制 flex 项目在特定断点处的放大和缩小方式，可在任何现有的功能类产添加 `{screen}:` 前缀。例如，使用 `md:flex-1` 仅在中等尺寸及以上的屏幕应用 `flex-1` 功能。
 
 ```html
 <div class="flex ...">
