@@ -1,6 +1,7 @@
 ---
 title: "Stroke"
-description: "Utilities for styling the stroke of SVG elements."
+# description: "Utilities for styling the stroke of SVG elements."
+description: "用于风格化 SVG 元素的 stroke 功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/stroke'
@@ -9,11 +10,15 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Use `stroke-current` to set the stroke color of an SVG to the current text color. This makes it easy to set an element's stroke color by combining this class with an existing [text color utility](/docs/text-color).
+<!-- Use `stroke-current` to set the stroke color of an SVG to the current text color. This makes it easy to set an element's stroke color by combining this class with an existing [text color utility](/docs/text-color). -->
 
-Useful for styling icon sets like [Heroicons](http://heroicons.com/) that are drawn entirely with strokes.
+<!-- Useful for styling icon sets like [Heroicons](http://heroicons.com/) that are drawn entirely with strokes. -->
+使用 `stroke-current` 将 SVG 的 `stroke` 颜色设置为当前的文本颜色。通过将该类与现有的[文本颜色功能类](/docs/text-color)相结合，可以轻松设置元素的 `stroke` 颜色。
+
+对于像 [Heroicons](http://heroicons.com/) 这样完全用 `stroke` 绘制的图标集很有用。
 
 ```html purple
 <template preview>
@@ -29,9 +34,11 @@ Useful for styling icon sets like [Heroicons](http://heroicons.com/) that are dr
 <svg class="**stroke-current text-purple-600** ..."></svg>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-Control which stroke utilities Tailwind generates by customizing the `theme.stroke` section in your `tailwind.config.js` file:
+<!-- Control which stroke utilities Tailwind generates by customizing the `theme.stroke` section in your `tailwind.config.js` file: -->
+通过在你的 `tailwind.config.js` 文件中自定义 `theme.stroke` 部分来控制 Tailwind 生成哪些 `stroke` 功能类。
 
 ```diff-js
   // tailwind.config.js
@@ -49,10 +56,12 @@ Control which stroke utilities Tailwind generates by customizing the `theme.stro
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="stroke" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="stroke" />

@@ -1,6 +1,7 @@
 ---
 title: "Grid Template Rows"
-description: "Utilities for specifying the rows in a grid layout."
+# description: "Utilities for specifying the rows in a grid layout."
+description: "用于在网格布局中指定行的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/gridTemplateRows'
@@ -9,9 +10,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用方法
 
-Use the `grid-rows-{n}` utilities to create grids with _n_ equally sized rows.
+<!-- Use the `grid-rows-{n}` utilities to create grids with _n_ equally sized rows. -->
+使用 `grid-rows-{n}` 工具来创建有_n_个同等大小的行的网格。
 
 ```html lightBlue
 <template preview class="bg-white p-8">
@@ -35,9 +38,11 @@ Use the `grid-rows-{n}` utilities to create grids with _n_ equally sized rows.
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the rows of a grid at a specific breakpoint, add a `{screen}:` prefix to any existing grid-template-rows utility. For example, use `md:grid-rows-6` to apply the `grid-rows-6` utility at only medium screen sizes and above.
+<!-- To control the rows of a grid at a specific breakpoint, add a `{screen}:` prefix to any existing grid-template-rows utility. For example, use `md:grid-rows-6` to apply the `grid-rows-6` utility at only medium screen sizes and above. -->
+要在特定的断点处控制网格的行，可以在任何现有的 grid-template-rows 工具类前添加 `{screen}:` 前缀。例如，使用 `md:grid-rows-6` 来仅在中等尺寸及以上的屏幕上应用 `grid-rows-6` 工具类。
 
 ```html
 <div class="grid grid-rows-2 **md:grid-rows-6** ...">
@@ -45,13 +50,17 @@ To control the rows of a grid at a specific breakpoint, add a `{screen}:` prefix
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
-By default Tailwind includes grid-template-row utilities for creating basic grids with up to 6 equal width rows. You change, add, or remove these by customizing the `gridTemplateRows` section of your Tailwind theme config.
+<!-- By default Tailwind includes grid-template-row utilities for creating basic grids with up to 6 equal width rows. You change, add, or remove these by customizing the `gridTemplateRows` section of your Tailwind theme config. -->
+默认情况下，Tailwind 包括 grid-template-row 功能，用于创建基本的网格，最多有6个等宽的行。您可以通过定制您的 Tailwind 主题配置的 `gridTemplateRows` 部分来改变、添加或删除它们。
 
-You have direct access to the `grid-template-rows` CSS property here so you can make your custom rows values as generic or as complicated and site-specific as you like.
+<!-- You have direct access to the `grid-template-rows` CSS property here so you can make your custom rows values as generic or as complicated and site-specific as you like. -->
+在这里你可以直接访问 `grid-template-rows` CSS属性，所以你可以让你的自定义行值变得通用或复杂，因网站而异。
 
 ```diff-js
   // tailwind.config.js
@@ -70,12 +79,13 @@ You have direct access to the `grid-template-rows` CSS property here so you can 
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+### 变体
 
 <Variants plugin="gridTemplateRows" name="grid-template-rows" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="gridTemplateRows" name="grid-template-rows" />

@@ -1,6 +1,7 @@
 ---
 title: "Overscroll Behavior"
-description: "Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area."
+# description: "Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area."
+description: "用于控制浏览器到达滚动区域边界时的行为的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/overscrollBehavior'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Auto
 
-Use `overscroll-auto` to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of the primary scroll area.
+<!-- Use `overscroll-auto` to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of the primary scroll area. -->
+使用 `overscroll-auto` 使用户能够在到达基础滚动区域的边界时继续滚动其父滚动区域。
 
 ```html emerald
 <template preview>
@@ -27,7 +29,8 @@ Use `overscroll-auto` to make it possible for the user to continue scrolling a p
 
 ## Contain
 
-Use `overscroll-contain` to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve "bounce" effects when scrolling past the end of the container in operating systems that support it.
+<!-- Use `overscroll-contain` to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve "bounce" effects when scrolling past the end of the container in operating systems that support it. -->
+使用 `overscroll-contain` 来防止目标区域的滚动触发父元素的滚动，但在支持的操作系统中，当滚动到容器的末端时，保留"反弹"效果。
 
 ```html lightBlue
 <template preview>
@@ -43,7 +46,8 @@ Use `overscroll-contain` to prevent scrolling in the target area from triggering
 
 ## None
 
-Use `overscroll-none` to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent "bounce" effects when scrolling past the end of the container.
+<!-- Use `overscroll-none` to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent "bounce" effects when scrolling past the end of the container. -->
+使用 `overscroll-none` 来防止目标区域的滚动触发父元素的滚动，也防止在滚动过容器的末端时产生"反弹"效果。
 
 ```html amber
 <template preview>
@@ -57,9 +61,10 @@ Use `overscroll-none` to prevent scrolling in the target area from triggering sc
 <div class="**overscroll-none** ...">Lorem ipsum dolor sit amet...</div>
 ```
 
-## Responsive
+## 响应式
 
-To control the overscroll-behavior property at a specific breakpoint, add a `{screen}:` prefix to any existing overscroll-behavior utility. For example, use `md:overscroll-contain` to apply the `overscroll-contain` utility at only medium screen sizes and above.
+<!-- To control the overscroll-behavior property at a specific breakpoint, add a `{screen}:` prefix to any existing overscroll-behavior utility. For example, use `md:overscroll-contain` to apply the `overscroll-contain` utility at only medium screen sizes and above. -->
+要在特定的断点处控制 overscroll-behavior 属性，请在任何现有的 overscroll-behavior 功能类前添加 `{screen}:` 前缀。例如，使用 `md:overscroll-contain` 以在中等尺寸及以上的屏幕应用 `overscroll-contain` 功能类。
 
 ```html
 <div class="overscroll-auto **md:overscroll-contain lg:overscroll-none** ...">
@@ -67,14 +72,15 @@ To control the overscroll-behavior property at a specific breakpoint, add a `{sc
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="overscrollBehavior" name="overscroll-behavior" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="overscrollBehavior" name="overscroll-behavior" />

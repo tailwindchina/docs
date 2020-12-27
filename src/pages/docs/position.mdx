@@ -1,6 +1,8 @@
 ---
-title: "Position"
-description: "Utilities for controlling how an element is positioned in the DOM."
+# title: "Position"
+title: "定位 Position"
+# description: "Utilities for controlling how an element is positioned in the DOM."
+description: "用于控制元素在DOM中的位置的工具。"
 features:
   responsive: true
   customizable: false
@@ -17,9 +19,11 @@ export const classes = { plugin }
 
 ## Static
 
-Use `static` to position an element according to the normal flow of the document.
+<!-- Use `static` to position an element according to the normal flow of the document. -->
+使用 `static` 根据常规的文档流来定位元素。
 
-Any offsets will be ignored and the element will not act as a position reference for absolutely positioned children.
+<!-- Any offsets will be ignored and the element will not act as a position reference for absolutely positioned children. -->
+任何偏移都将被忽略，而且该元素不会作为绝对定位的子元素的位置参考。
 
 ```html fuchsia
 <template preview>
@@ -43,9 +47,11 @@ Any offsets will be ignored and the element will not act as a position reference
 
 ## Relative
 
-Use `relative` to position an element according to the normal flow of the document.
+<!-- Use `relative` to position an element according to the normal flow of the document. -->
+使用 `relative` 根据常规的文档流来定位元素。
 
-Offsets are calculated relative to the element's normal position and the element *will* act as a position reference for absolutely positioned children.
+<!-- Offsets are calculated relative to the element's normal position and the element *will* act as a position reference for absolutely positioned children. -->
+偏移量是相对于元素的正常位置计算的，并且该元素将作为绝对定位的子元素的位置参考。
 
 ```html rose
 <template preview>
@@ -69,9 +75,11 @@ Offsets are calculated relative to the element's normal position and the element
 
 ## Absolute
 
-Use `absolute` to position an element *outside* of the normal flow of the document, causing neighboring elements to act as if the element doesn't exist.
+<!-- Use `absolute` to position an element *outside* of the normal flow of the document, causing neighboring elements to act as if the element doesn't exist. -->
+使用 `absolute` 将一个元素定位在文档常规流之外，使相邻元素的行为就像该元素不存在一样。
 
-Offsets are calculated relative to the nearest parent that has a position other than `static`, and the element *will* act as a position reference for other absolutely positioned children.
+<!-- Offsets are calculated relative to the nearest parent that has a position other than `static`, and the element *will* act as a position reference for other absolutely positioned children. -->
+偏移量是相对于最近的位置不是 `static`的父元素计算的，而且该元素将作为其他绝对定位的子元素的位置参考。
 
 ```html indigo
 <template preview>
@@ -123,9 +131,11 @@ Offsets are calculated relative to the nearest parent that has a position other 
 
 ## Fixed
 
-Use `fixed` to position an element relative to the browser window.
+<!-- Use `fixed` to position an element relative to the browser window. -->
+使用`fixed` 来定位一个元素相对于浏览器窗口的位置。
 
-Offsets are calculated relative to the viewport and the element *will* act as a position reference for absolutely positioned children.
+<!-- Offsets are calculated relative to the viewport and the element *will* act as a position reference for absolutely positioned children. -->
+偏移量是相对于视口计算的，且该元素将作为绝对定位的子元素的位置参考。
 
 ```html amber
 <template preview>
@@ -173,11 +183,14 @@ Offsets are calculated relative to the viewport and the element *will* act as a 
 
 ## Sticky
 
-<TipCompat>Note that sticky positioning is not supported in IE11.</TipCompat>
+<!-- <TipCompat>Note that sticky positioning is not supported in IE11.</TipCompat> -->
+<TipCompat>需要注意的是，IE11中不支持 sticky 定位。</TipCompat>
 
-Use `sticky` to position an element as `relative` until it crosses a specified threshold, then treat it as fixed until its parent is off screen.
+<!-- Use `sticky` to position an element as `relative` until it crosses a specified threshold, then treat it as fixed until its parent is off screen. -->
+使用 `sticky` 将一个元素定位为 `relative` ，直到它超过一个指定的阈值，然后将其视为 fixed，直到它的父元素离开屏幕。
 
-Offsets are calculated relative to the element's normal position and the element *will* act as a position reference for absolutely positioned children.
+<!-- Offsets are calculated relative to the element's normal position and the element *will* act as a position reference for absolutely positioned children. -->
+偏移量是相对于元素的正常位置计算的，且该元素将作为其绝对定位的子元素的位置参考。
 
 ```html emerald
 <template preview>
@@ -224,9 +237,10 @@ Offsets are calculated relative to the element's normal position and the element
 <!-- etc. -->
 ```
 
-## Responsive
+## 响应式
 
-To change how an element is positioned only at a specific breakpoint, add a `{screen}:` prefix to any existing position utility. For example, adding the class `md:absolute` to an element would apply the `absolute` utility at medium screen sizes and above.
+<!-- To change how an element is positioned only at a specific breakpoint, add a `{screen}:` prefix to any existing position utility. For example, adding the class `md:absolute` to an element would apply the `absolute` utility at medium screen sizes and above. -->
+要改变元素仅在特定断点处的定位方式，可在任何现有的定位工具类前添加 `{screen}:` 前缀。例如，将 `md:absolute` 类添加到一个元素上，就可以在中等及以上屏幕尺寸使用 `absolute` 功能类。
 
 ```html
 <div class="relative h-32 ...">
@@ -234,14 +248,15 @@ To change how an element is positioned only at a specific breakpoint, add a `{sc
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="position" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="position" />

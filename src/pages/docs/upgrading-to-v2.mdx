@@ -1,49 +1,68 @@
 ---
-title: "Upgrade Guide"
-description: "Upgrading from Tailwind CSS v1.x to v2.0."
+# title: "Upgrade Guide"
+# description: "Upgrading from Tailwind CSS v1.x to v2.0."
+title: "升级指南"
+description: "从 v1.x 升级到 v2.0"
 ---
 
-Tailwind CSS v2.0 is the first new major version since v1.0 was released in May 2019, and as such it includes a handful of small breaking changes.
+<!-- Tailwind CSS v2.0 is the first new major version since v1.0 was released in May 2019, and as such it includes a handful of small breaking changes. -->
+Tailwind CSS v2.0 是自2019年5月发布 v1.0 以来的第一个新的主要版本，因此它包括一些小的不兼容性变更。
+<!-- We don't take breaking changes lightly and have worked hard to make sure the upgrade path is as simple as possible. For most projects, upgrading should take less than 30 minutes. -->
+我们不会轻易作出不兼容性的变更，并努力确保升级路径尽可能简单。对于大多数项目来说，升级应该在30分钟内完成。
 
-We don't take breaking changes lightly and have worked hard to make sure the upgrade path is as simple as possible. For most projects, upgrading should take less than 30 minutes.
-
-If your project uses the `@tailwindcss/ui` plugin, be sure to read the [Tailwind UI for Tailwind CSS v2.0 upgrade guide](https://tailwindui.com/changes-for-v2) as well.
+<!-- If your project uses the `@tailwindcss/ui` plugin, be sure to read the [Tailwind UI for Tailwind CSS v2.0 upgrade guide](https://tailwindui.com/changes-for-v2) as well. -->
+如果您的项目使用 `@tailwindcss/ui` 插件，请务必阅读 [Tailwind UI for Tailwind CSS v2.0 升级指南](https://tailwindui.com/changes-for-v2)。
 
 ----
 
-## Install Tailwind CSS v2.0 and PostCSS 8
+<!-- ## Install Tailwind CSS v2.0 and PostCSS 8 -->
+## 安装 Tailwind CSS v2.0 和 PostCSS 8
 
-Tailwind CSS v2.0 has been updated for the latest PostCSS release which requires installing `postcss` and `autoprefixer` as peer dependencies alongside Tailwind itself.
+<!-- Tailwind CSS v2.0 has been updated for the latest PostCSS release which requires installing `postcss` and `autoprefixer` as peer dependencies alongside Tailwind itself. -->
+Tailwind CSS v2.0 已经更新为最新的 PostCSS 版本，这需要安装 `postcss` 和 `autoprefixer` 作为其依赖，同时安装 Tailwind 本身。
 
-Update Tailwind and install PostCSS and autoprefixer using npm:
+<!-- Update Tailwind and install PostCSS and autoprefixer using npm: -->
+更新 Tailwind 并使用 npm 安装 PostCSS 和 autoprefixer。
 
 ```shell
 npm install tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
-If you run into issues, you may need to use our [PostCSS 7 compatibility build](/docs/installation#post-css-7-compatibility-build) instead.
+<!-- If you run into issues, you may need to use our [PostCSS 7 compatibility build](/docs/installation#post-css-7-compatibility-build) instead. -->
+如果您遇到问题，您可能需要使用我们的 [PostCSS 7兼容性版本](/docs/installation#post-css-7)。
 
-## Support for IE 11 has been dropped
+<!-- ## Support for IE 11 has been dropped -->
+## 已取消对IE 11 的支持
 
-Prior to v2.0, we tried our best to make sure features we included in Tailwind worked in IE 11 whenever possible. This added considerable maintenance burden as well as increased build sizes (even when purging unused styles), so we have decided to drop support for IE 11 as of v2.0.
+<!-- Prior to v2.0, we tried our best to make sure features we included in Tailwind worked in IE 11 whenever possible. This added considerable maintenance burden as well as increased build sizes (even when purging unused styles), so we have decided to drop support for IE 11 as of v2.0. -->
+在v2.0之前，我们尽力确保我们在 Tailwind 中包含的功能尽可能在 IE 11 中工作。这增加了相当大的维护负担，以及增加了构建的大小（即使在清理未使用的样式），所以我们决定从v2.0开始放弃对IE 11的支持。
 
-If you need to support IE 11, we recommend continuing to use Tailwind CSS v1.9 until you no longer need to support IE.
+<!-- If you need to support IE 11, we recommend continuing to use Tailwind CSS v1.9 until you no longer need to support IE. -->
+如果您需要支持 IE 11，我们建议继续使用 Tailwind CSS v1.9，直到您不再需要支持 IE。
 
-## Upgrade to Node.js 12.13 or higher
+<!-- ## Upgrade to Node.js 12.13 or higher -->
+## 升级到Node.js 12.13或更高版本
 
-Tailwind CSS v2.0 no longer supports Node.js 8 or 10. To build your CSS you'll need to ensure you are running Node.js 12.13.0 or higher in both your local and CI environments.
+<!-- Tailwind CSS v2.0 no longer supports Node.js 8 or 10. To build your CSS you'll need to ensure you are running Node.js 12.13.0 or higher in both your local and CI environments. -->
+Tailwind CSS v2.0 不再支持 Node.js 8或10。要建立您的 CSS，您需要确保您在本地和 CI 环境中运行 Node.js 12.13.0或更高版本。
 
-## Update typography and forms plugins
+<!-- ## Update typography and forms plugins -->
+## 更新排版和表单插件
 
-If you are using `@tailwindcss/typography`, you'll want to [upgrade to v0.3.0](https://github.com/tailwindlabs/tailwindcss-typography/releases/tag/v0.3.0) which adds Tailwind CSS v2.0 support.
+<!-- If you are using `@tailwindcss/typography`, you'll want to [upgrade to v0.3.0](https://github.com/tailwindlabs/tailwindcss-typography/releases/tag/v0.3.0) which adds Tailwind CSS v2.0 support. -->
+如果您正在使用 `@tailwindcss/typography`，您需要升级到 v0.3.0，它增加了 Tailwind CSS v2.0 的支持。
+<!-- If you are using `@tailwindcss/custom-forms`, you will want to migrate to `@tailwindcss/forms` which replaces it. Learn more about the new forms plugin in [the release notes](https://blog.tailwindcss.com/tailwindcss-v2#utility-friendly-form-styles). -->
+如果您正在使用 `@tailwindcss/custom-forms`，您将需要迁移到 `@tailwindcss/forms` 来取代它。请在[发布说明](https://blog.tailwindcss.com/tailwindcss-v2#utility-friendly-form-styles)中了解更多关于新表单插件的信息。
 
-If you are using `@tailwindcss/custom-forms`, you will want to migrate to `@tailwindcss/forms` which replaces it. Learn more about the new forms plugin in [the release notes](https://blog.tailwindcss.com/tailwindcss-v2#utility-friendly-form-styles).
 
-The `@tailwindcss/custom-forms` plugin is not compatible with Tailwind CSS v2.0.
+<!-- The `@tailwindcss/custom-forms` plugin is not compatible with Tailwind CSS v2.0. -->
+`@tailwindcss/custom-forms` 插件与 Tailwind CSS v2.0不兼容。
 
-## Remove future and experimental configuration options
+<!-- ## Remove future and experimental configuration options -->
+## 删除未来和实验性的配置选项
 
-As of v2.0 there are no `future` or `experimental` options available, so you can remove any configuration like this from your `tailwind.config.js` file:
+<!-- As of v2.0 there are no `future` or `experimental` options available, so you can remove any configuration like this from your `tailwind.config.js` file: -->
+从 v2.0 开始，就没有 `future` 或 `experimental` 选项了，所以您可以从您的 tailwind.config.js 文件中删除任何这样的配置。
 
 ```diff-js
   module.exports = {
@@ -61,28 +80,36 @@ As of v2.0 there are no `future` or `experimental` options available, so you can
   }
 ```
 
-We will continue to use the `experimental` option in the future for new feature ideas but the `future` option will probably not be used.
+<!-- We will continue to use the `experimental` option in the future for new feature ideas but the `future` option will probably not be used. -->
+未来我们会继续使用 `experimental` 选项来实现新的功能想法，但 `future` 可能不会使用该选项。
 
-## Update renamed utility classes
+<!-- ## Update renamed utility classes -->
+## 更新重命名的功能类
 
-A small number of utilities have been renamed in v2.0:
+<!-- A small number of utilities have been renamed in v2.0: -->
+在 v2.0 中，有一小部分功能类被重新命名。
 
-| Old name             | New name            |
+| 旧名             | 新名          |
 | -------------------- | ------------------- |
 | `whitespace-no-wrap` | `whitespace-nowrap` |
 | `flex-no-wrap`       | `flex-nowrap`       |
 | `col-gap-{n}`        | `gap-x-{n}`         |
 | `row-gap-{n}`        | `gap-y-{n}`         |
 
-You should be able to globally find and replace these classes throughout your entire project very safely, as they are very distinct strings.
+<!-- You should be able to globally find and replace these classes throughout your entire project very safely, as they are very distinct strings. -->
+您应该能够在整个项目中非常安全地全局查找和替换这些类，因为它们是非常不同的字符串。
 
-Updating `whitespace-no-wrap` and `flex-no-wrap` is just a direct replacement, and for the gap utilities we recommend replacing `col-gap-` with `gap-x-` and `row-gap-` with `gap-y-` to handle all sizes at once.
+<!-- Updating `whitespace-no-wrap` and `flex-no-wrap` is just a direct replacement, and for the gap utilities we recommend replacing `col-gap-` with `gap-x-` and `row-gap-` with `gap-y-` to handle all sizes at once. -->
+更新 `whitespace-no-wrap` 和 `flex-no-wrap` 只是直接替换，对于 gap 功能类，我们建议将 `col-gap-` 替换为 `gap-x-`，将 `row-gap-` 替换为 `gap-y-`，以便一次性处理所有尺寸。
 
-## Enable hover and focus for fontWeight if needed
+<!-- ## Enable hover and focus for fontWeight if needed -->
+## 如果需要的话，为 fontWeight 启用 hover 和 focus 功能。
 
-The `hover` and `focus` variants have been disabled for the `fontWeight` plugin by default, as changing font-weight like this tends to cause layout jank so it's uncommon to actually do it anyways.
+<!-- The `hover` and `focus` variants have been disabled for the `fontWeight` plugin by default, as changing font-weight like this tends to cause layout jank so it's uncommon to actually do it anyways. -->
+fontWeight 插件的 `hover` 和 `focus` 变体已经被默认禁用，因为像这样改变字体重量往往会导致布局混乱，所以无论如何都不会真正这么做。
 
-If you need these in your project, re-enable them in your `tailwind.config.js` file:
+<!-- If you need these in your project, re-enable them in your `tailwind.config.js` file: -->
+如果您在项目中需要这些，请在您的 tailwind.config.js 文件中重新启用它们：
 
 ```diff-js
   // tailwind.config.js
@@ -95,9 +122,11 @@ If you need these in your project, re-enable them in your `tailwind.config.js` f
   }
 ```
 
-## Replace clearfix with flow-root
+<!-- ## Replace clearfix with flow-root -->
+用 flow-root 代替 clearfix
 
 The `clearfix` class has been removed since `flow-root` is a simpler solution to the same problem in modern browsers.
+`clearfix` 类已经被删除，因为在现代浏览器中，`flow-root` 是一个更简单的解决方案。
 
 ```diff-html
 - <div class="**clearfix**">
@@ -107,41 +136,52 @@ The `clearfix` class has been removed since `flow-root` is a simpler solution to
   </div>
 ```
 
-## Update font-weight class names for 100 and 200 weights
+<!-- ## Update font-weight class names for 100 and 200 weights -->
+## 更新 font-wight 类的 100 和 200 权重
 
-The class names for the `100` and `200` font weights have changed in Tailwind CSS v2.0:
+<!-- The class names for the `100` and `200` font weights have changed in Tailwind CSS v2.0: -->
+在 Tailwind CSS v2.0中，100 和 200 字体权重的类名已经改变。
 
-| Font weight | Old name             | New name            |
+| 字体权重 |        旧名称      | 新名称            |
 |--------| -------------------- | ------------------- |
 |100     | `font-hairline`           | `font-thin`              |
 |200     | `font-thin`               | `font-extralight`        |
 
-Since `font-thin` appears in both v1 and v2 for different weights, we recommend updating your classes in the following order:
+<!-- Since `font-thin` appears in both v1 and v2 for different weights, we recommend updating your classes in the following order: -->
+由于 `font-thin` 在 v1 和 v2 中出现的权重不同，我们建议按以下顺序更新您的类：
 
-1. Globally find and replace `font-thin` with `font-extralight`
-2. Globally find and replace `font-hairline` with `font-thin`
+<!-- 1. Globally find and replace `font-thin` with `font-extralight` -->
+1. 在全局范围内用 `font-extralight` 替换 `font-thin`
+<!-- 2. Globally find and replace `font-hairline` with `font-thin` -->
+2. 在全局范围内用 `font-thin` 替换 `font-hairline`
 
-## Replace shadow-outline and shadow-xs with ring utilities
+<!-- ## Replace shadow-outline and shadow-xs with ring utilities -->
+## 用 ring 功能类替换 shadow-outline 和 shadow-xs
 
-Tailwind CSS v2.0 introduces a new set of `ring` utilities that let you add outline shadows/focus rings in a way that automatically composes with Tailwind's other box-shadow utilities.
+<!-- Tailwind CSS v2.0 introduces a new set of `ring` utilities that let you add outline shadows/focus rings in a way that automatically composes with Tailwind's other box-shadow utilities. -->
+Tailwind CSS v2.0 引入了一套新的 `ring` 功能类，让您以一种自动与 Tailwind 的其他箱形阴影工具相结合的方式添加轮廓阴影/焦点环。
 
-These are a much better and more powerful alternative to the `shadow-outline` and `shadow-xs` classes, so we've removed those classes.
+<!-- These are a much better and more powerful alternative to the `shadow-outline` and `shadow-xs` classes, so we've removed those classes. -->
+这些都是比 `shadow-outline` 和 `shadow-xs` 类更好更强大的选择，所以我们已经删除了这些类。
 
-Replace `shadow-outline` with `ring`:
+<!-- Replace `shadow-outline` with `ring`: -->
+用 `ring` 替换 `shadow-outline`：
 
 ```diff-html
 - <div class="... **focus:shadow-outline**">
 + <div class="... **focus:ring**">
 ```
 
-Replace `shadow-xs` with `ring-1 ring-black ring-opacity-5`:
+<!-- Replace `shadow-xs` with `ring-1 ring-black ring-opacity-5`: -->
+用 `ring-1 ring-black ring-opacity-5` 替换 `shadow-xs`：
 
 ```diff-html
 - <div class="... **shadow-xs**">
 + <div class="... **ring-1 ring-black ring-opacity-5**">
 ```
 
-Alternatively, you can also add `shadow-outline` and `shadow-xs` back to your config file and leave your HTML untouched:
+<!-- Alternatively, you can also add `shadow-outline` and `shadow-xs` back to your config file and leave your HTML untouched: -->
+另外，您也可以将 `shadow-outline` 和 `shadow-xs` 添加到您的配置文件中，而不影响您的 HTML。
 
 ```js
 module.exports = {
@@ -156,15 +196,17 @@ module.exports = {
 }
 ```
 
-## Configure your color palette explicitly
+<!-- ## Configure your color palette explicitly -->
+## 显式配置您的调色板
 
-**If you are already using a custom color palette, no changes are required and you can safely skip this step.**
-
-The default color palette has changed considerably in Tailwind CSS v2.0 and is not designed to be a drop-in replacement for the color palette that was included in v1.
-
-If you're using the default color palette, you should configure it explicitly to override the new default palette with the colors your site is already using.
-
-Here is an example `tailwind.config.js` file that includes the default colors from v1:
+<!-- **If you are already using a custom color palette, no changes are required and you can safely skip this step.** -->
+**如果您已经使用了自定义的调色板，不需要改变，您可以安全地跳过这一步。**
+<!-- The default color palette has changed considerably in Tailwind CSS v2.0 and is not designed to be a drop-in replacement for the color palette that was included in v1. -->
+默认调色板在 Tailwind CSS v2.0 中已经发生了很大的变化，但并不是为了取代 v1 中的调色板。
+<!-- If you're using the default color palette, you should configure it explicitly to override the new default palette with the colors your site is already using. -->
+如果您正在使用默认调色板，您应该显式的地配置它，用您的网站已经使用的颜色覆盖新的默认调色板。
+<!-- Here is an example `tailwind.config.js` file that includes the default colors from v1: -->
+下面是一个包含v1版默认颜色的 `tailwind.config.js` 文件的例子：
 
 ```js
 // tailwind.config.js
@@ -292,17 +334,21 @@ module.exports = {
 }
 ```
 
-**We do not recommend updating existing sites to use the new default color palette.** The numbers are not meant to be transferrable, so for example `bg-red-600` in v2 is not just a "better" version of `bg-red-600` from v1 — it has different contrast characteristics. If you are happy with how your site looks, there is no reason to spend hours of your life updating your HTML. The old colors are great too!
+<!-- **We do not recommend updating existing sites to use the new default color palette.** The numbers are not meant to be transferrable, so for example `bg-red-600` in v2 is not just a "better" version of `bg-red-600` from v1 — it has different contrast characteristics. If you are happy with how your site looks, there is no reason to spend hours of your life updating your HTML. The old colors are great too! -->
+**我们不建议更新现有网站以使用新的默认调色板。这些数字并不意味着可以转移，所以例如 v2 中的 bg-red-600 并不仅仅是 v1 中的 bg-red-600 的 "更好 "版本--它有不同的对比特性。如果您对您的网站的外观很满意，就没有必要花上几个小时来更新您的 HTML。旧的颜色也很好**
+<!-- ## Configure your font-size scale explicitly -->
+## 显式配置您的 font-size
 
-## Configure your font-size scale explicitly
+<!-- **If you are already using a custom typography scale, no changes are required and you can safely skip this step.** -->
+**如果您已经使用了自定义的排版比例，则无需更改，您可以安全地跳过这一步。**
 
-**If you are already using a custom typography scale, no changes are required and you can safely skip this step.**
+<!-- In v2.0, each font-size utility includes a sensible size-specific line-height by default, so for example `text-sm` automatically sets a line-height of `1.25rem`. -->
+在v2.0中，每个字体大小工具默认都包含一个合理的特定行高，例如 `text-sm` 会自动设置 `1.25rem` 的行高。
+<!-- This will change how your site looks anywhere where you haven't explicitly added a `leading` utility alongside a font-size utility. -->
+如果您没有在 `font-size`功能类旁明确添加 `leading` 功能类，这将会改变您的网站在任何地方的外观。
 
-In v2.0, each font-size utility includes a sensible size-specific line-height by default, so for example `text-sm` automatically sets a line-height of `1.25rem`.
-
-This will change how your site looks anywhere where you haven't explicitly added a `leading` utility alongside a font-size utility.
-
-The fastest way to get past this is to explicitly configure your font-size scale to use the scale from v1:
+<!-- The fastest way to get past this is to explicitly configure your font-size scale to use the scale from v1: -->
+解决这个问题的最快方法是显式配置您的 `font-size` 比例，使用 v1 的比例：
 
 ```js
 // tailwind.config.js
@@ -324,18 +370,22 @@ module.exports = {
 }
 ```
 
-Alternatively, you can go through your HTML and explicitly add a `leading` utility anywhere where you were depending on an inherited line-height:
+<!-- Alternatively, you can go through your HTML and explicitly add a `leading` utility anywhere where you were depending on an inherited line-height: -->
+另外，您也可以检查您的 HTML，并在任何依赖继承行高的地方明确添加一个 `leading` 功能类。
 
 ```diff-html
 - <p class="text-lg">...</p>
 + <p class="text-lg **leading-normal**">...</p>
 ```
 
-## Update default theme keys to DEFAULT
+<!-- ## Update default theme keys to DEFAULT -->
+## 更新默认主题键为 DEFAULT
 
-In Tailwind CSS v1.x, the `default` keyword in various `theme` sections of the `tailwind.config.js` section sometimes meant "don't add a suffix to the class name".
+<!-- In Tailwind CSS v1.x, the `default` keyword in various `theme` sections of the `tailwind.config.js` section sometimes meant "don't add a suffix to the class name". -->
+在Tailwind CSS v1.x中， tailwind.config.js的各个主题部分的 `default` 关键字有时意味着 "不要给类名添加后缀"。
 
-For example, this configuration:
+<!-- For example, this configuration: -->
+例如，这个配置：
 
 ```js
 // tailwind.config.js
@@ -352,9 +402,11 @@ module.exports = {
 }
 ```
 
-...would generated a `rounded` class with a `border-radius` of `0.25rem`, _not_ a `rounded-default` class.
+<!-- ...would generated a `rounded` class with a `border-radius` of `0.25rem`, _not_ a `rounded-default` class. -->
+...会生成一个 `border-radius` 为 `0.25rem` 的 `rounded` 类，而不是一个 `rounded-default` 类。
 
-In Tailwind CSS v2.0, we've updated all special usage of `default` to uppercase `DEFAULT` instead:
+<!-- In Tailwind CSS v2.0, we've updated all special usage of `default` to uppercase `DEFAULT` instead: -->
+在 Tailwind CSS v2.0 中，我们已经更新了所有对 `default` 的特殊用法，改为大写的 `DEFAULT`。
 
 ```js
 // tailwind.config.js
@@ -371,15 +423,20 @@ module.exports = {
 }
 ```
 
-Lowercase `default` will be treated like any other string, so a `default` value under `borderRadius` _will_ generate a `rounded-default` class in Tailwind CSS v.2.0.
+<!-- Lowercase `default` will be treated like any other string, so a `default` value under `borderRadius` _will_ generate a `rounded-default` class in Tailwind CSS v.2.0. -->
+小写的 `default` 会像其他字符串一样被处理，所以在 `borderRadius` 下的默认值会在 Tailwind CSS v.2.0 中生成一个四舍五入的 `default` 类，您应该更新配置文件中所有 `default` 的用法，除非您真的想生成一个 `{utility}-default` 类。
 
-You should update all usage of `default` in your config file to `DEFAULT`, _except_ where you actually want to generate a `{utility}-default` class, like for `cursor-default`.
+<!-- You should update all usage of `default` in your config file to `DEFAULT`, _except_ where you actually want to generate a `{utility}-default` class, like for `cursor-default`. -->
+您应该把配置文件中所有 `default` 的用法都更新为 `DEFAULT`，除非您真的想生成一个 `{utility}-default` 类，比如 `cursor-default`。
 
-Reference [the complete default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js) to see where we now use `DEFAULT` and where we still use `default` if you are unclear about what changes you need to make to your own configuration.
+<!-- Reference [the complete default configuration](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js) to see where we now use `DEFAULT` and where we still use `default` if you are unclear about what changes you need to make to your own configuration. -->
+如果您不清楚您自己的配置需要做哪些改变，请参考[完整的 `default` 配置](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js)，看看我们现在在哪些地方使用了 `DEFAULT`，哪些地方还在使用 `default`。
 
-## Move deliberately shallow extend to top-level
+<!-- ## Move deliberately shallow extend to top-level -->
+## 特意将浅层扩展移到顶层
 
-In Tailwind CSS v1.0, theme changes under `extend` were merged shallowly. So this configuration would override _all_ of the purple colors:
+<!-- In Tailwind CSS v1.0, theme changes under `extend` were merged shallowly. So this configuration would override _all_ of the purple colors: -->
+在 Tailwind CSS v1.0 中，`extend` 下的主题变化被浅层次合并。所以这个配置会覆盖所有的紫色。
 
 ```js
 // tailwind.config.js
@@ -398,9 +455,11 @@ module.exports = {
 }
 ```
 
-In v2.0, these are merged deeply, so the above configuration would still generate the default `purple-100` to `purple-900` shades in addition to the custom `purple-light`, `purple-medium`, and `purple-dark` shades.
+<!-- In v2.0, these are merged deeply, so the above configuration would still generate the default `purple-100` to `purple-900` shades in addition to the custom `purple-light`, `purple-medium`, and `purple-dark` shades. -->
+在 v2.0 中，这些都是深度合并的，所以上面的配置仍然会生成默认的紫色-100到紫色-900色调，此外还有自定义的紫色-浅色、紫色-中色和紫色-深色。
 
-For the most part this is just helpful, but if you were depending on the shallow merging you will want to move your customizations to the top-level, and manually merge in the other top-level colors:
+<!-- For the most part this is just helpful, but if you were depending on the shallow merging you will want to move your customizations to the top-level, and manually merge in the other top-level colors: -->
+在大多数情况下，这很有用，但如果您是依靠浅层合并，您会希望将您的自定义移动到顶层，并手动合并其他顶层颜色。
 
 ```js
 const defaultTheme = require('tailwindcss/defaultTheme')
@@ -419,14 +478,17 @@ module.exports = {
 }
 ```
 
-You probably won't have to do this.
+<!-- You probably won't have to do this. -->
+您可能不需要这样做。
 
+<!-- ## Update `@apply` statements that rely on class order -->
+## 更新依赖类顺序的 @apply 语句
 
-## Update `@apply` statements that rely on class order
+<!-- The `@apply` feature has gotten a lot more powerful in v2.0, but a few behaviors needed to change to make that possible. -->
+在 v2.0 中，`@apply` 功能变得更加强大，但需要改变一些行为才能实现。
 
-The `@apply` feature has gotten a lot more powerful in v2.0, but a few behaviors needed to change to make that possible.
-
-Previously, classes were applied in the order they appeared in your CSS:
+<!-- Previously, classes were applied in the order they appeared in your CSS: -->
+以前，类是按照它们在 CSS 中出现的顺序来应用的。
 
 ```css
 /* Input */
@@ -441,7 +503,8 @@ Previously, classes were applied in the order they appeared in your CSS:
 }
 ```
 
-Now, classes are applied in the order they appear in the original CSS:
+<!-- Now, classes are applied in the order they appear in the original CSS: -->
+现在，类将按照它们在原始 CSS 中出现的顺序被应用。
 
 ```css
 /* Input */
@@ -456,14 +519,16 @@ Now, classes are applied in the order they appear in the original CSS:
 }
 ```
 
-This is to make sure the behavior matches the behavior you'd get in HTML:
+<!-- This is to make sure the behavior matches the behavior you'd get in HTML: -->
+这是为了确保行为与 HTML 中的行为一致。
 
 ```html
 <!-- Here `pt-5` still takes precedence even though it appears first. -->
 <div class="pt-5 p-4">...</div>
 ```
 
-If you were depending on the old behavior, you may see some differences in how your site is rendered. To get around this, use multiple `@apply` declarations:
+<!-- If you were depending on the old behavior, you may see some differences in how your site is rendered. To get around this, use multiple `@apply` declarations: -->
+如果您是依赖旧的行为，您可能会看到您的网站的渲染方式有一些差异。要解决这个问题，请使用多个 `@apply` 声明。
 
 ```css
 .my-class {
@@ -472,13 +537,17 @@ If you were depending on the old behavior, you may see some differences in how y
 }
 ```
 
-This is unlikely to affect almost anyone who wasn't going out their way to do something weird.
+<!-- This is unlikely to affect almost anyone who wasn't going out their way to do something weird. -->
+这几乎不会影响那些不会去做奇怪事情的人。
 
-## Add your configured prefix to any @apply statements
+<!-- ## Add your configured prefix to any @apply statements -->
+## 在任何 @apply 语句中添加您配置的前缀
 
-In Tailwind CSS v1.0, you could `@apply` unprefixed utilities even if you had configured a prefix.
+<!-- In Tailwind CSS v1.0, you could `@apply` unprefixed utilities even if you had configured a prefix. -->
+在 Tailwind CSS v1.0 中，即使您配置了一个前缀，您也可以 @apply 无前缀的功能类。
 
-This is no longer supported in v2.0, so if you have a prefix (like `tw-`) configured for your site, you'll need to make sure you include that whenever you use `@apply`:
+<!-- This is no longer supported in v2.0, so if you have a prefix (like `tw-`) configured for your site, you'll need to make sure you include that whenever you use `@apply`: -->
+这在 v2.0 中不再支持，所以如果您为您的网站配置了一个前缀（如 `tw-` ），您需要确保在您使用 `@apply` 时包含这个前缀。
 
 ```css
 .my-class {
@@ -486,9 +555,11 @@ This is no longer supported in v2.0, so if you have a prefix (like `tw-`) config
 }
 ```
 
-## Remove leading dot from @apply statements
+<!-- ## Remove leading dot from @apply statements -->
+## 删除 @apply 语句中的前导点
 
-We used to support writing `@apply` statements with an optional leading `.` character:
+<!-- We used to support writing `@apply` statements with an optional leading `.` character: -->
+我们曾经支持用可选的 `.` 字符来编写 `@apply` 语句。
 
 ```css
 .my-class {
@@ -496,7 +567,8 @@ We used to support writing `@apply` statements with an optional leading `.` char
 }
 ```
 
-We don't support this anymore, so update any `@apply` statements and remove the dot:
+<!-- We don't support this anymore, so update any `@apply` statements and remove the dot: -->
+我们不再支持这个了，所以更新任何 `@apply` 语句并删除点。
 
 ```css
 .my-class {
@@ -504,9 +576,11 @@ We don't support this anymore, so update any `@apply` statements and remove the 
 }
 ```
 
-## Enable any truncate variants under textOverflow
+<!-- ## Enable any truncate variants under textOverflow -->
+## 在 textOverflow 下启用任何 truncate 变体
 
-The `truncate` utility is now part of the `textOverflow` core plugin, so if you had enabled any extra variants (like `group-hover`) for the `wordBreak` plugin in order to use them with the `truncate` class, you'll want to enable them for `textOverflow` now as well or instead:
+<!-- The `truncate` utility is now part of the `textOverflow` core plugin, so if you had enabled any extra variants (like `group-hover`) for the `wordBreak` plugin in order to use them with the `truncate` class, you'll want to enable them for `textOverflow` now as well or instead: -->
+`truncate` 功能类现在是 `textOverflow` 核心插件的一部分，所以如果您为了使用 `truncate` 类而为 `wordBreak` 插件启用了任何额外的变体（比如 `group-hover`），您现在也要为 `textOverflow` 启用这些变体。
 
 ```diff-js
   // tailwind.config.js
@@ -518,11 +592,14 @@ The `truncate` utility is now part of the `textOverflow` core plugin, so if you 
   }
 ```
 
-## The scrolling-touch and scrolling-auto utilities have been removed
+<!-- ## The scrolling-touch and scrolling-auto utilities have been removed -->
+## 滚动触摸和自动滚动功能已移除
 
-Since iOS 13 stopped supporting the `-webkit-overflow-scrolling` property, we've removed these two utilities from v2.0.
+<!-- Since iOS 13 stopped supporting the `-webkit-overflow-scrolling` property, we've removed these two utilities from v2.0. -->
+由于 iOS 13 不再支持 `-webkit-overflow-scrolling` 属性，我们已经从 v2.0 中删除了这两个功能。
 
-If you still need them because you are building something for older iOS versions, you can add them yourself as custom utilities:
+<!-- If you still need them because you are building something for older iOS versions, you can add them yourself as custom utilities: -->
+如果您仍然需要它们，因为您正在为老版本的 iOS 构建一些东西，您可以自己将它们添加为自定义功能。
 
 ```css
 @tailwind base;
@@ -541,9 +618,11 @@ If you still need them because you are building something for older iOS versions
 }
 ```
 
-## Update theme function references that read from arrays
+<!-- ## Update theme function references that read from arrays -->
+## 更新从数组中读取的 theme 函数引用
 
-The `theme` function (in CSS, the `tailwind.config.js` file, and in the plugin API) is more intelligent in v2.0 and no longer requires you to manually join arrays or access the first index explicitly.
+<!-- The `theme` function (in CSS, the `tailwind.config.js` file, and in the plugin API) is more intelligent in v2.0 and no longer requires you to manually join arrays or access the first index explicitly. -->
+在 v2.0 中，`theme` 功能（在 CSS、tailwind.config.js文件和插件 API 中）更加智能，不再需要您手动加入数组或明确访问第一个索引。
 
 ```js
 // tailwind.config.js
@@ -574,15 +653,20 @@ module.exports = {
 }
 ```
 
-If for whatever reason you want to access the raw data structure, you can use the `config` function instead.
+<!-- If for whatever reason you want to access the raw data structure, you can use the `config` function instead. -->
+如果出于任何原因您想访问原始数据结构，您可以使用 `config` 函数来代替。
 
-## Add hidden to any template tags within space or divide elements
+<!-- ## Add hidden to any template tags within space or divide elements -->
+## 在空格或分割元素内的任何模板标签中添加隐藏功能
 
-We used to have a special rule for ignoring `template` elements when using the `space-x/y` and `divide-x/y` utilities, mostly to make life easier for Alpine.js users.
+<!-- We used to have a special rule for ignoring `template` elements when using the `space-x/y` and `divide-x/y` utilities, mostly to make life easier for Alpine.js users. -->
+我们曾经有一个特殊的规则，在使用 `space-x/y` 和 `divide-x/y` 功能类时忽略模板元素，主要是为了让 Alpine.js 用户更加方便。
 
-We've updated how this works to no longer special case `template` elements and instead just explicitly ignore any element that has a `hidden` attribute.
+<!-- We've updated how this works to no longer special case `template` elements and instead just explicitly ignore any element that has a `hidden` attribute. -->
+我们已经更新了工作方式，不再对模板元素进行特殊处理，而是明确地忽略任何具有隐藏属性的元素。
 
-To update your code for this change, just add `hidden` to your `template` tags:
+<!-- To update your code for this change, just add `hidden` to your `template` tags: -->
+要更新您的代码以适应这一变化，只需在您的 `template` 标签中添加 `hidden` 即可：
 
 ```diff-html
   <div class="space-y-4">
@@ -593,11 +677,14 @@ To update your code for this change, just add `hidden` to your `template` tags:
   </div>
 ```
 
-## Update purge options to match PurgeCSS 3.0
+<!-- ## Update purge options to match PurgeCSS 3.0 -->
+## 更新清除选项以匹配 PurgeCSS 3.0
 
-Internally we've upgraded to [PurgeCSS 3.0](https://github.com/FullHuman/purgecss/releases/tag/v3.0.0), so any raw options you were passing into PurgeCSS through the `options` key need to be updated to match the options exposed in PurgeCSS 3.0.
+<!-- Internally we've upgraded to [PurgeCSS 3.0](https://github.com/FullHuman/purgecss/releases/tag/v3.0.0), so any raw options you were passing into PurgeCSS through the `options` key need to be updated to match the options exposed in PurgeCSS 3.0. -->
+在内部，我们已经升级到了 [PurgeCSS 3.0](https://github.com/FullHuman/purgecss/releases/tag/v3.0.0)，所以您通过选项键传递到 PurgeCSS 的任何原始选项都需要更新，以匹配 PurgeCSS 3.0 中的选项。
 
-For example, if you were using `whitelist`, you'll want to update this to `safelist`:
+<!-- For example, if you were using `whitelist`, you'll want to update this to `safelist`: -->
+例如，如果您使用的是 `whitelist`，您就需要更新为 `safelist`：
 
 ```diff-js
   // tailwind.config.js
@@ -614,11 +701,14 @@ For example, if you were using `whitelist`, you'll want to update this to `safel
   }
 ```
 
-If you weren't using the `options` key, you don't need to do anything.
+<!-- If you weren't using the `options` key, you don't need to do anything. -->
+如果您没有使用 `option` 键，您不需要做任何事情。
 
-## Disable preserveHtmlElements if using a custom PurgeCSS extractor
+<!-- ## Disable preserveHtmlElements if using a custom PurgeCSS extractor -->
+## 如果使用自定义的 PurgeCSS 提取器，则禁用 preserveHtmlElements
 
-In v1.0, Tailwind ignored the `preserveHtmlElements` option if you were using a custom extractor. This option is now properly respected in v2.0, so if you want to disable it you'll need to do so explicitly:
+<!-- In v1.0, Tailwind ignored the `preserveHtmlElements` option if you were using a custom extractor. This option is now properly respected in v2.0, so if you want to disable it you'll need to do so explicitly: -->
+在 v1.0 中，如果您使用一个自定义的提取器，Tailwind 忽略了 `preserveHtmlElements` 选项。这个选项现在在 v2.0 中得到了适当的尊重，所以如果您想禁用它，您需要显式地这样做：
 
 ```diff-js
   // tailwind.config.js
@@ -637,11 +727,13 @@ In v1.0, Tailwind ignored the `preserveHtmlElements` option if you were using a 
   }
 ```
 
-## Prefix any keyframe references if needed
+<!-- ## Prefix any keyframe references if needed -->
+## 如有需要，请在任何 keyframe 引用前加上前缀
 
-If you've configured a prefix in your `tailwind.config.js` file, Tailwind v2.0 will automatically apply that prefix to any keyframes declarations in your `theme`.
-
-If you are referencing any configured keyframes in custom CSS, you'll want to make sure you add your prefix:
+<!-- If you've configured a prefix in your `tailwind.config.js` file, Tailwind v2.0 will automatically apply that prefix to any keyframes declarations in your `theme`. -->
+如果您已经在您的 `tailwind.config.js` 文件中配置了一个前缀，Tailwind v2.0 将自动应用该前缀到您的主题中的任何 `keyframes` 声明。
+<!-- If you are referencing any configured keyframes in custom CSS, you'll want to make sure you add your prefix: -->
+如果您在自定义 CSS 中引用任何配置的 keyframes，您需要确保添加您的前缀。
 
 ```diff-css
   .my-class {
@@ -650,4 +742,5 @@ If you are referencing any configured keyframes in custom CSS, you'll want to ma
   }
 ```
 
-This only matters if you've configured a prefix _and_ you're referencing configured keyframes in custom CSS files. If this affects more than two people on the entire planet I will be absolutely amazed.
+<!-- This only matters if you've configured a prefix _and_ you're referencing configured keyframes in custom CSS files. If this affects more than two people on the entire planet I will be absolutely amazed. -->
+这仅在您配置了前缀 _and_ 且引用自定义 CSS 文件中已配置的 keyframes 时才重要。 如果这影响到整个星球上的两个以上的人，我将绝对感到惊讶。

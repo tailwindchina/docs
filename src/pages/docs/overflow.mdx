@@ -1,6 +1,7 @@
 ---
 title: "Overflow"
-description: "Utilities for controlling how an element handles content that is too large for the container."
+# description: "Utilities for controlling how an element handles content that is too large for the container."
+description: "用于控制元素如何处理对容器来说太大的内容的工具。"
 features:
   responsive: true
   customizable: false
@@ -14,9 +15,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Visible
+<!-- ## Visible -->
+## 可见
 
-Use `overflow-visible` to prevent content within an element from being clipped. Note that any content that overflows the bounds of the element will then be visible.
+<!-- Use `overflow-visible` to prevent content within an element from being clipped. Note that any content that overflows the bounds of the element will then be visible. -->
+使用 `overflow-visible` 来防止元素内的内容被剪切。请注意，任何溢出元素边界的内容都将是可见的。
 
 ```html lightBlue
 <template preview>
@@ -32,9 +35,11 @@ Use `overflow-visible` to prevent content within an element from being clipped. 
 <div class="**overflow-visible** h-24 h- ...">Lorem ipsum dolor sit amet...</div>
 ```
 
-## Auto
+<!-- ## Auto -->
+## 自动
 
-Use `overflow-auto` to add scrollbars to an element in the event that its content overflows the bounds of that element. Unlike `.overflow-scroll`, which always shows scrollbars, this utility will only show them if scrolling is necessary.
+<!-- Use `overflow-auto` to add scrollbars to an element in the event that its content overflows the bounds of that element. Unlike `.overflow-scroll`, which always shows scrollbars, this utility will only show them if scrolling is necessary. -->
+使用 `overflow-auto` 在一个元素的内容溢出该元素的边界时为其添加滚动条。不像 `.overflow-scroll` 总是显示滚动条，这个工具只在需要滚动时才会显示。
 
 ```html rose
 <template preview>
@@ -48,9 +53,11 @@ Use `overflow-auto` to add scrollbars to an element in the event that its conten
 <div class="**overflow-auto** h-32 ...">Lorem ipsum dolor sit amet...</div>
 ```
 
-## Hidden
+<!-- ## Hidden -->
+## 隐藏
 
-Use `overflow-hidden` to clip any content within an element that overflows the bounds of that element.
+<!-- Use `overflow-hidden` to clip any content within an element that overflows the bounds of that element. -->
+使用 `overflow-hidden` 来剪切元素中任何溢出该元素边界的内容。
 
 ```html purple
 <template preview>
@@ -64,9 +71,11 @@ Use `overflow-hidden` to clip any content within an element that overflows the b
 <div class="**overflow-hidden** h-32 ...">Lorem ipsum dolor sit amet...</div>
 ```
 
-## Scroll horizontally if needed
+<!-- ## Scroll horizontally if needed -->
+## 需要时水平滚动
 
-Use `overflow-x-auto` to allow horizontal scrolling if needed.
+<!-- Use `overflow-x-auto` to allow horizontal scrolling if needed. -->
+如果需要，使用 `overflow-x-auto` 来允许水平滚动。
 
 ```html fuchsia
 <template preview>
@@ -80,9 +89,11 @@ Use `overflow-x-auto` to allow horizontal scrolling if needed.
 <div class="**overflow-x-auto** ...">QrLmmW69vMQD...</div>
 ```
 
-## Scroll vertically if needed
+<!-- ## Scroll vertically if needed -->
+## 需要时垂直滚动
 
-Use `overflow-y-auto` to allow vertical scrolling if needed.
+<!-- Use `overflow-y-auto` to allow vertical scrolling if needed. -->
+如果需要，使用 `overflow-y-auto` 来允许垂直滚动。
 
 ```html amber
 <template preview>
@@ -96,9 +107,11 @@ Use `overflow-y-auto` to allow vertical scrolling if needed.
 <div class="**overflow-y-auto** h-32 ...">Lorem ipsum dolor sit amet...</div>
 ```
 
-## Scroll horizontally always
+<!-- ## Scroll horizontally always -->
+## 始终水平滚动
 
-Use `overflow-x-scroll` to allow horizontal scrolling and always show scrollbars unless always-visible scrollbars are disabled by the operating system.
+<!-- Use `overflow-x-scroll` to allow horizontal scrolling and always show scrollbars unless always-visible scrollbars are disabled by the operating system. -->
+使用 `overflow-x-scroll` 允许水平滚动，并始终显示滚动条，除非操作系统禁用了始终可见的滚动条。
 
 ```html emerald
 <template preview>
@@ -112,9 +125,11 @@ Use `overflow-x-scroll` to allow horizontal scrolling and always show scrollbars
 <div class="**overflow-x-scroll** ...">QrLmmW69vMQD...</div>
 ```
 
-## Scroll vertically always
+<!-- ## Scroll vertically always -->
+## 始终垂直滚动
 
-Use `overflow-y-scroll` to allow vertical scrolling and always show scrollbars unless always-visible scrollbars are disabled by the operating system.
+<!-- Use `overflow-y-scroll` to allow vertical scrolling and always show scrollbars unless always-visible scrollbars are disabled by the operating system. -->
+使用 `overflow-y-scroll` 允许垂直滚动，并始终显示滚动条，除非操作系统禁用了始终可见的滚动条。
 
 ```html lightBlue
 <template preview>
@@ -129,9 +144,11 @@ Use `overflow-y-scroll` to allow vertical scrolling and always show scrollbars u
 ```
 
 
-## Scroll in all directions
+<!-- ## Scroll in all directions -->
+## 在所有方向上滚动
 
-Use `overflow-scroll` to add scrollbars to an element. Unlike `.overflow-auto`, which only shows scrollbars if they are necessary, this utility always shows them. Note that some operating systems (like macOS) hide unnecessary scrollbars regardless of this setting.
+<!-- Use `overflow-scroll` to add scrollbars to an element. Unlike `.overflow-auto`, which only shows scrollbars if they are necessary, this utility always shows them. Note that some operating systems (like macOS) hide unnecessary scrollbars regardless of this setting. -->
+使用 `overflow-scroll` 为元素添加滚动条。与 `.overflow-auto` 不同的是，`.overflow-auto` 只在必要时才显示滚动条，而这个工具总是显示滚动条。需要注意的是，有些操作系统（比如macOS）会隐藏不必要的滚动条，而不考虑这个设置。
 
 ```html fuchsia
 <template preview>
@@ -145,9 +162,10 @@ Use `overflow-scroll` to add scrollbars to an element. Unlike `.overflow-auto`, 
 <div class="**overflow-scroll** h-32 ...">Lorem ipsum dolor sit amet...</div>
 ```
 
-## Responsive
+## 响应式
 
-To apply an overflow utility only at a specific breakpoint, add a `{screen}:` prefix to the existing class name. For example, adding the class `md:overflow-scroll` to an element would apply the `overflow-scroll` utility at medium screen sizes and above.
+<!-- To apply an overflow utility only at a specific breakpoint, add a `{screen}:` prefix to the existing class name. For example, adding the class `md:overflow-scroll` to an element would apply the `overflow-scroll` utility at medium screen sizes and above. -->
+要只在特定的断点处应用 overflow 功能，请在现有的类名前添加 `{screen}:` 前缀。例如，将类 `md:overflow-scroll` 添加到一个元素中，就可以在中等大小及以上的屏幕上应用 `overflow-scroll` 工具。
 
 ```html
 <div class="overflow-auto **md:overflow-scroll** ...">
@@ -155,14 +173,15 @@ To apply an overflow utility only at a specific breakpoint, add a `{screen}:` pr
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="overflow" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="overflow" />

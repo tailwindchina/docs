@@ -1,15 +1,19 @@
 ---
-title: Optimizing for Production
-description: Removing unused CSS from your production builds for maximum performance.
+# title: Optimizing for Production
+# description: Removing unused CSS from your production builds for maximum performance.
+title: 优化生产
+description: 从您的生产构建中移除未使用的 CSS，以获得最佳性能。
 ---
 
 import { Heading } from '@/components/Heading'
 import { TipGood, TipBad } from '@/components/Tip'
 import stats from '@/utils/stats'
 
-## <Heading hidden>Overview</Heading>
+<!-- ## <Heading hidden>Overview</Heading> -->
+## <Heading hidden>概览</Heading>
 
-<p>Using the default configuration, the development build of Tailwind CSS is {stats.default.original} uncompressed, {stats.default.gzipped} minified and compressed with <a href="https://www.gnu.org/software/gzip/">Gzip</a>, and {stats.default.brotlified} when compressed with <a href="https://github.com/google/brotli">Brotli</a>.</p>
+<!-- <p>Using the default configuration, the development build of Tailwind CSS is {stats.default.original} uncompressed, {stats.default.gzipped} minified and compressed with <a href="https://www.gnu.org/software/gzip/">Gzip</a>, and {stats.default.brotlified} when compressed with <a href="https://github.com/google/brotli">Brotli</a>.</p> -->
+<p>使用默认配置，尾风CSS的开发版本是{stats.default.original}未压缩，{stats.default.gzipped}用<a href="https://www.gnu.org/software/gzip/">Gzip</a>进行压缩，{stats.default.brotlified}用<a href="https://github.com/google/brotli">Brotli</a>进行压缩。</p>
 
 <table>
   <thead>
@@ -30,27 +34,40 @@ import stats from '@/utils/stats'
   </tbody>
 </table>
 
-This might sound enormous but **the development build is large by design**.
+<!-- This might sound enormous but **the development build is large by design**. -->
+这听起来可能很庞大，那是因为设计就很庞大。
 
-To make the development experience as productive as possible, Tailwind generates thousands of utility classes for you, most of which you probably won't actually use.
+<!-- To make the development experience as productive as possible, Tailwind generates thousands of utility classes for you, most of which you probably won't actually use.
 
 Think of Tailwind like a giant box of LEGO — you dump it all out on the floor and build what you want to build, then when you're done you put all the pieces you didn't use back into the box.
 
 For example, Tailwind generates margin utilities for every size in your spacing scale, for every side of an element you might want to apply margin to, at every breakpoint you are using in your project. This leads to hundreds of different combinations that are all important to have available, but not all likely to be needed.
 
-**When building for production, you should always use Tailwind's `purge` option to tree-shake unused styles and optimize your final build size.** When removing unused styles with Tailwind, it's very hard to end up with more than 10kb of compressed CSS.
+**When building for production, you should always use Tailwind's `purge` option to tree-shake unused styles and optimize your final build size.** When removing unused styles with Tailwind, it's very hard to end up with more than 10kb of compressed CSS. -->
 
-## Writing purgeable HTML
+为了使开发经验尽可能的富有成效，Tailwind 为您生成了成千上万的功能类，其中大部分您可能不会真正使用。
 
-Before getting started with the `purge` feature, it's important to understand how it works and build the correct mental model to make sure you never accidentally remove important styles when building for production.
+把 Tailwind 想象成一个巨大的乐高盒子--您把它倾倒在地板上，建造您想建造的东西，然后当您完成后，您把所有您不用的碎片放回盒子里。
 
-[PurgeCSS](https://purgecss.com/) _(the library we use under the hood)_ is intentionally very naive in the way it looks for classes in your HTML. It doesn't try to parse your HTML and look for class attributes or dynamically execute your JavaScript — it simply looks for any strings in the entire file that match this regular expression:
+例如，Tailwind 为您的间距尺度中的每一个尺寸，为您可能想要应用边距的元素的每一个侧面，在您的项目中使用的每一个断点生成边距实用程序。这导致了数以百计的不同组合，这些组合都是重要的，但不可能都是需要的。
+
+**当构建生产时，您应该总是使用 Tailwind 的 `purge` 选项来摇树优化未使用的样式，并优化您的最终构建大小**当使用 Tailwind 删除未使用的样式时，很难最终得到超过 10kb 的压缩 CSS。
+
+## 编写可清除的 HTML
+
+<!-- Before getting started with the `purge` feature, it's important to understand how it works and build the correct mental model to make sure you never accidentally remove important styles when building for production. -->
+在开始使用 `Purge` 功能之前，重要的是要了解它是如何工作的，并建立正确的心理模型，以确保您在为生产构建时永远不会意外地删除重要的样式。
+
+[PurgeCSS](https://purgecss.com/)_(我们在引擎下使用的库)_在寻找 HTML 中的类的方式上故意非常幼稚。它并不试图解析您的 HTML 并查找类的属性，也不动态执行您的 JavaScript --它只是在整个文件中查找符合这个正则表达式的任何字符串。
 
 ```js
-/[^<>"'`\s]*[^<>"'`\s:]/g
+  /[^<>"'`\s]*[^<>"'`\s:]/g
 ```
 
-This basically matches any string separated by spaces, quotes or angle brackets, including HTML tags, attributes, classes, and even the actual written content in your markup.
+<!-- This basically matches any string separated by spaces, quotes or angle brackets, including HTML tags, attributes, classes, and even the actual written content in your markup. -->
+
+这基本上可以匹配任何由空格、引号或角括号分隔的字符串，包括 HTML 标签、属性、类，甚至是您标记中的实际书面内容。
+
 
 ```html
 <template preview>
@@ -85,27 +102,33 @@ This basically matches any string separated by spaces, quotes or angle brackets,
 </**div**>
 ```
 
-That means that **it is important to avoid dynamically creating class strings in your templates with string concatenation**, otherwise PurgeCSS won't know to preserve those classes.
+<!-- That means that **it is important to avoid dynamically creating class strings in your templates with string concatenation**, otherwise PurgeCSS won't know to preserve those classes. -->
 
-<TipBad>Don't use string concatenation to create class names</TipBad>
+<!-- <TipBad>Don't use string concatenation to create class names</TipBad> -->
+这意味着，**重要的是避免在您的模板中使用字符串连接**动态创建类字符串，否则 PurgeCSS 将不知道保存这些类。
+
+<TipBad>不要使用字符串连接来创建类名</TipBad>
 
 ```html mt-4
 <div class="**text-{{**  **error**  **?**  '**red**'  **:**  '**green**'  **}}-600**"></div>
 ```
 
-<TipGood>Do dynamically select a complete class name</TipGood>
+<!--<TipGood>Do dynamically select a complete class name</TipGood>-->
+<TipGood>动态选择一个完整的类名</TipGood>
 
 ```html mt-4
 <div class="**{{**  **error**  **?**  '**text-red-600**'  **:**  '**text-green-600**'  **}}**"></div>
 ```
 
-As long as a class name appears in your template _in its entirety_, PurgeCSS will not remove it.
+<!-- As long as a class name appears in your template _in its entirety_, PurgeCSS will not remove it. -->
 
-## Removing unused CSS
+只要一个类名出现在您的模板中，PurgeCSS 就不会删除它。
 
-### Basic usage
+## 删除未使用的CSS
 
-To get started, provide an array of paths to all of your template files using the `purge` option:
+### 基本用途
+
+要开始使用，请使用 `purge` 选项为您所有的模板文件提供一个路径数组。
 
 ```js
 // tailwind.config.js
@@ -121,13 +144,18 @@ module.exports = {
 }
 ```
 
-**This list should include *any* files in your project that reference any of your styles by name.** For example, if you have a JS file in your project that dynamically toggles some classes in your HTML, you should make sure to include that file in this list.
+<!-- **This list should include *any* files in your project that reference any of your styles by name.** For example, if you have a JS file in your project that dynamically toggles some classes in your HTML, you should make sure to include that file in this list. -->
+例如，如果您的项目中有一个JS文件，在您的HTML中动态切换一些类，**您应该确保在这个列表中包括该文件**。
 
-Now whenever you compile your CSS with `NODE_ENV` set to `production`, Tailwind will automatically purge unused styles from your CSS.
+<!-- Now whenever you compile your CSS with `NODE_ENV` set to `production`, Tailwind will automatically purge unused styles from your CSS.  -->
+现在，每当您在编译 CSS 时将 `NODE_ENV` 设置为 `production`，Tailwind 将自动从您的 CSS 中清除未使用的样式。
 
-### Enabling manually
+<!-- ### Enabling manually -->
 
-If you want to manually control whether unused styles should be removed (instead of depending implicitly on the environment variable), you can use an object syntax and provide the `enabled` option, specifying your templates using the `content` option:
+### 手动启用
+
+<!-- If you want to manually control whether unused styles should be removed (instead of depending implicitly on the environment variable), you can use an object syntax and provide the `enabled` option, specifying your templates using the `content` option: -->
+如果您想手动控制是否应该删除未使用的样式（而不是隐性地依赖环境变量），您可以使用一个对象语法，并提供 `enabled` 选项，使用 `content` 选项指定您的模板。
 
 ```js
 // tailwind.config.js
@@ -140,13 +168,20 @@ module.exports = {
 }
 ```
 
-We recommend only removing unused styles in production, as removing them in development means you need to recompile any time you change your templates and compiling with PurgeCSS enabled is much slower.
+<!-- We recommend only removing unused styles in production, as removing them in development means you need to recompile any time you change your templates and compiling with PurgeCSS enabled is much slower. -->
+我们建议只在生产中移除未使用的样式，因为在开发中移除它们意味着您需要在任何时候改变您的模板时重新编译，并且在启用 PurgeCSS 的情况下编译速度要慢得多。
 
-### Preserving HTML elements
+<!-- ### Preserving HTML elements -->
 
-By default, Tailwind will preserve all basic HTML element styles in your CSS, like styles for the `html`, `body`, `p`, `h1`, etc. tags. This is to minimize accidentally over-purging in cases where you are using markdown source files for example (where there is no actual `h1` tag present), or using a framework that hides the document shell (containing the `html` and `body` tags) somewhere in a vendor directory (like Next.js does).
+### 保留HTML元素
 
-If you want to disable this behavior, you can set `preserveHtmlElements` to false:
+<!-- By default, Tailwind will preserve all basic HTML element styles in your CSS, like styles for the `html`, `body`, `p`, `h1`, etc. tags. This is to minimize accidentally over-purging in cases where you are using markdown source files for example (where there is no actual `h1` tag present), or using a framework that hides the document shell (containing the `html` and `body` tags) somewhere in a vendor directory (like Next.js does). -->
+
+<!-- If you want to disable this behavior, you can set `preserveHtmlElements` to false:  -->
+
+默认情况下，Tailwind将保留所有基本的HTML元素样式在您的 CSS 中，如 `html`，`body`，`p`，`h1` 等标签的样式。这是为了减少意外的过度清洗，例如在您使用 markdown 源文件的情况下（其中没有实际的 `h1` 标签），或者使用一个框架将文档外壳（包含 `html` 和 `body` 标签）隐藏在供应商目录的某个地方（像 Next.js 那样）。
+
+如果您想禁止这种行为，您可以将 `preserveHtmlElements` 设置为 false。
 
 
 ```js
@@ -160,11 +195,14 @@ module.exports = {
 }
 ```
 
-We generally do not recommend this and believe that the risks outweigh the benefits, but we're not the cops, do whatever you want.
+<!-- We generally do not recommend this and believe that the risks outweigh the benefits, but we're not the cops, do whatever you want. -->
+我们一般不建议这样做，认为风险大于收益，但我们不是警察，您想怎么做就怎么做。
 
-### Purging specific layers
+<!-- ### Purging specific layers -->
+### 清理特定层
 
-By default, Tailwind will purge all styles in the `base`, `components`, and `utilities` layers. If you'd like to change this, use the `layers` option to manually specify the layers you'd like to purge:
+<!-- By default, Tailwind will purge all styles in the `base`, `components`, and `utilities` layers. If you'd like to change this, use the `layers` option to manually specify the layers you'd like to purge: -->
+默认情况下，Tailwind 将清除 `base`，`components`和 `utilities` 层中的所有样式。如果您想改变这一点，使用 `layers` 选项手动指定您想清除的层。
 
 ```js
 // tailwind.config.js
@@ -177,9 +215,11 @@ module.exports = {
 }
 ```
 
-### Removing all unused styles
+<!-- ### Removing all unused styles -->
+### 移除所有未使用到的 styles
 
-By default, Tailwind will only remove unused classes that it generates itself, or has been explicitly wrapped in a `@layer` directive. It will _not_ remove unused styles from third-party CSS you pull in to your project, like a datepicker library you pull in for example.
+<!-- By default, Tailwind will only remove unused classes that it generates itself, or has been explicitly wrapped in a `@layer` directive. It will _not_ remove unused styles from third-party CSS you pull in to your project, like a datepicker library you pull in for example. -->
+默认情况下，Tailwind 将只删除它自己生成的未使用的类，或者被明确地包裹在 `@layer` 指令中。它不会从第三方 CSS 中移除未使用的样式，比如您拉到您的项目中的 datepicker 库。
 
 ```css
 /* These styles will all be purged */
@@ -198,9 +238,13 @@ By default, Tailwind will only remove unused classes that it generates itself, o
 .flatpickr-weekday { /* ... */ }
 ```
 
-This is to avoid accidentally removing styles that you might need but are not directly referenced in your templates, like classes that are only referenced deep in your `node_modules` folder that are part of some other dependency.
+<!-- This is to avoid accidentally removing styles that you might need but are not directly referenced in your templates, like classes that are only referenced deep in your `node_modules` folder that are part of some other dependency. -->
 
-If you really want to remove _all_ unused styles, set `mode: 'all'` and `preserveHtmlElements: false` and **be very careful** to provide the paths to _all_ files that might reference any classes or HTML elements:
+<!-- If you really want to remove _all_ unused styles, set `mode: 'all'` and `preserveHtmlElements: false` and **be very careful** to provide the paths to _all_ files that might reference any classes or HTML elements: -->
+
+这是为了避免意外地删除那些您可能需要的但在模板中没有直接引用的样式，比如那些只在 `node_modules` 文件夹深处引用的类，它们是其他依赖关系的一部分。
+
+如果您真的想删除所有未使用的样式，设置 `mode: 'all'` 和 `preserveHtmlElements: false`，并且**要非常小心地**提供可能引用任何类或HTML元素的所有文件的路径。
 
 ```js
 // tailwind.config.js
@@ -217,11 +261,14 @@ module.exports = {
 }
 ```
 
-**We do not recommend this**, and generally find you get 99% of the file size benefits by sticking with the more conservative default approach.
+<!-- **We do not recommend this**, and generally find you get 99% of the file size benefits by sticking with the more conservative default approach. -->
+**我们不推荐这样做**，一般来说，您会发现坚持使用更保守的默认方法可以获得 99% 的文件大小的好处。
 
-### PurgeCSS options
+<!-- ### PurgeCSS options -->
+### PurgeCSS 选项
 
-If you need to pass any options directly to PurgeCSS, you can do so using `options`:
+<!-- If you need to pass any options directly to PurgeCSS, you can do so using `options`: -->
+如果您需要直接向 PurgeCSS 传递任何选项，您可以使用 `options` 来实现。
 
 ```js
 // tailwind.config.js
@@ -238,13 +285,16 @@ module.exports = {
 }
 ```
 
-A list of available options can be found in the [PurgeCSS documentation](https://purgecss.com/configuration.html#options).
+<!-- A list of available options can be found in the [PurgeCSS documentation](https://purgecss.com/configuration.html#options). -->
+可用的选项列表可以在[ PurgeCSS 文档](https://purgecss.com/configuration.html#options)中找到。
 
 ---
 
-## Alternate approaches
+<!-- ## Alternate approaches -->
 
-If you can't use PurgeCSS for one reason or another, you can also reduce Tailwind's footprint by removing unused values from [your configuration file](/docs/configuration).
+## 其他办法
+
+<!-- If you can't use PurgeCSS for one reason or another, you can also reduce Tailwind's footprint by removing unused values from [your configuration file](/docs/configuration).
 
 The default theme provides a very generous set of colors, breakpoints, sizes, margins, etc. to make sure that when you pull Tailwind down to prototype something, create a CodePen demo, or just try out the workflow, the experience is as enjoyable and fluid as possible.
 
@@ -252,17 +302,35 @@ We don't want you to have to go and write new CSS because we didn't provide enou
 
 This comes with a trade-off though: the default build is significantly heavier than it would be on a project with a purpose-built configuration file.
 
-Here are a few strategies you can use to keep your generated CSS small and performant.
+Here are a few strategies you can use to keep your generated CSS small and performant. -->
+如果您因为某种原因不能使用 PurgeCSS，您也可以通过从[您的配置文件](/docs/configuration)中删除未使用的值来减少Tailwind的足迹。
 
-### Limiting your color palette
+默认的主题提供了一套非常慷慨的颜色，断点，大小，边距等，以确保当您把Tailwind拉下来做原型，创建一个 CodePen 演示，或者只是尝试一下工作流程，体验是尽可能的愉快和流畅。
 
-The default theme includes a whopping [84 colors](/docs/customizing-colors) used for backgrounds, borders, text, and placeholders, all of which also have `hover:` and `focus:` variants, as well as responsive variants at the six default screen sizes.
+我们不希望您不得不去写新的 CSS，因为我们没有提供足够的 padding helpers，或者因为您想为您的演示使用橙色方案，而我们只给您蓝色。
+
+不过这也是有代价的：默认的构建要比在一个有专门配置文件的项目上要重得多。
+
+以下是一些策略，您可以用它来保持您生成的CSS小而性能好。
+
+<!-- ### Limiting your color palette -->
+
+### 限制您的调色板
+
+<!-- The default theme includes a whopping [84 colors](/docs/customizing-colors) used for backgrounds, borders, text, and placeholders, all of which also have `hover:` and `focus:` variants, as well as responsive variants at the six default screen sizes.
 
 By default, there are _thousands_ of classes generated to accommodate these colors, and it makes up close to half of the final build size.
 
 Very few projects actually need this many colors, and removing colors you don't need can have a huge impact on the overall file size.
 
-Here's how using a smaller color palette affects the final size:
+Here's how using a smaller color palette affects the final size: -->
+默认的主题包含了高达[84种颜色](/docs/customizing-colors)，用于背景、边框、文本和占位符，所有这些颜色都有 `hover:` 和 `focus:` 变体，以及六种默认屏幕尺寸的响应变体。
+
+默认情况下，有成千上万的类生成以适应这些颜色，它占了最终构建大小的近一半。
+
+很少有项目真正需要这么多颜色，删除不需要的颜色会对整体文件大小产生巨大影响。
+
+以下是使用较小的调色板对最终大小的影响。
 
 <table>
   <thead>
@@ -299,11 +367,15 @@ Here's how using a smaller color palette affects the final size:
   </tbody>
 </table>
 
-### Removing unused breakpoints
+<!-- ### Removing unused breakpoints -->
+### 删除未使用的断点
 
-Since almost every Tailwind utility is copied for every screen size, using fewer screen sizes can have a huge impact on the overall file size as well.
+<!-- Since almost every Tailwind utility is copied for every screen size, using fewer screen sizes can have a huge impact on the overall file size as well. -->
 
-Here's how defining fewer screens affects the output:
+<!-- Here's how defining fewer screens affects the output: -->
+由于几乎每个 Tailwind 功能类都是为每一个屏幕尺寸复制的，所以使用较少的屏幕尺寸也会对整体文件大小产生巨大的影响。
+
+以下是定义较少屏幕如何影响输出：
 
 <table>
   <thead>
@@ -347,11 +419,13 @@ Here's how defining fewer screens affects the output:
   </tbody>
 </table>
 
-<p>If you only need 3 screen sizes and 35 colors, you're down to {stats['35-colors-3-screens'].brotlified} compressed without changing anything else.</p>
+<!-- <p>If you only need 3 screen sizes and 35 colors, you're down to {stats['35-colors-3-screens'].brotlified} compressed without changing anything else.</p> -->
+<p>如果您只需要 3 种屏幕尺寸和 35 种颜色，那么您可以在不更改任何其他内容的情况下将其压缩为 {stats['35-colors-3-screens'].brotlified} 。</p>
 
-### Disabling unused core plugins and variants
-
-If you don't expect to need a certain utility plugin in your project at all, you can disable it completely by setting it to `false` in the `corePlugins` section of your config file:
+<!-- ### Disabling unused core plugins and variants -->
+### 禁用未使用到的核心插件和变体
+<!-- If you don't expect to need a certain utility plugin in your project at all, you can disable it completely by setting it to `false` in the `corePlugins` section of your config file: -->
+如果您不希望在您的项目中需要某个功能插件，您可以通过在配置文件的 `corePlugins` 部分将其设置为 `false` 来完全禁用它。
 
 ```js
 // tailwind.config.js
@@ -363,7 +437,8 @@ module.exports = {
 }
 ```
 
-If you only need a handful of utilities, you can pass an array to `corePlugins` with the utility plugins you want to keep.
+<!-- If you only need a handful of utilities, you can pass an array to `corePlugins` with the utility plugins you want to keep. -->
+如果您只需要少量的功能程序，您可以向 `corePlugins` 传递一个数组，其中包含您想保留的功能程序插件。
 
 ```js
 // tailwind.config.js
@@ -376,9 +451,11 @@ module.exports = {
 }
 ```
 
-The above would disable all utilities except margin and padding.
+<!-- The above would disable all utilities except margin and padding. -->
+以上将禁用除 margin 和 padding 以外的所有功能类。
 
-If you need a utility but don't need the responsive versions, set its variants to an empty array to generate 83% fewer classes:
+<!-- If you need a utility but don't need the responsive versions, set its variants to an empty array to generate 83% fewer classes: -->
+如果需要一个功能类，但不需要响应版本，将其变体设置为空数组，以减少 83% 的类。
 
 ```js
 module.exports = {
@@ -389,4 +466,5 @@ module.exports = {
 }
 ```
 
-These are mostly small wins compared to limiting your color palette or using fewer breakpoints, but they can still add up.
+<!-- These are mostly small wins compared to limiting your color palette or using fewer breakpoints, but they can still add up. -->
+与限制您的调色板或使用较少的断点相比，这些大多是小的优化，但它们仍然可以进一步减小构建体积。

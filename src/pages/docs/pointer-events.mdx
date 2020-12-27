@@ -1,6 +1,8 @@
 ---
-title: "Pointer Events"
-description: "Utilities for controlling whether an element responds to pointer events."
+# title: "Pointer Events"
+title: "指向事件"
+# description: "Utilities for controlling whether an element responds to pointer events."
+description: "用于控制元素是否响应指向事件的功能"
 features:
   responsive: true
   customizable: false
@@ -14,11 +16,15 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Use `pointer-events-auto` to revert to the default browser behavior for pointer events (like `:hover` and `click`).
+<!-- Use `pointer-events-auto` to revert to the default browser behavior for pointer events (like `:hover` and `click`). -->
 
-Use `pointer-events-none` to make an element ignore pointer events. The pointer events will still trigger on child elements and pass-through to elements that are "beneath" the target.
+<!-- Use `pointer-events-none` to make an element ignore pointer events. The pointer events will still trigger on child elements and pass-through to elements that are "beneath" the target. -->
+使用 `pointer-events-auto` 来恢复浏览器对指向事件（如 `:hover` 和 `click` ）的默认行为。
+
+使用 `pointer-events-none` 使元素忽略指向事件。指向事件仍然会在子元素上触发，并传递到目标元素的下方。
 
 ```html purple
 <template preview>
@@ -74,12 +80,15 @@ Use `pointer-events-none` to make an element ignore pointer events. The pointer 
 </div>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="pointerEvents" name="pointer event" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="pointerEvents" name="pointer event" />

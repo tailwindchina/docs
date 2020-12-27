@@ -210,7 +210,7 @@ function TopLevelNav() {
           </>
         }
       >
-        Playground
+        在线运行环境
       </TopLevelLink>
       <TopLevelLink
         href="https://blog.tailwindcss.com"

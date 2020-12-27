@@ -1,6 +1,7 @@
 ---
 title: "Flex"
-description: "Utilities for controlling how flex items both grow and shrink."
+# description: "Utilities for controlling how flex items both grow and shrink."
+description: "用于控制 flex 项目放大和缩小的工具。"
 features:
   responsive: true
   customizable: true
@@ -16,7 +17,8 @@ export const classes = { plugin }
 
 ## Initial
 
-Use `flex-initial` to allow a flex item to shrink but not grow, taking into account its initial size:
+<!-- Use `flex-initial` to allow a flex item to shrink but not grow, taking into account its initial size: -->
+使用 `flex-initial` 允许 flex 项目在考虑到其初始尺寸的情况下缩小但不放大：
 
 ```html indigo
 <template preview>
@@ -59,7 +61,8 @@ Use `flex-initial` to allow a flex item to shrink but not grow, taking into acco
 
 ## Flex 1
 
-Use `flex-1` to allow a flex item to grow and shrink as needed, ignoring its initial size:
+<!-- Use `flex-1` to allow a flex item to grow and shrink as needed, ignoring its initial size: -->
+使用 `flex-1` 允许 flex 项目根据需要放大和缩小，忽略其初始尺寸。
 
 ```html fuchsia
 <template preview>
@@ -105,7 +108,8 @@ Use `flex-1` to allow a flex item to grow and shrink as needed, ignoring its ini
 
 ## Auto
 
-Use `flex-auto` to allow a flex item to grow and shrink, taking into account its initial size:
+<!-- Use `flex-auto` to allow a flex item to grow and shrink, taking into account its initial size: -->
+使用 `flex-auto` 允许一个 flex 项目在考虑到其初始大小的情况下放大和缩小：
 
 ```html lightBlue
 <template preview>
@@ -151,7 +155,8 @@ Use `flex-auto` to allow a flex item to grow and shrink, taking into account its
 
 ## None
 
-Use `flex-none` to prevent a flex item from growing or shrinking:
+<!-- Use `flex-none` to prevent a flex item from growing or shrinking: -->
+使用 `flex-none` 来阻止一个 flex 项目的放大和缩小：
 
 ```html emerald
 <template preview>
@@ -181,9 +186,11 @@ Use `flex-none` to prevent a flex item from growing or shrinking:
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control how a flex item both grows and shrinks at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:flex-1` to apply the `flex-1` utility at only medium screen sizes and above.
+<!-- To control how a flex item both grows and shrinks at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:flex-1` to apply the `flex-1` utility at only medium screen sizes and above. -->
+要控制 flex 项目在特定断点处的放大和缩小方式，可在任何现有的功能类产添加 `{screen}:` 前缀。例如，使用 `md:flex-1` 仅在中等尺寸及以上的屏幕应用 `flex-1` 功能。
 
 ```html
 <div class="flex ...">
@@ -195,13 +202,15 @@ To control how a flex item both grows and shrinks at a specific breakpoint, add 
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
 ### Flex Values
 
-By default Tailwind provides four `flex` utilities. You change, add, or remove these by editing the `theme.flex` section of your Tailwind config.
+<!-- By default Tailwind provides four `flex` utilities. You change, add, or remove these by editing the `theme.flex` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了四个 `flex` 工具。您可以通过编辑您的 Tailwind 配置的 `theme.flex` 部分来改变、添加或删除这些工具。
 
 ```diff-js
   // tailwind.config.js
@@ -219,10 +228,10 @@ By default Tailwind provides four `flex` utilities. You change, add, or remove t
   }
 ```
 
-### Variants
+### 变体
 
 <Variants plugin="flex" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="flex" />

@@ -1,6 +1,8 @@
 ---
-title: "Resize"
-description: "Utilities for controlling how an element can be resized."
+# title: "Resize"
+title: "大小调整"
+# description: "Utilities for controlling how an element can be resized."
+description: "用于控制一个元素如何调整大小的功能"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/resize'
@@ -9,9 +11,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Resize in all directions
+<!-- ## Resize in all directions -->
+## 在所有方向调整大小
 
-Use `resize` to make an element horizontally and vertically resizable.
+<!-- Use `resize` to make an element horizontally and vertically resizable. -->
+使用 `resize` 使一个元素在水平和垂直方向上可调整大小。
 
 ```html purple
 <template preview>
@@ -19,9 +23,11 @@ Use `resize` to make an element horizontally and vertically resizable.
 </template>
 ```
 
-## Resize vertically
+<!-- ## Resize vertically -->
+## 在垂直方向调整大小
 
-Use `resize-y` to make an element vertically resizable.
+<!-- Use `resize-y` to make an element vertically resizable. -->
+使用 `resize-y` 使一个元素可以在垂直方向调整大小。
 
 ```html emerald
 <template preview>
@@ -29,9 +35,11 @@ Use `resize-y` to make an element vertically resizable.
 </template>
 ```
 
-## Resize horizontally
+<!-- ## Resize horizontally -->
+## 在水平方向调整大小
 
-Use `resize-x` to make an element horizontally resizable.
+<!-- Use `resize-x` to make an element horizontally resizable. -->
+使用 `resize-x` 使一个元素可以在水平方向调整大小。
 
 ```html amber
 <template preview>
@@ -39,9 +47,11 @@ Use `resize-x` to make an element horizontally resizable.
 </template>
 ```
 
-## Prevent resizing
+<!-- ## Prevent resizing -->
+## 防止大小调整
 
-Use `resize-none` to prevent an element from being resizable.
+<!-- Use `resize-none` to prevent an element from being resizable. -->
+使用 `resize-none` 来防止元素被调整大小。
 
 ```html lightBlue
 <template preview>
@@ -49,12 +59,15 @@ Use `resize-none` to prevent an element from being resizable.
 </template>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="resize" name="resizing" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="resize" name="resizing" />
