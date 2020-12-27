@@ -1,6 +1,8 @@
 ---
-title: "User Select"
-description: "Utilities for controlling whether the user can select text in an element."
+# title: "User Select"
+title: "用户选择"
+# description: "Utilities for controlling whether the user can select text in an element."
+description: "用于控制用户是否可以在元素中选择文本的功能"
 features:
  responsive: true
  customizable: false
@@ -14,9 +16,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Disable selecting text
+<!-- ## Disable selecting text -->
+## 禁用文本选择
 
-Use `select-none` to prevent selecting text in an element and its children.
+<!-- Use `select-none` to prevent selecting text in an element and its children. -->
+使用 `select-none` 来防止选择元素及其子元素中的文本。
 
 ```html amber
 <template preview>
@@ -30,9 +34,12 @@ Use `select-none` to prevent selecting text in an element and its children.
 </div>
 ```
 
-## Allow selecting text
+<!-- ## Allow selecting text -->
 
-Use `select-text` to allow selecting text in an element and its children.
+<!-- Use `select-text` to allow selecting text in an element and its children. -->
+## 允许选择文本
+
+使用 `select-text` 允许选择元素及其子元素中的文本。
 
 ```html emerald
 <template preview>
@@ -46,9 +53,12 @@ Use `select-text` to allow selecting text in an element and its children.
 </div>
 ```
 
-## Select all text in one click
+<!-- ## Select all text in one click
 
-Use `select-all` to automatically select all the text in an element when a user clicks.
+Use `select-all` to automatically select all the text in an element when a user clicks. -->
+## 一键选择所有文本
+
+使用 `select-all` 在用户点击时自动选择元素中的所有文本。
 
 ```html fuchsia
 <template preview>
@@ -62,9 +72,12 @@ Use `select-all` to automatically select all the text in an element when a user 
 </div>
 ```
 
-## Auto
+<!-- ## Auto
 
-Use `select-auto` to use the default browser behavior for selecting text. Useful for undoing other classes like `.select-none` at different breakpoints.
+Use `select-auto` to use the default browser behavior for selecting text. Useful for undoing other classes like `.select-none` at different breakpoints. -->
+## 自动
+
+使用 `select-auto` 来使用默认的浏览器行为来选择文本。对于撤销其他类如 `.select-none` 在不同断点的行为很有用。
 
 ```html lightBlue
 <template preview>
@@ -78,12 +91,15 @@ Use `select-auto` to use the default browser behavior for selecting text. Useful
 </div>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="userSelect" name="user-select" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="userSelect" name="user-select" />

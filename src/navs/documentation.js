@@ -168,6 +168,8 @@ export const documentationNav = {
     pages['user-select'],
   ],
   SVG: [pages['fill'], pages['stroke'], pages['stroke-width']],
-  Accessibility: [pages['screen-readers']],
-  'Official Plugins': [pages['typography-plugin']],
+  // Accessibility: [pages['screen-readers']],
+  '可访问性': [pages['screen-readers']],
+  // 'Official Plugins': [pages['typography-plugin']],
+  '官方插件': [pages['typography-plugin']],
 }
