@@ -1,6 +1,7 @@
 ---
 title: "Flex Wrap"
 description: "Utilities for controlling how flex items wrap."
+# description: "控制 flex 项目如何换行的工具"
 features:
   responsive: true
   customizable: false
@@ -14,9 +15,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Don't wrap
+<!-- ## Don't wrap -->
+## 不换行
 
-Use `flex-nowrap` to prevent flex items from wrapping, causing inflexible items to overflow the container if necessary:
+<!-- Use `flex-nowrap` to prevent flex items from wrapping, causing inflexible items to overflow the container if necessary: -->
+使用 `flex-nowrap` 来阻止 flex 项目换行，导致非弹性的项目在必要时溢出容器。
 
 ```html emerald
 <template preview>
@@ -34,9 +37,11 @@ Use `flex-nowrap` to prevent flex items from wrapping, causing inflexible items 
 </div>
 ```
 
-## Wrap normally
+<!-- ## Wrap normally -->
+## 常规换行
 
-Use `flex-wrap` to allow flex items to wrap:
+<!-- Use `flex-wrap` to allow flex items to wrap: -->
+使用 `flex-wrap` 允许 flex 项目换行：
 
 ```html lightBlue
 <template preview>
@@ -54,9 +59,11 @@ Use `flex-wrap` to allow flex items to wrap:
 </div>
 ```
 
-## Wrap reversed
+<!-- ## Wrap reversed -->
+## 反向换行
 
-Use `flex-wrap-reverse` to wrap flex items in the reverse direction:
+<!-- Use `flex-wrap-reverse` to wrap flex items in the reverse direction: -->
+使用 `flex-wrap-reverse` 允许 flex 项目以相反的方向换行：
 
 ```html purple
 <template preview>
@@ -74,9 +81,11 @@ Use `flex-wrap-reverse` to wrap flex items in the reverse direction:
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control how flex items wrap at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:flex-wrap-reverse` to apply the `flex-wrap-reverse` utility at only medium screen sizes and above.
+<!-- To control how flex items wrap at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:flex-wrap-reverse` to apply the `flex-wrap-reverse` utility at only medium screen sizes and above. -->
+要控制 flex 项在特定断点处的换行方式，请在任何现有的工具类前添加 `{screen}:` 前缀。例如，使用`md:flex-wrap-reverse` 仅在中等尺寸及以上的屏幕上应用 `flex-wrap-reverse` 功能类。
 
 ```html
 <div class="flex flex-wrap **md:flex-wrap-reverse** ...">
@@ -84,14 +93,15 @@ To control how flex items wrap at a specific breakpoint, add a `{screen}:` prefi
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="flexWrap" name="flex-wrap" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="flexWrap" name="flex-wrap" />
