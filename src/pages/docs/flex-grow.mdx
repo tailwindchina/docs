@@ -1,6 +1,7 @@
 ---
 title: "Flex Grow"
-description: "Utilities for controlling how flex items grow."
+# description: "Utilities for controlling how flex items grow."
+description: "控制 flex 项目放大的工具"
 features:
   responsive: true
   customizable: true
@@ -16,7 +17,8 @@ export const classes = { plugin }
 
 ## Grow
 
-Use `flex-grow` to allow a flex item to grow to fill any available space:
+<!-- Use `flex-grow` to allow a flex item to grow to fill any available space: -->
+使用 `flex-grow` 允许一个 flex 项目放大，以填充任何可用空间。
 
 ```html purple resizable
 <template preview class="p-6">
@@ -48,7 +50,8 @@ Use `flex-grow` to allow a flex item to grow to fill any available space:
 
 ## Don't grow
 
-Use `flex-grow-0` to prevent a flex item from growing:
+<!-- Use `flex-grow-0` to prevent a flex item from growing: -->
+使用 `flex-grow-0` 阻止一个 flex 项目放大:
 
 ```html emerald resizable
 <template preview class="p-6">
@@ -78,9 +81,11 @@ Use `flex-grow-0` to prevent a flex item from growing:
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control how a flex item grows at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:flex-grow-0` to apply the `flex-grow-0` utility at only medium screen sizes and above.
+<!-- To control how a flex item grows at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:flex-grow-0` to apply the `flex-grow-0` utility at only medium screen sizes and above. -->
+要控制 flex 项目在特定断点处的放大方式，请在任何现有的工具类前添加 `{screen}:` 前缀。例如，使用 `md:flex-grow-0` 仅在中等及以上尺寸屏幕上应用 `flex-grow-0` 功能。
 
 ```html
 <div class="flex ...">
@@ -92,13 +97,15 @@ To control how a flex item grows at a specific breakpoint, add a `{screen}:` pre
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
 ### Grow Values
 
-By default Tailwind provides two `flex-grow` utilities. You change, add, or remove these by editing the `theme.flexGrow` section of your Tailwind config.
+<!-- By default Tailwind provides two `flex-grow` utilities. You change, add, or remove these by editing the `theme.flexGrow` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了两个 `flex-grow` 实用程序。您可以通过编辑您的 Tailwind 配置中的 `theme.flexGrow` 部分来改变、添加或删除这些工具。
 
 ```diff-js
   // tailwind.config.js
@@ -114,10 +121,10 @@ By default Tailwind provides two `flex-grow` utilities. You change, add, or remo
   }
 ```
 
-### Variants
+### 变体
 
 <Variants plugin="flexGrow" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="flexGrow" />
