@@ -1,6 +1,7 @@
 ---
 title: "Grid Row Start / End"
-description: "Utilities for controlling how elements are sized and placed across grid rows."
+# description: "Utilities for controlling how elements are sized and placed across grid rows."
+description: "用于控制在网格行中元素的大小和放置方式的工具。"
 ---
 
 import gridRowPlugin from 'tailwindcss/lib/plugins/gridRow'
@@ -12,9 +13,11 @@ export const classes = {
   plugin: [gridRowPlugin, gridRowStartPlugin, gridRowEndPlugin]
 }
 
-## Spanning rows
+<!-- ## Spanning rows -->
+## 跨行
 
-Use the `row-span-{n}` utilities to make an element span _n_ rows.
+<!-- Use the `row-span-{n}` utilities to make an element span _n_ rows. -->
+使用 `row-span-{n}` 工具使一个元素跨越 _n_ 行。
 
 ```html fuchsia
 <template preview>
@@ -32,11 +35,14 @@ Use the `row-span-{n}` utilities to make an element span _n_ rows.
 </div>
 ```
 
-## Starting and ending lines
+<!-- ## Starting and ending lines -->
+## 起始与结束线
 
-Use the `row-start-{n}` and `row-end-{n}` utilities to make an element start or end at the _nth_ grid line. These can also be combined with the `row-span-{n}` utilities to span a specific number of rows.
+<!-- Use the `row-start-{n}` and `row-end-{n}` utilities to make an element start or end at the _nth_ grid line. These can also be combined with the `row-span-{n}` utilities to span a specific number of rows. -->
+使用 `row-start-{n}` 和 `row-end-{n}` 功能类，使元素以第 n 条网格线为起点或终点。这些工具也可以与 `row-span-{n}` 工具结合使用，来跨越特定数量的行。
 
-Note that CSS grid lines start at 1, not 0, so a full-height element in a 3-row grid would start at line 1 and end at line 4.
+<!-- Note that CSS grid lines start at 1, not 0, so a full-height element in a 3-row grid would start at line 1 and end at line 4. -->
+请注意，CSS 网格线从 1 开始，而不是 0，所以 3 行网格中的全高元素将从第 1 条网格线开始，第 4 条网格线结束。
 
 ```html lightBlue
 <template preview>
@@ -54,9 +60,11 @@ Note that CSS grid lines start at 1, not 0, so a full-height element in a 3-row 
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the row placement of an element at a specific breakpoint, add a `{screen}:` prefix to any existing grid-row utility. For example, use `md:row-span-3` to apply the `row-span-3` utility at only medium screen sizes and above.
+<!-- To control the row placement of an element at a specific breakpoint, add a `{screen}:` prefix to any existing grid-row utility. For example, use `md:row-span-3` to apply the `row-span-3` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素行的放置方式，可以在任何现有的 grid-row 工具类前添加 `{screen}:` 前缀。例如，使用 `md:row-span-3` 来仅在中等尺寸及以上的屏幕上应用 `col-span-3` 工具类。
 
 ```html
 <div class="grid grid-rows-3 ...">
@@ -64,13 +72,17 @@ To control the row placement of an element at a specific breakpoint, add a `{scr
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
-By default Tailwind includes grid-row utilities for working with grids with up to 6 explicit rows. You change, add, or remove these by customizing the `gridRow`, `gridRowStart`, and `gridRowEnd` sections of your Tailwind theme config.
+<!-- By default Tailwind includes grid-row utilities for working with grids with up to 6 explicit rows. You change, add, or remove these by customizing the `gridRow`, `gridRowStart`, and `gridRowEnd` sections of your Tailwind theme config. -->
+默认情况下，Tailwind 包括 grid-row 功能，用于处理最多有 6 个行的网格。您可以通过定制您的 Tailwind 主题配置的 `gridRow`、 `gridRowStart` 和 `gridRowEnd` 部分来改变、添加或删除它们。
 
-For creating more `row-{value}` utilities that control the `grid-row` shorthand property directly, customize the `gridRow` section of your Tailwind theme config:
+<!-- For creating more `row-{value}` utilities that control the `grid-row` shorthand property directly, customize the `gridRow` section of your Tailwind theme config: -->
+为了创建更多的 `row-{value}` 工具来直接控制 `grid-row` 简写属性，请自定义 Tailwind 主题配置的 `gridRow` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -85,9 +97,11 @@ For creating more `row-{value}` utilities that control the `grid-row` shorthand 
   }
 ```
 
-We use this internally for our `row-span-{n}` utilities. Note that since this configures the `grid-row` shorthand property directly, we include the word `span` directly in the value name, it's _not_ baked into the class name automatically. That means you are free to add entries that do whatever you want here — they don't just have to be `span` utilities.
+<!-- We use this internally for our `row-span-{n}` utilities. Note that since this configures the `grid-row` shorthand property directly, we include the word `span` directly in the value name, it's _not_ baked into the class name automatically. That means you are free to add entries that do whatever you want here — they don't just have to be `span` utilities. -->
+我们在内部将其用于 `row-span-{n}` 功能。请注意，因为这直接配置了 `grid-row` 速记属性，所以我们直接在值名中包含了 `span` 这个词，而_不是_自动加入到类名中。这意味着你可以自由地添加你想做的任何事情--它们不只是 `span` 功能。
 
-To add new `row-start-{n}` utilities, use the `gridRowStart` section of your Tailwind theme config:
+<!-- To add new `row-start-{n}` utilities, use the `gridRowStart` section of your Tailwind theme config: -->
+要添加新的  `row-start-{n}` 工具，请使用 Tailwind 主题配置的 `gridRowStart` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -107,7 +121,8 @@ To add new `row-start-{n}` utilities, use the `gridRowStart` section of your Tai
   }
 ```
 
-To add new `row-end-{n}` utilities, use the `gridRowEnd` section of your Tailwind theme config:
+<!-- To add new `row-end-{n}` utilities, use the `gridRowEnd` section of your Tailwind theme config: -->
+要添加新的  `row-end-{n}` 工具，请使用 Tailwind 主题配置的 `gridRowEnd` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -127,13 +142,17 @@ To add new `row-end-{n}` utilities, use the `gridRowEnd` section of your Tailwin
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
-By default, only responsive variants are generated for grid-row utilities.
+<!-- By default, only responsive variants are generated for grid-row utilities. -->
+默认情况下，只为 grid-row 功能生成响应式变体。
 
-You can control which variants are generated for the grid-row utilities by modifying the `gridRow`, `gridRowStart`, and `gridRowEnd` properties in the `variants` section of your `tailwind.config.js` file.
+<!-- You can control which variants are generated for the grid-row utilities by modifying the `gridRow`, `gridRowStart`, and `gridRowEnd` properties in the `variants` section of your `tailwind.config.js` file. -->
+你可以通过修改 `tailwind.config.js` 文件中 `variants` 部分的 `gridRow`、`gridRowStart` 和 `gridRowEnd` 属性来控制为 grid-row 功能生成哪些变体。
 
 ```diff-js
   // tailwind.config.js
@@ -147,8 +166,9 @@ You can control which variants are generated for the grid-row utilities by modif
   }
 ```
 
-Learn more about configuring variants in the [configuring variants documentation](/docs/configuring-variants/).
+<!-- Learn more about configuring variants in the [configuring variants documentation](/docs/configuring-variants/). -->
+在 [配置变体文档](/docs/configuring-variants/) 中了解更多关于配置变体的信息。
 
-### Disabling
+### 禁用
 
 <Disabling plugin={['gridRow', 'gridRowStart', 'gridRowEnd']} name="grid-row" />

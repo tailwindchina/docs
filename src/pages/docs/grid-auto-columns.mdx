@@ -1,6 +1,7 @@
 ---
 title: "Grid Auto Columns"
-description: "Utilities for controlling the size of implicitly-created grid columns."
+# description: "Utilities for controlling the size of implicitly-created grid columns."
+description: "用于控制隐式创建的网格列的大小的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/gridAutoColumns'
@@ -9,9 +10,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用方法
 
-Use the `auto-cols-{size}` utilities to control the size implicitly-created grid columns.
+<!-- Use the `auto-cols-{size}` utilities to control the size implicitly-created grid columns. -->
+使用 `auto-cols-{size}` 工具来控制隐式创建的网格列的大小。
 
 ```html
 <div class="grid grid-flow-col **auto-cols-max**">
@@ -21,9 +24,11 @@ Use the `auto-cols-{size}` utilities to control the size implicitly-created grid
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the grid-auto-columns property at a specific breakpoint, add a `{screen}:` prefix to any existing grid-auto-columns utility. For example, use `md:auto-cols-min` to apply the `auto-cols-min` utility at only medium screen sizes and above.
+<!-- To control the grid-auto-columns property at a specific breakpoint, add a `{screen}:` prefix to any existing grid-auto-columns utility. For example, use `md:auto-cols-min` to apply the `auto-cols-min` utility at only medium screen sizes and above. -->
+要在特定的断点处控制 grid-auto-columns 属性，可以在任何现有的 grid-auto-columns 工具前添加 `{screen}:` 前缀。例如，使用 `md:auto-cols-min` 来仅在中等尺寸及以上的屏幕应用 `auto-cols-min` 功能。
 
 ```html
 <div class="grid grid-flow-col auto-cols-max **md:auto-cols-min**">
@@ -33,11 +38,14 @@ To control the grid-auto-columns property at a specific breakpoint, add a `{scre
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
-By default Tailwind includes four general purpose grid-auto-columns utilities. You can customize these in the `theme.gridAutoColumns` section of your `tailwind.config.js` file.
+<!-- By default Tailwind includes four general purpose grid-auto-columns utilities. You can customize these in the `theme.gridAutoColumns` section of your `tailwind.config.js` file. -->
+默认情况下，Tailwind 包括四个通用的 grid-auto-columns 工具。您可以在您的 `tailwind.config.js` 文件的 `theme.gridAutoColumns` 部分定制这些工具。
 
 ```js
   // tailwind.config.js
@@ -52,12 +60,13 @@ By default Tailwind includes four general purpose grid-auto-columns utilities. Y
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+### 变体
 
 <Variants plugin="gridAutoColumns" name="grid-auto-columns" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="gridAutoColumns" name="grid-auto-columns" />

@@ -1,6 +1,7 @@
 ---
 title: "Gap"
-description: "Utilities for controlling gutters between grid rows and columns."
+# description: "Utilities for controlling gutters between grid rows and columns."
+description: "用于控制网格行和列之间的间隔的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/gap'
@@ -13,9 +14,11 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用方法
 
-Use `gap-{size}` to change the gap between both rows and columns in grid layouts.
+<!-- Use `gap-{size}` to change the gap between both rows and columns in grid layouts. -->
+使用 `gap-{size}` 来改变网格布局中行和列之间的间隔。
 
 ```html indigo
 <template preview class="p-6">
@@ -37,9 +40,11 @@ Use `gap-{size}` to change the gap between both rows and columns in grid layouts
 </div>
 ```
 
-### Changing row and column gaps independently
+<!-- ### Changing row and column gaps independently -->
+### 独立地改变行和列的间隙
 
-Use `gap-x-{size}` and `gap-y-{size}` to change the gap between rows and columns independently.
+<!-- Use `gap-x-{size}` and `gap-y-{size}` to change the gap between rows and columns independently. -->
+使用 `gap-x-{size}` 和 `gap-y-{size}` 分别改变行和列之间的间隙。
 
 ```html rose
 <template preview class="p-6">
@@ -67,9 +72,11 @@ Use `gap-x-{size}` and `gap-y-{size}` to change the gap between rows and columns
 
 ---
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the gap at a specific breakpoint, add a `{screen}:` prefix to any existing gap utility. For example, use `md:gap-6` to apply the `gap-6` utility at only medium screen sizes and above.
+<!-- To control the gap at a specific breakpoint, add a `{screen}:` prefix to any existing gap utility. For example, use `md:gap-6` to apply the `gap-6` utility at only medium screen sizes and above. -->
+要在特定的断点处控制间隙，请在任何现有的间隔工具前添加 `{screen}:` 前缀。例如，使用 `md:gap-6` 来仅在中等尺寸及以上的屏幕应用 `gap-6` 功能。
 
 ```html
 <div class="grid gap-4 **md:gap-6** ...">
@@ -77,15 +84,19 @@ To control the gap at a specific breakpoint, add a `{screen}:` prefix to any exi
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
 ---
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
-By default Tailwind's gap scale matches your configured [spacing scale](/docs/customizing-spacing).
+<!-- By default Tailwind's gap scale matches your configured [spacing scale](/docs/customizing-spacing). -->
+默认情况下，Tailwind 的间隙比例与您配置的 [间距比例](/docs/customizing-spacing) 相匹配。
 
-You can customize the global spacing scale in the `theme.spacing` or `theme.extend.spacing` sections of your `tailwind.config.js` file:
+<!-- You can customize the global spacing scale in the `theme.spacing` or `theme.extend.spacing` sections of your `tailwind.config.js` file: -->
+你可以在你的 `tailwind.config.js` 文件中的 `theme.spacing` 或 `theme.extend.spacing` 部分自定义全局间距比例。
 
 ```diff-js
   // tailwind.config.js
@@ -102,7 +113,8 @@ You can customize the global spacing scale in the `theme.spacing` or `theme.exte
   }
 ```
 
-To customize the gap scale separately, use the `gap` section of your Tailwind theme config.
+<!-- To customize the gap scale separately, use the `gap` section of your Tailwind theme config. -->
+要单独定制间隙比例，请使用 Tailwind 主题配置的 `gap` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -118,12 +130,15 @@ To customize the gap scale separately, use the `gap` section of your Tailwind th
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="gap" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="gap" />
