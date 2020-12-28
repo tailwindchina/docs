@@ -1,6 +1,7 @@
 ---
 title: "Translate"
-description: "Utilities for translating elements with transform."
+# description: "Utilities for translating elements with transform."
+description: "变换元素的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/translate'
@@ -13,9 +14,11 @@ export const classes = {
   sort: numbersFirstByPrefix,
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Translate an element by first enabling transforms with the `transform` utility, then specifying the translate direction and distance using the `translate-x-{amount}` and `translate-y-{amount}` utilities.
+<!-- Translate an element by first enabling transforms with the `transform` utility, then specifying the translate direction and distance using the `translate-x-{amount}` and `translate-y-{amount}` utilities. -->
+变换一个元素时，首先要使用 `transform` 功能启用 transforms，然后使用 `translate-x-{amount}` 和 `translate-y-{amount}` 功能指定变换方向和距离。
 
 ```html purple
 <template preview>
@@ -37,25 +40,33 @@ Translate an element by first enabling transforms with the `transform` utility, 
 <img class="transform **translate-y-0** ...">
 ```
 
-Note that because Tailwind implements transforms using [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), **the transform utilities are not supported in older browsers like IE11**. If you need transforms for your project and need to support older browsers, [add your own utilities](/docs/adding-new-utilities) or other custom CSS.
+<!-- Note that because Tailwind implements transforms using [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), **the transform utilities are not supported in older browsers like IE11**. If you need transforms for your project and need to support older browsers, [add your own utilities](/docs/adding-new-utilities) or other custom CSS. -->
+请注意，因为 Tailwind 使用[ CSS 自定义属性](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)来实现变换，**变换功能不支持旧的浏览器，如 IE11**。如果您的项目需要变换，并且需要支持旧的浏览器，[添加您自己的功能](/docs/adding-new-utilities)或其他自定义 CSS。
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the translation of an element at a specific breakpoint, add a `{screen}:` prefix to any existing translate utility. For example, use `md:translate-x-8` to apply the `translate-x-8` utility at only medium screen sizes and above.
+<!-- To control the translation of an element at a specific breakpoint, add a `{screen}:` prefix to any existing translate utility. For example, use `md:translate-x-8` to apply the `translate-x-8` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的变换，可在任何现有的变换功能中添加 `{screen}:` 前缀。例如，使用 `md:translate-x-8` 来应用 `translate-x-8` 功能，只在中等大小的屏幕上使用。
 
 ```html
 <img class="transform translate-x-2 **md:translate-x-8** ...">
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
 ### Translate scale
 
-By default Tailwind provides fixed value translate utilities that match our [spacing scale](/docs/customizing-spacing), as well as 50% and 100% variations for translating relative to the element's size.
+<!-- By default Tailwind provides fixed value translate utilities that match our [spacing scale](/docs/customizing-spacing), as well as 50% and 100% variations for translating relative to the element's size. -->
 
-You can customize the global spacing scale in the `theme.spacing` or `theme.extend.spacing` sections of your `tailwind.config.js` file:
+<!-- You can customize the global spacing scale in the `theme.spacing` or `theme.extend.spacing` sections of your `tailwind.config.js` file: -->
+默认情况下，Tailwind 提供了固定值的变换功能，它与我们的[ spacing scale ](/docs/customizing-spacing)相匹配，以及相对于元素大小的 50% 和 100% 的变换变化。
+
+你可以在你的 `tailwind.config.js` 文件中的 `theme.spacing` 或 `theme.extend.spacing` 部分自定义全局间距尺度。
 
 ```diff-js
   // tailwind.config.js
@@ -72,7 +83,8 @@ You can customize the global spacing scale in the `theme.spacing` or `theme.exte
   }
 ```
 
-To customize the translate scale separately, use the `theme.translate` section of your `tailwind.config.js` file.
+<!-- To customize the translate scale separately, use the `theme.translate` section of your `tailwind.config.js` file. -->
+要单独定制变换比例，请使用你的 `tailwind.config.js` 文件中的 `theme.translate` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -92,12 +104,15 @@ To customize the translate scale separately, use the `theme.translate` section o
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="translate" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="translate" />
