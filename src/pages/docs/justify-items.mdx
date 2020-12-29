@@ -1,6 +1,7 @@
 ---
 title: "Justify Items"
-description: "Utilities for controlling how grid items are aligned along their inline axis."
+# description: "Utilities for controlling how grid items are aligned along their inline axis."
+description: "用于控制网格项目如何沿其内联轴对齐的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/justifyItems'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Auto
 
-Use `justify-items-auto` to justify grid items automatically on their inline axis:
+<!-- Use `justify-items-auto` to justify grid items automatically on their inline axis: -->
+使用 `justify-items-auto` 在其内联轴上自动对网格项目进行调整。
 
 ```html emerald
 <template preview class="p-4">
@@ -37,7 +39,8 @@ Use `justify-items-auto` to justify grid items automatically on their inline axi
 
 ## Start
 
-Use `justify-items-start` to justify grid items against the start of their inline axis:
+<!-- Use `justify-items-start` to justify grid items against the start of their inline axis: -->
+使用 `justify-items-start` 使网格项目沿内联轴的起点排列。
 
 ```html indigo
 <template preview class="p-4">
@@ -63,7 +66,8 @@ Use `justify-items-start` to justify grid items against the start of their inlin
 
 ## End
 
-Use `justify-items-end` to justify grid items against the end of their inline axis:
+<!-- Use `justify-items-end` to justify grid items against the end of their inline axis: -->
+使用 `justify-items-start` 使网格项目沿内联轴的终点排列。
 
 ```html lightBlue
 <template preview class="p-4">
@@ -89,7 +93,8 @@ Use `justify-items-end` to justify grid items against the end of their inline ax
 
 ## Center
 
-Use `justify-items-center` to justify grid items along their inline axis:
+<!-- Use `justify-items-center` to justify grid items along their inline axis: -->
+使用 `justify-items-center` 使风格项目沿着他们的内联轴对齐。
 
 ```html amber
 <template preview class="p-4">
@@ -115,7 +120,8 @@ Use `justify-items-center` to justify grid items along their inline axis:
 
 ## Stretch
 
-Use `justify-items-stretch` to stretch items along their inline axis:
+<!-- Use `justify-items-stretch` to stretch items along their inline axis: -->
+使用 `justify-items-stretch` 沿其内联轴拉伸项目。
 
 ```html fuchsia
 <template preview class="p-4">
@@ -139,9 +145,11 @@ Use `justify-items-stretch` to stretch items along their inline axis:
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To justify flex items at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:justify-items-center` to apply the `justify-items-center` utility at only medium screen sizes and above.
+<!-- To justify flex items at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:justify-items-center` to apply the `justify-items-center` utility at only medium screen sizes and above. -->
+要在特定的断点处对 flex 项目应用 justify 工具，请在任何现有的工具类前添加 `{screen}:` 前缀。例如，使用 `md:justify-items-center` 来仅在中等尺寸以上的屏幕应用 `justify-items-center` 工具。
 
 ```html
 <div class="justify-items-start md:justify-items-center">
@@ -149,14 +157,15 @@ To justify flex items at a specific breakpoint, add a `{screen}:` prefix to any 
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="justifyItems" name="justify-items" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="justifyItems" name="justify-items" />
