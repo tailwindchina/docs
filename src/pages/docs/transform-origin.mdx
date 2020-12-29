@@ -1,6 +1,7 @@
 ---
 title: "Transform Origin"
-description: "Utilities for specifying the origin for an element's transformations."
+# description: "Utilities for specifying the origin for an element's transformations."
+description: "用于指定元素转换的源头的实用工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transformOrigin'
@@ -9,9 +10,12 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage
 
-Specify an element's transform origin using the `origin-{keyword}` utilities.
+Specify an element's transform origin using the `origin-{keyword}` utilities. -->
+## 用途
+
+使用 `origin-{keyword}` 功能指定元素的变换源。
 
 ```html indigo
 <template preview>
@@ -37,22 +41,27 @@ Specify an element's transform origin using the `origin-{keyword}` utilities.
 <img class="**origin-left** transform rotate-45 ...">
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the transform-origin of an element at a specific breakpoint, add a `{screen}:` prefix to any existing transform-origin utility. For example, use `md:origin-top` to apply the `origin-top` utility at only medium screen sizes and above.
+<!-- To control the transform-origin of an element at a specific breakpoint, add a `{screen}:` prefix to any existing transform-origin utility. For example, use `md:origin-top` to apply the `origin-top` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的转换原点，请在任何现有的转换原点功能中添加 `{screen}:` 前缀。例如，使用 `md:origin-top` 来应用 `origin-top` 功能在中等尺寸以上的屏幕上。
 
 ```html
 <img class="origin-center **md:origin-top** ...">
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
 ### Origin values
 
-By default Tailwind provides transform-origin utilities for all of the built-in browser keyword options. You change, add, or remove these by customizing the `transformOrigin` section of your Tailwind theme config.
+<!-- By default Tailwind provides transform-origin utilities for all of the built-in browser keyword options. You change, add, or remove these by customizing the `transformOrigin` section of your Tailwind theme config. -->
+
+默认情况下，Tailwind 为所有内置的浏览器关键字选项提供了转换来源的功能。您可以通过定制您的 Tailwind 主题配置的 `transformOrigin` 部分来改变，添加或删除这些。
 
 ```diff-js
   // tailwind.config.js
@@ -68,12 +77,15 @@ By default Tailwind provides transform-origin utilities for all of the built-in 
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="transformOrigin" name="transform-origin" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="transformOrigin" name="transform-origin" />
