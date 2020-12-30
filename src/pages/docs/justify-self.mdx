@@ -1,6 +1,7 @@
 ---
 title: "Justify Self"
-description: "Utilities for controlling how an individual grid item is aligned along its inline axis."
+# description: "Utilities for controlling how an individual grid item is aligned along its inline axis."
+description: "用于控制单个网格项如何沿其内联轴对齐的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/justifySelf'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Auto
 
-Use `justify-self-auto` to align an item based on the value of the grid's `justify-items` property:
+<!-- Use `justify-self-auto` to align an item based on the value of the grid's `justify-items` property: -->
+使用 `justify-self-auto` 根据网格的 `justify-items` 属性的值来对齐一个项目：
 
 ```html purple
 <template preview class="p-4">
@@ -37,7 +39,8 @@ Use `justify-self-auto` to align an item based on the value of the grid's `justi
 
 ## Start
 
-Use `justify-self-start` to align a grid item to the start its inline axis:
+<!-- Use `justify-self-start` to align a grid item to the start its inline axis: -->
+使用 `justify-self-start` 将网格项沿内联轴起点对齐：
 
 ```html emerald
 <template preview class="p-4">
@@ -63,7 +66,8 @@ Use `justify-self-start` to align a grid item to the start its inline axis:
 
 ## Center
 
-Use `justify-self-center` to align a grid item along the center its inline axis:
+<!-- Use `justify-self-center` to align a grid item along the center its inline axis: -->
+使用 `justify-self-center` 将网络项沿其内联轴的中心对齐。
 
 ```html amber
 <template preview class="p-4">
@@ -89,7 +93,8 @@ Use `justify-self-center` to align a grid item along the center its inline axis:
 
 ## End
 
-Use `justify-self-end` to align a grid item to the end its inline axis:
+<!-- Use `justify-self-end` to align a grid item to the end its inline axis: -->
+使用 `justify-self-end` 将网格项沿内联轴终点对齐：
 
 ```html rose
 <template preview class="p-4">
@@ -115,7 +120,8 @@ Use `justify-self-end` to align a grid item to the end its inline axis:
 
 ## Stretch
 
-Use `justify-self-stretch` to stretch a grid item to fill the grid area on its inline axis:
+<!-- Use `justify-self-stretch` to stretch a grid item to fill the grid area on its inline axis: -->
+使用 `justify-self-stretch` 来拉伸一个网格项，以填充其内联轴上的网格区域。
 
 ```html fuchsia
 <template preview class="p-4">
@@ -139,18 +145,20 @@ Use `justify-self-stretch` to stretch a grid item to fill the grid area on its i
 </div>
 ```
 
-## Responsive
+## 响应式
 
-To control the alignment of a grid item inside its grid area at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:justify-self-end` to apply the `justify-self-end` utility at only medium screen sizes and above.
+<!-- To control the alignment of a grid item inside its grid area at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:justify-self-end` to apply the `justify-self-end` utility at only medium screen sizes and above. -->
+要在特定的断点处控制网格项在其网格区域内的对齐，可以在任何现有的工具类前添加 `{screen}:` 前缀。例如，使用 `md:justify-self-end` 来仅在中等尺寸及以上的屏幕应用 `justify-self-end` 功能。
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="justifySelf" name="justify-self" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="justifySelf" name="justify-self" />
