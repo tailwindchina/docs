@@ -1,6 +1,7 @@
 ---
-title: "Box Shadow"
-description: "Utilities for controlling the box shadow of an element."
+title: "Box Shadow（盒阴影）"
+# description: "Utilities for controlling the box shadow of an element."
+description: "用于控制元素的盒状阴影的功能类。"
 features:
   responsive: true
   customizable: true
@@ -14,9 +15,10 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Outer shadow
+## Outer shadow（外阴影）
 
-Use the `.shadow-sm`, `.shadow`, `.shadow-md`, `.shadow-lg`, `.shadow-xl`, or `.shadow-2xl` utilities to apply different sized outer box shadows to an element.
+<!-- Use the `.shadow-sm`, `.shadow`, `.shadow-md`, `.shadow-lg`, `.shadow-xl`, or `.shadow-2xl` utilities to apply different sized outer box shadows to an element. -->
+使用 `.shadow-sm`, `.shadow`, `.shadow-md`, `.shadow-lg`, `.shadow-xl`, 或 `.shadow-2xl` 等功能类来应用不同大小的外框阴影到一个元素上。
 
 ```html indigo
 <template preview>
@@ -38,9 +40,10 @@ Use the `.shadow-sm`, `.shadow`, `.shadow-md`, `.shadow-lg`, `.shadow-xl`, or `.
 <div class="**shadow-2xl** ..."></div>
 ```
 
-## Inner shadow
+## Inner shadow （内阴影）
 
-Use the `shadow-inner` utility to apply a subtle inset box shadow to an element. This can be useful for things like form controls or wells.
+<!-- Use the `shadow-inner` utility to apply a subtle inset box shadow to an element. This can be useful for things like form controls or wells. -->
+使用 `shadow-inner` 功能类为元素应用一个微妙的插入框阴影。这对表单控件或井等元素很有用。
 
 ```html purple
 <template preview>
@@ -52,9 +55,10 @@ Use the `shadow-inner` utility to apply a subtle inset box shadow to an element.
 <div class="**shadow-inner** ..."></div>
 ```
 
-## No shadow
+## No shadow（无阴影）
 
-Use `shadow-none` to remove an existing box shadow from an element. This is most commonly used to remove a shadow that was applied at a smaller breakpoint.
+<!-- Use `shadow-none` to remove an existing box shadow from an element. This is most commonly used to remove a shadow that was applied at a smaller breakpoint. -->
+使用 `shadow-none` 从元素中移除现有的盒状阴影。这最常见的是用来移除应用在较小断点上的阴影。
 
 ```html rose
 <template preview>
@@ -66,9 +70,11 @@ Use `shadow-none` to remove an existing box shadow from an element. This is most
 <div class="**shadow-none** ..."></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the shadow of an element at a specific breakpoint, add a `{screen}:` prefix to any existing shadow utility. For example, use `md:shadow-lg` to apply the `shadow-lg` utility at only medium screen sizes and above.
+<!-- To control the shadow of an element at a specific breakpoint, add a `{screen}:` prefix to any existing shadow utility. For example, use `md:shadow-lg` to apply the `shadow-lg` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的阴影，请在任何现有的阴影功能中添加 `{screen}:` 前缀。例如，使用 `md:shadow-lg` 来应用 `shadow-lg` 功能在中等大小的屏幕和更大的屏幕上。
 
 ```html
 <div class="shadow **md:shadow-lg** ...">
@@ -76,15 +82,20 @@ To control the shadow of an element at a specific breakpoint, add a `{screen}:` 
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
 ### Box Shadows
 
-By default Tailwind provides three drop shadow utilities, one inner shadow utility, and a utility for removing existing shadows. You can change, add, or remove these by editing the `theme.boxShadow` section of your Tailwind config.
+<!-- By default Tailwind provides three drop shadow utilities, one inner shadow utility, and a utility for removing existing shadows. You can change, add, or remove these by editing the `theme.boxShadow` section of your Tailwind config. -->
 
-If a `default` shadow is provided, it will be used for the non-suffixed `.shadow` utility. Any other keys will be used as suffixes, for example the key `'2'` will create a corresponding `.shadow-2` utility.
+<!-- If a `default` shadow is provided, it will be used for the non-suffixed `.shadow` utility. Any other keys will be used as suffixes, for example the key `'2'` will create a corresponding `.shadow-2` utility. -->
+默认情况下，Tailwind 提供了三个 drop shadow 功能，一个内部阴影功能，和一个删除现有阴影的功能。您可以通过编辑您的 Tailwind 配置中的 `theme.boxShadow` 部分来改变，添加或删除这些功能。
+
+如果提供了一个 `default` 阴影，它将被用于非后缀的 `.shadow` 功能。任何其他键将被用作后缀，例如键 `'2'` 将创建一个相应的 `.shadow-2` 功能。
 
 ```diff-js
   // tailwind.config.js
@@ -107,10 +118,12 @@ If a `default` shadow is provided, it will be used for the non-suffixed `.shadow
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="boxShadow" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="boxShadow" />
