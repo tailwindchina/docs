@@ -1,6 +1,7 @@
 ---
-title: "Transition Duration"
-description: "Utilities for controlling the duration of CSS transitions."
+title: "Transition Duration (过渡持续时间)"
+# description: "Utilities for controlling the duration of CSS transitions."
+description: "用于控制过渡持续时间的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transitionDuration'
@@ -9,9 +10,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Use the `duration-{amount}` utilities to control an element's transition-duration.
+<!-- Use the `duration-{amount}` utilities to control an element's transition-duration. -->
+使用 `duration-{amount}` 功能来控制元素的过渡持续时间。
 
 ```html emerald
 <template preview>
@@ -33,17 +36,23 @@ Use the `duration-{amount}` utilities to control an element's transition-duratio
 <button class="transition **duration-700** ease-in-out ...">Hover me</button>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control an element's transition-duration at a specific breakpoint, add a `{screen}:` prefix to any existing transition-duration utility. For example, use `md:duration-500` to apply the `duration-500` utility at only medium screen sizes and above.
+<!-- To control an element's transition-duration at a specific breakpoint, add a `{screen}:` prefix to any existing transition-duration utility. For example, use `md:duration-500` to apply the `duration-500` utility at only medium screen sizes and above. -->
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+要在特定的断点处控制元素的过渡时间，可在任何现有的过渡时间功能呢中添加 `{screen}:` 前缀。例如，使用 `md:duration-500` 来应用 `duration-500` 功能，只适用于中等以上的屏幕尺寸。
 
-## Customizing
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
+
+<!-- ## Customizing -->
+## 自定义
 
 ### Duration values
 
-By default Tailwind provides eight general purpose transition-duration utilities. You change, add, or remove these by customizing the `transitionDuration` section of your Tailwind theme config.
+<!-- By default Tailwind provides eight general purpose transition-duration utilities. You change, add, or remove these by customizing the `transitionDuration` section of your Tailwind theme config. -->
+默认情况下，Tailwind 提供了 8 个通用的过渡时间功能，您可以通过自定义 `transitionDuration` 部分来改变，添加或删除这些功能。您可以通过定制您的 Tailwind 主题配置的 `transitionDuration` 部分来改变，添加或删除这些功能。
 
 ```diff-js
   // tailwind.config.js
@@ -59,12 +68,15 @@ By default Tailwind provides eight general purpose transition-duration utilities
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="transitionDuration" name="transition-duration" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="transitionDuration" name="transition-duration" />

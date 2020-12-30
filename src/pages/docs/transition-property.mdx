@@ -1,6 +1,7 @@
 ---
-title: "Transition Property"
-description: "Utilities for controlling which CSS properties transition."
+title: "Transition Property (过渡属性)"
+# description: "Utilities for controlling which CSS properties transition."
+description: "用于控制 CSS 过渡属性的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transitionProperty'
@@ -9,9 +10,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Use the `transition-{properties}` utilities to specify which properties should transition when they change.
+<!-- Use the `transition-{properties}` utilities to specify which properties should transition when they change. -->
+使用 `transition-{properties}` 功能来指定哪些属性在变化时应该过渡。
 
 ```html lightBlue
 <template preview>
@@ -29,7 +32,8 @@ Use the `transition-{properties}` utilities to specify which properties should t
 
 ## Prefers-reduced-motion
 
-You can conditionally apply animations and transitions using the `motion-safe` and `motion-reduce` variants:
+<!-- You can conditionally apply animations and transitions using the `motion-safe` and `motion-reduce` variants: -->
+您可以使用 `motion-safe` 和 `motion-reduce` 变体有条件地应用动画和过渡。
 
 ```html
 <button class="transition transform hover:-translate-y-1 **motion-reduce:transition-none motion-reduce:transform-none** ...">
@@ -37,7 +41,8 @@ You can conditionally apply animations and transitions using the `motion-safe` a
 </button>
 ```
 
-**These variants are not enabled by default**, but you can enable them in the `variants` section of your `tailwind.config.js` file:
+<!-- **These variants are not enabled by default**, but you can enable them in the `variants` section of your `tailwind.config.js` file: -->
+**这些变体默认情况下是不启用的**，但是您可以在您的 `tailwind.config.js` 文件的 `variants` 部分启用它们。
 
 ```js
 // tailwind.config.js
@@ -49,19 +54,26 @@ module.exports = {
 }
 ```
 
-Learn more in the [variants documentation](/docs/hover-focus-and-other-states#motion-safe-v1-6-0).
+<!-- Learn more in the [variants documentation](/docs/hover-focus-and-other-states#motion-safe-v1-6-0). -->
+在[悬停、焦点和其它状态文档](/docs/hover-focus-and-other-states#motion-safe)中了解更多。
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To change which properties of an element transition at a specific breakpoint, add a `{screen}:` prefix to any existing transition-property utility. For example, use `md:transition-colors` to apply the `transition-colors` utility at only medium screen sizes and above.
+<!-- To change which properties of an element transition at a specific breakpoint, add a `{screen}:` prefix to any existing transition-property utility. For example, use `md:transition-colors` to apply the `transition-colors` utility at only medium screen sizes and above. -->
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+要改变元素在特定断点处的过渡属性，请在任何现有的过渡属性功能中添加 `{screen}:` 前缀。例如，使用 `md:transition-colors` 来应用 `transition-colors` 功能，只适用于中等以上的屏幕尺寸。
 
-## Customizing
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
+
+<!-- ## Customizing -->
+## 自定义
 
 ### Property values
 
-By default Tailwind provides transition-property utilities for seven common property combinations. You change, add, or remove these by customizing the `transitionProperty` section of your Tailwind theme config.
+<!-- By default Tailwind provides transition-property utilities for seven common property combinations. You change, add, or remove these by customizing the `transitionProperty` section of your Tailwind theme config. -->
+默认情况下，Tailwind 为七个常见的属性组合提供了过渡属性功能。您可以通过定制您的 Tailwind 主题配置的 `transitionProperty` 部分来改变，添加或删除这些。
 
 ```diff-js
   // tailwind.config.js
@@ -77,12 +89,15 @@ By default Tailwind provides transition-property utilities for seven common prop
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="transitionProperty" name="transition-property" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="transitionProperty" name="transition-property" />
