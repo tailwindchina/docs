@@ -1,6 +1,7 @@
 ---
 title: "Place Content"
-description: "Utilities for controlling how content is justified and aligned at the same time."
+# description: "Utilities for controlling how content is justified and aligned at the same time."
+description: "用于同时控制内容如何在水平和垂直方向上对齐的工具"
 
 ---
 
@@ -12,7 +13,8 @@ export const classes = { plugin }
 
 ## Center
 
-Use `place-content-center` to pack items in the center of the block axis:
+<!-- Use `place-content-center` to pack items in the center of the block axis: -->
+使用 `place-content-center` 将项目定位在块轴的中心：
 
 ```html lightBlue
 <template preview>
@@ -38,7 +40,8 @@ Use `place-content-center` to pack items in the center of the block axis:
 
 ## Start
 
-Use `place-content-start` to pack items against the start of the block axis:
+<!-- Use `place-content-start` to pack items against the start of the block axis: -->
+使用 `place-content-start` 将项目沿着块轴的起点对齐：
 
 ```html purple
 <template preview>
@@ -65,6 +68,7 @@ Use `place-content-start` to pack items against the start of the block axis:
 ## End
 
 Use `place-content-end` to to pack items against the end of the block axis:
+使用 `place-content-end` 将项目沿着块轴的终点对齐：
 
 ```html rose
 <template preview>
@@ -90,7 +94,8 @@ Use `place-content-end` to to pack items against the end of the block axis:
 
 ## Space between
 
-Use `place-content-between` to distribute grid items along the block axis so that that there is an equal amount of space between each row on the block axis.
+<!-- Use `place-content-between` to distribute grid items along the block axis so that that there is an equal amount of space between each row on the block axis. -->
+使用 `place-content-between` 沿块轴分布网格项，使块轴上的每行之间有相等的空间：
 
 ```html amber
 <template preview>
@@ -116,7 +121,8 @@ Use `place-content-between` to distribute grid items along the block axis so tha
 
 ## Space around
 
-Use `place-content-around` distribute grid items such that there is an equal amount of space around each row on the block axis:
+<!-- Use `place-content-around` distribute grid items such that there is an equal amount of space around each row on the block axis: -->
+使用 `place-content-around` 分配网格项目，使块轴上的每行周围有相等的空间：
 
 ```html fuchsia
 <template preview>
@@ -142,7 +148,8 @@ Use `place-content-around` distribute grid items such that there is an equal amo
 
 ## Space evenly
 
-Use `place-content-evenly` to distribute grid items such that they are evenly spaced on the block axis:
+<!-- Use `place-content-evenly` to distribute grid items such that they are evenly spaced on the block axis: -->
+使用 `place-content-evenly` 来分配网格项，使它们在块轴上的间距相等。
 
 ```html emerald
 <template preview>
@@ -168,7 +175,8 @@ Use `place-content-evenly` to distribute grid items such that they are evenly sp
 
 ## Stretch
 
-Use `place-content-stretch` to stretch grid items along their grid areas on the block axis:
+<!-- Use `place-content-stretch` to stretch grid items along their grid areas on the block axis: -->
+使用 `place-content-stretch` 在块轴上沿其网格区域拉伸网格项。
 
 ```html indigo
 <template preview>
@@ -192,9 +200,10 @@ Use `place-content-stretch` to stretch grid items along their grid areas on the 
 </div>
 ```
 
-## Responsive
+## 响应式
 
 To place content at a specific breakpoint, add a `{screen}:` prefix to any existing `place-content` utility. For example, use `md:place-content-center` to apply the `place-content-center` utility at only medium screen sizes and above.
+要在特定的断点放置内容，可以在任何现有的 `place-content` 工具类前添加 `{screen}:` 前缀。例如，使用 `md:place-content-center` 来仅在中等尺寸及以上的屏幕应用 `place-content-center` 功能。
 
 ```html
 <div class="place-content-start md:place-content-center">
@@ -202,14 +211,15 @@ To place content at a specific breakpoint, add a `{screen}:` prefix to any exist
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="placeContent" name="place-content" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="placeContent" name="place-content" />
