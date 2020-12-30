@@ -1,6 +1,7 @@
 ---
 title: "Align Items"
-description: "Utilities for controlling how flex and grid items are positioned along a container's cross axis."
+# description: "Utilities for controlling how flex and grid items are positioned along a container's cross axis."
+description: "用于控制 Flex 和网格项如何沿着容器的横轴定位的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/alignItems'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Stretch
 
-Use `items-stretch` to stretch items to fill the container's cross axis:
+<!-- Use `items-stretch` to stretch items to fill the container's cross axis: -->
+使用 `items-stretch` 来拉伸项目以填充容器的交叉轴：
 
 ```html lightBlue
 <template preview class="p-4">
@@ -31,7 +33,8 @@ Use `items-stretch` to stretch items to fill the container's cross axis:
 
 ## Start
 
-Use `items-start` to align items to the start of the container's cross axis:
+<!-- Use `items-start` to align items to the start of the container's cross axis: -->
+使用 `items-start` 将项目沿着容器交叉轴的起点对齐：
 
 ```html fuchsia
 <template preview class="p-4">
@@ -51,7 +54,8 @@ Use `items-start` to align items to the start of the container's cross axis:
 
 ## Center
 
-Use `items-center` to align items along the center of the container's cross axis:
+<!-- Use `items-center` to align items along the center of the container's cross axis: -->
+使用 `items-center` 沿着容器的交叉轴中心对齐项目：
 
 ```html rose
 <template preview class="p-4">
@@ -71,7 +75,8 @@ Use `items-center` to align items along the center of the container's cross axis
 
 ## End
 
-Use `items-end` to align items to the end of the container's cross axis:
+<!-- Use `items-end` to align items to the end of the container's cross axis: -->
+使用 `items-end` 将项目沿着容器交叉轴的终点对齐：
 
 ```html purple
 <template preview class="p-4">
@@ -91,7 +96,8 @@ Use `items-end` to align items to the end of the container's cross axis:
 
 ## Baseline
 
-Use `items-baseline` to align items along the container's cross axis such that all of their baselines align:
+<!-- Use `items-baseline` to align items along the container's cross axis such that all of their baselines align: -->
+使用 `items-baseline` 沿容器的交叉轴对齐项目，使其所有基线对齐。
 
 ```html emerald
 <template preview class="p-4">
@@ -109,9 +115,10 @@ Use `items-baseline` to align items along the container's cross axis such that a
 </div>
 ```
 
-## Responsive
+## 响应式
 
-To control the alignment of flex items at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:items-center` to apply the `items-center` utility at only medium screen sizes and above.
+<!-- To control the alignment of flex items at a specific breakpoint, add a `{screen}:` prefix to any existing utility class. For example, use `md:items-center` to apply the `items-center` utility at only medium screen sizes and above. -->
+要在特定的断点处控制 flex 项目的对齐，可以在任何现有的工具类前添加 `{screen}:` 前缀。例如，使用 `md:items-center` 来仅在中等尺寸及以上的屏幕应用 `items-center` 功能。
 
 ```html
 <div class="items-stretch **md:items-center** ...">
@@ -121,12 +128,12 @@ To control the alignment of flex items at a specific breakpoint, add a `{screen}
 
 For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="alignItems" name="align-items" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="alignItems" name="align-items" />
