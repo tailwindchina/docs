@@ -1,6 +1,8 @@
 ---
-title: "Padding"
-description: "Utilities for controlling an element's padding."
+# title: "Padding"
+title: "内边距 Padding"
+# description: "Utilities for controlling an element's padding."
+description: "控制元素内边距的工具"
 features:
   responsive: true
   customizable: true
@@ -18,11 +20,14 @@ export const classes = {
   sort: numbersFirstByPrefix,
 }
 
-## Add padding to a single side
+<!-- ## Add padding to a single side -->
+## 为单侧添加内边距
 
-Control the padding on one side of an element using the `p{t|r|b|l}-{size}` utilities.
+<!-- Control the padding on one side of an element using the `p{t|r|b|l}-{size}` utilities. -->
+使用 `p{t|r|b|l}-{size}` 工具控制元素一侧的内边距。
 
-For example, `pt-6` would add `1.5rem` of padding to the top of an element, `pr-4` would add `1rem` of padding to the right of an element, `pb-8` would add `2rem` of padding to the bottom of an element, and `pl-2` would add `0.5rem` of padding to the left of an element.
+<!-- For example, `pt-6` would add `1.5rem` of padding to the top of an element, `pr-4` would add `1rem` of padding to the right of an element, `pb-8` would add `2rem` of padding to the bottom of an element, and `pl-2` would add `0.5rem` of padding to the left of an element. -->
+例如，`pt-6` 将在元素顶部增加 `1.5rem` 的内边距，`pr-4` 将在元素右侧增加 `1rem` 的内边距，`pb-8`  将在元素底部增加 `2rem` 的内边距，`pl-2` 将在元素左侧增加 `0.5rem`的内边距。
 
 ```html rose
 <template preview>
@@ -56,9 +61,11 @@ For example, `pt-6` would add `1.5rem` of padding to the top of an element, `pr-
 <div class="**pl-2** ...">pl-2</div>
 ```
 
-## Add horizontal padding
+<!-- ## Add horizontal padding -->
+## 添加水平方向的内边距
 
-Control the horizontal padding of an element using the `px-{size}` utilities.
+<!-- Control the horizontal padding of an element using the `px-{size}` utilities. -->
+使用 `px-{size}` 控制元素水平方向的内边距。
 
 ```html emerald
 <template preview>
@@ -72,9 +79,11 @@ Control the horizontal padding of an element using the `px-{size}` utilities.
 <div class="**px-8** ...">px-8</div>
 ```
 
-## Add vertical padding
+<!-- ## Add vertical padding -->
+## 添加垂直方向的内边距
 
-Control the vertical padding of an element using the `py-{size}` utilities.
+<!-- Control the vertical padding of an element using the `py-{size}` utilities. -->
+使用 `py-{size}` 控制元素垂直方向的内边距。
 
 ```html indigo
 <template preview>
@@ -88,9 +97,11 @@ Control the vertical padding of an element using the `py-{size}` utilities.
 <div class="**py-8** ...">py-8</div>
 ```
 
-## Add padding to all sides
+<!-- ## Add padding to all sides -->
+## 为所有边添加内边距
 
-Control the padding on all sides of an element using the `p-{size}` utilities.
+<!-- Control the padding on all sides of an element using the `p-{size}` utilities. -->
+使用 `p-{size}` 工具控制元素四个边的内边距。
 
 ```html fuchsia
 <template preview>
@@ -106,9 +117,11 @@ Control the padding on all sides of an element using the `p-{size}` utilities.
 
 ---
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the padding of an element at a specific breakpoint, add a `{screen}:` prefix to any existing padding utility. For example, adding the class `md:py-8` to an element would apply the `py-8` utility at medium screen sizes and above.
+<!-- To control the padding of an element at a specific breakpoint, add a `{screen}:` prefix to any existing padding utility. For example, adding the class `md:py-8` to an element would apply the `py-8` utility at medium screen sizes and above. -->
+要在特定的断点处控制元素的内边距，请在任何现有的 padding 工具前添加 `{screen}:` 前缀。例如，将 `md:py-8` 类添加到一个元素中，就可以在中等及以上屏幕尺寸的情况下应用 `py-8` 功能。
 
 ```html
 <div class="**md:py-8** ...">
@@ -116,17 +129,20 @@ To control the padding of an element at a specific breakpoint, add a `{screen}:`
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
 ---
 
-## Customizing
+## 定制
 
 ### Padding scale
 
-By default Tailwind provides 19 fixed padding utilities for each side and axis.
+<!-- By default Tailwind provides 19 fixed padding utilities for each side and axis. -->
+默认情况下，Tailwind 为每个边和轴提供了 19 个固定的内边距工具。
 
-If you'd like to customize these values for padding, margin, width, and height all at once, use the `theme.spacing` section of your `tailwind.config.js` file.
+<!-- If you'd like to customize these values for padding, margin, width, and height all at once, use the `theme.spacing` section of your `tailwind.config.js` file. -->
+如果你想一次性自定义 padding、margin、width 和 height 的值，请使用你的 `tailwind.config.js` 文件中的 `theme.spacing` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -142,7 +158,8 @@ If you'd like to customize these values for padding, margin, width, and height a
   }
 ```
 
-To customize only the padding values, use the `theme.padding` section of your `tailwind.config.js` file.
+<!-- To customize only the padding values, use the `theme.padding` section of your `tailwind.config.js` file. -->
+要只自定义 padding 值，请使用你的 `tailwind.config.js` 文件中的 `theme.padding` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -158,12 +175,13 @@ To customize only the padding values, use the `theme.padding` section of your `t
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+### 变体
 
 <Variants plugin="padding" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="padding" />
