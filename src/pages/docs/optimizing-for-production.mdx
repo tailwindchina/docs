@@ -13,7 +13,7 @@ import stats from '@/utils/stats'
 ## <Heading hidden>概览</Heading>
 
 <!-- <p>Using the default configuration, the development build of Tailwind CSS is {stats.default.original} uncompressed, {stats.default.gzipped} minified and compressed with <a href="https://www.gnu.org/software/gzip/">Gzip</a>, and {stats.default.brotlified} when compressed with <a href="https://github.com/google/brotli">Brotli</a>.</p> -->
-<p>使用默认配置，尾风CSS的开发版本是{stats.default.original}未压缩，{stats.default.gzipped}用<a href="https://www.gnu.org/software/gzip/">Gzip</a>进行压缩，{stats.default.brotlified}用<a href="https://github.com/google/brotli">Brotli</a>进行压缩。</p>
+<p>使用默认配置，TailwindCSS 的开发版本是{stats.default.original}未压缩，{stats.default.gzipped}用<a href="https://www.gnu.org/software/gzip/">Gzip</a>进行压缩，{stats.default.brotlified}用<a href="https://github.com/google/brotli">Brotli</a>进行压缩。</p>
 
 <table>
   <thead>
@@ -145,7 +145,7 @@ module.exports = {
 ```
 
 <!-- **This list should include *any* files in your project that reference any of your styles by name.** For example, if you have a JS file in your project that dynamically toggles some classes in your HTML, you should make sure to include that file in this list. -->
-例如，如果您的项目中有一个JS文件，在您的HTML中动态切换一些类，**您应该确保在这个列表中包括该文件**。
+例如，如果您的项目中有一个 JS 文件，在您的 HTML 中动态切换一些类，**您应该确保在这个列表中包括该文件**。
 
 <!-- Now whenever you compile your CSS with `NODE_ENV` set to `production`, Tailwind will automatically purge unused styles from your CSS.  -->
 现在，每当您在编译 CSS 时将 `NODE_ENV` 设置为 `production`，Tailwind 将自动从您的 CSS 中清除未使用的样式。
@@ -179,7 +179,7 @@ module.exports = {
 
 <!-- If you want to disable this behavior, you can set `preserveHtmlElements` to false:  -->
 
-默认情况下，Tailwind将保留所有基本的HTML元素样式在您的 CSS 中，如 `html`，`body`，`p`，`h1` 等标签的样式。这是为了减少意外的过度清洗，例如在您使用 markdown 源文件的情况下（其中没有实际的 `h1` 标签），或者使用一个框架将文档外壳（包含 `html` 和 `body` 标签）隐藏在供应商目录的某个地方（像 Next.js 那样）。
+默认情况下，Tailwind 将保留所有基本的 HTML 元素样式在您的 CSS 中，如 `html`，`body`，`p`，`h1` 等标签的样式。这是为了减少意外的过度清洗，例如在您使用 markdown 源文件的情况下（其中没有实际的 `h1` 标签），或者使用一个框架将文档外壳（包含 `html` 和 `body` 标签）隐藏在供应商目录的某个地方（像 Next.js 那样）。
 
 如果您想禁止这种行为，您可以将 `preserveHtmlElements` 设置为 false。
 
@@ -202,7 +202,7 @@ module.exports = {
 ### 清理特定层
 
 <!-- By default, Tailwind will purge all styles in the `base`, `components`, and `utilities` layers. If you'd like to change this, use the `layers` option to manually specify the layers you'd like to purge: -->
-默认情况下，Tailwind 将清除 `base`，`components`和 `utilities` 层中的所有样式。如果您想改变这一点，使用 `layers` 选项手动指定您想清除的层。
+默认情况下，Tailwind 将清除 `base`，`components` 和 `utilities` 层中的所有样式。如果您想改变这一点，使用 `layers` 选项手动指定您想清除的层。
 
 ```js
 // tailwind.config.js
@@ -311,7 +311,7 @@ Here are a few strategies you can use to keep your generated CSS small and perfo
 
 不过这也是有代价的：默认的构建要比在一个有专门配置文件的项目上要重得多。
 
-以下是一些策略，您可以用它来保持您生成的CSS小而性能好。
+以下是一些策略，您可以用它来保持您生成的 CSS 小而性能好。
 
 <!-- ### Limiting your color palette -->
 
@@ -324,7 +324,7 @@ By default, there are _thousands_ of classes generated to accommodate these colo
 Very few projects actually need this many colors, and removing colors you don't need can have a huge impact on the overall file size.
 
 Here's how using a smaller color palette affects the final size: -->
-默认的主题包含了高达[84种颜色](/docs/customizing-colors)，用于背景、边框、文本和占位符，所有这些颜色都有 `hover:` 和 `focus:` 变体，以及六种默认屏幕尺寸的响应变体。
+默认的主题包含了高达[ 84 种颜色](/docs/customizing-colors)，用于背景、边框、文本和占位符，所有这些颜色都有 `hover:` 和 `focus:` 变体，以及六种默认屏幕尺寸的响应变体。
 
 默认情况下，有成千上万的类生成以适应这些颜色，它占了最终构建大小的近一半。
 
@@ -438,7 +438,7 @@ module.exports = {
 ```
 
 <!-- If you only need a handful of utilities, you can pass an array to `corePlugins` with the utility plugins you want to keep. -->
-如果您只需要少量的功能程序，您可以向 `corePlugins` 传递一个数组，其中包含您想保留的功能程序插件。
+如果您只需要少量的功能类，您可以向 `corePlugins` 传递一个数组，其中包含您想保留的功能插件。
 
 ```js
 // tailwind.config.js
@@ -455,7 +455,7 @@ module.exports = {
 以上将禁用除 margin 和 padding 以外的所有功能类。
 
 <!-- If you need a utility but don't need the responsive versions, set its variants to an empty array to generate 83% fewer classes: -->
-如果需要一个功能类，但不需要响应版本，将其变体设置为空数组，以减少 83% 的类。
+如果需要一个功能类，但不需要响应式版本，将其变体设置为空数组，以减少 83% 的类生成。
 
 ```js
 module.exports = {
