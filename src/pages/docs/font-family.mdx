@@ -1,6 +1,8 @@
 ---
-title: "Font Family"
-description: "Utilities for controlling the font family of an element."
+# title: "Font Family"
+title: "字体序列 Font Family"
+# description: "Utilities for controlling the font family of an element."
+description: "控制元素字体序列的工具。"
 features:
   responsive: true
   customizable: true
@@ -16,7 +18,8 @@ export const classes = { plugin }
 
 ## Sans-serif
 
-Use `font-sans` to apply a web safe sans-serif font family:
+<!-- Use `font-sans` to apply a web safe sans-serif font family: -->
+使用 `font-sans` 应用一个网络安全的无衬线字体系列：
 
 ```html lightBlue
 <template preview>
@@ -32,7 +35,8 @@ Use `font-sans` to apply a web safe sans-serif font family:
 
 ## Serif
 
-Use `font-serif` to apply a web safe serif font family:
+<!-- Use `font-serif` to apply a web safe serif font family: -->
+使用 `font-serif` 来应用网络安全的衬线字体系列：
 
 ```html emerald
 <template preview>
@@ -48,7 +52,8 @@ Use `font-serif` to apply a web safe serif font family:
 
 ## Monospaced
 
-Use `font-mono` to apply a web safe monospaced font family:
+<!-- Use `font-mono` to apply a web safe monospaced font family: -->
+使用 `font-mono` 来应用一个网络安全的等宽字体系列：
 
 ```html indigo
 <template preview>
@@ -62,9 +67,10 @@ Use `font-mono` to apply a web safe monospaced font family:
 </p>
 ```
 
-## Responsive
+## 响应式
 
-To control the font family of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font family utility class. For example, use `md:font-serif` to apply the `font-serif` utility at only medium screen sizes and above.
+<!-- To control the font family of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font family utility class. For example, use `md:font-serif` to apply the `font-serif` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的字体序列，请在任何现有的字体序列工具类前添加 `{screen}:` 前缀。例如，使用 `md:font-serif` 来仅在中等大小及以上的屏幕应用 `font-serif` 工具。
 
 ```html
 <p class="font-sans **md:font-serif**">
@@ -72,13 +78,15 @@ To control the font family of an element at a specific breakpoint, add a `{scree
 </p>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
 ### Font Families
 
-By default Tailwind provides three font family utilities: a cross-browser sans-serif stack, a cross-browser serif stack, and a cross-browser monospaced stack. You can change, add, or remove these by editing the `theme.fontFamily` section of your Tailwind config.
+<!-- By default Tailwind provides three font family utilities: a cross-browser sans-serif stack, a cross-browser serif stack, and a cross-browser monospaced stack. You can change, add, or remove these by editing the `theme.fontFamily` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了三个字体系列工具：一个跨浏览器的无衬线字体堆栈，一个跨浏览器的衬线字体堆栈和一个跨浏览器的等宽字体堆栈。您可以通过编辑您的 Tailwind 配置中的 `theme.fontFamily` 部分来改变、添加或删除这些功能。
 
 ```diff-js
   // tailwind.config.js
@@ -95,7 +103,8 @@ By default Tailwind provides three font family utilities: a cross-browser sans-s
   }
 ```
 
-Font families can be specified as an array or as a simple comma-delimited string:
+<!-- Font families can be specified as an array or as a simple comma-delimited string: -->
+字体序列可以指定为一个数组或一个简单的逗号分隔的字符串：
 
 ```js
 {
@@ -107,7 +116,8 @@ Font families can be specified as an array or as a simple comma-delimited string
 }
 ```
 
-Note that **Tailwind does not automatically escape font names** for you. If you're using a font that contains an invalid identifier, wrap it in quotes or escape the invalid characters.
+<!-- Note that **Tailwind does not automatically escape font names** for you. If you're using a font that contains an invalid identifier, wrap it in quotes or escape the invalid characters. -->
+请注意，**尾风不会自动为您转义字体名称**。如果您使用的字体包含无效的标识符，请用引号包住它或转义这些无效的字符。
 
 ```js
 {
@@ -123,10 +133,10 @@ Note that **Tailwind does not automatically escape font names** for you. If you'
 
 ```
 
-### Variants
+### 变体
 
 <Variants plugin="fontFamily" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="fontFamily" />
