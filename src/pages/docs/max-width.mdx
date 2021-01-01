@@ -1,6 +1,7 @@
 ---
-title: "Max-Width"
-description: "Utilities for setting the maximum width of an element"
+title: "最大宽度 Max-Width"
+# description: "Utilities for setting the maximum width of an element"
+description: "用来设置元素最大宽度的工具"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/maxWidth'
@@ -13,9 +14,10 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Usage
+## 使用方法
 
-Set the maximum width of an element using the `max-w-{size}` utilities.
+<!-- Set the maximum width of an element using the `max-w-{size}` utilities. -->
+使用 `max-w-{size}` 工具设置元素的最大宽度。
 
 ```html emerald
 <template preview>
@@ -31,7 +33,8 @@ Set the maximum width of an element using the `max-w-{size}` utilities.
 
 ## Prose
 
-We added a new max-width by default called `max-w-prose`. If you are familiar with the [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography) you might recognize this one. The idea behind this class is that it allows you to have an optimal reading width.
+<!-- We added a new max-width by default called `max-w-prose`. If you are familiar with the [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography) you might recognize this one. The idea behind this class is that it allows you to have an optimal reading width. -->
+我们默认增加了一个新的最大宽度，叫做 `max-w-prose`。如果你熟悉 [排版插件](https://github.com/tailwindlabs/tailwindcss-typography)，你可能会认识这个。这个类背后的想法是，它允许你有一个最佳的阅读宽度。
 
 ```html purple
 <template preview>
@@ -49,9 +52,11 @@ We added a new max-width by default called `max-w-prose`. If you are familiar wi
 
 ---
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the max-width of an element at a specific breakpoint, add a `{screen}:` prefix to any existing max-width utility.
+<!-- To control the max-width of an element at a specific breakpoint, add a `{screen}:` prefix to any existing max-width utility. -->
+要在特定的断点处控制元素的最大宽度，请在任何现有的最大宽度工具前添加 `{screen}:` 前缀。
 
 ```html
 <div class="max-w-sm **md:max-w-lg** ...">
@@ -59,15 +64,17 @@ To control the max-width of an element at a specific breakpoint, add a `{screen}
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
 ---
 
-## Customizing
+## 定制
 
 ### Max-Width Scale
 
-Customize Tailwind's default max-width scale in the `theme.maxWidth` section of your `tailwind.config.js` file.
+<!-- Customize Tailwind's default max-width scale in the `theme.maxWidth` section of your `tailwind.config.js` file. -->
+在您的 `tailwind.config.js` 文件的 `theme.maxWidth` 部分定制 Tailwind 的默认最大宽度。
 
 ```diff-js
   // tailwind.config.js
@@ -82,12 +89,13 @@ Customize Tailwind's default max-width scale in the `theme.maxWidth` section of 
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+### 变体
 
 <Variants plugin="maxWidth" name="max-width" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="maxWidth" name="max-width" />
