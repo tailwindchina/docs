@@ -1,6 +1,8 @@
 ---
-title: "Height"
-description: "Utilities for setting the height of an element"
+# title: "Height"
+title: "高度 Height"
+# description: "Utilities for setting the height of an element"
+description: "用来设置元素高度的工具"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/height'
@@ -15,11 +17,12 @@ export const classes = {
 
 ## Auto
 
-Use `h-auto` to let the browser determine the height for the element.
+<!-- Use `h-auto` to let the browser determine the height for the element. -->
+使用 `h-auto` 让浏览器决定元素的高度。
 
 ```html amber
 <template preview>
-  <div class="h-auto w-40 mx-auto rounded-md bg-amber-500 text-white text-2xl font-extrabold flex items-center justify-center p-6">h-auto</div>
+  <div class="h-auto w-40 mx-auto rounded-md bg-amber-500 theightext-white text-2xl font-extrabold flex items-center justify-center p-6">h-auto</div>
 </template>
 
 <div class="**h-auto** ...">h-auto</div>
@@ -27,7 +30,8 @@ Use `h-auto` to let the browser determine the height for the element.
 
 ## Screen height
 
-Use `h-screen` to make an element span the entire height of the viewport.
+<!-- Use `h-screen` to make an element span the entire height of the viewport. -->
+使用 `h-screen` 使一个元素跨越整个视口的高度。
 
 ```html rose
 <template preview>
@@ -39,7 +43,8 @@ Use `h-screen` to make an element span the entire height of the viewport.
 
 ## Fixed height
 
-Use `h-{number}` or `h-px` to set an element to a fixed height.
+<!-- Use `h-{number}` or `h-px` to set an element to a fixed height. -->
+使用 `h-{number}` 或 `h-px` 将元素设置为固定高度。
 
 ```html indigo
 <template preview>
@@ -73,7 +78,8 @@ Use `h-{number}` or `h-px` to set an element to a fixed height.
 
 ## Full height
 
-Use `h-full` to set an element's height to 100% of its parent, as long as the parent has a defined height.
+<!-- Use `h-full` to set an element's height to 100% of its parent, as long as the parent has a defined height. -->
+使用 `h-full` 将一个元素的高度设置为其父元素的 100%，只要父元素有一个定义的高度。
 
 ```html
 <template preview class="flex justify-around items-end text-sm p-4">
@@ -89,25 +95,31 @@ Use `h-full` to set an element's height to 100% of its parent, as long as the pa
 
 ---
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the height of an element at a specific breakpoint, add a `{screen}:` prefix to any existing width utility. For example, adding the class `md:h-full` to an element would apply the `h-full` utility at medium screen sizes and above.
+<!-- To control the height of an element at a specific breakpoint, add a `{screen}:` prefix to any existing width utility. For example, adding the class `md:h-full` to an element would apply the `h-full` utility at medium screen sizes and above. -->
+要在特定的断点处控制元素的高度，可以在任何现有的高度工具前添加 `{screen}: `前缀。例如，将 `md:h-full` 类添加到一个元素中，就可以在中等及以上尺寸屏幕的情况下应用用 `h-full` 工具。
 
 ```html
 <div class="h-8 **md:h-full**"></div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
 ---
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
 ### Height Scale
 
-By default, Tailwind's height scale is a combination of the [default spacing scale](/docs/customizing-spacing#default-spacing-scale) as well as some additional values specific to heights.
+<!-- By default, Tailwind's height scale is a combination of the [default spacing scale](/docs/customizing-spacing#default-spacing-scale) as well as some additional values specific to heights. -->
+默认情况下，Tailwind 的高度比例是 [默认间距比例](/docs/customizing-spacing#default-spacing-scale) 以及一些特定高度的附加值的组合。
 
-You can customize the spacing scale for padding, margin, width, and height all at once in the `theme.spacing` section of your `tailwind.config.js` file:
+<!-- You can customize the spacing scale for padding, margin, width, and height all at once in the `theme.spacing` section of your `tailwind.config.js` file: -->
+你可以在你的 `tailwind.config.js` 文件中的 `theme.spacing` 部分一次性自定义 padding、margin、width 和 height 的间距比例。
 
 ```diff-js
   // tailwind.config.js
@@ -123,7 +135,8 @@ You can customize the spacing scale for padding, margin, width, and height all a
   }
 ```
 
-To customize height separately, use the `theme.height` section of your `tailwind.config.js` file.
+<!-- To customize height separately, use the `theme.height` section of your `tailwind.config.js` file. -->
+要单独定制高度，请使用你的 `tailwind.config.js` 文件中的 `theme.height` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -139,10 +152,10 @@ To customize height separately, use the `theme.height` section of your `tailwind
   }
 ```
 
-### Variants
+### 变体
 
 <Variants plugin="height" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="height" />
