@@ -1,6 +1,7 @@
 ---
-title: "Max-Height"
-description: "Utilities for setting the maximum height of an element"
+title: "最大高度 Max-Height"
+# description: "Utilities for setting the maximum height of an element"
+description: "用来设置元素最大高度的工具"
 features:
   responsive: true
   customizable: true
@@ -18,9 +19,11 @@ export const classes = {
   sort: numbersFirst,
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用方法
 
-Set the maximum height of an element using the `max-h-full` or `max-h-screen` utilities.
+<!-- Set the maximum height of an element using the `max-h-full` or `max-h-screen` utilities. -->
+使用 `max-h-full` 或 `max-h-screen` 工具设置元素的最大高度。
 
 ```html lightBlue
 <template preview>
@@ -40,9 +43,11 @@ Set the maximum height of an element using the `max-h-full` or `max-h-screen` ut
 
 ---
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the max-height of an element at a specific breakpoint, add a `{screen}:` prefix to any existing max-height utility.
+<!-- To control the max-height of an element at a specific breakpoint, add a `{screen}:` prefix to any existing max-height utility. -->
+要在特定的断点处控制元素的最大高度，请在任何现有的最大高度工具前添加 `{screen}:` 前缀。
 
 ```html
 <div class="h-48 max-h-full **md:max-h-screen** ...">
@@ -50,15 +55,18 @@ To control the max-height of an element at a specific breakpoint, add a `{screen
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
 ---
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
 ### Max-height scale
 
-Customize Tailwind's default max-height scale in the `theme.maxHeight` section of your `tailwind.config.js` file.
+<!-- Customize Tailwind's default max-height scale in the `theme.maxHeight` section of your `tailwind.config.js` file. -->
+在您的 `tailwind.config.js` 文件的 `theme.maxHeight` 部分定制 Tailwind 的默认最大高度。
 
 ```diff-js
   // tailwind.config.js
@@ -75,12 +83,13 @@ Customize Tailwind's default max-height scale in the `theme.maxHeight` section o
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+### 变体
 
 <Variants plugin="maxHeight" name="max-height" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="maxHeight" name="max-height" />
