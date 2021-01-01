@@ -1,6 +1,8 @@
 ---
-title: "Font Size"
-description: "Utilities for controlling the font size of an element."
+# title: "Font Size"
+title: "字体大小 Font Size"
+# description: "Utilities for controlling the font size of an element."
+description: "用来控制元素字体大小的工具"
 features:
   responsive: true
   customizable: true
@@ -15,9 +17,10 @@ import { Heading } from '@/components/Heading'
 
 export const classes = { plugin }
 
-## Usage
+## 用法
 
-Control the font size of an element using the `text-{size}` utilities.
+<!-- Control the font size of an element using the `text-{size}` utilities. -->
+使用 `text-{size}` 工具控制元素的字体大小。
 
 ```html purple
 <template preview>
@@ -92,21 +95,25 @@ Control the font size of an element using the `text-{size}` utilities.
 <p class="**text-9xl** ...">The quick brown fox ...</p>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the font size of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font size utility. For example, use `md:text-lg` to apply the `text-lg` utility at only medium screen sizes and above.
+<!-- To control the font size of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font size utility. For example, use `md:text-lg` to apply the `text-lg` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的字体大小，可在任何现有的字体大小工具类前添加 `{screen}:` 前缀。例如，使用 `md:text-lg` 来仅在中等及以上尺寸的屏幕应用 `text-lg` 工具。
 
 ```html
 <p class="text-base **md:text-lg** ...">The quick brown fox jumped over the lazy dog.</p>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
 ### Font Sizes
 
-By default Tailwind provides 10 `font-size` utilities. You change, add, or remove these by editing the `theme.fontSize` section of your Tailwind config.
+<!-- By default Tailwind provides 10 `font-size` utilities. You change, add, or remove these by editing the `theme.fontSize` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了 10 个 `font-size` 工具。你可以通过编辑你的 Tailwind 配置中的 `theme.fontSize` 部分来改变、添加或删除这些工具。
 
 ```diff-js
   // tailwind.config.js
@@ -132,7 +139,8 @@ By default Tailwind provides 10 `font-size` utilities. You change, add, or remov
 
 ### Providing a default line-height
 
-You can provide a default line-height for each of your font-sizes using a tuple of the form `[fontSize, lineHeight]` in your `tailwind.config.js` file.
+<!-- You can provide a default line-height for each of your font-sizes using a tuple of the form `[fontSize, lineHeight]` in your `tailwind.config.js` file. -->
+你可以在你的 `tailwind.config.js` 文件中使用 `[fontSize, lineHeight]` 形式的元组为你的每个字体大小提供一个默认的行高。
 
 ```js
 // tailwind.config.js
@@ -148,11 +156,13 @@ module.exports = {
 }
 ```
 
-We already provide default line heights for each `.text-{size}` class.
+<!-- We already provide default line heights for each `.text-{size}` class. -->
+我们已经为每个 `.text-{size}` 类提供了默认的行高。
 
 ### Providing a default letter-spacing
 
-If you also want to provide a default letter-spacing value for a font size, you can do so using a tuple of the form `[fontSize, { letterSpacing, lineHeight }]` in your `tailwind.config.js` file.
+<!-- If you also want to provide a default letter-spacing value for a font size, you can do so using a tuple of the form `[fontSize, { letterSpacing, lineHeight }]` in your `tailwind.config.js` file. -->
+如果你还想为字体大小提供一个默认的字母间距值，你可以在你的 `tailwind.config.js` 文件中使用 `[fontSize, { letterSpacing, lineHeight }]` 这样的元组来实现。
 
 ```js
 // tailwind.config.js
@@ -172,10 +182,10 @@ module.exports = {
 }
 ```
 
-### Variants
+### 变体
 
 <Variants plugin="fontSize" name="text sizing" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="fontSize" name="text sizing" />
