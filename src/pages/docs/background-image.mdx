@@ -1,6 +1,7 @@
 ---
 title: "Background Image"
-description: "Utilities for controlling an element's background image."
+# description: "Utilities for controlling an element's background image."
+description: "用于控制元素背景图片的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/backgroundImage'
@@ -10,9 +11,12 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Linear gradients
+<!-- ## Linear gradients -->
+## 线性渐变
 
-To give an element a linear gradient background, use one of the `bg-gradient-{direction}` utilities, in combination with the [gradient color stop](/docs/gradient-color-stops) utilities.
+<!-- To give an element a linear gradient background, use one of the `bg-gradient-{direction}` utilities, in combination with the [gradient color stop](/docs/gradient-color-stops) utilities. -->
+
+要给一个元素一个线性的渐变背景，可以使用 `bg-gradient-{direction}` 功能类，并结合[gradient color stop](/docs/gradient-color-stops)功能类。
 
 ```html
 <template preview>
@@ -22,23 +26,30 @@ To give an element a linear gradient background, use one of the `bg-gradient-{di
 <div class="**bg-gradient-to-r from-orange-400 via-red-500 to-pink-500** ..."></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the background image of an element at a specific breakpoint, add a `{screen}:` prefix to any existing background image utility. For example, use `md:bg-gradient-to-r` to apply the `bg-gradient-to-r` utility at only medium screen sizes and above.
+<!-- To control the background image of an element at a specific breakpoint, add a `{screen}:` prefix to any existing background image utility. For example, use `md:bg-gradient-to-r` to apply the `bg-gradient-to-r` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的背景图像，请在任何现有的背景图像功能类中添加 `{screen}:` 前缀。例如，使用 `md:bg-gradient-to-r` 来应用 `bg-gradient-to-r` 功能类，只适用于中等尺寸以上的屏幕。
 
 ```html
 <div class="bg-gradient-to-l **md:bg-gradient-to-r** ..."></div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Background Images
+<!-- ### Background Images -->
+### 背景图片
 
-By default Tailwind includes background image utilities for creating linear gradient backgrounds in eight directions.
+<!-- By default Tailwind includes background image utilities for creating linear gradient backgrounds in eight directions. -->
+默认情况下，Tailwind 包括背景图片功能类，用于创建八个方向的线性渐变背景。
 
-You can add your own background images by editing the `theme.backgroundImage` section of your `tailwind.config.js` file:
+<!-- You can add your own background images by editing the `theme.backgroundImage` section of your `tailwind.config.js` file: -->
+您可以通过编辑 `tailwind.config.js` 文件中的 `theme.backgroundImage` 部分来添加您自己的背景图片。
 
 ```diff-js
   // tailwind.config.js
@@ -54,14 +65,18 @@ You can add your own background images by editing the `theme.backgroundImage` se
   }
 ```
 
-These don't just have to be gradients — they can be any background images you need.
+<!-- These don't just have to be gradients — they can be any background images you need. -->
 
-These classes will take the form `bg-{key}`, so `hero-pattern` will become `bg-hero-pattern` for example.
+<!-- These classes will take the form `bg-{key}`, so `hero-pattern` will become `bg-hero-pattern` for example. -->
+这些不只是渐变，它们可以是任何您需要的背景图片。
 
-### Variants
+这些类将采用 `bg-{key}` 的形式，所以 `hero-pattern` 将变成 `bg-hero-pattern`。
+
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="backgroundImage" />
 
-### Disabling
-
+<!-- ### Disabling -->
+### 禁用
 <Disabling plugin="backgroundImage" />

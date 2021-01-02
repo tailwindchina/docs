@@ -1,6 +1,7 @@
 ---
 title: "Background Attachment"
-description: "Utilities for controlling how a background image behaves when scrolling."
+# description: "Utilities for controlling how a background image behaves when scrolling."
+description: "用于控制背景图片在滚动时的表现的功能类。"
 features:
   responsive: true
   customizable: false
@@ -16,7 +17,8 @@ export const classes = { plugin }
 
 ## Fixed
 
-Use `bg-fixed` to fix the background image relative to the viewport.
+<!-- Use `bg-fixed` to fix the background image relative to the viewport. -->
+使用 `bg-fixed` 来固定相对于视口的背景图片。
 
 ```html lightBlue
 <template preview>
@@ -30,7 +32,8 @@ Use `bg-fixed` to fix the background image relative to the viewport.
 
 ## Local
 
-Use `bg-local` to scroll the background image with the container and the viewport.
+<!-- Use `bg-local` to scroll the background image with the container and the viewport. -->
+使用 `bg-local` 来滚动容器和视口的背景图片。
 
 ```html indigo
 <template preview>
@@ -44,7 +47,8 @@ Use `bg-local` to scroll the background image with the container and the viewpor
 
 ## Scroll
 
-Use `bg-scroll` to scroll the background image with the viewport, but not with the container.
+<!-- Use `bg-scroll` to scroll the background image with the viewport, but not with the container. -->
+使用 `bg-scroll` 来滚动背景图片与视口，而不是容器。
 
 ```html fuchsia
 <template preview>
@@ -56,9 +60,11 @@ Use `bg-scroll` to scroll the background image with the viewport, but not with t
 <div class="**bg-scroll** ..." style="background-image: url(...)"></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式 
 
-To control the background attachment of an element at a specific breakpoint, add a `{screen}:` prefix to any existing background attachment utility. For example, use `md:bg-fixed` to apply the `bg-fixed` utility at only medium screen sizes and above.
+<!-- To control the background attachment of an element at a specific breakpoint, add a `{screen}:` prefix to any existing background attachment utility. For example, use `md:bg-fixed` to apply the `bg-fixed` utility at only medium screen sizes and above. -->
+要控制元素在特定断点处的 background attachment，请在任何现有的 background attachment 功能类中添加 `{screen}:` 前缀。例如，使用 `md:bg-fixed` 来应用 `bg-fixed` 功能类，只适用于中等尺寸以上的屏幕。
 
 ```html
 <div class="bg-local **md:bg-fixed** ...">
@@ -66,14 +72,18 @@ To control the background attachment of an element at a specific breakpoint, add
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义 
 
-### Variants
+<!-- ### Variants -->
+### 变体 
 
 <Variants plugin="backgroundAttachment" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用 
 
 <Disabling plugin="backgroundAttachment" />

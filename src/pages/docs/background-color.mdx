@@ -1,6 +1,7 @@
 ---
 title: "Background Color"
-description: "Utilities for controlling an element's background color."
+# description: "Utilities for controlling an element's background color."
+description: "用于控制元素背景色的功能类。"
 features:
   responsive: true
   customizable: true
@@ -29,9 +30,11 @@ export const classes = {
   ),
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the background color of an element using the `bg-{color}` utilities.
+<!-- Control the background color of an element using the `bg-{color}` utilities. -->
+使用`bg-{color}`功能类控制元素的背景颜色。
 
 ```html emerald
 <template preview>
@@ -45,9 +48,11 @@ Control the background color of an element using the `bg-{color}` utilities.
 <button class="**bg-green-500** ...">Button</button>
 ```
 
-### Changing opacity
+<!-- ### Changing opacity -->
+### 改变不透明度值
 
-Control the opacity of an element's background color using the `bg-opacity-{amount}` utilities.
+<!-- Control the opacity of an element's background color using the `bg-opacity-{amount}` utilities. -->
+使用 `bg-opacity-{amount}` 功能类控制元素背景色的不透明度。
 
 ```html purple
 <template preview>
@@ -67,21 +72,27 @@ Control the opacity of an element's background color using the `bg-opacity-{amou
 <div class="bg-purple-600 **bg-opacity-0** ..."></div>
 ```
 
-Learn more in the [background opacity documentation](/docs/background-opacity).
+<!-- Learn more in the [background opacity documentation](/docs/background-opacity). -->
+在[背景不透明度文档](/docs/background-opacity)中了解更多。
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the background color of an element at a specific breakpoint, add a `{screen}:` prefix to any existing background color utility. For example, use `md:bg-green-500` to apply the `bg-green-500` utility at only medium screen sizes and above.
+<!-- To control the background color of an element at a specific breakpoint, add a `{screen}:` prefix to any existing background color utility. For example, use `md:bg-green-500` to apply the `bg-green-500` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的背景色，请在任何现有的背景色功能类中添加 `{screen}:` 前缀。例如，使用 `md:bg-green-500` 来应用 `bg-green-500` 功能类在中等尺寸以上的屏幕上。
 
 ```html
 <button class="bg-blue-500 **md:bg-green-500** ...">Button</button>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Hover
+<!-- ## Hover -->
+## 悬停
 
-To control the background color of an element on hover, add the `hover:` prefix to any existing background color utility. For example, use `hover:bg-red-700` to apply the `bg-red-700` utility on hover.
+<!-- To control the background color of an element on hover, add the `hover:` prefix to any existing background color utility. For example, use `hover:bg-red-700` to apply the `bg-red-700` utility on hover. -->
+要控制元素在悬停时的背景色，请在任何现有的背景色功能类中添加 `hover:` 前缀。例如，使用 `hover:bg-red-700` 在悬停时应用 `bg-red-700` 功能类。
 
 ```html rose
 <template preview>
@@ -95,15 +106,18 @@ To control the background color of an element on hover, add the `hover:` prefix 
 <button class="bg-red-500 **hover:bg-red-700** ...">Button</button>
 ```
 
-Hover utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `hover:` prefix.
+<!-- Hover utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `hover:` prefix. -->
+悬停功能类也可以通过在 `hover:` 前缀前添加响应的 `{screen}:` 前缀来与响应式的功能类相结合。
 
 ```html
 <button class="... md:bg-blue-500 **md:hover:bg-blue-700** ...">Button</button>
 ```
 
-## Focus
+<!-- ## Focus -->
+## 焦点
 
-To control the background color of an element on focus, add the `focus:` prefix to any existing background color utility. For example, use `focus:bg-blue-500` to apply the `bg-blue-500` utility on focus.
+<!-- To control the background color of an element on focus, add the `focus:` prefix to any existing background color utility. For example, use `focus:bg-blue-500` to apply the `bg-blue-500` utility on focus. -->
+要控制焦点元素的背景颜色，请在任何现有的背景颜色功能类中添加 `focus:` 缀。例如，使用 `focus:bg-blue-500` 在焦点上应用 `bg-blue-500` 功能类。
 
 ```html amber
 <template preview>
@@ -115,19 +129,24 @@ To control the background color of an element on focus, add the `focus:` prefix 
 <input class="bg-gray-200 **focus:bg-white** ...">
 ```
 
-Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix.
+<!-- Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix. -->
+通过在 `focus:` 前缀之前添加响应的 `{screen}:` 前缀，焦点功能类也可以与响应式的功能类相结合。
 
 ```html
 <input class="... md:bg-gray-200 **md:focus:bg-white** ...">
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义 
 
 ### Background Colors
 
-By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as background colors.
+<!-- By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as background colors. -->
 
-You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` variable in your `tailwind.config.js` file, or customize just your background colors using the `theme.backgroundColor` section of your Tailwind config.
+<!-- You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` variable in your `tailwind.config.js` file, or customize just your background colors using the `theme.backgroundColor` section of your Tailwind config. -->
+默认情况下，Tailwind 将整个[默认调色板](/docs/customizing-colors#default-color-palette)作为背景色。
+
+你可以通过编辑 `tailwind.config.js` 文件中的 `theme.colors` 变量来[自定义你的调色板](/docs/colors#-2)，或者使用 Tailwind 配置中的 `theme.backgroundColor` 部分来自定义背景色。
 
 ```diff-js
   // tailwind.config.js
@@ -143,10 +162,12 @@ You can [customize your color palette](/docs/colors#customizing) by editing the 
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体 
 
 <Variants plugin="backgroundColor" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用 
 
 <Disabling plugin="backgroundColor" />
