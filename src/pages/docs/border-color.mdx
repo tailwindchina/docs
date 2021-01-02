@@ -1,6 +1,7 @@
 ---
 title: "Border Color"
-description: "Utilities for controlling the color of an element's borders."
+# description: "Utilities for controlling the color of an element's borders."
+description: "用于控制元素边框颜色的功能类。"
 features:
   responsive: true
   customizable: true
@@ -29,9 +30,11 @@ export const classes = {
   ),
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the border color of an element using the `border-{color}` utilities.
+<!-- Control the border color of an element using the `border-{color}` utilities. -->
+使用 `border-{color}` 功能类控制元素的边框颜色。
 
 ```html rose
 <template preview>
@@ -43,9 +46,11 @@ Control the border color of an element using the `border-{color}` utilities.
 <input class="border-2 **border-red-500** ...">
 ```
 
-### Changing opacity
+<!-- ### Changing opacity -->
+### 改变不透明度值
 
-Control the opacity of an element's border color using the `border-opacity-{amount}` utilities.
+<!-- Control the opacity of an element's border color using the `border-opacity-{amount}` utilities. -->
+使用 `border-opacity-{amount}` 功能类控制元素边框颜色的不透明度值。
 
 ```html lightBlue
 <template preview>
@@ -65,11 +70,14 @@ Control the opacity of an element's border color using the `border-opacity-{amou
 <div class="border-4 border-light-blue-500 **border-opacity-0** ..."></div>
 ```
 
-Learn more in the [border opacity documentation](/docs/border-opacity).
+<!-- Learn more in the [border opacity documentation](/docs/border-opacity). -->
+在[边框不透明度文档](/docs/border-opacity)中了解更多。
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the border color of an element at a specific breakpoint, add a `{screen}:` prefix to any existing border color utility. For example, use `md:border-green-500` to apply the `border-green-500` utility at only medium screen sizes and above.
+<!-- To control the border color of an element at a specific breakpoint, add a `{screen}:` prefix to any existing border color utility. For example, use `md:border-green-500` to apply the `border-green-500` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的边框颜色，请在任何现有的边框颜色功能类中添加 `{screen}:` 前缀。例如，使用 `md:border-green-500` 来应用 `border-green-500` 功能类在中等尺寸以上的屏幕上。
 
 ```html
 <button class="border-blue-500 **md:border-green-500** ...">
@@ -77,11 +85,13 @@ To control the border color of an element at a specific breakpoint, add a `{scre
 </button>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Hover
-
-To control the border color of an element on hover, add the `hover:` prefix to any existing border color utility. For example, use `hover:border-blue-500` to apply the `border-blue-500` utility on hover.
+<!-- ## Hover -->
+## 悬停
+<!-- To control the border color of an element on hover, add the `hover:` prefix to any existing border color utility. For example, use `hover:border-blue-500` to apply the `border-blue-500` utility on hover. -->
+要在悬停时控制元素的边框颜色，请在任何现有的边框颜色功能类中添加 `hover:` 前缀。例如，使用 `hover:border-blue-500` 在悬停时应用 `border-blue-500` 功能类。
 
 ```html purple
 <template preview>
@@ -97,15 +107,18 @@ To control the border color of an element on hover, add the `hover:` prefix to a
 </button>
 ```
 
-Hover utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `hover:` prefix.
-
+<!-- Hover utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `hover:` prefix. -->
+悬停功能类也可以通过在 `hover:` 前缀前添加响应的 `{screen}:` 前缀来与响应的功能类相结合使用。
 ```html
 <button class="... md:border-blue-500 md:hover:border-blue-700 ...">Button</button>
 ```
 
-## Focus
+<!-- ## Focus
 
-To control the border color of an element on focus, add the `focus:` prefix to any existing border color utility. For example, use `focus:border-blue-500` to apply the `border-blue-500` utility on focus.
+To control the border color of an element on focus, add the `focus:` prefix to any existing border color utility. For example, use `focus:border-blue-500` to apply the `border-blue-500` utility on focus. -->
+## 焦点
+
+要控制焦点元素的边框颜色，请在任何现有的边框颜色功能类中添加 `focus:` 前缀。例如，使用 `focus:border-blue-500` 在焦点上应用 `border-blue-500` 功能类。
 
 ```html blue
 <template preview>
@@ -117,7 +130,8 @@ To control the border color of an element on focus, add the `focus:` prefix to a
 <input class="border border-red-500 focus:border-blue-500 ...">
 ```
 
-Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix.
+<!-- Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix. -->
+通过在 `focus:` 前缀之前添加响应的 `{screen}:` 前缀，焦点功能类也可以与响应的功能类相结合使用。
 
 ```html
 <input class="... md:border-gray-200 md:focus:border-white ...">
@@ -125,13 +139,17 @@ Focus utilities can also be combined with responsive utilities by adding the res
 
 ---
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Border Colors
+<!-- ### Border Colors -->
+### 边框颜色
 
-By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as border colors.
+<!-- By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as border colors. -->
+默认情况下，Tailwind 将整个[默认调色板](/docs/customizing-colors#default-color-palette)作为边框颜色。
 
-You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` section of your `tailwind.config.js` file, or customize just your border colors using the `theme.borderColor` section.
+<!-- You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` section of your `tailwind.config.js` file, or customize just your border colors using the `theme.borderColor` section. -->
+您可以通过编辑 `tailwind.config.js` 文件中的 `theme.colors` 部分来[定制您的调色板](/docs/colors#-2)，或者使用 `theme.borderColor` 部分来定制您的边框颜色。
 
 ```diff-js
   // tailwind.config.js
@@ -148,10 +166,12 @@ You can [customize your color palette](/docs/colors#customizing) by editing the 
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="borderColor" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="borderColor" />

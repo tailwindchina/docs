@@ -1,6 +1,7 @@
 ---
 title: "Border Radius"
-description: "Utilities for controlling the border radius of an element."
+# description: "Utilities for controlling the border radius of an element."
+description: "用于控制元素边框半径的功能类。"
 features:
   responsive: true
   customizable: true
@@ -14,9 +15,12 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Rounded corners
+<!-- ## Rounded corners
 
-Use utilities like `.rounded-sm`, `.rounded`, or `.rounded-lg` to apply different border radius sizes to an element.
+Use utilities like `.rounded-sm`, `.rounded`, or `.rounded-lg` to apply different border radius sizes to an element. -->
+## 圆角
+
+使用 `.rounded-sm`, `.rounded`, 或 `.rounded-lg` 等实用功能类来应用不同的边框半径大小到一个元素上。
 
 ```html lightBlue
 <template preview>
@@ -34,9 +38,12 @@ Use utilities like `.rounded-sm`, `.rounded`, or `.rounded-lg` to apply differen
 <div class="**rounded-lg** ..."></div>
 ```
 
-## Pills and circles
+<!-- ## Pills and circles
 
-Use the `rounded-full` utility to create pills and circles.
+Use the `rounded-full` utility to create pills and circles. -->
+## 药丸形💊和圆圈
+
+使用 `rounded-full` 功能类来创建药丸形💊和圆圈。
 
 ```html indigo
 <template preview>
@@ -50,11 +57,14 @@ Use the `rounded-full` utility to create pills and circles.
 <div class="**rounded-full** h-24 w-24 flex items-center justify-center...">Circle</div>
 ```
 
-## No rounding
+<!-- ## No rounding -->
+## 无圆角
 
-Use `rounded-none` to remove an existing border radius from an element.
+<!-- Use `rounded-none` to remove an existing border radius from an element. -->
+使用 `rounded-none` 从元素中删除现有的边框半径。
 
-This is most commonly used to remove a border radius that was applied at a smaller breakpoint.
+<!-- This is most commonly used to remove a border radius that was applied at a smaller breakpoint. -->
+这最常见的是用来删除一个应用在较小断点上的边框半径。
 
 ```html rose
 <template preview>
@@ -66,9 +76,11 @@ This is most commonly used to remove a border radius that was applied at a small
 <div class="**rounded-none** ...">.rounded-none</div>
 ```
 
-## Rounding sides separately
+<!-- ## Rounding sides separately -->
+## 独立设置每条边框的圆角效果
 
-Use `rounded-{t|r|b|l}{-size?}` to only round one side an element.
+<!-- Use `rounded-{t|r|b|l}{-size?}` to only round one side an element. -->
+使用 `rounded-{t|r|b|l}{size?}` 只将圆角应用到元素的一个边框上。
 
 ```html emerald
 <template preview>
@@ -86,9 +98,11 @@ Use `rounded-{t|r|b|l}{-size?}` to only round one side an element.
 <div class="**rounded-l-lg** ...">.rounded-l-lg</div>
 ```
 
-## Rounding corners separately
+<!-- ## Rounding corners separately -->
+## 独立设置每个边角的圆角效果
 
-Use `rounded-{tl|tr|br|bl}{-size?}` to only round one corner an element.
+<!-- Use `rounded-{tl|tr|br|bl}{-size?}` to only round one corner an element. -->
+使用 `rounded-{tl|tr|br|bl}{-size?}` 只将圆角应用到元素的一个边角上。
 
 ```html amber
 <template preview>
@@ -106,9 +120,12 @@ Use `rounded-{tl|tr|br|bl}{-size?}` to only round one corner an element.
 <div class="**rounded-bl-lg** ..."></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the border radius of an element at a specific breakpoint, add a `{screen}:` prefix to any existing border radius utility. For example, use `md:rounded-lg` to apply the `rounded-lg` utility at only medium screen sizes and above.
+<!-- To control the border radius of an element at a specific breakpoint, add a `{screen}:` prefix to any existing border radius utility. For example, use `md:rounded-lg` to apply the `rounded-lg` utility at only medium screen sizes and above. -->
+
+要在特定的断点处控制元素的边界半径，请在任何现有的边界半径功能类中添加 `{screen}:` 前缀。例如，使用 `md:rounded-lg` 来应用 `rounded-lg` 功能类，只适用于中等尺寸以上的屏幕。
 
 ```html
 <div class="rounded **md:rounded-lg** ...">
@@ -116,13 +133,19 @@ To control the border radius of an element at a specific breakpoint, add a `{scr
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
 
-## Customizing
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-### Border Radiuses
+<!-- ## Customizing -->
+## 自定义
 
-By default Tailwind provides five border radius size utilities. You can change, add, or remove these by editing the `theme.borderRadius` section of your Tailwind config.
+<!-- ### Border Radiuses
+
+By default Tailwind provides five border radius size utilities. You can change, add, or remove these by editing the `theme.borderRadius` section of your Tailwind config. -->
+### 边框半径
+
+默认情况下，Tailwind 提供了五个边框半径大小的功能类，您可以通过编辑 `theme.borderRadius` 部分来改变，添加或删除这些功能类。您可以通过编辑 Tailwind 配置中的 `theme.borderRadius` 部分来改变，添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js
@@ -143,9 +166,11 @@ By default Tailwind provides five border radius size utilities. You can change, 
 ```
 
 ### Variants
+### 变体
 
 <Variants plugin="borderRadius" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="borderRadius" />
