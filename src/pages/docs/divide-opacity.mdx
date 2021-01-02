@@ -1,6 +1,7 @@
 ---
 title: "Divide Opacity"
-description: "Utilities for controlling the opacity borders between elements."
+# description: "Utilities for controlling the opacity borders between elements."
+description: "用于控制元素之间的不透明度边框的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/divideOpacity'
@@ -14,9 +15,11 @@ export const classes = {
   }
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the opacity of borders between elements using the `divide-opacity-{amount}` utilities.
+<!-- Control the opacity of borders between elements using the `divide-opacity-{amount}` utilities. -->
+使用 `divide-opacity-{amount}` 功能控制元素之间边框的不透明度。
 
 ```html purple
 <template preview>
@@ -34,9 +37,11 @@ Control the opacity of borders between elements using the `divide-opacity-{amoun
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the opacity of borders between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide opacity utility. For example, use `md:divide-opacity-50` to apply the `divide-opacity-50` utility at only medium screen sizes and above.
+<!-- To control the opacity of borders between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide opacity utility. For example, use `md:divide-opacity-50` to apply the `divide-opacity-50` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素之间边框的不透明度，请在任何现有的 divide opacity 功能中添加 `{screen}:` 前缀。例如，使用 `md:divide-opacity-50` 来应用 `divide-opacity-50` 功能，只适用于中等尺寸以上的屏幕。
 
 ```html
 <div class="divide-y-2 divide-blue-500 divide-opacity-75 **md:divide-opacity-50**">
@@ -44,11 +49,14 @@ To control the opacity of borders between elements at a specific breakpoint, add
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration:
+<!-- To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration: -->
+要一次性自定义所有与不透明度相关的功能类的不透明度值，请使用您的 `tailwind.config.js` 主题配置中的 `opacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -65,7 +73,8 @@ To customize the opacity values for all opacity-related utilities at once, use t
   }
 ```
 
-If you want to customize only the divide opacity utilities, use the `divideOpacity` section:
+<!-- If you want to customize only the divide opacity utilities, use the `divideOpacity` section: -->
+如果您只想自定义 divide opacity 的功能，请使用 `divideOpacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -82,12 +91,15 @@ If you want to customize only the divide opacity utilities, use the `divideOpaci
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="divideOpacity" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="divideOpacity" />
