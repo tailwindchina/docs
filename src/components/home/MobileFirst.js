@@ -284,7 +284,7 @@ export function MobileFirst() {
         {/*</Paragraph>*/}
         <Paragraph as="div" className="mb-6">
           <p>
-            在你的 CSS 中使用大量复杂的媒体查询非常糟糕，因此 Tailwind 可以让你直接在 HTML 中构建响应式的设计。
+            在您的 CSS 中使用大量复杂的媒体查询非常糟糕，因此 Tailwind 可以让您直接在 HTML 中构建响应式的设计。
           </p>
           <p>
             在功能类前面加上屏幕大小标记，就可以查看在指定断点处的神奇表现。

@@ -1,6 +1,6 @@
 ---
 title: 函数与指令
-description: Tailwind 向你的 CSS 的暴露的函数和指令的参考说明。
+description: Tailwind 向您的 CSS 的暴露的函数和指令的参考说明。
 ---
 
 import { TipGood, TipBad } from '@/components/Tip'
@@ -8,7 +8,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 ## @tailwind
 
 <!-- Use the `@tailwind` directive to insert Tailwind's `base`, `components`, `utilities` and `screens` styles into your CSS. -->
-使用 `@tailwind` 指令向你的 CSS 添加 Tailwind 的 `base`, `components`, `utilities` 和 `screens` 样式。
+使用 `@tailwind` 指令向您的 CSS 添加 Tailwind 的 `base`, `components`, `utilities` 和 `screens` 样式。
 
 ```css
 /**
@@ -44,10 +44,10 @@ import { TipGood, TipBad } from '@/components/Tip'
 ## @apply
 
 <!-- Use `@apply` to inline any existing utility classes into your own custom CSS. -->
-使用 `@apply` 将任何现存的功能类内联到你的自定义 CSS 中。
+使用 `@apply` 将任何现存的功能类内联到您的自定义 CSS 中。
 
 <!-- This is useful when you find a common utility pattern in your HTML that you'd like to extract to a new component. -->
-当你在你的 HTML 里找到你想要提取到一个新组件的通用的功能模式时，这非常有用。
+当您在您的 HTML 里找到您想要提取到一个新组件的通用的功能模式时，这非常有用。
 
 ```css
 .btn {
@@ -76,7 +76,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 ```
 
 <!-- If you want fine-grained control over the order in which classes are applied, use multiple `@apply` statements: -->
-如果你要对功能类的应用顺序进行细粒度的控制，请使用多个 `@apply` 语句：
+如果您要对功能类的应用顺序进行细粒度的控制，请使用多个 `@apply` 语句：
 
 ```css
 /* Input */
@@ -134,7 +134,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 ```
 
 <!-- If you'd like to `@apply` an existing class and make it `!important`, simply add `!important` to the end of the declaration: -->
-如果你想使用  `@apply` 内联一个已经存在的类，并且为其设置 `!important`，只需要把 `!important` 添加到声明的结尾即可。
+如果您想使用  `@apply` 内联一个已经存在的类，并且为其设置 `!important`，只需要把 `!important` 添加到声明的结尾即可。
 
 ```css
 /* Input */
@@ -154,7 +154,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 ```
 
 <!-- Note that if you're using Sass/SCSS, you'll need to use Sass' interpolation feature to get this to work: -->
-注意，如果你使用的是 Sass/SCSS，则你需要使用 Sass 的插值功能才能使其正常工作。
+注意，如果您使用的是 Sass/SCSS，则您需要使用 Sass 的插值功能才能使其正常工作。
 
 ```css
 .btn {
@@ -213,7 +213,7 @@ Tailwind会自动将 `@layer` 指令中的所有 CSS 移至与相应 `@tailwind`
 ## @variants
 
 <!-- You can generate `responsive`, `hover`, `focus`, `active`, and other [variants](/docs/hover-focus-and-other-states) of your own utilities by wrapping their definitions in the `@variants` directive. -->
-你可以通过在 `@variants` 指令中声明自己的功能类来生成他们的 `responsive`, `hover`, `focus`, `active` 及其它 [变体](/docs/hover-focus-and-other-states)。
+您可以通过在 `@variants` 指令中声明自己的功能类来生成他们的 `responsive`, `hover`, `focus`, `active` 及其它 [变体](/docs/hover-focus-and-other-states)。
 
 ```css
 @variants focus, hover {
@@ -279,14 +279,14 @@ Tailwind会自动将 `@layer` 指令中的所有 CSS 移至与相应 `@tailwind`
 ```
 
 <!-- The `@variants` at-rule supports all of the values that are supported in the `variants` section of your config file, as well as any [custom variants](/docs/plugins#adding-variants) added through plugins. -->
-该 `@variants` 规则支持你配置文件中 `variants` 部分支持的所有值，以及通过插件添加的 [自定义变体](/docs/plugins#adding-variants)。
+该 `@variants` 规则支持您配置文件中 `variants` 部分支持的所有值，以及通过插件添加的 [自定义变体](/docs/plugins#adding-variants)。
 
 ---
 
 ## @responsive
 
 <!-- You can generate responsive variants of your own classes by wrapping their definitions in the `@responsive` directive: -->
-你可以通过在 `@responsive` 指令中声明他们的定义来生成你自己的类的响应式变体。
+您可以通过在 `@responsive` 指令中声明他们的定义来生成您自己的类的响应式变体。
 
 ```css
 @responsive {
@@ -339,17 +339,17 @@ Tailwind会自动将 `@layer` 指令中的所有 CSS 移至与相应 `@tailwind`
 ```
 
 <!-- The responsive variants will be added to Tailwind's existing media queries at the end of your stylesheet. This makes sure that classes with a responsive prefix always defeat non-responsive classes that are targeting the same CSS property. -->
-响应式变体将在你的样式表的结尾被添加到 Tailwind 的已经存在的媒体查询中。这将确保那些带有响应式前缀的类优先级会高于同样 CSS 属性的非响应式的类。
+响应式变体将在您的样式表的结尾被添加到 Tailwind 的已经存在的媒体查询中。这将确保那些带有响应式前缀的类优先级会高于同样 CSS 属性的非响应式的类。
 
 ---
 
 ## @screen
 
 <!-- The `@screen` directive allows you to create media queries that reference your breakpoints by name instead of duplicating their values in your own CSS. -->
-`@screen` 指令允许你创建通过名称引用断点的媒体查询，而不是在你的 CSS 中复制他们的值。
+`@screen` 指令允许您创建通过名称引用断点的媒体查询，而不是在您的 CSS 中复制他们的值。
 
 <!-- For example, say you have a `sm` breakpoint at `640px` and you need to write some custom CSS that references this breakpoint. -->
-例如，假设有一个名为 `sm` 的 `640px` 的断点，你只需要写一些自定义的指向这个断点的 CSS。
+例如，假设有一个名为 `sm` 的 `640px` 的断点，您只需要写一些自定义的指向这个断点的 CSS。
 
 <!-- Instead of writing a raw media query that duplicates that value like this: -->
 而不是编写一个复制那些值的原始的媒体查询，如下所示：
@@ -361,7 +361,7 @@ Tailwind会自动将 `@layer` 指令中的所有 CSS 移至与相应 `@tailwind`
 ```
 
 <!-- ...you can use the `@screen` directive and reference the breakpoint by name: -->
-...你可以使用 `@screen` 指令，然后根据名称引用这个断点：
+...您可以使用 `@screen` 指令，然后根据名称引用这个断点：
 
 ```css
 @screen sm {
@@ -377,7 +377,7 @@ Tailwind会自动将 `@layer` 指令中的所有 CSS 移至与相应 `@tailwind`
 使用  `theme()` 函数可以通过点符号来获取 Tailwind 配置的值。
 
 <!-- This can be a useful alternative to `@apply` when you want to reference a value from your theme configuration for only part of a declaration: -->
-当你想要引用一个你主题配置中的一部分声明的值时，这是一个 `@apply` 的有用的替代方式。
+当您想要引用一个您主题配置中的一部分声明的值时，这是一个 `@apply` 的有用的替代方式。
 
 ```css
 .content-area {
@@ -386,7 +386,7 @@ Tailwind会自动将 `@layer` 指令中的所有 CSS 移至与相应 `@tailwind`
 ```
 
 <!-- If you need to access a value that contains a dot (like the `2.5` value in the spacing scale), you can use square bracket notation: -->
-如果你想获取一个含有点的值（像间距比例中的 `2.5`），则可以使用方括号。
+如果您想获取一个含有点的值（像间距比例中的 `2.5`），则可以使用方括号。
 
 ```css
 .content-area {

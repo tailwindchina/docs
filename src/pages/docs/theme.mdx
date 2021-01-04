@@ -8,7 +8,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 import { ThemeReference } from '@/components/ThemeReference'
 
 The `theme` section of your `tailwind.config.js` file is where you define your project's color palette, type scale, fonts, breakpoints, border radius values, and more.
-在`tailwind.config.js` 文件的 `theme` 部分，你可以定义你项目的调色板、类型比例、字体、断点、边框半径值等。
+在`tailwind.config.js` 文件的 `theme` 部分，您可以定义您项目的调色板、类型比例、字体、断点、边框半径值等。
 
 ```js
 // tailwind.config.js
@@ -46,7 +46,7 @@ module.exports = {
 ```
 
 <!-- We provide a sensible [default theme](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) with a very generous set of values to get you started, but don't be afraid to change it or extend; you're encouraged to customize it as much as you need to fit the goals of your design. -->
-我们提供了一个合理的 [默认主题](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7)，并提供了一套非常通用的值来让你开始使用，但不要害怕改变或扩展；我们鼓励你根据你的设计目标来定制它。
+我们提供了一个合理的 [默认主题](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7)，并提供了一套非常通用的值来让您开始使用，但不要害怕改变或扩展；我们鼓励您根据您的设计目标来定制它。
 
 ---
 
@@ -62,7 +62,7 @@ module.exports = {
 ### 屏幕
 
 <!-- The `screens` key allows you to customize the responsive breakpoints in your project. -->
-`screens`键允许你自定义项目中的响应断点。
+`screens`键允许您自定义项目中的响应断点。
 
 ```js
 // tailwind.config.js
@@ -85,7 +85,7 @@ module.exports = {
 ### 颜色
 
 <!-- The `colors` key allows you to customize the global color palette for your project. -->
-`colors` 键允许你为你的项目定制全局调色板。
+`colors` 键允许您为您的项目定制全局调色板。
 
 ```js
 // tailwind.config.js
@@ -116,7 +116,7 @@ module.exports = {
 ### 间距
 
 <!-- The `spacing` key allows you to customize the global spacing and sizing scale for your project. -->
-`spacing` 键允许你为你的项目定制全局的间距和大小比例。
+`spacing` 键允许您为您的项目定制全局的间距和大小比例。
 
 ```js
 // tailwind.config.js
@@ -175,7 +175,7 @@ module.exports = {
 其余的 `theme` 部分用于配置每个核心插件的可用值。
 
 <!-- For example, the `borderRadius` key lets you customize which border radius utilities will be generated: -->
-例如， `borderRadius` 键可以让你自定义将生成哪些边框半径功能类。
+例如， `borderRadius` 键可以让您自定义将生成哪些边框半径功能类。
 
 ```js
 module.exports = {
@@ -206,7 +206,7 @@ module.exports = {
 ```
 
 <!-- You'll notice that using a key of `DEFAULT` in the theme configuration created the class `rounded` with no suffix. This is a common convention in Tailwind and is supported by all core plugins. -->
-你会注意到，在主题配置中使用 `DEFAULT` 键创建了一个没有后缀的 `rounded` 类。这是一个常见的惯例，在 Tailwind 中，所有的核心插件都支持这样的用法。
+您会注意到，在主题配置中使用 `DEFAULT` 键创建了一个没有后缀的 `rounded` 类。这是一个常见的惯例，在 Tailwind 中，所有的核心插件都支持这样的用法。
 
 <!-- To learn more about customizing a specific core plugin, visit the documentation for that plugin. -->
 要了解更多关于定制特定核心插件的信息，请访问该插件的文档。
@@ -217,15 +217,15 @@ module.exports = {
 ## 定制默认主体
 
 <!-- Out of the box, your project will automatically inherit the values from [the default theme configuration](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5). If you would like to customize the default theme, you have a few different options depending on your goals. -->
-开箱即用，您的项目将自动继承 [默认主题配置] (https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5)中的值。如果你想自定义默认主题，你有几个不同的选项，取决于你的目标。
+开箱即用，您的项目将自动继承 [默认主题配置] (https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5)中的值。如果您想自定义默认主题，您有几个不同的选项，取决于您的目标。
 
 ### 扩展默认主题
 
 <!-- If you'd like to preserve the default values for a theme option but also add new values, add your extensions under the `extend` key in the `theme` section of your configuration file. -->
-如果你想保留一个主题选项的默认值，但也要添加新的值，在配置文件的 `theme` 部分的 `extend` 键下添加你的扩展。
+如果您想保留一个主题选项的默认值，但也要添加新的值，在配置文件的 `theme` 部分的 `extend` 键下添加您的扩展。
 
 <!-- For example, if you wanted to add an extra breakpoint but preserve the existing ones, you could extend the `screens` property: -->
-例如，如果你想增加一个额外的断点，但保留现有的断点，你可以扩展 `screens` 属性。
+例如，如果您想增加一个额外的断点，但保留现有的断点，您可以扩展 `screens` 属性。
 
 ```js
 // tailwind.config.js
@@ -244,7 +244,7 @@ module.exports = {
 ### 覆盖默认主题
 
 <!-- To override an option in the default theme, add your overrides directly under the `theme` section of your `tailwind.config.js`: -->
-要覆盖默认主题中的一个选项，直接在你的 `tailwind.config.js` 文件的 `theme`部分添加你的覆盖。
+要覆盖默认主题中的一个选项，直接在您的 `tailwind.config.js` 文件的 `theme`部分添加您的覆盖。
 
 ```js
 // tailwind.config.js
@@ -267,10 +267,10 @@ module.exports = {
 这将完全替换 Tailwind 中该键的默认配置，所以在上面的例子中，没有一个默认的透明度类将被生成。
 
 <!-- Any keys you **do not** provide will be inherited from the default theme, so in the above example, the default theme configuration for things like colors, spacing, border-radius, background-position, etc. would be preserved. -->
-任何你**没有**提供的键都将从默认主题中继承，所以在上面的例子中，默认的主题配置，如颜色，间距，边框半径，背景位置等将被保留。
+任何您**没有**提供的键都将从默认主题中继承，所以在上面的例子中，默认的主题配置，如颜色，间距，边框半径，背景位置等将被保留。
 
 <!-- You can of course both override some parts of the default theme and extend other parts of the default theme within the same configuration: -->
-当然，在同一配置下，你既可以覆盖默认主题的一部分，也可以扩展默认主题的另一部分。
+当然，在同一配置下，您既可以覆盖默认主题的一部分，也可以扩展默认主题的另一部分。
 
 ```js
 // tailwind.config.js
@@ -296,10 +296,10 @@ module.exports = {
 ### 引用其它值
 
 <!-- If you need to reference another value in your theme, you can do so by providing a closure instead of a static value. The closure will receive a `theme()` function that you can use to look up other values in your theme using dot notation. -->
-如果你需要在你的主题中引用另一个值，你可以通过提供一个闭包而不是一个静态值来实现。该闭包将收到一个 `theme()` 函数，你可以使用点符号来查找你主题中的其他值。
+如果您需要在您的主题中引用另一个值，您可以通过提供一个闭包而不是一个静态值来实现。该闭包将收到一个 `theme()` 函数，您可以使用点符号来查找您主题中的其他值。
 
 <!-- For example, you could generate `fill` utilities for every color in your color palette by referencing `theme('colors')` in your `fill` configuration: -->
-例如，你可以通过在你的 `fill` 配置中引用 `theme('colors')` 来为你的调色板中的每一种颜色生成 `fill` 功能类。
+例如，您可以通过在您的 `fill` 配置中引用 `theme('colors')` 来为您的调色板中的每一种颜色生成 `fill` 功能类。
 
 ```js
 // tailwind.config.js
@@ -314,15 +314,15 @@ module.exports = {
 ```
 
 <!-- The `theme()` function attempts to find the value you are looking for from the fully merged theme object, so it can reference your own customizations as well as the default theme values. It also works recursively, so as long as there is a static value at the end of the chain it will be able to resolve the value you are looking for. -->
-`theme()` 函数试图从完全合并的主题对象中找到你正在寻找的值，因此它可以引用你自己的定制以及默认的主题值。它也是递归工作的，所以只要在链的最后有一个静态值，它就能解析出你要找的值。
+`theme()` 函数试图从完全合并的主题对象中找到您正在寻找的值，因此它可以引用您自己的定制以及默认的主题值。它也是递归工作的，所以只要在链的最后有一个静态值，它就能解析出您要找的值。
 
 ### 引用默认主题
 
 <!-- If you'd like to reference a value in the default theme for any reason, you can import it from `tailwindcss/defaultTheme`. -->
-如果你想在默认主题中出于任何原因引用一个值，你可以从 `tailwindcss/defaultTheme` 中导入它。
+如果您想在默认主题中出于任何原因引用一个值，您可以从 `tailwindcss/defaultTheme` 中导入它。
 
 <!-- One example of where this is useful is if you'd like to add a font family to one of Tailwind's default font stacks: -->
-一个有用的例子是，如果你想添加一个字体家族到 Tailwind 的默认字体堆栈中。
+一个有用的例子是，如果您想添加一个字体家族到 Tailwind 的默认字体堆栈中。
 
 ```js
 // tailwind.config.js
@@ -345,10 +345,10 @@ module.exports = {
 ### 禁用全部核心插件
 
 <!-- If you don't want to generate any classes for a certain core plugin, it's better to set that plugin to false in your `corePlugins` configuration than to provide an empty object for that key in your `theme` configuration. -->
-如果你不想为某个核心插件生成任何类，最好在你的 `corePlugins` 配置中把该插件设置为 false，而不是在你的 `theme` 配置中为该键提供一个空对象。
+如果您不想为某个核心插件生成任何类，最好在您的 `corePlugins` 配置中把该插件设置为 false，而不是在您的 `theme` 配置中为该键提供一个空对象。
 
 <!-- <TipBad>Don't assign an empty object in your theme configuration</TipBad> -->
-<TipBad>不要在你的主题配置中赋值一个空对象。</TipBad>
+<TipBad>不要在您的主题配置中赋值一个空对象。</TipBad>
 
 ```js
 // tailwind.config.js
@@ -360,7 +360,7 @@ module.exports = {
 ```
 
 <!-- <TipGood>Do disable the plugin in your corePlugins configuration</TipGood> -->
-<TipGood>请在你的 corePlugins 配置中禁用该插件。</TipGood>
+<TipGood>请在您的 corePlugins 配置中禁用该插件。</TipGood>
 
 ```js
 // tailwind.config.js
@@ -380,7 +380,7 @@ module.exports = {
 在一些情况下，向 `theme` 对象添加自己的键是有用的。
 
 <!-- One example of this is adding new keys to create a single source of truth for values that are common between multiple core plugins. For example, you could extract a shared `positions` object that could be referenced by both the `backgroundPosition` and `objectPosition` plugins: -->
-其中一个例子是添加新的键，为多个核心插件之间的共同值创建一个单一的真实来源。例如，你可以提取一个共享的 `positions` 对象，它可以被 `backgroundPosition` 和 `objectPosition` 插件引用。
+其中一个例子是添加新的键，为多个核心插件之间的共同值创建一个单一的真实来源。例如，您可以提取一个共享的 `positions` 对象，它可以被 `backgroundPosition` 和 `objectPosition` 插件引用。
 
 ```js
 // tailwind.config.js
@@ -404,7 +404,7 @@ module.exports = {
 ```
 
 <!-- Another example is adding a new key to reference inside a custom plugin. For example, if you've written a `filters` plugin for your project, you might add a `filters` key to your `theme` object that the plugin references: -->
-另一个例子是在自定义插件内部添加一个新的键来引用。例如，如果你为你的项目编写了一个 `filters` 插件，你可以在你的 `theme` 对象中添加一个 `filters` 键，让插件引用。
+另一个例子是在自定义插件内部添加一个新的键来引用。例如，如果您为您的项目编写了一个 `filters` 插件，您可以在您的 `theme` 对象中添加一个 `filters` 键，让插件引用。
 
 ```js
 // tailwind.config.js
@@ -424,7 +424,7 @@ module.exports = {
 ```
 
 <!-- Since the entire `theme` object is available in your CSS using the [theme function](/docs/functions-and-directives#theme), you might also add a key just to be able to reference it in your CSS. -->
-由于整个 `theme` 对象可以通过[theme 函数](/docs/functions-and-directives#theme) 在你的 CSS 中使用，你也可以添加一个键来在你的 CSS 中引用它。
+由于整个 `theme` 对象可以通过[theme 函数](/docs/functions-and-directives#theme) 在您的 CSS 中使用，您也可以添加一个键来在您的 CSS 中引用它。
 
 ## 配置参考
 

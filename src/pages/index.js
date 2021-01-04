@@ -119,7 +119,7 @@ export default function Home() {
           {/*  your markup.*/}
           {/*</p>          */}
           <p className="max-w-screen-lg text-lg sm:text-2xl sm:leading-10 font-medium mb-10 sm:mb-11">
-            Tailwind CSS 是一个功能类优先的 CSS 框架，它集成了诸如 <InlineCode>flex</InlineCode>,{' '}<InlineCode>pt-4</InlineCode>, <InlineCode>text-center</InlineCode> 和{' '}<InlineCode>rotate-90</InlineCode> 的类，这些类能直接在你的标记语言中组合起来，构建出任何设计。
+            Tailwind CSS 是一个功能类优先的 CSS 框架，它集成了诸如 <InlineCode>flex</InlineCode>,{' '}<InlineCode>pt-4</InlineCode>, <InlineCode>text-center</InlineCode> 和{' '}<InlineCode>rotate-90</InlineCode> 的类，这些类能直接在您的标记语言中组合起来，构建出任何设计。
           </p>
           <div className="flex flex-wrap space-y-4 sm:space-y-0 sm:space-x-4 text-center">
             <NextLink href="/docs">
@@ -154,8 +154,8 @@ export default function Home() {
                 </a>{' '}
                 <Widont>
                   来说明为什么传统的 “语义化类名” 是 CSS 难以维护的原因，
-                  但事实是除非你实际尝试过，你永远不会相信我。
-                  如果你能抑制住想吐槽的冲动，给它一个机会，我真的觉得你会怀疑你是怎么用其他方式来使用CSS的。
+                  但事实是除非您实际尝试过，您永远不会相信我。
+                  如果您能抑制住想吐槽的冲动，给它一个机会，我真的觉得您会怀疑您是怎么用其他方式来使用CSS的。
                 </Widont>
               </Paragraph>
             </blockquote>

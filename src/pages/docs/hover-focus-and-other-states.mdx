@@ -38,7 +38,7 @@ import { VariantEnabledList } from '@/components/VariantEnabledList'
 查看默认启用了哪些变体的列表，查看本页末尾的 [参考表](#default-variants-reference)。
 
 <!-- If you need to target a state that Tailwind doesn't support, you can extend the supported variants by [writing a variant plugin](#creating-custom-variants). -->
-如果你需要启用一个 Tailwind 未支持的状态，可以通过 [编写变体插件](#creating-custom-variants) 来扩展支持的变体。
+如果您需要启用一个 Tailwind 未支持的状态，可以通过 [编写变体插件](#creating-custom-variants) 来扩展支持的变体。
 
 ---
 
@@ -66,7 +66,7 @@ import { VariantEnabledList } from '@/components/VariantEnabledList'
 </div>
 
 <!-- You can control whether `hover` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `hover` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `hover` 变体：
 
 ```js
 // tailwind.config.js
@@ -102,7 +102,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `focus` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `focus` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `focus` 变体：
 
 ```js
 // tailwind.config.js
@@ -142,7 +142,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `active` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `active` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `active` 变体：
 
 ```js
 // tailwind.config.js
@@ -161,7 +161,7 @@ module.exports = {
 ## Group-hover
 
 <!-- If you need to style a child element when hovering over a specific parent element, add the `group` class to the parent element and add the `group-hover:` prefix to the utility on the child element. -->
-如果你需要当鼠标悬停在一个指定的父元素上时对其子元素设置样式，给父元素添加 `group` 类，并且为子元素的功能类添加 `group-hover:` 前缀。
+如果您需要当鼠标悬停在一个指定的父元素上时对其子元素设置样式，给父元素添加 `group` 类，并且为子元素的功能类添加 `group-hover:` 前缀。
 
 ```html indigo
 <template preview>
@@ -182,7 +182,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `group-hover` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `group-hover` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `group-hover` 变体：
 
 ```js
 // tailwind.config.js
@@ -224,7 +224,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `group-focus` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `group-focus` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `group-focus` 变体：
 
 ```js
 // tailwind.config.js
@@ -272,7 +272,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `focus-within` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `focus-within` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `focus-within` 变体：
 
 ```js
 // tailwind.config.js
@@ -317,7 +317,7 @@ module.exports = {
 ```
 
 <!-- Note that currently only [Chrome, Edge, and Firefox](https://caniuse.com/?search=focus-visible) support `focus-visible` natively, so for sufficient browser support you should install and configure both the [focus-visible JS polyfill](https://github.com/WICG/focus-visible) and the [focus-visible PostCSS polyfill](https://github.com/csstools/postcss-focus-visible). Make sure to include the PostCSS plugin _after_ Tailwind in your list of PostCSS plugins: -->
-注意：目前仅 [Chrome, Edge, and Firefox](https://caniuse.com/?search=focus-visible) 原生支持 `focus-visible`，因此，为了获得足够的浏览器支持，你应该安装并配置 [focus-visible JS polyfill](https://github.com/WICG/focus-visible) 和 [focus-visible PostCSS polyfill](https://github.com/csstools/postcss-focus-visible)，并确保该插件在 PostCSS 插件列表中位于 Tailwind 之后。
+注意：目前仅 [Chrome, Edge, and Firefox](https://caniuse.com/?search=focus-visible) 原生支持 `focus-visible`，因此，为了获得足够的浏览器支持，您应该安装并配置 [focus-visible JS polyfill](https://github.com/WICG/focus-visible) 和 [focus-visible PostCSS polyfill](https://github.com/csstools/postcss-focus-visible)，并确保该插件在 PostCSS 插件列表中位于 Tailwind 之后。
 
 ```js
 // postcss.config.js
@@ -335,7 +335,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `focus-visible` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `focus-visible` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `focus-visible` 变体：
 
 ```js
 // tailwind.config.js
@@ -387,7 +387,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `motion-safe` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `motion-safe` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `motion-safe` 变体：
 
 ```js
 // tailwind.config.js
@@ -439,7 +439,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `motion-reduce` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `motion-reduce` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `motion-reduce` 变体：
 
 ```js
 // tailwind.config.js
@@ -485,7 +485,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `disabled` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `disabled` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `disabled` 变体：
 
 ```js
 // tailwind.config.js
@@ -522,7 +522,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `visited` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `visited` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `visited` 变体：
 
 ```js
 // tailwind.config.js
@@ -561,7 +561,7 @@ module.exports = {
 </div>
 
 <!-- You can control whether `checked` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `checked` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `checked` 变体：
 
 ```js
 // tailwind.config.js
@@ -601,14 +601,14 @@ module.exports = {
 ```
 
 <!-- It's important to note that you should add any `first:` utilities to the child element, not the parent element. -->
-需要特别注意的是，你应该将 `first:` 功能类添加到子元素上，而不是父元素。
+需要特别注意的是，您应该将 `first:` 功能类添加到子元素上，而不是父元素。
 
 <div>
   <VariantEnabledList variant="first-child"/>
 </div>
 
 <!-- You can control whether `first` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `first` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `first` 变体：
 
 ```js
 // tailwind.config.js
@@ -647,14 +647,14 @@ module.exports = {
 ```
 
 <!-- It's important to note that you should add any `last:` utilities to the child element, not the parent element. -->
-需要特别注意的是，你应该将 `last:` 功能类添加到子元素上，而不是父元素。
+需要特别注意的是，您应该将 `last:` 功能类添加到子元素上，而不是父元素。
 
 <div>
   <VariantEnabledList variant="last-child"/>
 </div>
 
 <!-- You can control whether `last` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `last` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `last` 变体：
 
 ```js
 // tailwind.config.js
@@ -693,14 +693,14 @@ module.exports = {
 ```
 
 <!-- It's important to note that you should add any `odd:` utilities to the child element, not the parent element. -->
-需要特别注意的是，你应该将 `odd:` 功能类添加到子元素上，而不是父元素。
+需要特别注意的是，您应该将 `odd:` 功能类添加到子元素上，而不是父元素。
 
 <div>
   <VariantEnabledList variant="odd-child"/>
 </div>
 
 <!-- You can control whether `odd` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `odd` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `odd` 变体：
 
 ```js
 // tailwind.config.js
@@ -739,14 +739,14 @@ module.exports = {
 ```
 
 <!-- It's important to note that you should add any `even:` utilities to the child element, not the parent element. -->
-需要特别注意的是，你应该将 `even:` 功能类添加到子元素上，而不是父元素。
+需要特别注意的是，您应该将 `even:` 功能类添加到子元素上，而不是父元素。
 
 <div>
   <VariantEnabledList variant="even-child"/>
 </div>
 
 <!-- You can control whether `even` variants are enabled for a plugin in the `variants` section of your `tailwind.config.js` file: -->
-你可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `even` 变体：
+您可以在 `tailwind.config.js` 文件中的 `variants` 部分控制是否为某个插件启用 `even` 变体：
 
 ```js
 // tailwind.config.js
@@ -765,7 +765,7 @@ module.exports = {
 ## 与响应式前缀结合使用
 
 <!-- State variants are also responsive, meaning you can do things like change an element's hover style at different breakpoints for example. -->
-状态变体也是响应式的，意味着你可以执行诸如在不同断点处更改元素的悬停样式的操作。
+状态变体也是响应式的，意味着您可以执行诸如在不同断点处更改元素的悬停样式的操作。
 
 To apply a state variant at a specific breakpoint, add the responsive prefix first, before the state prefix:
 要在指定断点应用一个状态变体，请在状态前缀之前添加响应式前缀。
@@ -781,7 +781,7 @@ To apply a state variant at a specific breakpoint, add the responsive prefix fir
 ## 为自定义功能类生成变体
 
 <!-- You can generate state variants for your own custom CSS classes by wrapping them with the `@variants` directive: -->
-你可以通过使用 `@variants` 指令包裹住你自己的自定义 CSS 类来为他们生成状态变体：
+您可以通过使用 `@variants` 指令包裹住您自己的自定义 CSS 类来为他们生成状态变体：
 
 ```css
 /* Input: */
@@ -846,7 +846,7 @@ module.exports = {
 出于文件大小的考虑，默认情况下，Tailwind 没有包含所有功能类的所有变体。
 
 <!-- To configure which variants are enabled for your project, see the [configuring variants documentation](/docs/configuring-variants). -->
-要为你的项目配置启用哪些变体，参考 [配置变体文档](/docs/configuring-variants)。
+要为您的项目配置启用哪些变体，参考 [配置变体文档](/docs/configuring-variants)。
 
 <div>
   <DefaultVariantsConfig />

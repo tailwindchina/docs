@@ -29,11 +29,11 @@ export default function Resources() {
           {/*  framework to produce visually awesome work.*/}
           {/*</p>*/}
           <p>
-            我们认为 Tailwind 是一个了不起的 CSS 框架，但你需要的不仅仅是一个生产优秀的视觉产品的 CSS 框架。
+            我们认为 Tailwind 是一个了不起的 CSS 框架，但您需要的不仅仅是一个生产优秀的视觉产品的 CSS 框架。
           </p>
           <p>
             {/*Here are some resources that can help you take your Tailwind projects to the next level.*/}
-            这里有一些资源，可以帮助你把你的 Tailwind 项目提升到一个新的水平。
+            这里有一些资源，可以帮助您把您的 Tailwind 项目提升到一个新的水平。
           </p>
         </div>
         {/*<p>*/}

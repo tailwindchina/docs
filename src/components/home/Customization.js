@@ -133,7 +133,7 @@ export function Customization() {
             Tailwind 包含一组精心设计的开箱即用的默认值，但实际上，所有内容都可定制，比如调色板、间距比例、盒子阴影以及鼠标光标样式。
           </p>
           <p>
-            使用 tailwind.config.js 文件构建你自己的设计系统，然后让 Tailwind 将其转换成你自己的定制 CSS 框架。
+            使用 tailwind.config.js 文件构建您自己的设计系统，然后让 Tailwind 将其转换成您自己的定制 CSS 框架。
           </p>
         </Paragraph>
         <Link href="/docs/configuration" className="text-rose-600 hover:text-rose-800">

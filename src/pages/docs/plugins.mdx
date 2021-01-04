@@ -14,7 +14,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 插件让您注册新的样式，让 Tailwind 使用 JavaScript 代替 CSS 注入用户的样式表。
 
 <!-- To get started with your first plugin, import Tailwind's `plugin` function from `tailwindcss/plugin`. Then inside your `plugins` array, and call it with an anonymous function as the first argument. -->
-要开始你的第一个插件，先从 `tailwindcss/plugin` 导入 Tailwind 的 `plugin` 函数。然后在你的 `plugins` 数组中，调用这个函数，用一个匿名函数作为其第一个参数。
+要开始您的第一个插件，先从 `tailwindcss/plugin` 导入 Tailwind 的 `plugin` 函数。然后在您的 `plugins` 数组中，调用这个函数，用一个匿名函数作为其第一个参数。
 
 ```js
 // tailwind.config.js
@@ -55,7 +55,7 @@ module.exports = {
 插件功能类的输出顺序是按照其注册的顺序，在内置的功能类*之后*，所以如果一个插件的作用目标是任何一个与内置功能类相同的属性，插件功能类将优先。
 
 <!-- To add new utilities from a plugin, call `addUtilities`, passing in your styles using [CSS-in-JS syntax](#css-in-js-syntax): -->
-要从插件中添加新的功能类，调用 `addUtilities`，使用 [CSS-in-JS 语法](#css-in-js-syntax) 传递你的样式。
+要从插件中添加新的功能类，调用 `addUtilities`，使用 [CSS-in-JS 语法](#css-in-js-syntax) 传递您的样式。
 
 ```js
 // tailwind.config.js
@@ -110,7 +110,7 @@ module.exports = {
 ```
 
 <!-- If necessary, you can opt out of this behavior by passing an options object as a second parameter to `addUtilities`: -->
-如果有必要，你可以通过向 `addUtilities` 传递一个选项对象作为第二个参数来选择不使用这种行为。
+如果有必要，您可以通过向 `addUtilities` 传递一个选项对象作为第二个参数来选择不使用这种行为。
 
 ```js
 // tailwind.config.js
@@ -136,7 +136,7 @@ module.exports = {
 ### 变体
 
 <!-- To generate responsive, hover, focus, active, or other variants of your styles, specify the variants you'd like to generate using the `variants` option: -->
-要生成 responsive、hover、focus、active 或样式的其它变体，请使用 `variants` 选项指定你想生成的变体。
+要生成 responsive、hover、focus、active 或样式的其它变体，请使用 `variants` 选项指定您想生成的变体。
 
 ```js
 // tailwind.config.js
@@ -158,7 +158,7 @@ module.exports = {
 ```
 
 <!-- If you only need to specify variants and don't need to opt-out of the default prefix or important options, you can also pass the array of variants as the second parameter directly: -->
-如果你只需要指定变体，而不需要选择不使用默认的前缀或 important 选项，你也可以直接将变体数组作为第二个参数传递。
+如果您只需要指定变体，而不需要选择不使用默认的前缀或 important 选项，您也可以直接将变体数组作为第二个参数传递。
 
 ```js
 // tailwind.config.js
@@ -178,7 +178,7 @@ module.exports = {
 ```
 
 <!-- If you'd like the user to provide the variants themselves under the `variants` section in their `tailwind.config.js` file, you can use the `variants()` function to get the variants they have configured: -->
-如果你希望用户在他们的 `tailwind.config.js` 文件中的 `variants` 部分提供自己的变体，你可以使用 `variants()` 函数来获取他们配置的变体。
+如果您希望用户在他们的 `tailwind.config.js` 文件中的 `variants` 部分提供自己的变体，您可以使用 `variants()` 函数来获取他们配置的变体。
 
 ```js
 // tailwind.config.js
@@ -209,10 +209,10 @@ module.exports = {
 `addComponents` 函数允许您在 Tailwind 的 `components` 层注册新的样式。
 
 <!-- Use it to add more opinionated, complex classes like buttons, form controls, alerts, etc; the sort of pre-built components you often see in other frameworks that you might need to override with utility classes. -->
-用它来添加更个性化、更复杂的类，比如按钮、表单控件、警告等；就是你在其他框架中经常看到的你可能需要使用功能类覆盖的那种预建组件。
+用它来添加更个性化、更复杂的类，比如按钮、表单控件、警告等；就是您在其他框架中经常看到的您可能需要使用功能类覆盖的那种预建组件。
 
 <!-- To add new component styles from a plugin, call `addComponents`, passing in your styles using [CSS-in-JS syntax](#css-in-js-syntax): -->
-要从插件中添加新的组件样式，调用 `addComponents` ，使用 [CSS-in-JS 语法](#css-in-js-syntax) 传递你的样式。
+要从插件中添加新的组件样式，调用 `addComponents` ，使用 [CSS-in-JS 语法](#css-in-js-syntax) 传递您的样式。
 
 ```js
 // tailwind.config.js
@@ -293,7 +293,7 @@ module.exports = {
 ```
 
 <!-- Although there's rarely a good reason to make component declarations important, if you really need to do it you can always add `!important` manually: -->
-虽然很少有一个很好的理由让组件声明 important，但如果你真的需要这样做，你可以手动添加 `!important` 。
+虽然很少有一个很好的理由让组件声明 important，但如果您真的需要这样做，您可以手动添加 `!important` 。
 
 ```js
 // tailwind.config.js
@@ -318,7 +318,7 @@ module.exports = {
 ```
 
 <!-- All classes in a selector will be prefixed by default, so if you add a more complex style like: -->
-选择器中的所有类都会默认添加前缀，所以如果你添加一个更复杂的样式，比如：
+选择器中的所有类都会默认添加前缀，所以如果您添加一个更复杂的样式，比如：
 
 ```js
 // tailwind.config.js
@@ -399,7 +399,7 @@ module.exports = {
 ```
 
 <!-- If you only need to specify variants and don't need to opt-out of the default prefix or important options, you can also pass the array of variants as the second parameter directly: -->
-如果你只需要指定变体，而不需要选择不使用默认的前缀或 important 选项，你也可以直接将变体数组作为第二个参数传递。
+如果您只需要指定变体，而不需要选择不使用默认的前缀或 important 选项，您也可以直接将变体数组作为第二个参数传递。
 
 ```js
 // tailwind.config.js
@@ -419,7 +419,7 @@ module.exports = {
 ```
 
 <!-- If you'd like the user to provide the variants themselves under the `variants` section in their `tailwind.config.js` file, you can use the `variants()` function to get the variants they have configured: -->
-如果你希望用户在他们的 `tailwind.config.js` 文件中的 `variants` 部分提供自己的变体，你可以使用 `variants()` 函数来获取他们配置的变体。
+如果您希望用户在他们的 `tailwind.config.js` 文件中的 `variants` 部分提供自己的变体，您可以使用 `variants()` 函数来获取他们配置的变体。
 
 ```js
 // tailwind.config.js
@@ -453,7 +453,7 @@ module.exports = {
 使用它来添加诸如基本的排版样式、个性化的全局重置或 `@font-face` 规则。
 
 <!-- To add new base styles from a plugin, call `addBase`, passing in your styles using [CSS-in-JS syntax](#css-in-js-syntax): -->
-要从插件中添加新的基础样式，调用 `addBase`，使用 [CSS-in-JS 语法](#css-in-js-syntax) 传递你的样式。
+要从插件中添加新的基础样式，调用 `addBase`，使用 [CSS-in-JS 语法](#css-in-js-syntax) 传递您的样式。
 
 ```js
 // tailwind.config.js
@@ -481,7 +481,7 @@ module.exports = {
 ## 转义类名
 
 <!-- If your plugin generates classes that contain user-provided strings, you can use the `e` function to escape those class names to make sure non-standard characters are handled properly automatically. -->
-如果你的插件生成的类中包含用户提供的字符串，你可以使用 `e` 函数来转义这些类名，以确保非标准字符被正确地自动处理。
+如果您的插件生成的类中包含用户提供的字符串，您可以使用 `e` 函数来转义这些类名，以确保非标准字符被正确地自动处理。
 
 <!-- For example, this plugin generates a set of `.rotate-{angle}` utilities where `{angle}` is a user provided string. The `e` function is used to escape the concatenated class name to make sure classes like `.rotate-1/4` work as expected: -->
 例如，这个插件生成了一组 `.rotate-{angle}` 功能类，其中 `{angle}` 是用户提供的字符串。`e` 函数用于转义连接的类名，以确保像 `.rotate-1/4` 这样的类能按预期工作。
@@ -532,10 +532,10 @@ module.exports = {
 ```
 
 <!-- Be careful to only escape content you actually want to escape; don't pass the leading `.` in a class name or the `:` at the beginning pseudo-classes like `:hover` or `:focus` or those characters will be escaped. -->
-注意只转义你真正想转义的内容；不要在类名中传递前导的 `.` 或在 `:hover` 或 `:focus` 等伪类的开头传递 `:`，否则这些字符将被转义。
+注意只转义您真正想转义的内容；不要在类名中传递前导的 `.` 或在 `:hover` 或 `:focus` 等伪类的开头传递 `:`，否则这些字符将被转义。
 
 <!-- Additionally, because CSS has rules about the characters a class name can *start* with (a class can't start with a number, but it can contain one), it's a good idea to escape your complete class name (not just the user-provided portion) or you may end up with unnecessary escape sequences: -->
-此外，因为 CSS 有关于类名的规则（类名不能以数字开头，但可以包含数字），所以最好是转义完整的类名（不只是用户提供的部分），否则你可能会得到不必要的转义序列。
+此外，因为 CSS 有关于类名的规则（类名不能以数字开头，但可以包含数字），所以最好是转义完整的类名（不只是用户提供的部分），否则您可能会得到不必要的转义序列。
 
 ```js
 // Will unnecessarily escape `1`
@@ -553,10 +553,10 @@ module.exports = {
 ## 手动给选择器加前缀
 
 <!-- If you're writing something complex where you only want to prefix certain classes, you can use the `prefix` function to have fine-grained control of when the user's configured prefix is applied. -->
-如果你正在写一些复杂的东西，你只想给某些类加前缀，你可以使用 `prefix` 函数来精细控制何时应用用户配置的前缀。
+如果您正在写一些复杂的东西，您只想给某些类加前缀，您可以使用 `prefix` 函数来精细控制何时应用用户配置的前缀。
 
 <!-- For example, if you're creating a plugin to be reused across a set of internal projects that includes existing classes in its selectors, you might only want to prefix the new classes: -->
-例如，如果你正在创建一个插件，以便在一组内部项目中重复使用，在其选择器中包含现有的类，你可能只想给新的类加上前缀。
+例如，如果您正在创建一个插件，以便在一组内部项目中重复使用，在其选择器中包含现有的类，您可能只想给新的类加上前缀。
 
 ```js
 // tailwind.config.js
@@ -599,7 +599,7 @@ prefix('.btn-blue .w-1\/4 > h1.text-xl + a .bar')
 ## 引用用户配置
 
 <!-- The `config`, `theme`, and `variants` functions allow you to ask for a value from the user's Tailwind configuration using dot notation, providing a default value if that path doesn't exist. -->
-`config`、`theme` 和 `variants` 函数允许你使用点符号从用户的 Tailwind 配置中获取一个值，如果该路径不存在，则提供一个默认值。
+`config`、`theme` 和 `variants` 函数允许您使用点符号从用户的 Tailwind 配置中获取一个值，如果该路径不存在，则提供一个默认值。
 
 <!-- For example, this simplified version of the built-in [container](/docs/container) plugin uses the `theme` function to get the user's configured breakpoints: -->
 例如，这个简化版的内置 [容器](/docs/container) 插件使用 `theme` 函数来获取用户配置的断点。
@@ -643,7 +643,7 @@ theme('screens')
 ```
 
 <!-- If you'd like to reference the user's `variants` configuration, it's recommended that you use the `variants()` function instead of the config function. -->
-如果你想引用用户的 `variants` 配置，建议你使用 `variants()` 函数而不是 config 函数。
+如果您想引用用户的 `variants` 配置，建议您使用 `variants()` 函数而不是 config 函数。
 
 <!-- <TipBad>Don't use the config function to look up variants</TipBad> -->
 <TipBad>不要使用 config 函数来查找变体</TipBad>
@@ -660,7 +660,7 @@ addUtilities(newUtilities, variants('customPlugin'))
 ```
 
 <!-- Since `variants` could simply be a global list of variants to configure for every plugin in the whole project, using the `variants()` function lets you easily respect the user's configuration without reimplementing that logic yourself. -->
-由于 `variants` 可以简单地成为一个全局的变体列表，为整个项目中的每一个插件进行配置，所以使用 `variants()` 函数可以让你很容易地遵从用户的配置，而不是自己重新实现这个逻辑。
+由于 `variants` 可以简单地成为一个全局的变体列表，为整个项目中的每一个插件进行配置，所以使用 `variants()` 函数可以让您很容易地遵从用户的配置，而不是自己重新实现这个逻辑。
 
 ```js
 // tailwind.config.js
@@ -689,7 +689,7 @@ module.exports = {
 通常情况下，一个插件暴露自己的选项是有意义的，用户可以配置这些选项来定制插件的行为。
 
 <!-- The best way to accomplish this is to claim your own key in the user's `theme` and `variants` configuration and ask them to provide any options there so you can access them with the `theme` and `variants` functions. -->
-最好的方法是在用户的 `theme` 和 `variants` 配置中定义自己的键，并要求他们在那里提供任何选项，这样你就可以通过 `theme` 和 `variants` 函数访问它们。
+最好的方法是在用户的 `theme` 和 `variants` 配置中定义自己的键，并要求他们在那里提供任何选项，这样您就可以通过 `theme` 和 `variants` 函数访问它们。
 
 <!-- For example, here's a plugin *(extracted to its own module)* for creating simple gradient utilities that accepts the gradients and variants to generate as options: -->
 例如，这里有一个插件*(提取到自己的模块)*，用于创建简单的渐变功能类，接受要生成的渐变值和变体做为选项。
@@ -714,7 +714,7 @@ module.exports = plugin(function({ addUtilities, e, theme, variants }) {
 ```
 
 <!-- To use it, you'd `require` it in your plugins list, specifying your configuration under the `gradients` key in both `theme` and `variants`: -->
-要使用它，你需要在你的插件列表中 `require` 它，在 `theme` 和 `variants` 中的 `gradients` 键下指定你的配置。
+要使用它，您需要在您的插件列表中 `require` 它，在 `theme` 和 `variants` 中的 `gradients` 键下指定您的配置。
 
 ```js
 // tailwind.config.js
@@ -774,7 +774,7 @@ module.exports = plugin(function({ addUtilities, e, theme, variants }) {
 ## CSS-in-JS 语法
 
 <!-- Each of `addUtilities`, `addComponents`, and `addBase` expect CSS rules written as JavaScript objects. Tailwind uses the same sort of syntax you might recognize from CSS-in-JS libraries like [Emotion](https://emotion.sh/docs/object-styles), and is powered by [postcss-js](https://github.com/postcss/postcss-js) under the hood. -->
-每一个 `addUtilities`、`addComponents` 和 `addBase` 都期望 CSS 规则写成 JavaScript 对象。Tailwind 使用的语法，你可能会从 CSS-in-JS 库中识别出来，如 [Emotion](https://emotion.sh/docs/object-styles)，并由 [postcss-js](https://github.com/postcss/postcss-js) 提供支持。
+每一个 `addUtilities`、`addComponents` 和 `addBase` 都期望 CSS 规则写成 JavaScript 对象。Tailwind 使用的语法，您可能会从 CSS-in-JS 库中识别出来，如 [Emotion](https://emotion.sh/docs/object-styles)，并由 [postcss-js](https://github.com/postcss/postcss-js) 提供支持。
 
 <!-- Consider this simple CSS rule: -->
 考虑这个简单的CSS规则：
@@ -814,7 +814,7 @@ addComponents({
 ```
 
 <!-- Nesting is also supported (powered by [postcss-nested](https://github.com/postcss/postcss-nested)), using the same syntax you might be familiar with from Sass or Less: -->
-也支持嵌套（由 [postcss-nested](https://github.com/postcss/postcss-nested) 提供支持），使用你可能熟悉的 Sass 或 Less 的相同语法。
+也支持嵌套（由 [postcss-nested](https://github.com/postcss/postcss-nested) 提供支持），使用您可能熟悉的 Sass 或 Less 的相同语法。
 
 ```js
 addComponents({
@@ -860,7 +860,7 @@ addComponents({
 ```
 
 <!-- ...or as an array of objects in case you need to repeat the same key: -->
-...或者作为一个对象数组，以备你需要重复使用同一个键：
+...或者作为一个对象数组，以备您需要重复使用同一个键：
 
 ```js
 addComponents([
@@ -888,10 +888,10 @@ addComponents([
 ## 增加变体
 
 <!-- The `addVariant` function allows you to register your own custom [variants](/docs/hover-focus-and-other-states) that can be used just like the built-in hover, focus, active, etc. variants. -->
-`addVariant` 函数允许你注册自己的自定义 [变体](/docs/hover-focus-andother-states)，这些变体可以像内置的 hover、hover、hover 等变体一样使用。
+`addVariant` 函数允许您注册自己的自定义 [变体](/docs/hover-focus-andother-states)，这些变体可以像内置的 hover、hover、hover 等变体一样使用。
 
 <!-- To add a new variant, call the `addVariant` function, passing in the name of your custom variant, and a callback that modifies the affected CSS rules as needed. -->
-要添加一个新的变量，调用 `addVariant` 函数，传入你的自定义变量的名称，以及一个回调，根据需要修改受影响的 CSS 规则。
+要添加一个新的变量，调用 `addVariant` 函数，传入您的自定义变量的名称，以及一个回调，根据需要修改受影响的 CSS 规则。
 
 ```js
 const plugin = require('tailwindcss/plugin')
@@ -920,7 +920,7 @@ module.exports = {
 ### 基本变体
 
 <!-- If you want to add a simple variant that only needs to change the selector, use the `modifySelectors` helper. -->
-如果你想添加一个简单的变量，只需要改变选择器，使用 `modifySelectors` 助手。
+如果您想添加一个简单的变量，只需要改变选择器，使用 `modifySelectors` 助手。
 
 <!-- The `modifySelectors` helper accepts a function that receives an object that can be destructured into the following parts: -->
 `modifySelectors` 助手接受一个函数，该函数接收一个对象，该对象可以被重构为以下部分：
@@ -929,7 +929,7 @@ module.exports = {
 - `className`, the class name of the current rule *with the leading dot removed*
 
 <!-- The function you pass to `modifySelectors` should simply return the modified selector. -->
-你传递给 `modifySelectors` 的函数应该简单地返回修改后的选择器。
+您传递给 `modifySelectors` 的函数应该简单地返回修改后的选择器。
 
 <!-- For example, a `first-child` variant plugin could be written like this: -->
 例如，一个 `first-child` 的变体插件可以这样写：
@@ -955,10 +955,10 @@ module.exports = {
 ### 复杂变体
 
 <!-- If you need to do anything beyond simply modifying selectors (like changing the actual rule declarations, or wrapping the rules in another at-rule), you'll need to use the `container` instance. -->
-如果你需要做的事情不仅仅是简单地修改选择器（比如改变实际的规则声明，或者将规则包装在另一个 at-rule 中），你将需要使用 `container` 实例。
+如果您需要做的事情不仅仅是简单地修改选择器（比如改变实际的规则声明，或者将规则包装在另一个 at-rule 中），您将需要使用 `container` 实例。
 
 <!-- Using the `container` instance, you can traverse all of the rules within a given module or `@variants` block and manipulate them however you like using the standard PostCSS API. -->
-使用 `container` 实例，你可以在给定的模块或 `@variants` 块中遍历所有的规则，并使用标准的 PostCSS API 随意操作它们。
+使用 `container` 实例，您可以在给定的模块或 `@variants` 块中遍历所有的规则，并使用标准的 PostCSS API 随意操作它们。
 
 <!-- For example, this plugin creates an `important` version of each affected utility by prepending the class with an exclamation mark and modifying each declaration to be `important`: -->
 例如，该插件通过在类前加上感叹号，并将每个声明修改为 `important`，为每个受影响的功能创建一个 `important` 版本。
@@ -1028,7 +1028,7 @@ modules.exports = {
 ```
 
 <!-- To use custom variants with custom utilities in your own CSS, use the [variants at-rule](/docs/functions-and-directives#variants): -->
-要在你自己的CSS中使自定义变体和自定义功能类一起使用，请使用 [variants at-rule](/docs/functions-and-directives#variants)。
+要在您自己的CSS中使自定义变体和自定义功能类一起使用，请使用 [variants at-rule](/docs/functions-and-directives#variants)。
 
 ```css
 @variants hover, first-child {

@@ -117,7 +117,7 @@ export default function DocsLandingPage() {
       </h1>
       <p className="text-2xl tracking-tight mb-10">
         {/* Learn Tailwind the way that best matches your learning style. */}
-        用最适合你的方式学习 Tailwind
+        用最适合您的方式学习 Tailwind
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xl:gap-8">
         <section className="flex">
@@ -127,7 +127,7 @@ export default function DocsLandingPage() {
                 <h2 className="text-xl font-semibold mb-2 text-shadow">阅读文档</h2>
                 <p className="font-medium text-violet-100 text-shadow mb-4">
                   {/* Learn how to get Tailwind set up in your project. */}
-                  学习如何在你的工程中加入 Tailwind
+                  学习如何在您的工程中加入 Tailwind
                 </p>
                 <Link href="/docs/installation">
                   <a className="mt-auto bg-violet-800 bg-opacity-50 hover:bg-opacity-75 transition-colors duration-200 rounded-xl font-semibold py-2 px-4 inline-flex">

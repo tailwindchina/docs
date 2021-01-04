@@ -38,7 +38,7 @@ export function ReadyMadeComponents() {
         {/*  want to build.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          Tailwind UI 是由 Tailwind CSS 创始团队开发设计的一套精美的、完全响应式的 UI 组件，提供了数百个现成可用的示例供你选择，确保能帮助你找到一个构建项目的完美的起点。
+          Tailwind UI 是由 Tailwind CSS 创始团队开发设计的一套精美的、完全响应式的 UI 组件，提供了数百个现成可用的示例供您选择，确保能帮助您找到一个构建项目的完美的起点。
         </Paragraph>
         <Link href="https://tailwindui.com/" className="text-violet-600 hover:text-violet-800">
           了解更多 -&gt;

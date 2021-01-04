@@ -31,7 +31,7 @@ export function Disabling({ plugin, name }) {
   return (
     <div className="prose">
       <p>
-          如果你不打算在你的项目中使用 {name} 功能，你可以通过在配置文件的{' '}<code>corePlugins</code> 部分将{' '}
+          如果您不打算在您的项目中使用 {name} 功能，您可以通过在配置文件的{' '}<code>corePlugins</code> 部分将{' '}
           <span
               dangerouslySetInnerHTML={{
                   __html: joinWithAnd(plugins.map((p) => `<code>${p}</code>`)),
