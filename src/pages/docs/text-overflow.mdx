@@ -1,6 +1,7 @@
 ---
-title: "Text Overflow"
-description: "Utilities for controlling text overflow in an element."
+title: "Text Overflow（文本溢出）"
+# description: "Utilities for controlling text overflow in an element."
+description: "用于控制元素中文本溢出的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/textOverflow'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Truncate
 
-Use `truncate` to truncate overflowing text with an ellipsis (<code>…</code>) if needed.
+<!-- Use `truncate` to truncate overflowing text with an ellipsis (<code>…</code>) if needed. -->
+如果需要的话，使用 `truncate` 用省略号(<code>...</code>)来截断溢出的文本。
 
 ```html indigo
 <template preview>
@@ -25,7 +27,8 @@ Use `truncate` to truncate overflowing text with an ellipsis (<code>…</code>) 
 
 ## Overflow Ellipsis
 
-Use `overflow-ellipsis` to truncate overflowing text with an ellipsis (<code>…</code>) if needed.
+<!-- Use `overflow-ellipsis` to truncate overflowing text with an ellipsis (<code>…</code>) if needed. -->
+如果需要的话，使用 `overflow-ellipsis` 用省略号(<code>...</code>)来截断溢出的文本。
 
 ```html emerald
 <template preview>
@@ -39,7 +42,8 @@ Use `overflow-ellipsis` to truncate overflowing text with an ellipsis (<code>…
 
 ## Overflow Clip
 
-Use `overflow-clip` to truncate the text at the limit of the content area.
+<!-- Use `overflow-clip` to truncate the text at the limit of the content area. -->
+使用 `overflow-clip` 在内容区域的极限处截断文本。
 
 ```html lightBlue
 <template preview>
@@ -51,9 +55,11 @@ Use `overflow-clip` to truncate the text at the limit of the content area.
 <p class="**overflow-clip** overflow-hidden ...">...</p>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the text overflow in an element only at a specific breakpoint, add a `{screen}:` prefix to any existing text overflow utility. For example, adding the class `md:overflow-clip` to an element would apply the `overflow-clip` utility at medium screen sizes and above.
+<!-- To control the text overflow in an element only at a specific breakpoint, add a `{screen}:` prefix to any existing text overflow utility. For example, adding the class `md:overflow-clip` to an element would apply the `overflow-clip` utility at medium screen sizes and above. -->
+要只在特定的断点处控制元素中的文本溢出，可以在任何现有的文本溢出功能类中添加 `{screen}:` 前缀。例如，在元素中添加 `md:overflow-clip` 类，就可以在中等尺寸以上的屏幕上使用 `overflow-clip` 功能类。
 
 ```html
 <p class="truncate **md:overflow-clip** ...">
@@ -61,14 +67,18 @@ To control the text overflow in an element only at a specific breakpoint, add a 
 </p>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体 
 
 <Variants plugin="textOverflow" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="textOverflow" />

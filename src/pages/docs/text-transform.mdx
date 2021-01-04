@@ -1,6 +1,7 @@
 ---
-title: "Text Transform"
-description: "Utilities for controlling the transformation of text."
+title: "Text Transform（文本转换）"
+# description: "Utilities for controlling the transformation of text."
+description: "用于控制文本转换的功能类。"
 features:
   responsive: true
   customizable: false
@@ -16,7 +17,8 @@ export const classes = { plugin }
 
 ## Normal Case
 
-Use the `normal-case` utility to preserve the original casing. This is typically used to reset capitalization at different breakpoints.
+<!-- Use the `normal-case` utility to preserve the original casing. This is typically used to reset capitalization at different breakpoints. -->
+使用 `normal-case` 功能类来保留原来的外壳，这通常用于在不同的断点处重置大写。
 
 ```html emerald
 <template preview>
@@ -28,7 +30,8 @@ Use the `normal-case` utility to preserve the original casing. This is typically
 
 ## Uppercase
 
-Use the `uppercase` utility to uppercase text.
+<!-- Use the `uppercase` utility to uppercase text. -->
+使用 `uppercase` 功能类对文本进行大写转换。
 
 ```html purple
 <template preview>
@@ -40,7 +43,8 @@ Use the `uppercase` utility to uppercase text.
 
 ## Lowercase
 
-Use the `lowercase` utility to lowercase text.
+<!-- Use the `lowercase` utility to lowercase text. -->
+使用 `lowercase` 功能类对文本进行小写转换。
 
 ```html rose
 <template preview>
@@ -52,7 +56,8 @@ Use the `lowercase` utility to lowercase text.
 
 ## Capitalize
 
-Use the `capitalize` utility to capitalize text.
+<!-- Use the `capitalize` utility to capitalize text. -->
+使用 `capitalize` 功能类对文本进行首字母大写转换。
 
 ```html fuchsia
 <template preview>
@@ -62,9 +67,11 @@ Use the `capitalize` utility to capitalize text.
 <p class="**capitalize** ...">The quick brown fox ...</p>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the text transformation of an element at a specific breakpoint, add a `{screen}:` prefix to any existing text transformation utility. For example, use `md:uppercase` to apply the `uppercase` utility at only medium screen sizes and above.
+<!-- To control the text transformation of an element at a specific breakpoint, add a `{screen}:` prefix to any existing text transformation utility. For example, use `md:uppercase` to apply the `uppercase` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的文本转换，可在任何现有的文本转换功能类中添加 `{screen}:` 前缀。例如，使用 `md:uppercase` 来应用 `uppercase` 功能类在中等大小的屏幕和更大的屏幕上。
 
 ```html
 <p class="capitalize **md:uppercase** ...">
@@ -72,14 +79,18 @@ To control the text transformation of an element at a specific breakpoint, add a
 </p>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="textTransform" name="text transformation" />
 
-### Disabling
+<!-- ### Disabling -->
+### 设计
 
 <Disabling plugin="textTransform" name="text transformation" />

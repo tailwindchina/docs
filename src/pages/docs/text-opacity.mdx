@@ -1,6 +1,7 @@
 ---
-title: "Text Opacity"
-description: "Utilities for controlling the opacity of an element's text color."
+title: "Text Opacity（文本颜色不透明度）"
+# description: "Utilities for controlling the opacity of an element's text color."
+description: "用于控制元素文本颜色不透明度的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/textOpacity'
@@ -10,9 +11,11 @@ import { TipGood, TipBad } from '@/components/Tip'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the opacity of an element's text color using the `text-opacity-{amount}` utilities.
+<!-- Control the opacity of an element's text color using the `text-opacity-{amount}` utilities. -->
+使用 `text-opacity-{amount}` 功能类控制元素的文字颜色的不透明度。
 
 ```html
 <template preview>
@@ -32,9 +35,11 @@ Control the opacity of an element's text color using the `text-opacity-{amount}`
 <p class="text-purple-700 **text-opacity-0** ...">The quick brown fox ...</p>
 ```
 
-Note that because these utilities are implemented using CSS custom properties, a `.text-{color}` utility must be present on the same element for them to work.
+<!-- Note that because these utilities are implemented using CSS custom properties, a `.text-{color}` utility must be present on the same element for them to work. -->
+请注意，由于这些功能类是通过 CSS 自定义属性来实现的，因此必须在同一元素上存在 `.text-{color}` 功能类，它们才能发挥作用。
 
-<TipBad>Don't try to use text opacity utilities on an inherited text color</TipBad>
+<!--{ <TipBad>Don't try to use text opacity utilities on an inherited text color</TipBad> -->
+<TipBad>不要试图在继承的文本颜色上使用文本不透明度功能类</TipBad>
 
 ```html rose
 <div class="text-black">
@@ -42,7 +47,8 @@ Note that because these utilities are implemented using CSS custom properties, a
 </div>
 ```
 
-<TipGood>Do make sure to add a text color utility to the same element explicitly</TipGood>
+<!--{ <TipGood>Do make sure to add a text color utility to the same element explicitly</TipGood> -->
+<TipGood>请确保在同一元素中明确添加文本颜色功能类</TipGood>
 
 ```html emerald
 <div class="text-black">
@@ -50,9 +56,11 @@ Note that because these utilities are implemented using CSS custom properties, a
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式 
 
-To control an element's text color opacity at a specific breakpoint, add a `{screen}:` prefix to any existing text color opacity utility. For example, use `md:text-opacity-50` to apply the `text-opacity-50` utility at only medium screen sizes and above.
+<!-- To control an element's text color opacity at a specific breakpoint, add a `{screen}:` prefix to any existing text color opacity utility. For example, use `md:text-opacity-50` to apply the `text-opacity-50` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的文本颜色不透明度，请在任何现有的文本颜色不透明度功能类中添加 `{screen}:` 前缀。例如，使用 `md:text-opacity-50` 来应用 `text-opacity-50` 功能类在中等大小的屏幕或以上。
 
 ```html
 <div class="text-blue-500 text-opacity-75 md:text-opacity-50">
@@ -60,11 +68,14 @@ To control an element's text color opacity at a specific breakpoint, add a `{scr
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration:
+<!-- To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration: -->
+要一次性自定义所有与不透明度相关的功能类的不透明度值，请使用您的 `tailwind.config.js` 主题配置中的 `opacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -81,7 +92,8 @@ To customize the opacity values for all opacity-related utilities at once, use t
   }
 ```
 
-If you want to customize only the text opacity utilities, use the `textOpacity` section:
+<!-- If you want to customize only the text opacity utilities, use the `textOpacity` section: -->
+如果您只想自定义文本不透明度功能类，请使用 `textOpacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -98,12 +110,15 @@ If you want to customize only the text opacity utilities, use the `textOpacity` 
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#customizing-the-default-theme)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="textOpacity" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="textOpacity" />
