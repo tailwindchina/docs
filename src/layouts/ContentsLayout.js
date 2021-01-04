@@ -158,9 +158,16 @@ export function ContentsLayoutOuter({ children, layoutProps, ...props }) {
 }
 
 export function ContentsLayout({ children, meta, classes, tableOfContents }) {
+  // const toc = [
+  //   ...(classes
+  //     ? [{ title: 'Default class reference', slug: 'class-reference', children: [] }]
+  //     : []),
+  //   ...tableOfContents,
+  // ]
+
   const toc = [
     ...(classes
-      ? [{ title: 'Default class reference', slug: 'class-reference', children: [] }]
+      ? [{ title: '默认类参考', slug: 'class-reference', children: [] }]
       : []),
     ...tableOfContents,
   ]
