@@ -7,15 +7,15 @@ import { Logo } from '@/components/Logo'
 const footerNav = {
   '入门': {
     className: 'row-span-2',
-    items: documentationNav['Getting started'],
+    items: documentationNav['入门'],
   },
   '核心概念': {
     className: 'row-span-2',
-    items: documentationNav['Core Concepts'],
+    items: documentationNav['核心概念'],
   },
   '定制': {
     className: 'row-span-2',
-    items: documentationNav['Customization'],
+    items: documentationNav['定制'],
   },
   '社区': {
     items: [
