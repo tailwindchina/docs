@@ -1,6 +1,7 @@
 ---
 title: "Place Self"
-description: "Utilities for controlling how an individual item is justified and aligned at the same time."
+# description: "Utilities for controlling how an individual item is justified and aligned at the same time."
+description: "用于同时控制单个项目如何在水平和垂直方向上对齐的工具"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/placeSelf'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Auto
 
-Use `place-self-auto` to align an item based on the value of the container's `place-items` property:
+<!-- Use `place-self-auto` to align an item based on the value of the container's `place-items` property: -->
+使用 `place-self-auto` 根据容器的 `place-items` 属性的值来对齐一个项目：
 
 ```html emerald
 <template preview>
@@ -37,7 +39,8 @@ Use `place-self-auto` to align an item based on the value of the container's `pl
 
 ## Start
 
-Use `place-self-start` to align an item to the start on both axes:
+<!-- Use `place-self-start` to align an item to the start on both axes: -->
+使用 `place-self-start` 将一个项目对齐两个轴的起点：
 
 ```html fuchsia
 <template preview>
@@ -63,7 +66,8 @@ Use `place-self-start` to align an item to the start on both axes:
 
 ## Center
 
-Use `place-self-center` to align an item at the center on both axes:
+<!-- Use `place-self-center` to align an item at the center on both axes: -->
+使用 `place-self-center` 将一个项目对齐两个轴的中心：
 
 ```html amber
 <template preview>
@@ -89,7 +93,8 @@ Use `place-self-center` to align an item at the center on both axes:
 
 ## End
 
-Use `place-self-end` to align an item to the end on both axes:
+<!-- Use `place-self-end` to align an item to the end on both axes: -->
+使用 `place-self-end` 将一个项目对齐两个轴的终点：
 
 ```html purple
 <template preview>
@@ -115,7 +120,8 @@ Use `place-self-end` to align an item to the end on both axes:
 
 ## Stretch
 
-Use `place-self-stretch` to stretch an item on both axes:
+<!-- Use `place-self-stretch` to stretch an item on both axes: -->
+使用 `place-self-stretch` 沿着两个轴拉伸一个项目：
 
 ```html lightBlue
 <template preview>
@@ -139,9 +145,10 @@ Use `place-self-stretch` to stretch an item on both axes:
 </div>
 ```
 
-## Responsive
+## 响应式
 
-To place an item at a specific breakpoint, add a `{screen}:` prefix to any existing `place-self` utility. For example, use `md:place-self-end` to apply the `place-self-end` utility at only medium screen sizes and above.
+<!-- To place an item at a specific breakpoint, add a `{screen}:` prefix to any existing `place-self` utility. For example, use `md:place-self-end` to apply the `place-self-end` utility at only medium screen sizes and above. -->
+要在特定的断点放置项目，可以在任何现有的 `place-self` 工具类前添加 `{screen}:` 前缀。例如，使用 `md:place-self-end` 来仅在中等尺寸及以上的屏幕应用 `place-self-end` 功能。
 
 ```html
 <div class="place-self-start md:place-self-end">
@@ -149,14 +156,15 @@ To place an item at a specific breakpoint, add a `{screen}:` prefix to any exist
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="placeSelf" name="place-self" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="placeSelf" name="place-self" />

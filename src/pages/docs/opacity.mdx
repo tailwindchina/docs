@@ -1,6 +1,7 @@
 ---
-title: "Opacity"
-description: "Utilities for controlling the opacity of an element."
+title: "不透明度"
+# description: "Utilities for controlling the opacity of an element."
+description: "用于控制元素不透明度的功能类。"
 features:
   responsive: true
   customizable: true
@@ -14,9 +15,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the opacity of an element using the `opacity-{amount}` utilities.
+<!-- Control the opacity of an element using the `opacity-{amount}` utilities. -->
+使用 `opacity-{amount}` 功能控制元素的不透明度。
 
 ```html lightBlue
 <template preview>
@@ -36,9 +39,11 @@ Control the opacity of an element using the `opacity-{amount}` utilities.
 <div class="bg-light-blue-600 **opacity-0** ..."></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the opacity of an element at a specific breakpoint, add a `{screen}:` prefix to any existing opacity utility. For example, use `md:opacity-50` to apply the `opacity-50` utility at only medium screen sizes and above.
+<!-- To control the opacity of an element at a specific breakpoint, add a `{screen}:` prefix to any existing opacity utility. For example, use `md:opacity-50` to apply the `opacity-50` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的不透明度，可在任何现有的不透明度功能中添加 `{screen}:` 前缀。例如，使用 `md:opacity-50` 来应用 `opacity-50` 功能，只适用于中等大小的屏幕及以上。
 
 ```html
 <div class="opacity-100 **md:opacity-50** ...">
@@ -46,13 +51,16 @@ To control the opacity of an element at a specific breakpoint, add a `{screen}:`
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
 ### Opacity Scale
 
-By default Tailwind provides five opacity utilities based on a simple numeric scale. You change, add, or remove these by editing the `theme.opacity` section of your Tailwind config.
+<!-- By default Tailwind provides five opacity utilities based on a simple numeric scale. You change, add, or remove these by editing the `theme.opacity` section of your Tailwind config. -->
+默认情况下，Tailwind 提供了五个基于简单的数字比例的不透明度功能。您可以通过编辑您的 Tailwind 配置中的 `theme.opacity` 部分来改变，添加或删除这些功能。
 
 ```diff-js
   // tailwind.config.js
@@ -78,10 +86,12 @@ By default Tailwind provides five opacity utilities based on a simple numeric sc
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="opacity" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="opacity" />

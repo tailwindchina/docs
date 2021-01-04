@@ -1,6 +1,8 @@
 ---
-title: "Border Opacity"
-description: "Utilities for controlling the opacity of an element's border color."
+# title: "Border Opacity"
+title: "边框不透明度"
+# description: "Utilities for controlling the opacity of an element's border color."
+description: "用于控制元素边框颜色不透明度的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/borderOpacity'
@@ -9,9 +11,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the opacity of an element's border color using the `border-opacity-{amount}` utilities.
+<!-- Control the opacity of an element's border color using the `border-opacity-{amount}` utilities. -->
+使用 `border-opacity-{amount}` 功能类控制元素边框颜色的不透明度。
 
 ```html lightBlue
 <template preview>
@@ -31,9 +35,11 @@ Control the opacity of an element's border color using the `border-opacity-{amou
 <div class="border-4 border-light-blue-500 **border-opacity-0** ..."></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式 
 
-To control an element's border color opacity at a specific breakpoint, add a `{screen}:` prefix to any existing border color opacity utility. For example, use `md:border-opacity-50` to apply the `border-opacity-50` utility at only medium screen sizes and above.
+<!-- To control an element's border color opacity at a specific breakpoint, add a `{screen}:` prefix to any existing border color opacity utility. For example, use `md:border-opacity-50` to apply the `border-opacity-50` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的边框颜色不透明度，请在任何现有的边框颜色不透明度功能类中添加 `{screen}:` 前缀。例如，使用 `md:border-opacity-50` 来应用`border-opacity-50` 功能类，只适用于中等尺寸以上的屏幕。
 
 ```html
 <div class="border-2 border-blue-500 border-opacity-75 md:border-opacity-50">
@@ -41,11 +47,14 @@ To control an element's border color opacity at a specific breakpoint, add a `{s
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration:
+<!-- To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration: -->
+要一次性自定义所有与不透明度相关的功能的不透明度值，请使用您的 `tailwind.config.js` 主题配置中的 `opacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -62,7 +71,8 @@ To customize the opacity values for all opacity-related utilities at once, use t
   }
 ```
 
-If you want to customize only the border opacity utilities, use the `borderOpacity` section:
+<!-- If you want to customize only the border opacity utilities, use the `borderOpacity` section: -->
+如果您只想定制边框不透明度的功能类，请使用 `borderOpacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -79,12 +89,15 @@ If you want to customize only the border opacity utilities, use the `borderOpaci
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="borderOpacity" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="borderOpacity" />

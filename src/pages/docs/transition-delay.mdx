@@ -1,6 +1,7 @@
 ---
-title: "Transition Delay"
-description: "Utilities for controlling the delay of CSS transitions."
+title: "过渡延迟"
+# description: "Utilities for controlling the delay of CSS transitions."
+description: "用于控制 CSS 过渡延迟的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transitionDelay'
@@ -11,7 +12,10 @@ export const classes = { plugin }
 
 ## Usage
 
-Use the `delay-{amount}` utilities to control an element's transition-delay.
+<!-- Use the `delay-{amount}` utilities to control an element's transition-delay. -->
+## 使用
+
+使用 `delay-{amount}` 功能类来控制某个元素的过渡延迟（transition-delay）属性。
 
 ```html amber
 <template preview>
@@ -33,17 +37,23 @@ Use the `delay-{amount}` utilities to control an element's transition-delay.
 <button class="transition **delay-700** duration-300 ease-in-out ...">Hover me</button>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control an element's transition-delay at a specific breakpoint, add a `{screen}:` prefix to any existing transition-delay utility. For example, use `md:delay-500` to apply the `delay-500` utility at only medium screen sizes and above.
+<!-- To control an element's transition-delay at a specific breakpoint, add a `{screen}:` prefix to any existing transition-delay utility. For example, use `md:delay-500` to apply the `delay-500` utility at only medium screen sizes and above.
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+要在特定的断点处控制元素的过渡-延迟，请在任何现有的过渡-延迟实用程序中添加 `{screen}:` 前缀。例如，使用 `md:delay-500` 来应用 `delay-500` 功能，只适用于中等以上的屏幕尺寸。
 
-## Customizing
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-### Delay values
+<!-- ## Customizing -->
+## 自定义
 
-By default Tailwind provides eight general purpose transition-delay utilities. You change, add, or remove these by customizing the `transitionDelay` section of your Tailwind theme config.
+### Delay values （延迟值）
+
+<!-- By default Tailwind provides eight general purpose transition-delay utilities. You change, add, or remove these by customizing the `transitionDelay` section of your Tailwind theme config. -->
+默认情况下，Tailwindb提供了八个通用的过渡-延迟功能。您可以通过定制您的 Tailwind 主题配置的 `transitionDelay` 部分来改变，添加或删除这些功能。
 
 ```diff-js
   // tailwind.config.js
@@ -59,12 +69,15 @@ By default Tailwind provides eight general purpose transition-delay utilities. Y
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="transitionDelay" name="transition-delay" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="transitionDelay" name="transition-delay" />

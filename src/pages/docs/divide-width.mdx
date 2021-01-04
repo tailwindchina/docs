@@ -1,6 +1,8 @@
 ---
-title: "Divide Width"
-description: "Utilities for controlling the border width between elements."
+# title: "Divide Width"
+title: "分割线厚度"
+# description: "Utilities for controlling the border width between elements."
+description: "用于控制元素之间边框宽度的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/divideWidth'
@@ -16,9 +18,11 @@ export const classes = {
   ),
 }
 
-## Add borders between horizontal children
+<!-- ## Add borders between horizontal children -->
+## 在水平方向的子类元素间添加边框
 
-Add borders between horizontal elements using the `divide-x-{amount}` utilities.
+<!-- Add borders between horizontal elements using the `divide-x-{amount}` utilities. -->
+使用 `divid-x-{amount}` 功能在水平元素之间添加边框。
 
 ```html emerald
 <template preview>
@@ -36,9 +40,11 @@ Add borders between horizontal elements using the `divide-x-{amount}` utilities.
 </div>
 ```
 
-## Add borders between stacked children
+<!-- ## Add borders between stacked children -->
+## 在堆叠的子类元素之间添加边框
 
-Add borders between stacked elements using the `divide-y-{amount}` utilities.
+<!-- Add borders between stacked elements using the `divide-y-{amount}` utilities. -->
+使用 `divide-y-{amount}` 功能在堆叠元素之间添加边框。
 
 ```html amber
 <template preview>
@@ -56,9 +62,11 @@ Add borders between stacked elements using the `divide-y-{amount}` utilities.
 </div>
 ```
 
-## Reversing children order
+<!-- ## Reversing children order -->
+## 反转子类元素的顺序
 
-If your elements are in reverse order (using say `flex-row-reverse` or `flex-col-reverse`), use the `divide-x-reverse` or `divide-y-reverse` utilities to ensure the border is added to the correct side of each element.
+<!-- If your elements are in reverse order (using say `flex-row-reverse` or `flex-col-reverse`), use the `divide-x-reverse` or `divide-y-reverse` utilities to ensure the border is added to the correct side of each element. -->
+如果您的元素的顺序是相反的(例如使用 `flex-row-reverse` 或 `flex-col-reverse`)，使用 `divide-x-reverse` 或 `divide-y-reverse` 功能类来确保边界被添加到每个元素的正确一侧。
 
 ```html rose
 <template preview>
@@ -78,9 +86,11 @@ If your elements are in reverse order (using say `flex-row-reverse` or `flex-col
 
 ---
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the borders between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide utility. For example, adding the class `md:divide-y-8` to an element would apply the `divide-y-8` utility at medium screen sizes and above.
+<!-- To control the borders between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide utility. For example, adding the class `md:divide-y-8` to an element would apply the `divide-y-8` utility at medium screen sizes and above. -->
+要在特定的断点处控制元素之间的边框，可在任何现有的 `divide` 功能类中添加 `{screen}:` 前缀。例如，在元素中添加 `md:divide-y-8` 类，就可以在中等尺寸以上的屏幕上使用 `divide-y-8` 功能类。
 
 ```html
 <div class="divide-y divide-gray-400 **md:divide-y-8**">
@@ -90,15 +100,19 @@ To control the borders between elements at a specific breakpoint, add a `{screen
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
 ---
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Divide width scale
+<!-- ### Divide width scale -->
+### 定义 Divide 宽度值
 
-The divide width scale inherits its values from the `borderWidth` scale by default, so if you'd like to customize your values for both border width and divide width together, use the `theme.borderWidth` section of your `tailwind.config.js` file.
+<!-- The divide width scale inherits its values from the `borderWidth` scale by default, so if you'd like to customize your values for both border width and divide width together, use the `theme.borderWidth` section of your `tailwind.config.js` file. -->
+分割宽度（divide width）默认继承了 `borderWidth` 的值，所以如果您想同时定制边界宽度和分割宽度的值，请使用 `tailwind.config.js` 文件中的 `theme.borderWidth` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -117,7 +131,8 @@ The divide width scale inherits its values from the `borderWidth` scale by defau
   }
 ```
 
-To customize only the divide width values, use the `theme.divideWidth` section of your `tailwind.config.js` file.
+<!-- To customize only the divide width values, use the `theme.divideWidth` section of your `tailwind.config.js` file. -->
+要只自定义分割宽度值，请使用 `tailwind.config.js` 文件中的 `theme.divideWidth` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -136,12 +151,15 @@ To customize only the divide width values, use the `theme.divideWidth` section o
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="divideWidth" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="divideWidth" />

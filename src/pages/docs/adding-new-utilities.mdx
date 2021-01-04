@@ -1,6 +1,6 @@
 ---
 title: 添加新的功能类
-description: 使用你的自定义功能类来扩展 Tailwind。
+description: 使用您的自定义功能类来扩展 Tailwind。
 ---
 
 import { TipGood, TipBad } from '@/components/Tip'
@@ -9,14 +9,14 @@ import { TipGood, TipBad } from '@/components/Tip'
 尽管 Tailwind 提供了相当全面的开箱即用的功能类集，您仍可能会遇到需要添加一些自己的功能类的情况。
 
 <!-- Deciding on the best way to extend a framework can be paralyzing, so here are some best practices to help you add your own utilities in the most idiomatic way possible. -->
-确定扩展框架的最佳方法非常不易，因此这里有一些最佳实践，可以帮助你以最惯用的方式添加自己的功能类。
+确定扩展框架的最佳方法非常不易，因此这里有一些最佳实践，可以帮助您以最惯用的方式添加自己的功能类。
 
 ---
 
 ## 使用 CSS
 
 <!-- The easiest way to add your own utilities to Tailwind is to simply add them to your CSS. -->
-将自己的功能类添加到 Tailwind 的最简单的方式是直接添加到你的 CSS 中。
+将自己的功能类添加到 Tailwind 的最简单的方式是直接添加到您的 CSS 中。
 
 ```css
 @tailwind base;
@@ -45,7 +45,7 @@ import { TipGood, TipBad } from '@/components/Tip'
 ### 生成响应式变体
 
 <!-- If you'd like to generate [responsive variants](/docs/responsive-design) of your own utilities based on the breakpoints defined in your `tailwind.config.js` file, wrap your utilities in the `@variants` directive and add `responsive` to the list of variants: -->
-如果你想根据你的 `tailwind.config.js` 定义的断点创建功能类的变体，请将你的功能类放在  `@variants` 指令中，并把 `responsive` 添加到变体列表中。
+如果您想根据您的 `tailwind.config.js` 定义的断点创建功能类的变体，请将您的功能类放在  `@variants` 指令中，并把 `responsive` 添加到变体列表中。
 
 ```css
 @tailwind base;
@@ -80,7 +80,7 @@ Tailwind 将自动生成每个自定义功能类的前缀版本，您可以有�
 ### 生成深色模式变体
 
 <!-- If you'd like to generate [dark mode variants](/docs/dark-mode) of your own utilities, first make sure `darkMode` is set to either `media` or `class` in your `tailwind.config.js` file: -->
-如果你想生成你自己的功能类的 [dark mode variants](/docs/dark-mode)，首先确保在你的 `tailwind.config.js` 文件中 `darkMode` 被设置为 `media` 或者 `class`。
+如果您想生成您自己的功能类的 [dark mode variants](/docs/dark-mode)，首先确保在您的 `tailwind.config.js` 文件中 `darkMode` 被设置为 `media` 或者 `class`。
 
 ```js
 // tailwind.config.js
@@ -91,7 +91,7 @@ module.exports = {
 ```
 
 <!-- Next, wrap your utilities in the `@variants` directive and add `dark` to the list of variants: -->
-下一步，将你的功能类放在 `@variants` 指令中，并且把 `dark` 添加到变体列表中。
+下一步，将您的功能类放在 `@variants` 指令中，并且把 `dark` 添加到变体列表中。
 
 ```css
 @tailwind base;
@@ -122,7 +122,7 @@ Tailwind 将自动生成每个自定义功能类的前缀版本，您可以有�
 ### 生成状态变体
 
 <!-- If you'd like to create [state variants](/docs/hover-focus-and-other-states) for your own utilities, wrap your utilities in the `@variants` directive and list the variants you'd like to enable: -->
-如果你想为你的功能类生成 [状态变体](/docs/hover-focus-and-other-states)，请将你的功能类放在 `@variants` 指令中，并列出你想启用的变体：
+如果您想为您的功能类生成 [状态变体](/docs/hover-focus-and-other-states)，请将您的功能类放在 `@variants` 指令中，并列出您想启用的变体：
 
 ```css
 @tailwind base;
@@ -202,6 +202,6 @@ module.exports = {
 ```
 
 <!-- This can be a good choice if you want to publish your custom utilities as a library or make it easier to share them across multiple projects. -->
-如果你想把你的自定义功能类作为一个库发布，或者使其更容易跨项目分享，这是一个不错的选择。
+如果您想把您的自定义功能类作为一个库发布，或者使其更容易跨项目分享，这是一个不错的选择。
 
 在 [功能插件文档](/docs/plugins#adding-utilities) 中了解更多信息。

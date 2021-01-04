@@ -1,6 +1,7 @@
 ---
-title: "List Style Position"
-description: "Utilities for controlling the position of bullets/numbers in lists."
+title: "列表项标记位置"
+# description: "Utilities for controlling the position of bullets/numbers in lists."
+description: "用来控制列表中项目标记符号/数字位置的工具。"
 features:
   responsive: true
   customizable: false
@@ -14,9 +15,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 用法
 
-Control the position of the markers in a list using the `list-inside` and `list-outside` utilities.
+<!-- Control the position of the markers in a list using the `list-inside` and `list-outside` utilities. -->
+使用 `list-inside` 和 `list-outside` 工具控制列表中标记的位置。
 
 ```html lightBlue
 <template preview class="p-4 px-8">
@@ -50,9 +53,11 @@ Control the position of the markers in a list using the `list-inside` and `list-
 </ul>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the list style position of a list element at a specific breakpoint, add a `{screen}:` prefix to any existing list utility. For example, use `.md:list-inside` to apply the `list-inside` utility at only medium screen sizes and above.
+<!-- To control the list style position of a list element at a specific breakpoint, add a `{screen}:` prefix to any existing list utility. For example, use `.md:list-inside` to apply the `list-inside` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的列表项标记位置，请在任何现有的列表工具类前添加 `{screen}:` 前缀。例如，使用 `md:list-inside` 来仅在中等大小及以上的屏幕应用 `list-inside` 工具。
 
 ```html
 <ul class="list-outside **md:list-inside**">
@@ -61,14 +66,18 @@ To control the list style position of a list element at a specific breakpoint, a
 </ul>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="listStylePosition" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="listStylePosition" />

@@ -1,6 +1,8 @@
 ---
-title: "Transform"
-description: "Utilities for controlling transform behaviour."
+# title: "Transform"
+title: "变换"
+# description: "Utilities for controlling transform behaviour."
+description: "用于控制转换行为的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transform'
@@ -11,7 +13,8 @@ export const classes = { plugin }
 
 ## Transform
 
-To enable transformations you have to add the `transform` utility.
+<!-- To enable transformations you have to add the `transform` utility. -->
+要启用 transformations，您必须添加` transform` 功能。
 
 ```html amber
 <template preview>
@@ -37,9 +40,12 @@ To enable transformations you have to add the `transform` utility.
 <img class="**transform** translate-x-4 translate-y-4 ...">
 ```
 
-## Hardware acceleration
+<!-- ## Hardware acceleration
 
-A lot of transformations can be executed on the GPU instead of the CPU. This enables better performance. You can use the `transform-gpu` utility to enable GPU Acceleration.
+A lot of transformations can be executed on the GPU instead of the CPU. This enables better performance. You can use the `transform-gpu` utility to enable GPU Acceleration. -->
+## 硬件加速
+
+很多转换可以在 GPU 上执行，而不是在 CPU 上执行。这样可以获得更好的性能。您可以使用 `transform-gpu` 功能来启用 GPU 加速。
 
 ```html
 <div class="**transform-gpu** scale-150 ..."></div>
@@ -47,26 +53,32 @@ A lot of transformations can be executed on the GPU instead of the CPU. This ena
 
 ## None
 
-If you want to disable transformations, then you can use the `transform-none` utility.
+<!-- If you want to disable transformations, then you can use the `transform-none` utility. -->
+如果您想禁用转换，那么您可以使用 `transform-none` 功能。
 
 ```html
 <div class="transform rotate-45 **lg:transform-none** ..."></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To enable or disable transforms at a specific breakpoint, add a `{screen}:` prefix to any of the transform utilities. For example, use `md:transform` to apply the `transform` utility at only medium screen sizes and above.
+<!-- To enable or disable transforms at a specific breakpoint, add a `{screen}:` prefix to any of the transform utilities. For example, use `md:transform` to apply the `transform` utility at only medium screen sizes and above. -->
+要在特定的断点处启用或禁用转换，请在任何转换功能类中添加 `{screen}:` 前缀。例如，使用` md:transform` 来应用 `transform` 功能类在中等大小的屏幕和更大的屏幕上。
 
 ```html
 <img class="transform **sm:transform-gpu md:transform-none** ...">
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="transform" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="transform" />

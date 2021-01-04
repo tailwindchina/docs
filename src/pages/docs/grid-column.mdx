@@ -110,7 +110,7 @@ export const classes = {
 ```
 
 <!-- We use this internally for our `col-span-{n}` utilities. Note that since this configures the `grid-column` shorthand property directly, we include the word `span` directly in the value name, it's _not_ baked into the class name automatically. That means you are free to add entries that do whatever you want here — they don't just have to be `span` utilities. -->
-我们在内部将其用于 `col-span-{n}` 功能。请注意，因为这直接配置了 `grid-column` 速记属性，所以我们直接在值名中包含了 `span` 这个词，而_不是_自动加入到类名中。这意味着你可以自由地添加你想做的任何事情--它们不只是 `span` 功能。
+我们在内部将其用于 `col-span-{n}` 功能。请注意，因为这直接配置了 `grid-column` 速记属性，所以我们直接在值名中包含了 `span` 这个词，而_不是_自动加入到类名中。这意味着您可以自由地添加您想做的任何事情--它们不只是 `span` 功能。
 
 <!-- To add new `col-start-{n}` utilities, use the `gridColumnStart` section of your Tailwind theme config: -->
 要添加新的  `col-start-{n}` 工具，请使用 Tailwind 主题配置的 `gridColumnStart` 部分。
@@ -162,7 +162,7 @@ export const classes = {
 默认情况下，只为 grid-column 功能生成响应式变体。
 
 <!-- You can control which variants are generated for the grid-column utilities by modifying the `gridColumn`, `gridColumnStart`, and `gridColumnEnd` properties in the `variants` section of your `tailwind.config.js` file. -->
-你可以通过修改 `tailwind.config.js` 文件中 `variants` 部分的 `gridColumn`、`gridColumnStart` 和 `gridColumnEnd` 属性来控制为 grid-column 功能生成哪些变体。
+您可以通过修改 `tailwind.config.js` 文件中 `variants` 部分的 `gridColumn`、`gridColumnStart` 和 `gridColumnEnd` 属性来控制为 grid-column 功能生成哪些变体。
 
 ```diff-js
   // tailwind.config.js

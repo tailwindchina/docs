@@ -697,7 +697,7 @@ export function ComponentDriven() {
         {/*  truth so you can make changes in one place.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          如果你在一遍又一遍的重复着相同的工具类，那么你最好将他们提取到一个组件或者模板片断，这样就会得到一个单一的源文件，因此可以在一个地方对他们修改。
+          如果您在一遍又一遍的重复着相同的工具类，那么您最好将他们提取到一个组件或者模板片断，这样就会得到一个单一的源文件，因此可以在一个地方对他们修改。
         </Paragraph>
         <Link href="/docs/extracting-components" className="text-amber-500 hover:text-amber-700">
           了解更多 -&gt;

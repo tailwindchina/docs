@@ -1,6 +1,7 @@
 ---
-title: "Table Layout"
-description: "Utilities for controlling the table layout algorithm."
+title: "表格布局"
+# description: "Utilities for controlling the table layout algorithm."
+description: "用于控制表格布局算法的功能类。"
 features:
   responsive: true
   customizable: false
@@ -16,7 +17,8 @@ export const classes = { plugin }
 
 ## Auto
 
-Use `table-auto` to allow the table to automatically size columns to fit the contents of the cell.
+<!-- Use `table-auto` to allow the table to automatically size columns to fit the contents of the cell. -->
+使用 `table-auto` 允许表格自动调整列的大小以适应单元格的内容。
 
 ```html emerald
 <template preview>
@@ -78,9 +80,12 @@ Use `table-auto` to allow the table to automatically size columns to fit the con
 
 ## Fixed
 
-Use `table-fixed` to allow the table to ignore the content and use fixed widths for columns. The width of the first row will set the column widths for the whole table.
+<!-- Use `table-fixed` to allow the table to ignore the content and use fixed widths for columns. The width of the first row will set the column widths for the whole table. -->
 
-You can manually set the widths for some columns and the rest of the available width will be divided evenly amongst the columns without explicit width.
+<!-- You can manually set the widths for some columns and the rest of the available width will be divided evenly amongst the columns without explicit width. -->
+使用 `table-fixed` 允许表格忽略内容，使用固定的列宽。第一行的宽度将设置整个表格的列宽。
+
+您可以手动设置一些列的宽度，其余的可用宽度将被平均分配给没有明确宽度的列。
 
 ```html lightBlue
 <template preview>
@@ -140,12 +145,15 @@ You can manually set the widths for some columns and the rest of the available w
 </table>
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="tableLayout" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="tableLayout" />

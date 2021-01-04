@@ -1,6 +1,6 @@
 ---
 title: 深色模式
-description: 使用 Tailwind CSS 在深色模式下为你的网站设置样式。
+description: 使用 Tailwind CSS 在深色模式下为您的网站设置样式。
 ---
 
 ## <Heading hidden>基础用法</Heading>
@@ -9,7 +9,7 @@ description: 使用 Tailwind CSS 在深色模式下为你的网站设置样式�
 现在深色功能是很多操作系统的首要功能，因此与默认设计同时设计一个深色模式已变得越来越普遍。
 
 <!-- To make this as easy as possible, Tailwind includes a `dark` variant that lets you style your site differently when dark mode is enabled: -->
-为了使此操作尽可能简单，Tailwind 包含一个 `dark` 变体，当启用深色模式时，你可以为你的网站设置不同的样式。
+为了使此操作尽可能简单，Tailwind 包含一个 `dark` 变体，当启用深色模式时，您可以为您的网站设置不同的样式。
 
 ```html
 <div class="bg-white **dark:bg-gray-800**">
@@ -37,7 +37,7 @@ module.exports = {
 <!-- Now whenever dark mode is enabled on the user's operating system, `dark:{class}` classes will take precedence over unprefixed classes.
 The `media` strategy uses the `prefers-color-scheme` media feature under the hood, but if you'd like to support toggling dark mode manually,
 you can also [use the 'class' strategy](#toggling-dark-mode-manually) for more control. -->
-现在，只要用户的操作系统开启了深色模式，`dark:{class}` 类离将优先于无前缀的类。`media` 策略在底层使用 `prefers-color-scheme` 媒体功能，但是，如果你想支持手动切换深色模式，你也可以 [使用 'class' 策略](#toggling-dark-mode-manually) 进行更多控制。
+现在，只要用户的操作系统开启了深色模式，`dark:{class}` 类离将优先于无前缀的类。`media` 策略在底层使用 `prefers-color-scheme` 媒体功能，但是，如果您想支持手动切换深色模式，您也可以 [使用 'class' 策略](#toggling-dark-mode-manually) 进行更多控制。
 
 <!-- By default, when `darkMode` is enabled `dark` variants are only generated for color-related classes, which includes text color, background color, border color, gradients, and placeholder color. -->
 默认情况下，当 `darkMode` 启用时，只会为颜色相关的类生成 `dark` 变体，包括文本颜色、背景颜色、边框颜色、渐变色以及点位符颜色。
@@ -57,7 +57,7 @@ you can also [use the 'class' strategy](#toggling-dark-mode-manually) for more c
 ```
 
 <!-- The responsive variant needs to come first, then `dark`, then the state variant for this to work. -->
-为了使其正常工作，你必须把响应式变体要在最前面，然后是 `dark` 变体，最后是状态变体。
+为了使其正常工作，您必须把响应式变体要在最前面，然后是 `dark` 变体，最后是状态变体。
 
 ---
 
@@ -65,7 +65,7 @@ you can also [use the 'class' strategy](#toggling-dark-mode-manually) for more c
 ## 为其它功能类启用深色模式
 
 <!-- To enable the `dark` variant for other utilities, add `dark` to the the variants list for whatever utility you'd like to enable it for: -->
-要想为其它功能启用 `dark` 变体，把 `dark` 添加到你想要启用的任何功能的变体列表中。
+要想为其它功能启用 `dark` 变体，把 `dark` 添加到您想要启用的任何功能的变体列表中。
 
 ```js
 // tailwind.config.js
@@ -124,7 +124,7 @@ module.exports = {
 ```
 
 <!-- How you add the `dark` class to the `html` element is up to you, but a common approach is to use a bit of JS that reads a preference from somewhere (like `localStorage`) and updates the DOM accordingly. -->
-如何将 `dark` 类添加到 `html` 元素中取决于你，但是一种常见的方式是使用 JS 从某个地方（如 `localStorage`）读取首选项并相应的更新 DOM。
+如何将 `dark` 类添加到 `html` 元素中取决于您，但是一种常见的方式是使用 JS 从某个地方（如 `localStorage`）读取首选项并相应的更新 DOM。
 
 <!-- Here's a simple example of how you can support light mode, dark mode, as well as respecting the operating system preference: -->
 这是一个简单的示例，说明如何支持浅色模式、深色模式，以及如何遵守操作系统的首选项。
@@ -148,4 +148,4 @@ localStorage.removeItem('theme')
 ```
 
 <!-- Again you can manage this however you like, even storing the preference server-side in a database and rendering the class on the server — it's totally up to you. -->
-同样，你可以根据自己的喜好进行管理，甚至可以将偏好存储在服务端数据库中并在服务器上渲染出相应的类，这完全取决于你。
+同样，您可以根据自己的喜好进行管理，甚至可以将偏好存储在服务端数据库中并在服务器上渲染出相应的类，这完全取决于您。

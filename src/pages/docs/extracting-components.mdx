@@ -39,7 +39,7 @@ Tailwind 鼓励 [功能优先](/docs/utility-first) 的工作流程，最初仅�
 ```
 
 <!-- But as a project grows, you'll inevitably find yourself repeating common utility combinations to recreate the same component in many different places. This is most apparent with small components, like buttons, form elements, badges, etc. -->
-但是随着项目的成长，你会不可避免的发现自己重复使用通用的功能类组合在许多不同的地方创建相同的组件。这对于类似按钮、表单元素、徽章这样的小组件最为明显。
+但是随着项目的成长，您会不可避免的发现自己重复使用通用的功能类组合在许多不同的地方创建相同的组件。这对于类似按钮、表单元素、徽章这样的小组件最为明显。
 
 ```html emerald
 <template preview>
@@ -64,7 +64,7 @@ Tailwind 鼓励 [功能优先](/docs/utility-first) 的工作流程，最初仅�
 ## 提取模板组件
 
 <!-- It's very rare that all of the information needed to define a UI component can live entirely in CSS — there's almost always some important corresponding HTML structure you need to use as well. -->
-定义一个 UI 组件的所有信息可以完全存在于 CSS 中，这非常罕见。与此同时，你也需要使用一些重要的相对应的 HTML 结构。
+定义一个 UI 组件的所有信息可以完全存在于 CSS 中，这非常罕见。与此同时，您也需要使用一些重要的相对应的 HTML 结构。
 
 <!-- <TipBad>Don't rely on CSS classes to extract complex components</TipBad> -->
 <TipBad>不要依赖 CSS 类来提取复杂的组件</TipBad>
@@ -112,7 +112,7 @@ Tailwind 鼓励 [功能优先](/docs/utility-first) 的工作流程，最初仅�
 因此，通常最好将 UI 的可重用部分提取到模板片断或 JavaScript 组件中，而不是编写自定义 CSS 类。
 
 <!-- By creating a single source of truth for a template, you can keep using utility classes without any of the maintenance burden created by duplicating the same classes in multiple places. -->
-通过为模板创建一个单一源，你可以继续使用功能类，而不会因为在多个地方复制相同的类而造成任何的维护负担。
+通过为模板创建一个单一源，您可以继续使用功能类，而不会因为在多个地方复制相同的类而造成任何的维护负担。
 
 <!-- <TipGood>Create a template partial or JavaScript component</TipGood> -->
 <TipGood>创建模板片断或者 JavaScript 组件</TipGood>
@@ -189,7 +189,7 @@ Here's what a `btn-indigo` class might look like using `@apply` to compose it fr
 ```
 
 <!-- To avoid unintended specificity issues, we recommend wrapping your custom component styles with the `@layer components { ... }` directive to tell Tailwind what layer those styles belong to: -->
-为了避免意外的特定性问题，我们建议你使用 `@layer components { ... }` 指令包装你的自定义组件样式，以告诉 Tailwind 这些样式属于哪一层。
+为了避免意外的特定性问题，我们建议您使用 `@layer components { ... }` 指令包装您的自定义组件样式，以告诉 Tailwind 这些样式属于哪一层。
 
 ```css
 @tailwind base;

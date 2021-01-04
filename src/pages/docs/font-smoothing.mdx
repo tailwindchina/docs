@@ -1,6 +1,7 @@
 ---
-title: "Font Smoothing"
-description: "Utilities for controlling the font smoothing of an element."
+title: "字体平滑度"
+# description: "Utilities for controlling the font smoothing of an element."
+description: "用来控制字体平滑度的工具"
 features:
   responsive: true
   customizable: false
@@ -16,7 +17,8 @@ export const classes = { plugin }
 
 ## Subpixel Antialiasing
 
-Use the `subpixel-antialiased` utility to render text using subpixel antialiasing.
+<!-- Use the `subpixel-antialiased` utility to render text using subpixel antialiasing. -->
+使用 `subpixel-antialiased` 工具以使用 subpixel antialiasing 来渲染文本。
 
 ```html lightBlue
 <template preview>
@@ -28,7 +30,8 @@ Use the `subpixel-antialiased` utility to render text using subpixel antialiasin
 
 ## Grayscale Antialiasing
 
-Use the `antialiased` utility to render text using grayscale antialiasing.
+<!-- Use the `antialiased` utility to render text using grayscale antialiasing. -->
+使用 `antialiased` 功能以使用 grayscale antialiasing 来渲染的文本。
 
 ```html emerald
 <template preview>
@@ -38,9 +41,11 @@ Use the `antialiased` utility to render text using grayscale antialiasing.
 <p class="**antialiased** ...">The quick brown fox ...</p>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the font smoothing of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font smoothing utility. For example, use `md:antialiased` to apply the `antialiased` utility at only medium screen sizes and above.
+<!-- To control the font smoothing of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font smoothing utility. For example, use `md:antialiased` to apply the `antialiased` utility at only medium screen sizes and above. -->
+要在特定的断点处控制一个元素的字体平滑度，可以在任何现有的字体平滑度工具前添加一个 `{screen}:` 前缀。例如，使用 `md:antialiased` 来仅在中等及以上尺寸屏幕上应用 `antialiased` 工具。
 
 ```html
 <p class="antialiased sm:subpixel-antialiased **md:antialiased** ...">
@@ -48,14 +53,15 @@ To control the font smoothing of an element at a specific breakpoint, add a `{sc
 </p>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="fontSmoothing" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="fontSmoothing" />

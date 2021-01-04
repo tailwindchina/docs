@@ -1,6 +1,7 @@
 ---
-title: "Placeholder Opacity"
-description: "Utilities for controlling the opacity of an element's placeholder color."
+title: "占位文本不透明度"
+# description: "Utilities for controlling the opacity of an element's placeholder color."
+description: "用来控制元素占位文本颜色的不透明度的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/placeholderOpacity'
@@ -12,9 +13,11 @@ export const classes = {
   transformSelector: (selector) => selector.split('::')[0].replace(/^\./, '').replace(/\\/g, ''),
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the opacity of an element's placeholder color using the `placeholder-opacity-{amount}` utilities.
+<!-- Control the opacity of an element's placeholder color using the `placeholder-opacity-{amount}` utilities. -->
+使用 `placeholder-opacity-{amount}` 工具控制元素的占位文本颜色的不透明度。
 
 ```html fuchsia
 <template preview>
@@ -44,19 +47,24 @@ Control the opacity of an element's placeholder color using the `placeholder-opa
 <input class="placeholder-gray-500 **placeholder-opacity-0** ..." placeholder="jane@example.com">
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control an element's placeholder color opacity at a specific breakpoint, add a `{screen}:` prefix to any existing placeholder color opacity utility. For example, use `md:placeholder-opacity-50` to apply the `placeholder-opacity-50` utility at only medium screen sizes and above.
+<!-- To control an element's placeholder color opacity at a specific breakpoint, add a `{screen}:` prefix to any existing placeholder color opacity utility. For example, use `md:placeholder-opacity-50` to apply the `placeholder-opacity-50` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素占位文本颜色的不透明度，请在任何现有的占位文本颜色不透明度工具类前添加 `{screen}:` 前缀。例如，使用 `md:placeholder-opacity-50` 来仅在中等大小及以上的屏幕应用 `placeholder-opacity-50` 工具。
 
 ```html
 <input class="placeholder-gray-500 placeholder-opacity-75 **md:placeholder-opacity-50** ..." placeholder="jane@example.com">
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
-To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration:
+<!-- To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration: -->
+要一次性自定义所有与不透明度相关的工具的不透明度值，请使用您的 `tailwind.config.js` 主题配置中的 `opacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -73,7 +81,8 @@ To customize the opacity values for all opacity-related utilities at once, use t
   }
 ```
 
-If you want to customize only the placeholder opacity utilities, use the `placeholderOpacity` section:
+<!-- If you want to customize only the placeholder opacity utilities, use the `placeholderOpacity` section: -->
+如果您只想自定义占位文本不透明度工具，请使用 `placeholderOpacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -90,12 +99,15 @@ If you want to customize only the placeholder opacity utilities, use the `placeh
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="placeholderOpacity" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="placeholderOpacity" />

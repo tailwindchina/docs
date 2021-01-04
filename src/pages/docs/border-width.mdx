@@ -1,6 +1,8 @@
 ---
-title: "Border Width"
-description: "Utilities for controlling the width of an element's borders."
+# title: "Border Width"
+title: "边框厚度"
+# description: "Utilities for controlling the width of an element's borders."
+description: "用于控制元素边框宽度的功能类。"
 features:
   responsive: true
   customizable: true
@@ -15,9 +17,11 @@ import { Heading } from '@/components/Heading'
 
 export const classes = { plugin }
 
-## All sides
+<!-- ## All sides -->
+## 所有边
 
-Use the `border`, `.border-0`, `.border-2`, `.border-4`, or `.border-8` utilities to set the border width for all sides of an element.
+<!-- Use the `border`, `.border-0`, `.border-2`, `.border-4`, or `.border-8` utilities to set the border width for all sides of an element. -->
+使用 `border`, `.border-0`, `.border-2`, `.border-4`, 或 `.border-8` 等功能类来设置一个元素所有边框的宽度。
 
 ```html indigo
 <template preview>
@@ -47,9 +51,11 @@ Use the `border`, `.border-0`, `.border-2`, `.border-4`, or `.border-8` utilitie
 <div class="**border-8** border-indigo-600 ..."></div>
 ```
 
-## Individual sides
+<!-- ## Individual sides -->
+## 单独的边
 
-Use the `border-{side}`, `.border-{side}-0`, `.border-{side}-2`, `.border-{side}-4`, or `.border-{side}-8` utilities to set the border width for one side of an element.
+<!-- Use the `border-{side}`, `.border-{side}-0`, `.border-{side}-2`, `.border-{side}-4`, or `.border-{side}-8` utilities to set the border width for one side of an element. -->
+使用 `border-{side}`, `.border-{side}-0`, `.border-{side}-2`, `.border-{side}-4`, 或 `.border-{side}-8` 等功能类来设置元素一侧的边框宽度。
 
 ```html fuchsia
 <template preview>
@@ -75,11 +81,15 @@ Use the `border-{side}`, `.border-{side}-0`, `.border-{side}-2`, `.border-{side}
 <div class="**border-l-2** border-fuchsia-600 ..."></div>
 ```
 
-## Between elements
+<!-- ## Between elements -->
+## 元素间
 
-You can also add borders between child elements using the `divide-{x/y}-{width}` and `divide-{color}` utilities.
+<!-- You can also add borders between child elements using the `divide-{x/y}-{width}` and `divide-{color}` utilities.
 
-Learn more in the [Divide Width](/docs/divide-width) and [Divide Color](/docs/divide-color) documentation.
+Learn more in the [Divide Width](/docs/divide-width) and [Divide Color](/docs/divide-color) documentation. -->
+您还可以使用 `divid-{x/y}-{width}` 和 `divid-{color}` 功能类在子元素之间添加边框。
+
+更多信息请参见[分割宽度](/docs/divid-width)和[分割颜色](/docs/divid-color)文档。
 
 ```html lightBlue
 <template preview>
@@ -98,21 +108,29 @@ Learn more in the [Divide Width](/docs/divide-width) and [Divide Color](/docs/di
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
 
-To control the border width of an element at a specific breakpoint, add a `{screen}:` prefix to any existing border width utility. For example, use `md:border-t-4` to apply the `border-t-4` utility at only medium screen sizes and above.
+<!-- To control the border width of an element at a specific breakpoint, add a `{screen}:` prefix to any existing border width utility. For example, use `md:border-t-4` to apply the `border-t-4` utility at only medium screen sizes and above. --> -->
+## 响应式
+
+要在特定的断点处控制元素的边框宽度，请在任何现有的边框宽度功能类中添加 `{screen}:` 前缀。例如，使用 `md:border-t-4` 来应用 `border-t-4` 功能类，只适用于中等尺寸以上的屏幕。
 
 ```html
 <div class="border-2 **md:border-t-4** ..."></div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Border Widths
+<!-- ### Border Widths
 
-By default Tailwind provides five `border-width` utilities, and the same number of utilities per side (top, right, bottom, and left). You change, add, or remove these by editing the `theme.borderWidth` section of your Tailwind config. The values in this section will also control which utilities will be generated side.
+By default Tailwind provides five `border-width` utilities, and the same number of utilities per side (top, right, bottom, and left). You change, add, or remove these by editing the `theme.borderWidth` section of your Tailwind config. The values in this section will also control which utilities will be generated side. -->
+### 边框宽度
+
+默认情况下，Tailwind 提供了五个 `border-width` 功能类，每个边的功能类数量相同（顶部，右侧，底部和左侧）。您可以通过编辑 Tailwind 配置的 `theme.borderWidth` 部分来改变，添加或删除这些。这一部分的值也将控制哪些功能类将被生成。
 
 ```diff-js
   // tailwind.config.js
@@ -131,10 +149,11 @@ By default Tailwind provides five `border-width` utilities, and the same number 
   }
 ```
 
-### Variants
-
+<!-- ### Variants -->
+### 变体
 <Variants plugin="borderWidth" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="borderWidth" />

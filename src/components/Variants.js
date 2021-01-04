@@ -41,7 +41,7 @@ export function Variants({ plugin, name }) {
     <div className="prose">
       <p dangerouslySetInnerHTML={{ __html: opening }} />
       <p>
-        你可以通过修改你的{' '}<code>tailwind.config.js</code> 文件中的 <code>variants</code> 部分中的{' '}<code>{plugin}</code> 属性来控制为 {name} 功能生成哪些变体。
+        您可以通过修改您的{' '}<code>tailwind.config.js</code> 文件中的 <code>variants</code> 部分中的{' '}<code>{plugin}</code> 属性来控制为 {name} 功能生成哪些变体。
       </p>
       <p>
           例如，这个配置{variants.length > 0 ? 'also ' : ''}将生成{' '}{joinWithAnd(extraVariants)} 变体:

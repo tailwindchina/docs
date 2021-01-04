@@ -1,6 +1,8 @@
 ---
-title: "Divide Color"
-description: "Utilities for controlling the border color between elements."
+# title: "Divide Color"
+title: "分割线颜色"
+# description: "Utilities for controlling the border color between elements."
+description: "用于控制元素之间边框颜色的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/divideColor'
@@ -32,9 +34,11 @@ export const classes = {
   ),
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the border color between elements using the `divide-{color}` utilities.
+<!-- Control the border color between elements using the `divide-{color}` utilities. -->
+使用 `divide-{color}` 功能控制元素之间的边框颜色。
 
 ```html fuchsia
 <template preview>
@@ -52,9 +56,11 @@ Control the border color between elements using the `divide-{color}` utilities.
 </div>
 ```
 
-### Changing opacity
+<!-- ### Changing opacity -->
+### 改变不透明度
 
-Control the opacity of borders between elements using the `divide-opacity-{amount}` utilities.
+<!-- Control the opacity of borders between elements using the `divide-opacity-{amount}` utilities. -->
+使用 `divide-opacity-{amount}` 功能控制元素之间边框的不透明度。
 
 ```html lightBlue
 <template preview>
@@ -72,13 +78,16 @@ Control the opacity of borders between elements using the `divide-opacity-{amoun
 </div>
 ```
 
-Learn more in the [divide opacity documentation](/docs/divide-opacity).
+<!-- Learn more in the [divide opacity documentation](/docs/divide-opacity). -->
+在[ divide opacity 文档](/docs/divide-opacity)中了解更多。
 
 ---
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the borders between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide utility. For example, adding the class `md:divide-x-8` to an element would apply the `divide-x-8` utility at medium screen sizes and above.
+<!-- To control the borders between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide utility. For example, adding the class `md:divide-x-8` to an element would apply the `divide-x-8` utility at medium screen sizes and above. -->
+要在特定的断点处控制元素之间的边界，可在任何现有的 divide 功能中添加 `{screen}:` 前缀。例如，在元素中添加 `md:divide-x-8` 类，就可以在中等尺寸以上的屏幕上使用 `divide-x-8` 功能。
 
 ```html
 <div class="divide-y divide-teal-400 **md:divide-pink-400**">
@@ -88,17 +97,23 @@ To control the borders between elements at a specific breakpoint, add a `{screen
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
 ---
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Border Colors
+### 边框颜色
 
-By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as divide colors.
+<!-- By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as divide colors. -->
+默认情况下，Tailwind 将整个[默认调色板](/docs/customizing-colors#default-color-palette)作为 divide 颜色。
 
-You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` section of your `tailwind.config.js` file, customize just your border and divide colors together using the `theme.borderColor` section, or customize only the divide colors using the `theme.divideColor` section.
+<!-- You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` section of your `tailwind.config.js` file, customize just your border and divide colors together using the `theme.borderColor` section, or customize only the divide colors using the `theme.divideColor` section. -->
+
+您可以通过编辑 `tailwind.config.js` 文件中的 `theme.colors#customizing` 部分来[自定义您的调色板](/docs/customizing-colors#-2)，使用 `theme.borderColor` 部分只自定义边框颜色和 divide 颜色，或者使用 `theme.divideColor` 部分只自定义 divide 颜色。
+
 
 ```diff-js
   // tailwind.config.js
@@ -114,10 +129,12 @@ You can [customize your color palette](/docs/colors#customizing) by editing the 
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="divideColor" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="divideColor" />

@@ -1,6 +1,7 @@
 ---
-title: "Text Decoration"
-description: "Utilities for controlling the decoration of text."
+title: "文本装饰"
+# description: "Utilities for controlling the decoration of text."
+description: "用于控制文本装饰的实用功能类。"
 features:
   responsive: true
   customizable: false
@@ -16,7 +17,8 @@ export const classes = { plugin }
 
 ## Underline
 
-Use the `underline` utility to underline text.
+<!-- Use the `underline` utility to underline text. -->
+使用 `underline` 功能类对文本添加下划线样式。
 
 ```html fuchsia
 <template preview>
@@ -28,7 +30,8 @@ Use the `underline` utility to underline text.
 
 ## Line Through
 
-Use the `line-through` utility to strike out text.
+<!-- Use the `line-through` utility to strike out text. -->
+使用 `line-through` 功能类来提示删除文本。
 
 ```html rose
 <template preview>
@@ -40,7 +43,8 @@ Use the `line-through` utility to strike out text.
 
 ## No Underline
 
-Use the `no-underline` utility to remove underline or line-through styling.
+<!-- Use the `no-underline` utility to remove underline or line-through styling. -->
+使用 `no-underline` 功能类来移除 `underline` 或 `line-through` 样式。
 
 ```html purple
 <template preview>
@@ -52,9 +56,11 @@ Use the `no-underline` utility to remove underline or line-through styling.
 <a href="#" class="**no-underline** ...">Link with no underline</a>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the text decoration of an element at a specific breakpoint, add a `{screen}:` prefix to any existing text decoration utility. For example, use `md:underline` to apply the `underline` utility at only medium screen sizes and above.
+<!-- To control the text decoration of an element at a specific breakpoint, add a `{screen}:` prefix to any existing text decoration utility. For example, use `md:underline` to apply the `underline` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的文本装饰，请在任何现有的文本装饰功能类中添加 `{screen}:` 前缀。例如，使用 `md:underline` 来应用 `underline` 功能类在中等大小的屏幕和以上的屏幕上。
 
 ```html
 <p class="no-underline **md:underline** ...">
@@ -62,11 +68,13 @@ To control the text decoration of an element at a specific breakpoint, add a `{s
 </p>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
 ## Hover	
 
-To control the text decoration of an element on hover, add the `hover:` prefix to any existing text decoration utility. For example, use `hover:underline` to apply the `underline` utility on hover.	
+<!-- To control the text decoration of an element on hover, add the `hover:` prefix to any existing text decoration utility. For example, use `hover:underline` to apply the `underline` utility on hover.	 -->
+要控制元素在悬停时的文本装饰，可以在任何现有的文本装饰功能类中添加 `hover:` 前缀。例如，使用 `hover:underline` 在悬停时应用 `underline` 功能类。
 
 ```html indigo	
 <template preview class="text-center p-4">	
@@ -75,7 +83,8 @@ To control the text decoration of an element on hover, add the `hover:` prefix t
 <a href="#" class="no-underline **hover:underline** ...">Link</a>	
 ```	
 
-Hover utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `hover:` prefix.	
+<!-- Hover utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `hover:` prefix.	 -->
+悬停功能类也可以通过在 `hover:` 前缀前添加响应的 `{screen}:` 前缀来与响应的功能类结合使用。	
 
 ```html	
 <a href="#" class="... md:no-underline **md:hover:underline** ...">Link</a>	
@@ -83,7 +92,8 @@ Hover utilities can also be combined with responsive utilities by adding the res
 
 ## Focus	
 
-To control the text decoration of an element on focus, add the `focus:` prefix to any existing text decoration utility. For example, use `focus:underline` to apply the `underline` utility on focus.	
+<!-- To control the text decoration of an element on focus, add the `focus:` prefix to any existing text decoration utility. For example, use `focus:underline` to apply the `underline` utility on focus.	 -->
+要控制焦点元素的文本装饰，请在任何现有的文本装饰功能类中添加 `focus:` 前缀。例如，使用 `focus:underline` 在焦点上应用 `underline` 功能类。	
 
 ```html emerald	
 <template preview>	
@@ -94,18 +104,22 @@ To control the text decoration of an element on focus, add the `focus:` prefix t
 <input class="**focus:underline** ..." value="Focus me">	
 ```	
 
-Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix.	
+<!-- Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix.	 -->
+通过在 `focus:` 前缀之前添加响应的 `{screen}:` 前缀，焦点功能类也可以与响应的功能类结合使用。
 
 ```html	
 <input class="**md:focus:underline** ..." value="Focus me">	
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="textDecoration" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="textDecoration" />

@@ -1,6 +1,7 @@
 ---
-title: "Transition Timing Function"
-description: "Utilities for controlling the easing of CSS transitions."
+title: "过渡计时函数"
+# description: "Utilities for controlling the easing of CSS transitions."
+description: "用于控制 CSS 过渡缓和的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transitionTimingFunction'
@@ -9,9 +10,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Use the `ease-{timing}` utilities to control an element's easing curve.
+<!-- Use the `ease-{timing}` utilities to control an element's easing curve. -->
+使用 `ease-{timing}` 功能来控制元素的缓和曲线。
 
 ```html indigo
 <template preview>
@@ -33,17 +36,23 @@ Use the `ease-{timing}` utilities to control an element's easing curve.
 <button class="transition **ease-in-out** duration-700 ...">Hover me</button>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control an element's transition-timing-function at a specific breakpoint, add a `{screen}:` prefix to any existing transition-timing-function utility. For example, use `md:ease-in-out` to apply the `ease-in-out` utility at only medium screen sizes and above.
+<!-- To control an element's transition-timing-function at a specific breakpoint, add a `{screen}:` prefix to any existing transition-timing-function utility. For example, use `md:ease-in-out` to apply the `ease-in-out` utility at only medium screen sizes and above. -->
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+要在特定的断点处控制元素的过渡时间函数，请在任何现有的过渡时间函数功能中添加 `{screen}:` 前缀。例如，使用 `md:ease-in-out` 来应用 `ease-in-out` 功能，只适用于中等大小的屏幕及以上。
 
-## Customizing
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
+
+<!-- ## Customizing -->
+## 自定义
 
 ### Timing values
 
-By default Tailwind provides four general purpose transition-timing-function utilities. You change, add, or remove these by customizing the `transitionTimingFunction` section of your Tailwind theme config.
+<!-- By default Tailwind provides four general purpose transition-timing-function utilities. You change, add, or remove these by customizing the `transitionTimingFunction` section of your Tailwind theme config. -->
+默认情况下，Tailwind 提供了四个通用的过渡计时功能功能。您可以通过定制您的 Tailwind 主题配置中的 `transitionTimingFunction` 部分来改变，添加或删除这些功能。
 
 ```diff-js
   // tailwind.config.js
@@ -59,12 +68,15 @@ By default Tailwind provides four general purpose transition-timing-function uti
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在[主题定制文档](/docs/theme#-5)中了解更多关于定制默认主题的信息。
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="transitionTimingFunction" name="transition-timing-function" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="transitionTimingFunction" name="transition-timing-function" />

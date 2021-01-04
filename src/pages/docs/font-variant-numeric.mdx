@@ -1,6 +1,7 @@
 ---
 title: "Font Variant Numeric"
-description: "Utilities for controlling the variant of numbers."
+# description: "Utilities for controlling the variant of numbers."
+description: "用来控制数字变形的工具"
 ---
 
 import { Variants } from '@/components/Variants'
@@ -24,21 +25,25 @@ export const classes = {
   }
 }
 
-## Usage
+## 使用方法
 
-Use the `font-variant-numeric` utilities to enable additional glyphs for numbers, fractions, and ordinal markers *(in fonts that support them)*.
+<!-- Use the `font-variant-numeric` utilities to enable additional glyphs for numbers, fractions, and ordinal markers *(in fonts that support them)*. -->
+使用 `font-variant-numeric` 工具为数字、分数和序号标记启用其他字形（在支持它们的字体中）。
 
-These utilities are composable so you can enable multiple `font-variant-numeric` features by combining multiple classes in your HTML:
+<!-- These utilities are composable so you can enable multiple `font-variant-numeric` features by combining multiple classes in your HTML: -->
+这些工具是可组合的，因此您可以通过组合 HTML 中的多个类来实现多个 `font-variant-numeric` 功能。
 
 ```html
 <p class="**ordinal slashed-zero tabular-nums** ...">1234567890</p>
 ```
 
-Note that many fonts don't support these features *(stacked fractions support for example is especially rare)*, so some of these utilities may have no effect depending on the font family you are using.
+<!-- Note that many fonts don't support these features *(stacked fractions support for example is especially rare)*, so some of these utilities may have no effect depending on the font family you are using. -->
+请注意，很多字体不支持这些功能*（例如，对堆叠分数的支持特别少见），因此，根据您所使用的字体序列，其中的一些工具可能无效。
 
 ### Ordinal
 
-Use the `ordinal` utility to enable special glyphs for the ordinal markers.
+<!-- Use the `ordinal` utility to enable special glyphs for the ordinal markers. -->
+使用 `ordinal` 工具来为序数标记启用特殊字形。
 
 ```html emerald
 <template preview>
@@ -51,7 +56,8 @@ Use the `ordinal` utility to enable special glyphs for the ordinal markers.
 
 ### Slashed Zero
 
-Use the `slashed-zero` utility to force a 0 with a slash; this is useful when a clear distinction between O and 0 is needed.
+<!-- Use the `slashed-zero` utility to force a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. -->
+使用 `slashed-zero` 功能强制为 0 加上一个短杠。当您需要明确区分 O 和 0 时，这很有用。
 
 ```html lightBlue
 <template preview>
@@ -63,7 +69,8 @@ Use the `slashed-zero` utility to force a 0 with a slash; this is useful when a 
 
 ### Lining figures
 
-Use the `lining-nums` utility to use the numeric glyphs that are all aligned by their baseline. This corresponds to the `lnum` OpenType feature. This is the default for most fonts.
+<!-- Use the `lining-nums` utility to use the numeric glyphs that are all aligned by their baseline. This corresponds to the `lnum` OpenType feature. This is the default for most fonts. -->
+使用 `lining-nums` 工具来使用所有按其基线对齐的数字字形。这对应于 `lnum` OpenType功能。这是大多数字体的默认值。
 
 ```html rose
 <template preview>
@@ -75,7 +82,8 @@ Use the `lining-nums` utility to use the numeric glyphs that are all aligned by 
 
 ### Oldstyle figures
 
-Use the `oldstyle-nums` utility to use numeric glyphs where some numbers have descenders. This corresponds to the `onum` OpenType feature.
+<!-- Use the `oldstyle-nums` utility to use numeric glyphs where some numbers have descenders. This corresponds to the `onum` OpenType feature. -->
+使用 `oldstyle-nums` 工具来使用其中一些数字有降格的数字字形。这对应于 `onum` OpenType功能。
 
 ```html fuchsia
 <template preview>
@@ -87,7 +95,8 @@ Use the `oldstyle-nums` utility to use numeric glyphs where some numbers have de
 
 ### Proportional figures
 
-Use the `proportional-nums` utility to use numeric glyphs that have proportional widths (rather than uniform/tabular). This corresponds to the `pnum` OpenType feature.
+<!-- Use the `proportional-nums` utility to use numeric glyphs that have proportional widths (rather than uniform/tabular). This corresponds to the `pnum` OpenType feature. -->
+使用 `proportional-nums` 工具来使用具有比例宽度（而不是统一/表格）的数字字形。这对应于 `pnum` OpenType功能。
 
 ```html indigo
 <template preview>
@@ -103,7 +112,8 @@ Use the `proportional-nums` utility to use numeric glyphs that have proportional
 
 ### Tabular figures
 
-Use the `tabular-nums` utility to use numeric glyphs that have uniform/tabular widths (rather than proportional). This corresponds to the `tnum` OpenType feature.
+<!-- Use the `tabular-nums` utility to use numeric glyphs that have uniform/tabular widths (rather than proportional). This corresponds to the `tnum` OpenType feature. -->
+使用 `tabular-nums` 工具来使用具有统一/表格宽度（而不是比例）的数字字形。这与 `tnum` OpenType功能相对应。
 
 ```html amber
 <template preview>
@@ -119,7 +129,8 @@ Use the `tabular-nums` utility to use numeric glyphs that have uniform/tabular w
 
 ### Diagonal fractions
 
-Use the `diagonal-fractions` utility to replace numbers separated by a slash with common diagonal fractions. This corresponds to the `frac` OpenType feature.
+<!-- Use the `diagonal-fractions` utility to replace numbers separated by a slash with common diagonal fractions. This corresponds to the `frac` OpenType feature. -->
+使用 `diagonal-fractions` 工具，用普通的对角线分数替换被斜线分隔的数字。这对应于 `frac` OpenType功能。
 
 ```html emerald
 <template preview>
@@ -131,7 +142,8 @@ Use the `diagonal-fractions` utility to replace numbers separated by a slash wit
 
 ### Stacked fractions
 
-Use the `stacked-fractions` utility to replace numbers separated by a slash with common stacked fractions. This corresponds to the `frac` OpenType feature. Very few fonts seem to support this feature — we've used Ubuntu Mono here.
+<!-- Use the `stacked-fractions` utility to replace numbers separated by a slash with common stacked fractions. This corresponds to the `frac` OpenType feature. Very few fonts seem to support this feature — we've used Ubuntu Mono here. -->
+使用 `stacked-fractions` 工具，用常见的堆叠分数替换用斜线分隔的数字。这对应于 `frac` OpenType功能。似乎很少有字体支持这个功能--我们在这里使用的是 Ubuntu Mono。
 
 ```html lightBlue
 <template preview>
@@ -144,15 +156,17 @@ Use the `stacked-fractions` utility to replace numbers separated by a slash with
 
 ### Resetting numeric font variants
 
-Use the `normal-nums` propery to reset numeric font variants. This is usually useful for resetting a font feature at a particular breakpoint:
+<!-- Use the `normal-nums` propery to reset numeric font variants. This is usually useful for resetting a font feature at a particular breakpoint: -->
+使用 `normal-nums` 属性重置数字字体变形。这通常对在特定断点处重置字体特征很有用。
 
 ```html
 <p class="slashed-zero tabular-nums **md:normal-nums** ...">12345</p>
 ```
 
-## Responsive
+## 响应式
 
-To control `font-variant-numeric` property of an element at a specific breakpoint, add a `{screen}:` prefix to any existing `font-variant-numeric` utility. For example, use `md:tabular-nums` to apply the `tabular-nums` utility at only medium screen sizes and above.
+<!-- To control `font-variant-numeric` property of an element at a specific breakpoint, add a `{screen}:` prefix to any existing `font-variant-numeric` utility. For example, use `md:tabular-nums` to apply the `tabular-nums` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素的 `font-variant-numeric` 属性，请在任何现有的 `font-variant-numeric` 工具类前添加 `{screen}:` 前缀。例如，使用 `md:tabular-nums` 来仅在中等大小及以上的屏幕应用 `tabular-nums` 工具。
 
 ```html
 <div class="proportional-nums **md:tabular-nums**">
@@ -160,15 +174,15 @@ To control `font-variant-numeric` property of an element at a specific breakpoin
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
+## 定制
 
-## Customizing
-
-### Variants
+### 变体
 
 <Variants plugin="fontVariantNumeric" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="fontVariantNumeric" />

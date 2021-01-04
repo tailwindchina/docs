@@ -1,9 +1,11 @@
 ---
-title: "Gradient Color Stops"
-description: "Utilities for controlling the color stops in background gradients."
+# title: "Gradient Color Stops"
+title: "渐变色停止"
+# description: "Utilities for controlling the color stops in background gradients."
+description: "用于控制背景渐变中的颜色停止的功能类。"
 features:
   responsive: true
-  customizable: true
+  customizable: truegrad
   hover: true
   focus: false
 ---
@@ -35,9 +37,13 @@ export const classes = {
   ),
 }
 
-## Starting color
+<!-- ## Starting color
 
-Set the starting color of a gradient using the `from-{color}` utilities.
+Set the starting color of a gradient using the `from-{color}` utilities. -->
+
+## 开始颜色
+
+使用 `from-{color}` 功能类设置渐变的起始颜色。
 
 ```html
 <template preview>
@@ -47,11 +53,15 @@ Set the starting color of a gradient using the `from-{color}` utilities.
 <div class="bg-gradient-to-r **from-red-500** ..."></div>
 ```
 
-Gradients fade out to transparent by default.
+<!-- Gradients fade out to transparent by default. -->
+默认情况下，渐变色为透明色。
 
-## Ending color
+<!-- ## Ending color
 
-Set the ending color of a gradient using the `to-{color}` utilities.
+Set the ending color of a gradient using the `to-{color}` utilities. -->
+## 结束色
+
+使用 `to-{color}` 功能类设置渐变的结束颜色。
 
 ```html
 <template preview>
@@ -61,11 +71,15 @@ Set the ending color of a gradient using the `to-{color}` utilities.
 <div class="bg-gradient-to-r from-teal-400 **to-blue-500** ..."></div>
 ```
 
-Gradients to **do not** fade in from transparent by default. To fade in from transparent, reverse the gradient direction and use a `from-{color}` utility.
+<!-- Gradients to **do not** fade in from transparent by default. To fade in from transparent, reverse the gradient direction and use a `from-{color}` utility. -->
+默认情况下，渐变效果**不会**从透明中淡入。要从透明渐变，请反转渐变方向，并使用 `from-{color}` 功能类。
 
-## Middle color
+<!-- ## Middle color
 
-Add a middle color to a gradient using the `via-{color}` utilities.
+Add a middle color to a gradient using the `via-{color}` utilities. -->
+## 中间色
+
+使用 `via-{color}` 功能类为渐变添加中间色。
 
 ```html
 <template preview>
@@ -75,23 +89,28 @@ Add a middle color to a gradient using the `via-{color}` utilities.
 <div class="bg-gradient-to-r from-purple-400 **via-pink-500** to-red-500 ..."></div>
 ```
 
-Gradients with a `from-{color}` and `via-{color}` will fade out to transparent by default if no `to-{color}` is present.
+<!-- Gradients with a `from-{color}` and `via-{color}` will fade out to transparent by default if no `to-{color}` is present. -->
+如果没有出现 `to-{color}`，带有 `from-{color}` 和 `via-{color}` 的梯度将默认为淡出为透明。
 
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the gradient color stops of an element at a specific breakpoint, add a `{screen}:` prefix to any existing gradient color stop utility. For example, use `md:from-green-500` to apply the `from-green-500` utility at only medium screen sizes and above.
+<!-- To control the gradient color stops of an element at a specific breakpoint, add a `{screen}:` prefix to any existing gradient color stop utility. For example, use `md:from-green-500` to apply the `from-green-500` utility at only medium screen sizes and above. -->
+要控制元素在特定断点处的渐变色停止，可在任何现有的渐变色停止功能类中添加 `{screen}:` 前缀。例如，使用 `md:from-green-500` 来应用 `from-green-500` 功能类，只在中等大小的屏幕及以上。
 
 ```html
 <div class="bg-gradient-to-r from-purple-400 **md:from-orange-500**"></div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
+<!-- ## Hover -->
+## 悬停
 
-## Hover
-
-To control the gradient color stops of an element on hover, add the `hover:` prefix to any existing gradient color stop utility. For example, use `hover:bg-blue-500` to apply the `bg-blue-500` utility on hover.
+<!-- To control the gradient color stops of an element on hover, add the `hover:` prefix to any existing gradient color stop utility. For example, use `hover:bg-blue-500` to apply the `bg-blue-500` utility on hover. -->
+要控制元素在悬停时的渐变色停止，请在任何现有的渐变色停止功能类中添加 `hover:` 前缀。例如，使用 `hover:bg-blue-500` 在悬停时应用 `bg-blue-500` 功能类。
 
 ```html
 <template preview>
@@ -108,14 +127,16 @@ To control the gradient color stops of an element on hover, add the `hover:` pre
 ```
 
 Hover utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix.
+通过在 `focus:` 前缀之前添加响应的 `{screen}:` 前缀，悬停功能类也可以与响应功能类相结合。
 
 ```html
 <button class="... **md:from-blue-500 md:hover:from-blue-700** ...">Button</button>
 ```
 
-## Focus
-
-To control the gradient color stops of an element on focus, add the `focus:` prefix to any existing gradient color stop utility. For example, use `focus:bg-blue-500` to apply the `bg-blue-500` utility on focus.
+<!-- ## Focus -->
+## 聚焦
+<!-- To control the gradient color stops of an element on focus, add the `focus:` prefix to any existing gradient color stop utility. For example, use `focus:bg-blue-500` to apply the `bg-blue-500` utility on focus. -->
+要在焦点上控制元素的渐变色停顿，可在任何现有的渐变色停顿功能类中添加 `focus:` 前缀。例如，使用 `focus:bg-blue-500` 在焦点上应用 `bg-blue-500` 功能类。
 
 ```html
 <template preview>
@@ -131,20 +152,26 @@ To control the gradient color stops of an element on focus, add the `focus:` pre
 </button>
 ```
 
-Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix.
+<!-- Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix. -->
 
 ```html
 <button class="... md:from-blue-500 md:focus:from-blue-700 ...">Button</button>
 ```
 
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Background Colors
+<!-- ### Background Colors -->
+### 背景颜色
 
-By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as gradient color stops.
+<!-- By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as gradient color stops.
 
-You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` variable in your `tailwind.config.js` file, or customize just your gradient color stop colors using the `theme.gradientColorStops` section of your Tailwind config.
+You can [customize your color palette](/docs/colors#customizing) by editing the `theme.colors` variable in your `tailwind.config.js` file, or customize just your gradient color stop colors using the `theme.gradientColorStops` section of your Tailwind config. -->
+默认情况下， Tailwind 将整个[默认调色板](/docs/customizing-colors#default-color-palette)作为渐变色停止。
+
+您可以通过编辑 `tailwind.config.js` 文件中的 `theme.cols` 变量来[自定义您的调色板](/docs/colors#-2)，或者使用 Tailwind 配置中的 `theme.gradientColorStops` 部分来自定义渐变色停止颜色。
+
 
 ```diff-js
   // tailwind.config.js
@@ -160,10 +187,12 @@ You can [customize your color palette](/docs/colors#customizing) by editing the 
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="gradientColorStops" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="gradientColorStops" />

@@ -114,7 +114,7 @@ export function Performance() {
         {/*  projects ship less than 10KB of CSS to the client.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          Tailwind 在构建生产文件时会自动删除所有未使用的 CSS，这意味着你最后的 CSS 文件可能会是最小的。实际上，大多数 Tailwind 项目向客户端传输的 CSS 少于 10KB。
+          Tailwind 在构建生产文件时会自动删除所有未使用的 CSS，这意味着您最后的 CSS 文件可能会是最小的。实际上，大多数 Tailwind 项目向客户端传输的 CSS 少于 10KB。
         </Paragraph>
         <Link href="/docs/optimizing-for-production" className="text-teal-500 hover:text-teal-700">
           了解更多 -&gt;

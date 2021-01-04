@@ -1,6 +1,7 @@
 ---
 title: "Place Items"
-description: "Utilities for controlling how items are justified and aligned at the same time."
+# description: "Utilities for controlling how items are justified and aligned at the same time."
+description: "用于同时控制项目如何在水平和垂直方向对齐的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/placeItems'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Auto
 
-Use `place-items-auto` to place grid items automatically in their grid areas:
+<!-- Use `place-items-auto` to place grid items automatically in their grid areas: -->
+使用 `place-items-auto` 将网格项目自动放置在其网格区域：
 
 ```html indigo
 <template preview>
@@ -37,7 +39,8 @@ Use `place-items-auto` to place grid items automatically in their grid areas:
 
 ## Start
 
-Use `place-items-start` to place grid items on the start of their grid areas on both axis:
+<!-- Use `place-items-start` to place grid items on the start of their grid areas on both axis: -->
+使用 `place-items-start` 将网格项目放置在网格区域的两个轴上的起点：
 
 ```html emerald
 <template preview>
@@ -63,7 +66,8 @@ Use `place-items-start` to place grid items on the start of their grid areas on 
 
 ## End
 
-Use `place-items-end` to place grid items on the end of their grid areas on both axis:
+<!-- Use `place-items-end` to place grid items on the end of their grid areas on both axis: -->
+使用 `place-items-end` 将网格项目放置在网格区域的两个轴上的终点：
 
 ```html amber
 <template preview>
@@ -89,7 +93,8 @@ Use `place-items-end` to place grid items on the end of their grid areas on both
 
 ## Center
 
-Use `place-items-center` to place grid items on the center of their grid areas on both axis:
+<!-- Use `place-items-center` to place grid items on the center of their grid areas on both axis: -->
+使用 `place-items-center` 将网格项目放置在网格区域的两个轴上的中心：
 
 ```html purple
 <template preview>
@@ -115,7 +120,8 @@ Use `place-items-center` to place grid items on the center of their grid areas o
 
 ## Stretch
 
-Use `place-items-stretch` to stretch items along their grid areas on both axis:
+<!-- Use `place-items-stretch` to stretch items along their grid areas on both axis: -->
+使用 `place-items-stretch` 将网格项目沿着网格区域的两个轴拉伸：
 
 ```html lightBlue
 <template preview>
@@ -139,9 +145,10 @@ Use `place-items-stretch` to stretch items along their grid areas on both axis:
 </div>
 ```
 
-## Responsive
+## 响应式
 
-To place items at a specific breakpoint, add a `{screen}:` prefix to any existing `place-items` utility. For example, use `md:place-items-center` to apply the `place-items-center` utility at only medium screen sizes and above.
+<!-- To place items at a specific breakpoint, add a `{screen}:` prefix to any existing `place-items` utility. For example, use `md:place-items-center` to apply the `place-items-center` utility at only medium screen sizes and above. -->
+要在特定的断点放置项目，可以在任何现有的 `place-items` 工具类前添加 `{screen}:` 前缀。例如，使用 `md:place-items-center` 来仅在中等尺寸及以上的屏幕应用 `place-items-center` 功能。
 
 ```html
 <div class="place-items-start md:place-items-center">
@@ -149,14 +156,15 @@ To place items at a specific breakpoint, add a `{screen}:` prefix to any existin
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Customizing
+## 定制
 
-### Variants
+### 变体
 
 <Variants plugin="placeItems" name="place-items" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="placeItems" name="place-items" />

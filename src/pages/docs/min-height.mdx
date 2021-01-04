@@ -1,6 +1,8 @@
 ---
-title: "Min-Height"
-description: "Utilities for setting the minimum height of an element"
+# title: "Min-Height"
+title: "最小高度"
+# description: "Utilities for setting the minimum height of an element"
+description: "用来设置元素最小高度的工具"
 features:
   responsive: true
   customizable: true
@@ -14,9 +16,10 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Usage
+## 使用方法
 
-Set the minimum height of an element using the `min-h-0`, `min-h-full`, or `min-h-screen` utilities.
+<!-- Set the minimum height of an element using the `min-h-0`, `min-h-full`, or `min-h-screen` utilities. -->
+使用 `min-h-0` 、`min-h-full` 或 `min-h-screen` 工具设置元素的最小宽度。
 
 ```html purple
 <template preview>
@@ -36,9 +39,10 @@ Set the minimum height of an element using the `min-h-0`, `min-h-full`, or `min-
 
 ---
 
-## Responsive
+## 响应式
 
-To control the min-height of an element at a specific breakpoint, add a `{screen}:` prefix to any existing min-height utility.
+<!-- To control the min-height of an element at a specific breakpoint, add a `{screen}:` prefix to any existing min-height utility. -->
+要在特定的断点处控制元素的最小高度，请在任何现有的最小高度工具前添加 `{screen}:` 前缀。
 
 ```html
 <div class="h-48 ...">
@@ -52,11 +56,12 @@ For more information about Tailwind's responsive design features, check out the 
 
 ---
 
-## Customizing
+## 定制
 
 ### Min-height scale
 
-Customize Tailwind's default min-height scale in the `theme.minHeight` section of your `tailwind.config.js` file.
+<!-- Customize Tailwind's default min-height scale in the `theme.minHeight` section of your `tailwind.config.js` file. -->
+在您的 `tailwind.config.js` 文件的 `theme.minHeight` 部分定制 Tailwind 的默认最小高度。
 
 ```diff-js
   // tailwind.config.js
@@ -73,12 +78,13 @@ Customize Tailwind's default min-height scale in the `theme.minHeight` section o
   }
 ```
 
-Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme).
+<!-- Learn more about customizing the default theme in the [theme customization documentation](/docs/theme#customizing-the-default-theme). -->
+在 [主题自定义文档](/docs/theme#customizing-the-default-theme) 中了解更多关于自定义默认主题的信息。
 
-### Variants
+### 变体
 
 <Variants plugin="minHeight" name="min-height" />
 
-### Disabling
+### 禁用
 
 <Disabling plugin="minHeight" name="min-height" />

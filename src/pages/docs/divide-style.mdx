@@ -1,6 +1,8 @@
 ---
-title: "Divide Style"
-description: "Utilities for controlling the border style between elements."
+# title: "Divide Style"
+title: "分割线样式"
+# description: "Utilities for controlling the border style between elements."
+description: "用于控制元素之间的边框样式的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/divideStyle'
@@ -17,9 +19,11 @@ export const classes = {
   ),
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用
 
-Control the border style between elements using the `divide-{style}` utilities.
+<!-- Control the border style between elements using the `divide-{style}` utilities. -->
+使用 `divide-{style}` 功能控制元素之间的边框样式。
 
 ```html amber
 <template preview>
@@ -37,9 +41,11 @@ Control the border style between elements using the `divide-{style}` utilities.
 </div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the border style between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide style utility. For example, use `md:divide-dashed` to apply the `divide-dashed` utility at only medium screen sizes and above.
+<!-- To control the border style between elements at a specific breakpoint, add a `{screen}:` prefix to any existing divide style utility. For example, use `md:divide-dashed` to apply the `divide-dashed` utility at only medium screen sizes and above. -->
+要在特定的断点处控制元素之间的边框样式，请在任何现有的 divide style 功能中添加 `{screen}:` 前缀。例如，使用 `md:divide-dashed` 来应用 `divide-dashed` 功能，只适用于中等尺寸以上的屏幕。
 
 ```html
 <div class="divide-y-2 divide-dashed **md:divide-solid**">
@@ -47,14 +53,18 @@ To control the border style between elements at a specific breakpoint, add a `{s
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="divideStyle" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="divideStyle" />

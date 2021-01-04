@@ -10,11 +10,11 @@ description: 在 Tailwind 的基础上添加自己的全局基础样式的最佳
 Tailwind 包含了一系列有用的开箱即用的基础样式，我们称之为 [Preflight](/docs/preflight)，他实际上是 [modern-normalize](https://github.com/sindresorhus/modern-normalize)，外加少些额外的样式。
 
 <!-- Preflight is a great starting point for most projects, but if you'd ever like to add your own additional base styles, here are some recommendations for doing it idiomatically. -->
-对于大多数项目来说，Preflight 是一个很好的起点，但是如果你想添加你自己的额外的基础样式，以下是一些惯用做法的建议。
+对于大多数项目来说，Preflight 是一个很好的起点，但是如果您想添加您自己的额外的基础样式，以下是一些惯用做法的建议。
 
 ---
 
-## 在你的 HTML 中使用类
+## 在您的 HTML 中使用类
 
 If you just want to apply some global styling to the `html` or `body` elements, consider just adding existing classes to those elements in your HTML instead of writing new CSS:
 如果您只想对 `html` 或者 `body` 元素应用某种全局样式，只需将现有类添加到 HTML 中的那些元素，而不是编写新的 CSS ：
@@ -58,12 +58,12 @@ If you just want to apply some global styling to the `html` or `body` elements, 
 使用 `@layer` 指令还能告诉 Tailwind 在清除基础样式时使用哪些样式来清除。阅读我们的 [关于生产优化的文档](/docs/optimizing-for-production) 以了解更多信息。
 
 <!-- It's a good idea to use [@apply](/docs/functions-and-directives#apply) or [theme()](/docs/functions-and-directives#theme) to define these styles to avoid accidentally deviating from your design system. -->
-最好使用 [@apply](/docs/functions-and-directives#apply) 或者 [theme()](/docs/functions-and-directives#theme) 来定义这些样式，以避免意外偏离你的设计系统。
+最好使用 [@apply](/docs/functions-and-directives#apply) 或者 [theme()](/docs/functions-and-directives#theme) 来定义这些样式，以避免意外偏离您的设计系统。
 
 ### @font-face 规则
 
 <!-- You can use the same approach to add your `@font-face` rules for any custom fonts you're using: -->
-你可以使用相同的方式为你正在使用的任何自定义字体添加 `@font-face` 规则。
+您可以使用相同的方式为您正在使用的任何自定义字体添加 `@font-face` 规则。
 
 ```css
 @tailwind base;
@@ -89,7 +89,7 @@ If you just want to apply some global styling to the `html` or `body` elements, 
 ## 使用插件
 
 <!-- You can also add base styles by [writing a plugin](/docs/plugins#adding-base-styles) and using the `addBase` function: -->
-你还可以通过 [编写插件](/docs/plugins#adding-base-styles) 并使用 `addBase` 函数来添加基础样式：
+您还可以通过 [编写插件](/docs/plugins#adding-base-styles) 并使用 `addBase` 函数来添加基础样式：
 
 ```js
 // tailwind.config.js

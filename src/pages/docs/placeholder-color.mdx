@@ -1,6 +1,7 @@
 ---
-title: "Placeholder Color"
-description: "Utilities for controlling the color of placeholder text."
+title: "占位文本颜色"
+# description: "Utilities for controlling the color of placeholder text."
+description: "用于控制占位文本颜色的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/placeholderColor'
@@ -26,9 +27,11 @@ export const classes = {
   ),
 }
 
-## Usage
+<!-- ## Usage -->
+## 使用方法
 
-Control the placeholder color of an element using the `placeholder-{color}` utilities.
+<!-- Control the placeholder color of an element using the `placeholder-{color}` utilities. -->
+使用 `placeholder-{color}` 工具控制元素占位文本的颜色。
 
 ```html emerald
 <template preview class="text-center p-6">
@@ -42,9 +45,11 @@ Control the placeholder color of an element using the `placeholder-{color}` util
 <input class="**placeholder-red-300** ..." placeholder="jane@example.com">
 ```
 
-### Changing opacity
+<!-- ### Changing opacity -->
+### 改变不透明度
 
-Control the opacity of an element's placeholder color using the `placeholder-opacity-{amount}` utilities.
+<!-- Control the opacity of an element's placeholder color using the `placeholder-opacity-{amount}` utilities. -->
+使用 `placeholder-opacity-{amount}` 工具控制元素的占位文本颜色的不透明度。
 
 ```html lightBlue
 <template preview>
@@ -74,21 +79,27 @@ Control the opacity of an element's placeholder color using the `placeholder-opa
 <input class="placeholder-gray-500 **placeholder-opacity-0** ..." placeholder="jane@example.com">
 ```
 
-Learn more in the [placeholder opacity documentation](/docs/placeholder-opacity).
+<!-- Learn more in the [placeholder opacity documentation](/docs/placeholder-opacity). -->
+在 [占位符不透明度文档](/docs/placeholder-opacity) 中了解更多。
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the text color of an input placeholder at a specific breakpoint, add a `{screen}:` prefix to any existing text color utility. For example, use `md:placeholder-green-500` to apply the `placeholder-green-500` utility at only medium screen sizes and above.
+<!-- To control the text color of an input placeholder at a specific breakpoint, add a `{screen}:` prefix to any existing text color utility. For example, use `md:placeholder-green-500` to apply the `placeholder-green-500` utility at only medium screen sizes and above. -->
+要在特定的断点处控制输入框占位文本的颜色，请在任何现有的占位文本颜色工具类前添加 `{screen}:` 前缀。例如，使用 `md:placeholder-green-500` 来仅在中等大小及以上的屏幕应用 `placeholder-green-500` 工具。
 
 ```html
 <input class="placeholder-gray-500 **md:placeholder-green-500**" placeholder="jane@example.com">
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看 [响应式设计](/docs/responsive-design) 文档。
 
-## Focus
+<!-- ## Focus -->
+## 焦点
 
-To control the placeholder color of an element on focus, add the `focus:` prefix to any existing placeholder color utility. For example, use `focus:placeholder-blue-600` to apply the `placeholder-blue-600` utility on focus.
+<!-- To control the placeholder color of an element on focus, add the `focus:` prefix to any existing placeholder color utility. For example, use `focus:placeholder-blue-600` to apply the `placeholder-blue-600` utility on focus. -->
+要控制获得焦点时元素的占位文本颜色，请在任何现有的占位文本颜色工具前添加 `focus:` 前缀。例如，使用 `focus:placeholder-blue-600` 在获得焦点时应用 `placeholder-blue-600` 工具。
 
 ```html indigo
 <template preview class="text-center p-6">
@@ -100,19 +111,24 @@ To control the placeholder color of an element on focus, add the `focus:` prefix
 <input class="placeholder-gray-600 **focus:placeholder-gray-400** ..." placeholder="jane@example.com">
 ```
 
-Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix.
+<!-- Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix. -->
+通过在 `focus:` 前缀前添加响应式 `{screen}:` 前缀，focus 工具也可以与 responsive 工具相结合。
 
 ```html
 <input class="... md:placeholder-gray-900 **md:focus:placeholder-red-600** ...">
 ```
 
-## Customizing
+<!-- ## Customizing -->
+## 定制
 
-### Placeholder Colors
+<!-- ### Placeholder Colors -->
+### 占位符文本颜色
 
-By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as placeholder colors.
+<!-- By default Tailwind makes the entire [default color palette](/docs/customizing-colors#default-color-palette) available as placeholder colors. -->
+默认情况下，Tailwind 整个 [默认调色板](/docs/customizing-colors#default-color-palette) 都可作为占位文本颜色。
 
-You can [customize your color palette](/docs/colors#customizing) by editing `theme.colors` in your `tailwind.config.js` file, or customize just your placeholder colors in the `theme.textColor` section.
+<!-- You can [customize your color palette](/docs/colors#customizing) by editing `theme.colors` in your `tailwind.config.js` file, or customize just your placeholder colors in the `theme.textColor` section. -->
+您可以通过编辑 `tailwind.config.js` 文件中的 `theme.colors` 来 [自定义您的调色板](/docs/colors#customizing)，或者在 `theme.textColor` 部分只自定义您的占位文本颜色。
 
 ```diff-js
   // tailwind.config.js
@@ -128,10 +144,12 @@ You can [customize your color palette](/docs/colors#customizing) by editing `the
   }
 ```
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="placeholderColor" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="placeholderColor" />

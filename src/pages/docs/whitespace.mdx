@@ -1,6 +1,7 @@
 ---
-title: "Whitespace"
-description: "Utilities for controlling an element's white-space property."
+title: "空格"
+# description: "Utilities for controlling an element's white-space property."
+description: "用于控制元素的空格属性的工具。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/whitespace'
@@ -11,7 +12,8 @@ export const classes = { plugin }
 
 ## Normal
 
-Use `whitespace-normal` to cause text to wrap normally within an element. Newlines and spaces will be collapsed.
+<!-- Use `whitespace-normal` to cause text to wrap normally within an element. Newlines and spaces will be collapsed. -->
+使用 `whitespace-normal` 使文本在元素中正常包裹。换行和空格将被折叠。
 
 ```html indigo
 <template preview>
@@ -35,7 +37,8 @@ Use `whitespace-normal` to cause text to wrap normally within an element. Newlin
 
 ## No Wrap
 
-Use `whitespace-nowrap` to prevent text from wrapping within an element. Newlines and spaces will be collapsed.
+<!-- Use `whitespace-nowrap` to prevent text from wrapping within an element. Newlines and spaces will be collapsed. -->
+使用 `whitespace-nowrap` 来防止文本在元素中被包裹。换行和空格将被折叠。
 
 ```html emerald
 <template preview>
@@ -59,7 +62,8 @@ Use `whitespace-nowrap` to prevent text from wrapping within an element. Newline
 
 ## Pre
 
-Use `whitespace-pre` to preserve newlines and spaces within an element. Text will not be wrapped.
+<!-- Use `whitespace-pre` to preserve newlines and spaces within an element. Text will not be wrapped. -->
+使用 `whitespace-pre` 来保留元素中的换行和空格。文本不会被包装。
 
 ```html amber
 <template preview>
@@ -83,7 +87,8 @@ Use `whitespace-pre` to preserve newlines and spaces within an element. Text wil
 
 ## Pre Line
 
-Use `whitespace-pre-line` to preserve newlines but not spaces within an element. Text will be wrapped normally.
+<!-- Use `whitespace-pre-line` to preserve newlines but not spaces within an element. Text will be wrapped normally. -->
+使用 `whitespace-pre-line` 保留换行，但不保留元素中的空格。文本将被正常包装。
 
 ```html lightBlue
 <template preview>
@@ -106,7 +111,8 @@ Use `whitespace-pre-line` to preserve newlines but not spaces within an element.
 
 ## Pre Wrap
 
-Use `whitespace-pre-wrap` to preserve newlines and spaces within an element. Text will be wrapped normally.
+<!-- Use `whitespace-pre-wrap` to preserve newlines and spaces within an element. Text will be wrapped normally. -->
+使用 `whitespace-pre-wrap` 来保留元素中的换行和空格。文本将被正常包装。
 
 ```html rose
 <template preview>
@@ -126,9 +132,11 @@ Use `whitespace-pre-wrap` to preserve newlines and spaces within an element. Tex
   reprehenderit saepe quam aliquid odio accusamus.</div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式 
 
-To control the whitespace property of an element only at a specific breakpoint, add a `{screen}:` prefix to any existing whitespace utility. For example, adding the class `md:whitespace-pre` to an element would apply the `whitespace-pre` utility at medium screen sizes and above.
+<!-- To control the whitespace property of an element only at a specific breakpoint, add a `{screen}:` prefix to any existing whitespace utility. For example, adding the class `md:whitespace-pre` to an element would apply the `whitespace-pre` utility at medium screen sizes and above. -->
+要只在特定的断点处控制元素的 whitespace 属性，可以在任何现有的 whitespace 功能类中添加 `{screen}:` 前缀。例如，将类 `md:whitespace-pre` 添加到元素中，就可以在中等尺寸以上的屏幕上使用 `whitespace-pre` 工具。
 
 ```html
 <div class="whitespace-normal **md:whitespace-pre** ...">
@@ -136,14 +144,18 @@ To control the whitespace property of an element only at a specific breakpoint, 
 </div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档。
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义 
 
-### Variants
+<!-- ### Variants -->
+### 变体 
 
 <Variants plugin="whitespace" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用 
 
 <Disabling plugin="whitespace" />

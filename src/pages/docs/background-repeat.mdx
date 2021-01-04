@@ -1,6 +1,8 @@
 ---
-title: "Background Repeat"
-description: "Utilities for controlling the repetition of an element's background image."
+# title: "Background Repeat"
+title: "背景图像重复"
+# description: "Utilities for controlling the repetition of an element's background image."
+description: "用于控制元素背景图像重复的功能类。"
 features:
   responsive: true
   customizable: false
@@ -14,9 +16,11 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Repeat
+<!-- ## Repeat -->
+## 重复
 
-Use `bg-repeat` to repeat the background image both vertically and horizontally.
+<!-- Use `bg-repeat` to repeat the background image both vertically and horizontally. -->
+使用 `bg-repeat` 在垂直和水平方向上重复背景图片。
 
 ```html fuchsia
 <template preview>
@@ -27,9 +31,11 @@ Use `bg-repeat` to repeat the background image both vertically and horizontally.
 <div class="**bg-repeat** ..." style="background-image: url(...)"></div>
 ```
 
-## No Repeat
+<!-- ## No Repeat -->
+## 不重复
 
-Use `bg-no-repeat` when you don't want to repeat the background image.
+<!-- Use `bg-no-repeat` when you don't want to repeat the background image. -->
+当您不想重复背景图片时，使用 `bg-no-repeat`。
 
 ```html rose
 <template preview>
@@ -40,9 +46,12 @@ Use `bg-no-repeat` when you don't want to repeat the background image.
 <div class="**bg-no-repeat** bg-center ..." style="background-image: url(...)"></div>
 ```
 
-## Repeat Horizontally
+<!-- ## Repeat Horizontally
 
-Use `bg-repeat-x` to repeat the background image only horizontally.
+Use `bg-repeat-x` to repeat the background image only horizontally. -->
+## 横向重复
+
+使用 `bg-repeat-x` 只在水平方向重复背景图片。
 
 ```html purple
 <template preview>
@@ -53,9 +62,12 @@ Use `bg-repeat-x` to repeat the background image only horizontally.
 <div class="**bg-repeat-x** bg-center ..." style="background-image: url(...)"></div>
 ```
 
-## Repeat Vertically
+<!-- ## Repeat Vertically
 
-Use `bg-repeat-y` to repeat the background image only vertically.
+Use `bg-repeat-y` to repeat the background image only vertically. -->
+## 垂直重复
+
+使用 `bg-repeat-y` 只在垂直方向重复背景图片。
 
 ```html indigo
 <template preview>
@@ -66,22 +78,28 @@ Use `bg-repeat-y` to repeat the background image only vertically.
 <div class="**bg-repeat-y** bg-center ..." style="background-image: url(...)"></div>
 ```
 
-## Responsive
+<!-- ## Responsive -->
+## 响应式
 
-To control the repetition of an element's background image at a specific breakpoint, add a `{screen}:` prefix to any existing background repeat utility. For example, adding the class `md:bg-repeat-x` to an element would apply the `bg-repeat-x` utility at medium screen sizes and above.
+<!-- To control the repetition of an element's background image at a specific breakpoint, add a `{screen}:` prefix to any existing background repeat utility. For example, adding the class `md:bg-repeat-x` to an element would apply the `bg-repeat-x` utility at medium screen sizes and above. -->
+要控制元素的背景图像在特定断点处的重复，可以在任何现有的背景重复功能类中添加 `{screen}:` 前缀。例如，将 `md:bg-repeat-x` 类添加到一个元素中，就可以在中等大小的屏幕上应用 `bg-repeat-x` 功能类。
 
 ```html
 <div class="bg-repeat **md:bg-repeat-x** ..."></div>
 ```
 
-For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation.
+<!-- For more information about Tailwind's responsive design features, check out the [Responsive Design](/docs/responsive-design) documentation. -->
+关于 Tailwind 的响应式设计功能的更多信息，请查看[响应式设计](/docs/responsive-design)文档
 
-## Customizing
+<!-- ## Customizing -->
+## 自定义 
 
-### Variants
+<!-- ### Variants -->
+### 变体
 
 <Variants plugin="backgroundRepeat" />
 
-### Disabling
+<!-- ### Disabling -->
+### 禁用
 
 <Disabling plugin="backgroundRepeat" />

@@ -8,10 +8,10 @@ import { TipGood, TipBad } from '@/components/Tip'
 import { ThemeReference } from '@/components/ThemeReference'
 
 <!-- By default, any configuration you add in your own `tailwind.config.js` file is intelligently merged with the [default configuration](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js), with your own configuration acting as a set of overrides and extensions. -->
-默认情况下，你的 `tailwind.config.js` 文件中添加的任何配置将被智能的与 [默认配置](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js) 合并，你自己的配置则作为一组覆盖与扩展。
+默认情况下，您的 `tailwind.config.js` 文件中添加的任何配置将被智能的与 [默认配置](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js) 合并，您自己的配置则作为一组覆盖与扩展。
 
 <!-- The `presets` option lets you specify a _different_ configuration to use as your base, making it easy to package up a set of customizations that you'd like to reuse across projects. -->
-`presets` 选项允许你指定一个_不同_的配置来用作你的基本配置，这使得打包一组跨项目复用的配置非常简单。
+`presets` 选项允许您指定一个_不同_的配置来用作您的基本配置，这使得打包一组跨项目复用的配置非常简单。
 
 ```js
 // tailwind.config.js
@@ -32,7 +32,7 @@ module.exports = {
 ## 创建预设
 
 <!-- Presets are just regular Tailwind configuration objects, taking the exact same shape as the configuration you would add in your `tailwind.config.js` file. -->
-预设就是常规的 Tailwind 配置对象，与你的 `tailwind.config.js` 文件里添加的配置毫无二致。
+预设就是常规的 Tailwind 配置对象，与您的 `tailwind.config.js` 文件里添加的配置毫无二致。
 
 ```js
 // Example preset
@@ -110,7 +110,7 @@ module.exports = {
 ```
 
 <!-- **By default, presets themselves extend Tailwind's [default configuration](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js) just like your own configuration would**. If you'd like to create a preset that completely replaces the default configuration, include an empty `presets` key in the preset itself: -->
-**默认情况下，预设本身会扩展 Tailwind 的 [默认配置](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js)，就像你自己的配置一样**。如果你想创建一个预设来完全代替默认配置，在预设本身中包含一个空的 `presets` 键。
+**默认情况下，预设本身会扩展 Tailwind 的 [默认配置](https://unpkg.com/browse/tailwindcss@^2/stubs/defaultConfig.stub.js)，就像您自己的配置一样**。如果您想创建一个预设来完全代替默认配置，在预设本身中包含一个空的 `presets` 键。
 
 ```js
 // Example preset
@@ -134,7 +134,7 @@ module.exports = {
 ## 如何合并配置
 
 <!-- Project-specific configurations (those found in your `tailwind.config.js` file) are merged against presets the same way they are merged against the default configuration. -->
-项目特定的配置（那些在你的 `tailwind.config.js` 文件中找到的配置）与预设配置合并的方式与默认配置合并的方式相同。
+项目特定的配置（那些在您的 `tailwind.config.js` 文件中找到的配置）与预设配置合并的方式与默认配置合并的方式相同。
 
 <!-- The following options in `tailwind.config.js` simply **replace** the same option if present in a preset: -->
 `tailwind.config.js` 中的以下选项只是**替换**了预设中存在的相同选项：
@@ -177,19 +177,19 @@ module.exports = {
 ### 插件
 
 <!-- The `plugins` array is merged across configurations to make it possible for a preset to register plugins while also allowing you to add additional plugins at the project-level. -->
-`plugins` 数组在不同的配置中被合并，使预设可以注册插件，同时也允许你添加额外的项目级插件。
+`plugins` 数组在不同的配置中被合并，使预设可以注册插件，同时也允许您添加额外的项目级插件。
 
 <!-- This means it's not possible to disable a plugin that has been added by a preset. If you find yourself wanting to disable a plugin in a preset, it's a sign that you should probably remove that plugin from the preset and include it on a project-by-project basis instead, or [split your preset into two presets](#extending-multiple-presets). -->
-这意味着不可能禁用一个预设所添加的插件。如果你发现自己想要禁用预设中的某个插件，这说明你可能应该将该插件从预设中移除，并逐个项目地将其引用，或者 [把预设拆分为两个](#extending-multiple-presets)。
+这意味着不可能禁用一个预设所添加的插件。如果您发现自己想要禁用预设中的某个插件，这说明您可能应该将该插件从预设中移除，并逐个项目地将其引用，或者 [把预设拆分为两个](#extending-multiple-presets)。
 
 <!-- ### Core plugins -->
 ### 核心插件
 
 <!-- The `corePlugins` option behaves differently depending on whether you configure it as an object or as an array. -->
-`corePlugins` 选项根据你是将其配置为对象还是数组而表现不同。
+`corePlugins` 选项根据您是将其配置为对象还是数组而表现不同。
 
 <!-- If you configure `corePlugins` as an object, it is merged across configurations. -->
-如果你把 `corePlugins` 配置为一个对象，那么它就会被跨配置合并。
+如果您把 `corePlugins` 配置为一个对象，那么它就会被跨配置合并。
 
 ```js
 // ./example-preset.js
@@ -213,7 +213,7 @@ module.exports = {
 ```
 
 <!-- If you configure `corePlugins` as an array, it replaces any `corePlugins` configuration provided by your configured preset(s). -->
-如果你把 `corePlugins` 配置为一个数组，它就会取代你配置的预设所提供的任何 `corePlugins` 配置。
+如果您把 `corePlugins` 配置为一个数组，它就会取代您配置的预设所提供的任何 `corePlugins` 配置。
 
 ```js
 // ./example-preset.js
@@ -240,7 +240,7 @@ module.exports = {
 ## 扩展多个预设
 
 <!-- The `presets` option is an array and can accept multiple presets. This is useful if you want to split your reusable customizations up into composable chunks that can be imported independently. -->
-`presets` 选项是一个数组，可以接受多个预设。如果你想把你的可重复使用的定制拆分成可以独立导入的组合块，这很有用。
+`presets` 选项是一个数组，可以接受多个预设。如果您想把您的可重复使用的定制拆分成可以独立导入的组合块，这很有用。
 
 ```js
 // tailwind.config.js
@@ -254,7 +254,7 @@ module.exports = {
 ```
 
 <!-- When adding multiple presets, it's important to note that if they overlap in any way, they are resolved the same way your own customizations are resolved against a preset, and the last configuration wins. -->
-在添加多个预设时，需要注意的是，如果它们以任何方式重叠，它们的解析方式和你自己的自定义与预设的解析方式是一样的，最后的配置获胜。
+在添加多个预设时，需要注意的是，如果它们以任何方式重叠，它们的解析方式和您自己的自定义与预设的解析方式是一样的，最后的配置获胜。
 
 <!-- For example, if both of these configurations provided a custom color palette (and were not using `extend`), the color palette from `configuration-b` would be used: -->
 例如，如果这两个配置都提供了一个自定义调色板（并且没有使用 `extend`），则会使用 `configuration-b` 的调色板。
@@ -275,7 +275,7 @@ module.exports = {
 ## 禁用默认配置
 
 <!-- If you'd like to completely disable the default configuration and start with no base configuration at all, set `presets` to an empty array: -->
-如果你想完全禁用默认配置并且不使用任何基础配置，请将 `presets` 设置为一个空数组。
+如果您想完全禁用默认配置并且不使用任何基础配置，请将 `presets` 设置为一个空数组。
 
 ```js
 // tailwind.config.js
@@ -289,7 +289,7 @@ module.exports = {
 这将完全禁用所有 Tailwind 的默认设置，因此根本不会生成颜色、字体系列、字体大小、间距值等。
 
 <!-- You can also do this from within a preset if you'd like your preset to provide a complete design system on its own that doesn't extend Tailwind's defaults: -->
-如果你想让你的预设提供一个完整的设计系统，而不是扩展 Tailwind 的默认值，你也可以在预设中这样做。
+如果您想让您的预设提供一个完整的设计系统，而不是扩展 Tailwind 的默认值，您也可以在预设中这样做。
 
 ```js
 // ./example-preset.js
