@@ -697,7 +697,7 @@ export function ComponentDriven() {
         {/*  truth so you can make changes in one place.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          如果您在一遍又一遍的重复着相同的工具类，那么您最好将他们提取到一个组件或者模板片断，这样就会得到一个单一的源文件，因此可以在一个地方对他们修改。
+          如果您在一遍又一遍的重复着相同的功能类，那么您最好将他们提取到一个组件或者模板片断，这样就会得到一个单一的源文件，因此可以在一个地方对他们修改。
         </Paragraph>
         <Link href="/docs/extracting-components" className="text-amber-500 hover:text-amber-700">
           了解更多 -&gt;
@@ -811,7 +811,7 @@ export function ComponentDriven() {
         {/*  pasting the list of class names.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          想保持原来的使用习惯而不是组件框架模式？使用 Tailwind 的 @apply 指令，复制和粘贴那些类名列表，就可以把重复的工具类抽取到一个自定义的 CSS 类中。
+          想保持原来的使用习惯而不是组件框架模式？使用 Tailwind 的 @apply 指令，复制和粘贴那些类名列表，就可以把重复的功能类抽取到一个自定义的 CSS 类中。
         </Paragraph>
         <Link href="/docs/extracting-components" className="text-orange-500 hover:text-orange-700">
           了解更多 -&gt;
