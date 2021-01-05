@@ -1,1 +1,1 @@
-self.__BUILD_MANIFEST = {__rewrites:[],sortedPages:["\u002F_app","\u002F_error","\u002Fdocs","\u002Fdocs\u002Fgrid-template-columns"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
+self.__BUILD_MANIFEST = {__rewrites:[],sortedPages:["\u002F_app","\u002F_error","\u002Fdocs\u002Fstroke","\u002Fdocs\u002Fstroke-width"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
