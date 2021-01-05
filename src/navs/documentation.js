@@ -38,7 +38,7 @@ export const documentationNav = {
     pages['plugins'],
     pages['presets'],
   ],
-  'Base Styles': [pages['preflight']],
+  '基础样式': [pages['preflight']],
   '布局': [
     pages['container'],
     pages['box-sizing'],
