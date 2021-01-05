@@ -1,7 +1,7 @@
 ---
 title: "Grid Auto Flow"
 # description: "Utilities for controlling how elements in a grid are auto-placed."
-description: "用于控制网格中元素如何自动放置的工具。"
+description: "用于控制网格中元素如何自动放置的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/gridAutoFlow'
@@ -14,7 +14,7 @@ export const classes = { plugin }
 ## 使用方法
 
 <!-- Use the `grid-flow-{keyword}` utilities to control how the auto-placement algorithm works for a grid layout. -->
-使用 `grid-flow-{keyword}` 工具来控制网格布局的自动放置算法。
+使用 `grid-flow-{keyword}` 功能类来控制网格布局的自动放置算法。
 
 ```html purple
 <template preview class="bg-white p-8">
@@ -42,7 +42,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the grid-auto-flow property at a specific breakpoint, add a `{screen}:` prefix to any existing grid-auto-flow utility. For example, use `md:grid-flow-col` to apply the `grid-flow-col` utility at only medium screen sizes and above. -->
-要在特定的断点处控制 grid-auto-flow 属性，可以在任何现有的 grid-auto-flow 工具前添加 `{screen}:` 前缀。例如，使用 `md:grid-flow-col` 来仅在中等尺寸及以上的屏幕应用 `grid-flow-col` 功能类。
+要在特定的断点处控制 grid-auto-flow 属性，可以在任何现有的 grid-auto-flow 功能类前添加 `{screen}:` 前缀。例如，使用 `md:grid-flow-col` 来仅在中等尺寸及以上的屏幕应用 `grid-flow-col` 功能类。
 
 ```html
 <div class="grid grid-flow-col **md:grid-flow-col** ...">

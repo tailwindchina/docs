@@ -1,7 +1,7 @@
 ---
 title: "占位文本不透明度"
 # description: "Utilities for controlling the opacity of an element's placeholder color."
-description: "用来控制元素占位文本颜色的不透明度的工具。"
+description: "用来控制元素占位文本颜色的不透明度的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/placeholderOpacity'
@@ -17,7 +17,7 @@ export const classes = {
 ## 使用
 
 <!-- Control the opacity of an element's placeholder color using the `placeholder-opacity-{amount}` utilities. -->
-使用 `placeholder-opacity-{amount}` 工具控制元素的占位文本颜色的不透明度。
+使用 `placeholder-opacity-{amount}` 功能类控制元素的占位文本颜色的不透明度。
 
 ```html fuchsia
 <template preview>
@@ -51,7 +51,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control an element's placeholder color opacity at a specific breakpoint, add a `{screen}:` prefix to any existing placeholder color opacity utility. For example, use `md:placeholder-opacity-50` to apply the `placeholder-opacity-50` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素占位文本颜色的不透明度，请在任何现有的占位文本颜色不透明度工具类前添加 `{screen}:` 前缀。例如，使用 `md:placeholder-opacity-50` 来仅在中等大小及以上的屏幕应用 `placeholder-opacity-50` 工具。
+要在特定的断点处控制元素占位文本颜色的不透明度，请在任何现有的占位文本颜色不透明度功能类前添加 `{screen}:` 前缀。例如，使用 `md:placeholder-opacity-50` 来仅在中等大小及以上的屏幕应用 `placeholder-opacity-50` 功能类。
 
 ```html
 <input class="placeholder-gray-500 placeholder-opacity-75 **md:placeholder-opacity-50** ..." placeholder="jane@example.com">
@@ -64,7 +64,7 @@ export const classes = {
 ## 定制
 
 <!-- To customize the opacity values for all opacity-related utilities at once, use the `opacity` section of your `tailwind.config.js` theme configuration: -->
-要一次性自定义所有与不透明度相关的工具的不透明度值，请使用您的 `tailwind.config.js` 主题配置中的 `opacity` 部分。
+要一次性自定义所有与不透明度相关的功能类的不透明度值，请使用您的 `tailwind.config.js` 主题配置中的 `opacity` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -82,7 +82,7 @@ export const classes = {
 ```
 
 <!-- If you want to customize only the placeholder opacity utilities, use the `placeholderOpacity` section: -->
-如果您只想自定义占位文本不透明度工具，请使用 `placeholderOpacity` 部分。
+如果您只想自定义占位文本不透明度功能类，请使用 `placeholderOpacity` 部分。
 
 ```diff-js
   // tailwind.config.js

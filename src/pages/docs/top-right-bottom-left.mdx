@@ -1,7 +1,7 @@
 ---
 title: "Top / Right / Bottom / Left"
 # description: "Utilities for controlling the placement of positioned elements."
-description: "用于控制被定位的元素的位置的工具。"
+description: "用于控制被定位的元素的位置的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/inset'
@@ -17,10 +17,10 @@ export const classes = {
 ## 使用方法
 
 <!-- Use the `{top|right|bottom|left|inset}-0` utilities to anchor absolutely positioned elements against any of the edges of the nearest positioned parent. -->
-使用 `{top|right|bottom|left|inset}-0` 实用工具，将绝对定位的元素锚定在最近定位的父元素的任何边缘上。
+使用 `{top|right|bottom|left|inset}-0` 功能类，将绝对定位的元素锚定在最近定位的父元素的任何边缘上。
 
 <!-- Combined with Tailwind's padding and margin utilities, you'll probably find that these are all you need to precisely control absolutely positioned elements. -->
-结合 Tailwind 的 padding 和 margin 工具，您可能会发现这些是所有的您需要的用来精确控制绝对定位元素的工具。
+结合 Tailwind 的 padding 和 margin 功能类，您可能会发现这些是所有的您需要的用来精确控制绝对定位元素的功能类。
 
 ```html emerald
 <template preview>
@@ -104,7 +104,7 @@ export const classes = {
 ## 响应式
 
 <!-- To position an element only at a specific breakpoint, add a `{screen}:` prefix to any existing positioning utility. For example, adding the class `md:inset-y-0` to an element would apply the `inset-y-0` utility at medium screen sizes and above. -->
-要仅在特定的断点处定位一个元素，请在任何现有的定位工具前添加 `{screen}:` 前缀。例如，将 `md:inset-y-0` 类添加到一个元素上，就可以在中等尺寸及以上的屏幕上使用 `inset-y-0` 工具。
+要仅在特定的断点处定位一个元素，请在任何现有的定位功能类前添加 `{screen}:` 前缀。例如，将 `md:inset-y-0` 类添加到一个元素上，就可以在中等尺寸及以上的屏幕上使用 `inset-y-0` 功能类。
 
 ```html
 <div class="relative h-32 ...">
@@ -120,7 +120,7 @@ export const classes = {
 ### Top / Right / Bottom / Left scale
 
 <!-- By default Tailwind only provides `0` and `auto` top/right/bottom/left/inset utilities. You can change, add, or remove these by editing the `theme.inset` section of your `tailwind.config.js` file. -->
-默认情况下，Tailwind 只提供值为 `0` 和 `auto` 的 top/right/bottom/left/inset 工具。您可以通过编辑 `tailwind.config.js` 文件中的 `theme.inset` 部分来改变、添加或删除这些工具。
+默认情况下，Tailwind 只提供值为 `0` 和 `auto` 的 top/right/bottom/left/inset 功能类。您可以通过编辑 `tailwind.config.js` 文件中的 `theme.inset` 部分来改变、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js

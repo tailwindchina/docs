@@ -1,7 +1,7 @@
 ---
 title: "Grid Template Columns"
 # description: "Utilities for specifying the columns in a grid layout."
-description: "用于在网格布局中指定列的工具。"
+description: "用于在网格布局中指定列的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/gridTemplateColumns'
@@ -14,7 +14,7 @@ export const classes = { plugin }
 ## 使用方法
 
 <!-- Use the `grid-cols-{n}` utilities to create grids with _n_ equally sized columns. -->
-使用 `grid-cols-{n}` 工具来创建有_n_个同等大小的列的网格。
+使用 `grid-cols-{n}` 功能类来创建有_n_个同等大小的列的网格。
 
 ```html fuchsia
 <template preview class="bg-white p-8">
@@ -42,7 +42,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the columns of a grid at a specific breakpoint, add a `{screen}:` prefix to any existing grid-template-columns utility. For example, use `md:grid-cols-6` to apply the `grid-cols-6` utility at only medium screen sizes and above. -->
-要在特定的断点处控制网格的列，可以在任何现有的 grid-template-columns 工具类前添加 `{screen}:` 前缀。例如，使用 `md:grid-cols-6` 来仅在中等尺寸及以上的屏幕上应用 `grid-cols-6` 工具类。
+要在特定的断点处控制网格的列，可以在任何现有的 grid-template-columns 功能类前添加 `{screen}:` 前缀。例如，使用 `md:grid-cols-6` 来仅在中等尺寸及以上的屏幕上应用 `grid-cols-6` 功能类。
 
 ```html
 <div class="grid grid-cols-1 **md:grid-cols-6**">

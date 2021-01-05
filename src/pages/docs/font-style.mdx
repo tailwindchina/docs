@@ -2,7 +2,7 @@
 # title: "Font Style"
 title: "字体样式"
 # description: "Utilities for controlling the style of text."
-description: "用来控制字体样式的工具。"
+description: "用来控制字体样式的功能类。"
 features:
   responsive: true
   customizable: false
@@ -19,7 +19,7 @@ export const classes = { plugin }
 ## Italics
 
 <!-- Use the `italic` utility to make text italic. -->
-使用 `italic` 工具使文字变成斜体。
+使用 `italic` 功能类使文字变成斜体。
 
 ```html emerald
 <template preview>
@@ -32,7 +32,7 @@ export const classes = { plugin }
 ## Undo Italics
 
 <!-- Use the `not-italic` utility to display text normally. This is typically used to reset italic text at different breakpoints. -->
-使用 `not-italic` 工具正常显示文本。这通常用于在不同的断点处重置斜体文字。
+使用 `not-italic` 功能类正常显示文本。这通常用于在不同的断点处重置斜体文字。
 
 ```html amber
 <template preview>
@@ -45,7 +45,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the font style of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font style utility. For example, use `md:not-italic` to apply the `not-italic` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的字体样式，请在任何现有的字体样式工具类前添加 `{screen}:` 前缀。例如，使用 `md:not-italic` 来仅在中等大小及以上的屏幕应用 `not-italic` 工具。
+要在特定的断点处控制元素的字体样式，请在任何现有的字体样式功能类前添加 `{screen}:` 前缀。例如，使用 `md:not-italic` 来仅在中等大小及以上的屏幕应用 `not-italic` 功能类。
 
 ```html
 <p class="italic **md:not-italic** ...">

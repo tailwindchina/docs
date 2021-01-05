@@ -2,7 +2,7 @@
 # title: "Overflow"
 title: "溢出"
 # description: "Utilities for controlling how an element handles content that is too large for the container."
-description: "用于控制元素如何处理超出容器的内容的工具。"
+description: "用于控制元素如何处理超出容器的内容的功能类。"
 features:
   responsive: true
   customizable: false
@@ -40,7 +40,7 @@ export const classes = { plugin }
 ## 自动
 
 <!-- Use `overflow-auto` to add scrollbars to an element in the event that its content overflows the bounds of that element. Unlike `.overflow-scroll`, which always shows scrollbars, this utility will only show them if scrolling is necessary. -->
-使用 `overflow-auto` 在一个元素的内容溢出该元素的边界时为其添加滚动条。不像 `.overflow-scroll` 总是显示滚动条，这个工具只在需要滚动时才会显示。
+使用 `overflow-auto` 在一个元素的内容溢出该元素的边界时为其添加滚动条。不像 `.overflow-scroll` 总是显示滚动条，这个功能类只在需要滚动时才会显示。
 
 ```html rose
 <template preview>
@@ -149,7 +149,7 @@ export const classes = { plugin }
 ## 在所有方向上滚动
 
 <!-- Use `overflow-scroll` to add scrollbars to an element. Unlike `.overflow-auto`, which only shows scrollbars if they are necessary, this utility always shows them. Note that some operating systems (like macOS) hide unnecessary scrollbars regardless of this setting. -->
-使用 `overflow-scroll` 为元素添加滚动条。与 `.overflow-auto` 不同的是，`.overflow-auto` 只在必要时才显示滚动条，而这个工具总是显示滚动条。需要注意的是，有些操作系统（比如macOS）会隐藏不必要的滚动条，而不考虑这个设置。
+使用 `overflow-scroll` 为元素添加滚动条。与 `.overflow-auto` 不同的是，`.overflow-auto` 只在必要时才显示滚动条，而这个功能类总是显示滚动条。需要注意的是，有些操作系统（比如macOS）会隐藏不必要的滚动条，而不考虑这个设置。
 
 ```html fuchsia
 <template preview>
@@ -166,7 +166,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To apply an overflow utility only at a specific breakpoint, add a `{screen}:` prefix to the existing class name. For example, adding the class `md:overflow-scroll` to an element would apply the `overflow-scroll` utility at medium screen sizes and above. -->
-要只在特定的断点处应用 overflow 功能，请在现有的类名前添加 `{screen}:` 前缀。例如，将类 `md:overflow-scroll` 添加到一个元素中，就可以在中等大小及以上的屏幕上应用 `overflow-scroll` 工具。
+要只在特定的断点处应用 overflow 功能，请在现有的类名前添加 `{screen}:` 前缀。例如，将类 `md:overflow-scroll` 添加到一个元素中，就可以在中等大小及以上的屏幕上应用 `overflow-scroll` 功能类。
 
 ```html
 <div class="overflow-auto **md:overflow-scroll** ...">

@@ -2,7 +2,7 @@
 # title: "Font Family"
 title: "字体序列"
 # description: "Utilities for controlling the font family of an element."
-description: "控制元素字体序列的工具。"
+description: "控制元素字体序列的功能类。"
 features:
   responsive: true
   customizable: true
@@ -70,7 +70,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the font family of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font family utility class. For example, use `md:font-serif` to apply the `font-serif` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的字体序列，请在任何现有的字体序列工具类前添加 `{screen}:` 前缀。例如，使用 `md:font-serif` 来仅在中等大小及以上的屏幕应用 `font-serif` 工具。
+要在特定的断点处控制元素的字体序列，请在任何现有的字体序列功能类前添加 `{screen}:` 前缀。例如，使用 `md:font-serif` 来仅在中等大小及以上的屏幕应用 `font-serif` 功能类。
 
 ```html
 <p class="font-sans **md:font-serif**">
@@ -86,7 +86,7 @@ export const classes = { plugin }
 ### Font Families
 
 <!-- By default Tailwind provides three font family utilities: a cross-browser sans-serif stack, a cross-browser serif stack, and a cross-browser monospaced stack. You can change, add, or remove these by editing the `theme.fontFamily` section of your Tailwind config. -->
-默认情况下，Tailwind 提供了三个字体系列工具：一个跨浏览器的无衬线字体堆栈，一个跨浏览器的衬线字体堆栈和一个跨浏览器的等宽字体堆栈。您可以通过编辑您的 Tailwind 配置中的 `theme.fontFamily` 部分来改变、添加或删除这些功能。
+默认情况下，Tailwind 提供了三个字体系列功能类：一个跨浏览器的无衬线字体堆栈，一个跨浏览器的衬线字体堆栈和一个跨浏览器的等宽字体堆栈。您可以通过编辑您的 Tailwind 配置中的 `theme.fontFamily` 部分来改变、添加或删除这些功能。
 
 ```diff-js
   // tailwind.config.js

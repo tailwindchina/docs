@@ -1,6 +1,6 @@
 ---
 title: "列表项标记类型"
-description: "用来控制列表项标记类型的工具。"
+description: "用来控制列表项标记类型的功能类。"
 features:
   responsive: true
   customizable: true
@@ -18,7 +18,7 @@ export const classes = { plugin }
 ## 使用方法
 
 <!-- To create bulleted or numeric lists, use the `list-disc` and `list-decimal` utilities. -->
-要创建项目符号或数字列表，请使用 `list-disc` 和 `list-decimal` 工具。
+要创建项目符号或数字列表，请使用 `list-disc` 和 `list-decimal` 功能类。
 
 ```html purple
 <template preview>
@@ -69,7 +69,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the list style type of a list element at a specific breakpoint, add a `{screen}:` prefix to any existing list utility. For example, use `.md:list-disc` to apply the `list-disc` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的列表项标记类型，请在任何现有的列表工具类前添加 `{screen}:` 前缀。例如，使用 `md:list-disc` 来仅在中等大小及以上的屏幕应用 `list-disc` 工具。
+要在特定的断点处控制元素的列表项标记类型，请在任何现有的列表功能类前添加 `{screen}:` 前缀。例如，使用 `md:list-disc` 来仅在中等大小及以上的屏幕应用 `list-disc` 功能类。
 
 ```html
 <ul class="list-none **md:list-disc**">
@@ -86,7 +86,7 @@ export const classes = { plugin }
 ## 定制
 
 <!-- By default Tailwind provides three utilities for the most common list style types. You change, add, or remove these by editing the `theme.listStyleType` section of your Tailwind config. -->
-默认情况下，Tailwind 为最常见的列表样式类型提供了三个工具，您可以通过编辑 Tailwind 配置的 `theme.listStyleType` 部分来改变、添加或删除这些工具。
+默认情况下，Tailwind 为最常见的列表样式类型提供了三个功能类，您可以通过编辑 Tailwind 配置的 `theme.listStyleType` 部分来改变、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js
