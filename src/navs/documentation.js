@@ -92,7 +92,7 @@ export const documentationNav = {
     pages['min-height'],
     pages['max-height'],
   ],
-  '字体': [
+  '排版': [
     pages['font-family'],
     pages['font-size'],
     pages['font-smoothing'],
