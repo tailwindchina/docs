@@ -6,7 +6,7 @@ const pages = createPageList(
 )
 
 export const documentationNav = {
-  'Getting started': [
+  '入门': [
     pages['installation'],
     {
       title: '发布说明',
@@ -18,7 +18,7 @@ export const documentationNav = {
     pages['browser-support'],
     pages['intellisense'],
   ],
-  'Core Concepts': [
+  '核心概念': [
     pages['utility-first'],
     pages['responsive-design'],
     pages['hover-focus-and-other-states'],
@@ -28,7 +28,7 @@ export const documentationNav = {
     pages['adding-new-utilities'],
     pages['functions-and-directives'],
   ],
-  Customization: [
+  '定制': [
     pages['configuration'],
     pages['theme'],
     pages['breakpoints'],
@@ -38,8 +38,8 @@ export const documentationNav = {
     pages['plugins'],
     pages['presets'],
   ],
-  'Base Styles': [pages['preflight']],
-  Layout: [
+  '基础样式': [pages['preflight']],
+  '布局': [
     pages['container'],
     pages['box-sizing'],
     pages['display'],
@@ -54,7 +54,7 @@ export const documentationNav = {
     pages['visibility'],
     pages['z-index'],
   ],
-  Flexbox: [
+  '盒模型': [
     pages['flex-direction'],
     pages['flex-wrap'],
     pages['flex'],
@@ -62,7 +62,7 @@ export const documentationNav = {
     pages['flex-shrink'],
     pages['order'],
   ],
-  Grid: [
+  '网格': [
     pages['grid-template-columns'],
     pages['grid-column'],
     pages['grid-template-rows'],
@@ -72,7 +72,7 @@ export const documentationNav = {
     pages['grid-auto-rows'],
     pages['gap'],
   ],
-  'Box Alignment': [
+  '盒对齐': [
     pages['justify-content'],
     pages['justify-items'],
     pages['justify-self'],
@@ -83,8 +83,8 @@ export const documentationNav = {
     pages['place-items'],
     pages['place-self'],
   ],
-  Spacing: [pages['padding'], pages['margin'], pages['space']],
-  Sizing: [
+  '间距': [pages['padding'], pages['margin'], pages['space']],
+  '尺寸': [
     pages['width'],
     pages['min-width'],
     pages['max-width'],
@@ -92,7 +92,7 @@ export const documentationNav = {
     pages['min-height'],
     pages['max-height'],
   ],
-  Typography: [
+  '排版': [
     pages['font-family'],
     pages['font-size'],
     pages['font-smoothing'],
@@ -115,7 +115,7 @@ export const documentationNav = {
     pages['whitespace'],
     pages['word-break'],
   ],
-  Backgrounds: [
+  '背景': [
     pages['background-attachment'],
     pages['background-clip'],
     pages['background-color'],
@@ -126,7 +126,7 @@ export const documentationNav = {
     pages['background-image'],
     pages['gradient-color-stops'],
   ],
-  Borders: [
+  '边框': [
     pages['border-radius'],
     pages['border-width'],
     pages['border-color'],
@@ -142,16 +142,16 @@ export const documentationNav = {
     pages['ring-offset-width'],
     pages['ring-offset-color'],
   ],
-  Effects: [pages['box-shadow'], pages['opacity']],
-  Tables: [pages['border-collapse'], pages['table-layout']],
-  'Transitions and Animation': [
+  '特效': [pages['box-shadow'], pages['opacity']],
+  '表格': [pages['border-collapse'], pages['table-layout']],
+  '过渡和动画': [
     pages['transition-property'],
     pages['transition-duration'],
     pages['transition-timing-function'],
     pages['transition-delay'],
     pages['animation'],
   ],
-  Transforms: [
+  '转换': [
     pages['transform'],
     pages['transform-origin'],
     pages['scale'],
@@ -159,7 +159,7 @@ export const documentationNav = {
     pages['translate'],
     pages['skew'],
   ],
-  Interactivity: [
+  '交互': [
     pages['appearance'],
     pages['cursor'],
     pages['outline'],
@@ -168,6 +168,6 @@ export const documentationNav = {
     pages['user-select'],
   ],
   SVG: [pages['fill'], pages['stroke'], pages['stroke-width']],
-  Accessibility: [pages['screen-readers']],
-  'Official Plugins': [pages['typography-plugin']],
+  '可访问性': [pages['screen-readers']],
+  '官方插件': [pages['typography-plugin']],
 }
