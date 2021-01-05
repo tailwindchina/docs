@@ -142,7 +142,7 @@ export const documentationNav = {
     pages['ring-offset-width'],
     pages['ring-offset-color'],
   ],
-  Effects: [pages['box-shadow'], pages['opacity']],
+  '特效': [pages['box-shadow'], pages['opacity']],
   '表格': [pages['border-collapse'], pages['table-layout']],
   '过渡和动画': [
     pages['transition-property'],
