@@ -16,7 +16,7 @@ import { ReactComponent as RefactoringUiCompleteLogo } from '@/img/refactoring-u
 const whatsNew = [
   {
     // title: 'Focus Ring Utilities',
-    title: 'Focus 效果类',
+    title: 'Focus 轮廓环功能类',
     version: '2.0+',
     image: require('@/img/docs/focus-ring.svg').ReactComponent,
     href: '/docs/ring-width',
