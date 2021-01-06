@@ -1,6 +1,8 @@
 ---
-title: "Install Tailwind CSS with Next.js"
-description: "Setting up Tailwind CSS in a Next.js project."
+# title: "Install Tailwind CSS with Next.js"
+# description: "Setting up Tailwind CSS in a Next.js project."
+title: "在 Next.js 中安装 Tailwind CSS"
+description: "在 Next.js 工程中配置 Tailwind CSS。"
 tool: Next.js
 ---
 
@@ -16,7 +18,7 @@ script: npx create-next-app
 ```preval setup
 version:
   Next.js v10: latest
-  Next.js v9 or older: compat-7
+  Next.js v9 或者更旧版本: compat-7
 ```
 
 ```preval configuration
@@ -24,14 +26,20 @@ purge:
   - ./pages/**/*.js
   - ./components/**/*.js
 ```
-
+<!-- 
 ### Include Tailwind in your CSS
 
-When including Tailwind in your CSS in a Next.js project, there are two approaches you can take.
+When including Tailwind in your CSS in a Next.js project, there are two approaches you can take. -->
+### 在您的 CSS 中加入 Tailwind
 
-#### Import Tailwind directly in your JS
+当在 Next.js 项目的 CSS 中加入 Tailwind 时，有两种方法可以选择：
 
-If you aren't planning to write any custom CSS in your project, the fastest way to include Tailwind is to import it directly in `pages/_app.js`:
+<!-- #### Import Tailwind directly in your JS
+
+If you aren't planning to write any custom CSS in your project, the fastest way to include Tailwind is to import it directly in `pages/_app.js`: -->
+#### 在您的 JS 中直接导入 Tailwind
+
+如果您不打算在您的项目中编写任何自定义 CSS，最快的方法是直接在 `pages/_app.js` 中导入 Tailwind。
 
 ```diff-js
   // pages/_app.js
@@ -45,14 +53,16 @@ If you aren't planning to write any custom CSS in your project, the fastest way 
   export default MyApp
 ```
 
-If you aren't planning to use them, you can safely delete any CSS files Next.js creates for you by default like `globals.css` and `Home.module.css`. Make sure you delete any references to them within your components as well.
+<!-- If you aren't planning to use them, you can safely delete any CSS files Next.js creates for you by default like `globals.css` and `Home.module.css`. Make sure you delete any references to them within your components as well. -->
+如果您不打算使用它们，您可以安全地删除 Next.js 默认为您创建的任何 CSS 文件，如 `globals.css` 和 `Home.module.css`。确保在您的组件中也删除对它们的任何引用。
 
 ```preval include
 level: 4
 file: ./styles/global.css 
 ```
 
-Finally, ensure your CSS file is being imported in your `pages/_app.js` component:
+<!-- Finally, ensure your CSS file is being imported in your `pages/_app.js` component: -->
+最后，确保您的 CSS 文件被导入到您的 `pages/_app.js` 组件中。
 
 ```js
 // pages/_app.js
@@ -65,7 +75,8 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 ```
 
-If you've chosen to use a different file than the default `globals.css` file, you'll want to update the import accordingly.
+<!-- If you've chosen to use a different file than the default `globals.css` file, you'll want to update the import accordingly. -->
+如果您选择使用与默认的 `globals.css` 文件不同的文件，您需要相应地更新导入。
 
 ---
 

@@ -1,6 +1,8 @@
 ---
-title: "Install Tailwind CSS with Gatsby"
-description: "Setting up Tailwind CSS in a Gatsby project."
+# title: "Install Tailwind CSS with Gatsby"
+title: "在 Gatsby 中安装 Tailwind CSS"
+# description: "Setting up Tailwind CSS in a Gatsby project."
+description: "在 Gatsby 工程中配置 Tailwind CSS。"
 tool: Gatsby
 ---
 
@@ -23,9 +25,12 @@ purge:
   - ./src/**/*.{js,jsx,ts,tsx}
 ```
 
-### Enable gatsby-plugin-postcss 
+<!-- ### Enable gatsby-plugin-postcss 
 
-In your `gatsby-config.js` file, enable the [postcss plugin](https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/).
+In your `gatsby-config.js` file, enable the [postcss plugin](https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/). -->
+### 启用 gatsby-plugin-postcss
+
+在您的 `gatsby-config.js` 文件中，启用[ postcss 插件](https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/)。
 
 ```diff-js
   // gatsby-config.js
@@ -41,14 +46,16 @@ create: true
 file: ./src/styles/global.css
 ```
 
-Finally, create a `./gatsby-browser.js` file at the root of your project if it doesn't already exist, and import your CSS file:
+<!-- Finally, create a `./gatsby-browser.js` file at the root of your project if it doesn't already exist, and import your CSS file: -->
+最后，如果在您的项目根目录不存在 `./gatsby-browser.js` 文件，请创建一个，并导入您的 CSS 文件。
 
 ```diff-js
   // ./gatsby-browser.js
 + import './src/styles/global.css';
 ```
 
-Read [the Gatsby documentation on using global styles](https://www.gatsbyjs.com/tutorial/part-two/#using-global-styles) to learn more about working with global CSS files in Gatsby.
+<!-- Read [the Gatsby documentation on using global styles](https://www.gatsbyjs.com/tutorial/part-two/#using-global-styles) to learn more about working with global CSS files in Gatsby. -->
+阅读[关于使用全局样式的 Gatsby 文档](https://www.gatsbyjs.com/tutorial/part-two/#using-global-styles)，了解更多关于在 Gatsby 中使用全局 CSS 文件的信息。
 
 ---
 
