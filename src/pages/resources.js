@@ -122,8 +122,9 @@ export default function Resources() {
             <Logo title="Headless UI" component={HeadlessUi} />
           </a>
           <p>
-            Completely unstyled, fully accessible UI components, designed to integrate beautifully
-            with Tailwind CSS.
+            {/*Completely unstyled, fully accessible UI components, designed to integrate beautifully*/}
+            {/*with Tailwind CSS.*/}
+            完全非风格化的，完全可访问的UI组件，为与 Tailwind CSS 的完美整合而设计。
           </p>
         </section>
         <section>
@@ -144,7 +145,8 @@ export default function Resources() {
             </div>
           </a>
           <p>
-            A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.
+            {/*A set of free MIT-licensed high-quality SVG icons for you to use in your web projects.*/}
+            一组免费的 MIT 授权的高质量 SVG 图标，供您在您的网页项目中使用。
           </p>
         </section>
         <section>
@@ -165,8 +167,9 @@ export default function Resources() {
             </div>
           </a>
           <p>
-            A set of free MIT-licensed high-quality SVG patterns for you to use in your web
-            projects.
+            {/*A set of free MIT-licensed high-quality SVG patterns for you to use in your web*/}
+            {/*projects.*/}
+            一套免费的 MIT 授权的高质量 SVG 图案，供你在你的网页项目中使用。
           </p>
         </section>
       </div>
