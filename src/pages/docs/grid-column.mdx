@@ -1,7 +1,7 @@
 ---
 title: "Grid Column Start / End"
 # description: "Utilities for controlling how elements are sized and placed across grid columns."
-description: "用于控制在网格列中元素的大小和放置方式的工具。"
+description: "用于控制在网格列中元素的大小和放置方式的功能类。"
 ---
 
 import gridColumnPlugin from 'tailwindcss/lib/plugins/gridColumn'
@@ -17,7 +17,7 @@ export const classes = {
 ## 跨列
 
 <!-- Use the `col-span-{n}` utilities to make an element span _n_ columns. -->
-使用 `col-span-{n}` 工具使元素跨越 _n_ 列。
+使用 `col-span-{n}` 功能类使元素跨越 _n_ 列。
 
 ```html purple
 <template preview class="bg-white p-8">
@@ -47,7 +47,7 @@ export const classes = {
 ## 起始与结束线
 
 <!-- Use the `col-start-{n}` and `col-end-{n}` utilities to make an element start or end at the _nth_ grid line. These can also be combined with the `col-span-{n}` utilities to span a specific number of columns. -->
-使用 `col-start-{n}` 和 `col-end-{n}` 功能类，使元素以第 n 条网格线为起点或终点。这些工具也可以与 `col-span-{n}` 工具结合使用，来跨越特定数量的列。
+使用 `col-start-{n}` 和 `col-end-{n}` 功能类，使元素以第 n 条网格线为起点或终点。这些功能类也可以与 `col-span-{n}` 功能类结合使用，来跨越特定数量的列。
 
 <!-- Note that CSS grid lines start at 1, not 0, so a full-width element in a 6-column grid would start at line 1 and end at line 7. -->
 请注意，CSS 网格线从 1 开始，而不是 0，所以 6 列网格中的全宽元素将从第 1 条网格线开始，第 7 条网格线结束。
@@ -78,7 +78,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control the column placement of an element at a specific breakpoint, add a `{screen}:` prefix to any existing grid-column utility. For example, use `md:col-span-6` to apply the `col-span-6` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素列的放置方式，可以在任何现有的 grid-column 工具类前添加 `{screen}:` 前缀。例如，使用 `md:col-span-6` 来仅在中等尺寸及以上的屏幕上应用 `col-span-6` 工具类。
+要在特定的断点处控制元素列的放置方式，可以在任何现有的 grid-column 功能类前添加 `{screen}:` 前缀。例如，使用 `md:col-span-6` 来仅在中等尺寸及以上的屏幕上应用 `col-span-6` 功能类。
 
 ```html
   <div class="col-span-2 **md:col-span-6**"></div>
@@ -94,7 +94,7 @@ export const classes = {
 默认情况下，Tailwind 包括 grid-column 功能，用于处理最多有12个列的网格。您可以通过定制您的 Tailwind 主题配置的 `gridColumn`、 `gridColumnStart` 和 `gridColumnEnd` 部分来改变、添加或删除它们。
 
 <!-- For creating more `col-{value}` utilities that control the `grid-column` shorthand property directly, customize the `gridColumn` section of your Tailwind theme config: -->
-为了创建更多的 `col-{value}` 工具来直接控制 `grid-column` 简写属性，请自定义 Tailwind 主题配置的 `gridColumn` 部分。
+为了创建更多的 `col-{value}` 功能类来直接控制 `grid-column` 简写属性，请自定义 Tailwind 主题配置的 `gridColumn` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -113,7 +113,7 @@ export const classes = {
 我们在内部将其用于 `col-span-{n}` 功能。请注意，因为这直接配置了 `grid-column` 速记属性，所以我们直接在值名中包含了 `span` 这个词，而_不是_自动加入到类名中。这意味着您可以自由地添加您想做的任何事情--它们不只是 `span` 功能。
 
 <!-- To add new `col-start-{n}` utilities, use the `gridColumnStart` section of your Tailwind theme config: -->
-要添加新的  `col-start-{n}` 工具，请使用 Tailwind 主题配置的 `gridColumnStart` 部分。
+要添加新的  `col-start-{n}` 功能类，请使用 Tailwind 主题配置的 `gridColumnStart` 部分。
 
 ```diff-js
   // tailwind.config.js
@@ -133,7 +133,7 @@ export const classes = {
 ```
 
 <!-- To add new `col-end-{n}` utilities, use the `gridColumnEnd` section of your Tailwind theme config: -->
-要添加新的  `col-end-{n}` 工具，请使用 Tailwind 主题配置的 `gridColumnEnd` 部分。
+要添加新的  `col-end-{n}` 功能类，请使用 Tailwind 主题配置的 `gridColumnEnd` 部分。
 
 ```diff-js
   // tailwind.config.js

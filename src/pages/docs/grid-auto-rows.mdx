@@ -1,7 +1,7 @@
 ---
 title: "Grid Auto Rows"
 # description: "Utilities for controlling the size of implicitly-created grid rows."
-description: "用于控制隐式创建的网格行的大小的工具。"
+description: "用于控制隐式创建的网格行的大小的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/gridAutoRows'
@@ -14,7 +14,7 @@ export const classes = { plugin }
 ## 使用方法
 
 <!-- Use the `auto-rows-{size}` utilities to control the size implicitly-created grid rows. -->
-使用 `auto-rows-{size}` 工具来控制隐式创建的网格行的大小。
+使用 `auto-rows-{size}` 功能类来控制隐式创建的网格行的大小。
 
 ```html
 <div class="grid grid-flow-row **auto-rows-max**">
@@ -28,7 +28,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the grid-auto-rows property at a specific breakpoint, add a `{screen}:` prefix to any existing grid-auto-rows utility. For example, use `md:auto-rows-min` to apply the `auto-rows-min` utility at only medium screen sizes and above. -->
-要在特定的断点处控制 grid-auto-rows 属性，可以在任何现有的 grid-auto-rows 工具前添加 `{screen}:` 前缀。例如，使用 `md:auto-rows-min` 来仅在中等尺寸及以上的屏幕应用 `auto-rows-min` 功能。
+要在特定的断点处控制 grid-auto-rows 属性，可以在任何现有的 grid-auto-rows 功能类前添加 `{screen}:` 前缀。例如，使用 `md:auto-rows-min` 来仅在中等尺寸及以上的屏幕应用 `auto-rows-min` 功能。
 
 ```html
 <div class="grid grid-flow-row auto-rows-max **md:auto-rows-min**">
@@ -45,7 +45,7 @@ export const classes = { plugin }
 ## 定制
 
 <!-- By default Tailwind includes four general purpose grid-auto-rows utilities. You can customize these in the `theme.gridAutoRows` section of your `tailwind.config.js` file. -->
-默认情况下，Tailwind 包括四个通用的 grid-auto-rows 工具。您可以在您的 `tailwind.config.js` 文件的 `theme.gridAutoRows` 部分定制这些工具。
+默认情况下，Tailwind 包括四个通用的 grid-auto-rows 功能类。您可以在您的 `tailwind.config.js` 文件的 `theme.gridAutoRows` 部分定制这些功能类。
 
 ```js
   // tailwind.config.js

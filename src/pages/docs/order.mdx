@@ -1,7 +1,7 @@
 ---
 title: "Order"
 # description: "Utilities for controlling the order of flex items."
-description: "用来控制 flex 项目排列顺序的工具"
+description: "用来控制 flex 项目排列顺序的功能类"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/order'
@@ -37,7 +37,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To apply a flex direction utility only at a specific breakpoint, add a `{screen}:` prefix to the existing class name. For example, adding the class `md:flex-row` to an element would apply the `flex-row` utility at medium screen sizes and above. -->
-要仅在特定断点处应用一个 flex 方向工具，请在任何现有的工具类前添加 `{screen}:` 前缀。例如，使用 `md:flex-row` 仅在中等及以上尺寸屏幕上应用 `flex-row` 功能。
+要仅在特定断点处应用一个 flex 方向功能类，请在任何现有的功能类前添加 `{screen}:` 前缀。例如，使用 `md:flex-row` 仅在中等及以上尺寸屏幕上应用 `flex-row` 功能。
 
 ```html
 <div class="flex">
@@ -54,7 +54,7 @@ export const classes = { plugin }
 ## 定制
 
 <!-- By default Tailwind provides utilities for `order-first`, `order-last`, `order-none`, and an `order-{number}` utility for the numbers 1 through 12. You change, add, or remove these by editing the `theme.order` section of your `tailwind.config.js` file. -->
-默认情况下，Tailwind 为 `order-first`、 `order-last`、 `order-none`、 和 `order-{number}` 提供了数字 1 到 12 的工具。您可以通过编辑您的 `tailwind.config.js` 文件中的 `theme.order` 部分来更改、添加或删除这些工具。
+默认情况下，Tailwind 为 `order-first`、 `order-last`、 `order-none`、 和 `order-{number}` 提供了数字 1 到 12 的功能类。您可以通过编辑您的 `tailwind.config.js` 文件中的 `theme.order` 部分来更改、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js

@@ -1,7 +1,7 @@
 ---
 title: "列表项标记位置"
 # description: "Utilities for controlling the position of bullets/numbers in lists."
-description: "用来控制列表中项目标记符号/数字位置的工具。"
+description: "用来控制列表中项目标记符号/数字位置的功能类。"
 features:
   responsive: true
   customizable: false
@@ -19,7 +19,7 @@ export const classes = { plugin }
 ## 用法
 
 <!-- Control the position of the markers in a list using the `list-inside` and `list-outside` utilities. -->
-使用 `list-inside` 和 `list-outside` 工具控制列表中标记的位置。
+使用 `list-inside` 和 `list-outside` 功能类控制列表中标记的位置。
 
 ```html lightBlue
 <template preview class="p-4 px-8">
@@ -57,7 +57,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the list style position of a list element at a specific breakpoint, add a `{screen}:` prefix to any existing list utility. For example, use `.md:list-inside` to apply the `list-inside` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的列表项标记位置，请在任何现有的列表工具类前添加 `{screen}:` 前缀。例如，使用 `md:list-inside` 来仅在中等大小及以上的屏幕应用 `list-inside` 工具。
+要在特定的断点处控制元素的列表项标记位置，请在任何现有的列表功能类前添加 `{screen}:` 前缀。例如，使用 `md:list-inside` 来仅在中等大小及以上的屏幕应用 `list-inside` 功能类。
 
 ```html
 <ul class="list-outside **md:list-inside**">

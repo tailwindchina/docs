@@ -1,7 +1,7 @@
 ---
 title: "Z-Index"
 # description: "Utilities for controlling the stack order of an element."
-description: "用于控制元素的堆栈顺序的工具。"
+description: "用于控制元素的堆栈顺序的功能类。"
 features:
   responsive: true
   customizable: true
@@ -18,7 +18,7 @@ export const classes = { plugin }
 ## 使用方法
 
 <!-- Control the stack order (or three-dimensional positioning) of an element in Tailwind, regardless of order it has been displayed, using the `z-{index}` utilities. -->
-在 Tailwind 中使用 `z-{index}` 工具控制一个元素的堆栈顺序（或三维定位），使得与其显示顺序无关。
+在 Tailwind 中使用 `z-{index}` 功能类控制一个元素的堆栈顺序（或三维定位），使得与其显示顺序无关。
 
 ```html fuchsia
 <template preview class="p-4">
@@ -57,7 +57,7 @@ export const classes = { plugin }
 ### Z-Index 范围
 
 <!-- By default Tailwind provides six numeric `z-index` utilities and an `auto` utility. You change, add, or remove these by editing the `theme.zIndex` section of your Tailwind config. -->
-默认情况下，Tailwind 提供了六个数值的 `z-index` 工具和一个 `auto` 工具。您可以通过编辑您的 Tailwind 配置中的 `theme.zIndex` 部分来改变、添加或删除这些工具。
+默认情况下，Tailwind 提供了六个数值的 `z-index` 功能类和一个 `auto` 功能类。您可以通过编辑您的 Tailwind 配置中的 `theme.zIndex` 部分来改变、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js

@@ -1,7 +1,7 @@
 ---
 title: "行高"
 # description: "Utilities for controlling the leading (line height) of an element."
-description: "用于控制元素的前行距（行高）的工具。"
+description: "用于控制元素的前行距（行高）的功能类。"
 features:
   responsive: true
   customizable: true
@@ -20,7 +20,7 @@ export const classes = { plugin }
 ## 相对行高
 
 <!-- Use the `leading-none`, `leading-tight`, `leading-snug`, `leading-normal`, `leading-relaxed`, and `leading-loose` utilities to give an element a relative line-height based on its current font-size. -->
-使用 `leading-none`、 `leading-tight`、 `leading-snug`、 `leading-normal`、 `leading-relaxed` 和 `leading-loose` 等工具，根据元素当前的字体大小，给它一个相对的行高。
+使用 `leading-none`、 `leading-tight`、 `leading-snug`、 `leading-normal`、 `leading-relaxed` 和 `leading-loose` 等功能类，根据元素当前的字体大小，给它一个相对的行高。
 
 ```html purple
 <template preview>
@@ -62,7 +62,7 @@ export const classes = { plugin }
 ## 固定行高
 
 <!-- Use the `leading-{size}` utilities to give an element a fixed line-height, irrespective of the current font-size. These are useful when you need very precise control over an element's final size. -->
-使用 `leading-{size}` 工具给一个元素一个固定的行高，而不管当前的字体大小。当您需要非常精确地控制一个元素的最终大小时，这些工具非常有用。
+使用 `leading-{size}` 功能类给一个元素一个固定的行高，而不管当前的字体大小。当您需要非常精确地控制一个元素的最终大小时，这些功能类非常有用。
 
 ```html emerald
 <template preview>
@@ -114,7 +114,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the line height of an element at a specific breakpoint, add a `{screen}:` prefix to any existing line height utility. For example, use `md:leading-loose` to apply the `leading-loose` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的行高，请在任何现有的行高工具类前添加 `{screen}:` 前缀。例如，使用 `md:leading-loose` 来仅在中等大小及以上的屏幕应用 `leading-loose` 工具。
+要在特定的断点处控制元素的行高，请在任何现有的行高功能类前添加 `{screen}:` 前缀。例如，使用 `md:leading-loose` 来仅在中等大小及以上的屏幕应用 `leading-loose` 功能类。
 
 ```html
 <p class="leading-none **md:leading-loose** ...">Lorem ipsum dolor sit amet ...</p>
@@ -126,7 +126,7 @@ export const classes = { plugin }
 ## 定制
 
 <!-- By default Tailwind provides six relative and eight fixed `line-height` utilities. You change, add, or remove these by customizing the `lineHeight` section of your Tailwind theme config. -->
-默认情况下，Tailwind 提供了六个相对的和八个固定的 `line-height` 工具。您可以通过定制您的 Tailwind 主题配置的 `lineHeight` 部分来改变、添加或删除这些工具。
+默认情况下，Tailwind 提供了六个相对的和八个固定的 `line-height` 功能类。您可以通过定制您的 Tailwind 主题配置的 `lineHeight` 部分来改变、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js

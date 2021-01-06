@@ -2,7 +2,7 @@
 # title: "Font Weight"
 title: "字体粗细"
 # description: "Utilities for controlling the font weight of an element."
-description: "用来控制字体粗细的工具"
+description: "用来控制字体粗细的功能类"
 features:
   responsive: true
   customizable: true
@@ -19,7 +19,7 @@ export const classes = { plugin }
 ## 使用方法
 
 <!-- Control the font weight of an element using the `font-{weight}` utilities. -->
-使用 `font-{weight}` 工具来控制元素字体粗细。
+使用 `font-{weight}` 功能类来控制元素字体粗细。
 
 ```html lightBlue
 <template preview>
@@ -77,7 +77,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the font weight of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font weight utility. For example, use `md:font-bold` to apply the `font-bold` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的字体粗细，请在任何现有的字体粗细工具类前添加 `{screen}:` 前缀。例如，使用 `md:font-bold` 来仅在中等大小及以上的屏幕应用 `font-bold` 工具。
+要在特定的断点处控制元素的字体粗细，请在任何现有的字体粗细功能类前添加 `{screen}:` 前缀。例如，使用 `md:font-bold` 来仅在中等大小及以上的屏幕应用 `font-bold` 功能类。
 
 ```html
 <p class="font-normal **md:font-bold** ...">The quick brown fox jumped over the lazy dog.</p>
@@ -91,7 +91,7 @@ export const classes = { plugin }
 ### Font Weights
 
 <!-- By default Tailwind provides 10 `font-weight` utilities. You change, add, or remove these by editing the `theme.fontWeight` section of your Tailwind config. -->
-默认情况下，Tailwind 提供了10个 `font-weight` 工具。您可以通过编辑您的 Tailwind 配置中的 `theme.fontWeight` 部分来改变、添加或删除这些工具。
+默认情况下，Tailwind 提供了10个 `font-weight` 功能类。您可以通过编辑您的 Tailwind 配置中的 `theme.fontWeight` 部分来改变、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js
