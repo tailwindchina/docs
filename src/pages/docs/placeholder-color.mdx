@@ -1,7 +1,7 @@
 ---
 title: "占位文本颜色"
 # description: "Utilities for controlling the color of placeholder text."
-description: "用于控制占位文本颜色的工具。"
+description: "用于控制占位文本颜色的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/placeholderColor'
@@ -31,7 +31,7 @@ export const classes = {
 ## 使用方法
 
 <!-- Control the placeholder color of an element using the `placeholder-{color}` utilities. -->
-使用 `placeholder-{color}` 工具控制元素占位文本的颜色。
+使用 `placeholder-{color}` 功能类控制元素占位文本的颜色。
 
 ```html emerald
 <template preview class="text-center p-6">
@@ -49,7 +49,7 @@ export const classes = {
 ### 改变不透明度
 
 <!-- Control the opacity of an element's placeholder color using the `placeholder-opacity-{amount}` utilities. -->
-使用 `placeholder-opacity-{amount}` 工具控制元素的占位文本颜色的不透明度。
+使用 `placeholder-opacity-{amount}` 功能类控制元素的占位文本颜色的不透明度。
 
 ```html lightBlue
 <template preview>
@@ -86,7 +86,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control the text color of an input placeholder at a specific breakpoint, add a `{screen}:` prefix to any existing text color utility. For example, use `md:placeholder-green-500` to apply the `placeholder-green-500` utility at only medium screen sizes and above. -->
-要在特定的断点处控制输入框占位文本的颜色，请在任何现有的占位文本颜色工具类前添加 `{screen}:` 前缀。例如，使用 `md:placeholder-green-500` 来仅在中等大小及以上的屏幕应用 `placeholder-green-500` 工具。
+要在特定的断点处控制输入框占位文本的颜色，请在任何现有的占位文本颜色功能类前添加 `{screen}:` 前缀。例如，使用 `md:placeholder-green-500` 来仅在中等大小及以上的屏幕应用 `placeholder-green-500` 功能类。
 
 ```html
 <input class="placeholder-gray-500 **md:placeholder-green-500**" placeholder="jane@example.com">
@@ -99,7 +99,7 @@ export const classes = {
 ## 焦点
 
 <!-- To control the placeholder color of an element on focus, add the `focus:` prefix to any existing placeholder color utility. For example, use `focus:placeholder-blue-600` to apply the `placeholder-blue-600` utility on focus. -->
-要控制获得焦点时元素的占位文本颜色，请在任何现有的占位文本颜色工具前添加 `focus:` 前缀。例如，使用 `focus:placeholder-blue-600` 在获得焦点时应用 `placeholder-blue-600` 工具。
+要控制获得焦点时元素的占位文本颜色，请在任何现有的占位文本颜色功能类前添加 `focus:` 前缀。例如，使用 `focus:placeholder-blue-600` 在获得焦点时应用 `placeholder-blue-600` 功能类。
 
 ```html indigo
 <template preview class="text-center p-6">
@@ -112,7 +112,7 @@ export const classes = {
 ```
 
 <!-- Focus utilities can also be combined with responsive utilities by adding the responsive `{screen}:` prefix *before* the `focus:` prefix. -->
-通过在 `focus:` 前缀前添加响应式 `{screen}:` 前缀，focus 工具也可以与 responsive 工具相结合。
+通过在 `focus:` 前缀前添加响应式 `{screen}:` 前缀，focus 功能类也可以与 responsive 功能类相结合。
 
 ```html
 <input class="... md:placeholder-gray-900 **md:focus:placeholder-red-600** ...">

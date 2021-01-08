@@ -2,7 +2,7 @@
 # title: "Font Size"
 title: "字体大小"
 # description: "Utilities for controlling the font size of an element."
-description: "用来控制元素字体大小的工具"
+description: "用来控制元素字体大小的功能类"
 features:
   responsive: true
   customizable: true
@@ -20,7 +20,7 @@ export const classes = { plugin }
 ## 用法
 
 <!-- Control the font size of an element using the `text-{size}` utilities. -->
-使用 `text-{size}` 工具控制元素的字体大小。
+使用 `text-{size}` 功能类控制元素的字体大小。
 
 ```html purple
 <template preview>
@@ -99,7 +99,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the font size of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font size utility. For example, use `md:text-lg` to apply the `text-lg` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的字体大小，可在任何现有的字体大小工具类前添加 `{screen}:` 前缀。例如，使用 `md:text-lg` 来仅在中等及以上尺寸的屏幕应用 `text-lg` 工具。
+要在特定的断点处控制元素的字体大小，可在任何现有的字体大小功能类前添加 `{screen}:` 前缀。例如，使用 `md:text-lg` 来仅在中等及以上尺寸的屏幕应用 `text-lg` 功能类。
 
 ```html
 <p class="text-base **md:text-lg** ...">The quick brown fox jumped over the lazy dog.</p>
@@ -114,7 +114,7 @@ export const classes = { plugin }
 ### 字体大小
 
 <!-- By default Tailwind provides 10 `font-size` utilities. You change, add, or remove these by editing the `theme.fontSize` section of your Tailwind config. -->
-默认情况下，Tailwind 提供了 10 个 `font-size` 工具。您可以通过编辑您的 Tailwind 配置中的 `theme.fontSize` 部分来改变、添加或删除这些工具。
+默认情况下，Tailwind 提供了 10 个 `font-size` 功能类。您可以通过编辑您的 Tailwind 配置中的 `theme.fontSize` 部分来改变、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js

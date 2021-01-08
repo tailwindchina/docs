@@ -1,7 +1,7 @@
 ---
 title: "Space Between"
 # description: "Utilities for controlling the space between child elements."
-description: "用于控制子元素之间的间隔的工具。"
+description: "用于控制子元素之间的间隔的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/space'
@@ -23,7 +23,7 @@ export const classes = {
 ## 在子元素之间添加水平间隔
 
 <!-- Control the horizontal space between elements using the `space-x-{amount}` utilities. -->
-使用 `space-x-{amount}` 工具控制元素之间的水平空间。
+使用 `space-x-{amount}` 功能类控制元素之间的水平空间。
 
 ```html fuchsia
 <template preview>
@@ -47,7 +47,7 @@ export const classes = {
 ## 在子元素之间添加垂直间隔
 
 <!-- Control the vertical space between elements using the `space-y-{amount}` utilities. -->
-使用 `space-y-{amount}` 工具控制元素之间的垂直空间。
+使用 `space-y-{amount}` 功能类控制元素之间的垂直空间。
 
 ```html lightBlue
 <template preview>
@@ -97,7 +97,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control the space between elements at a specific breakpoint, add a `{screen}:` prefix to any existing space utility. For example, adding the class `md:space-x-8` to an element would apply the `space-x-8` utility at medium screen sizes and above. -->
-要在特定的断点处控制元素之间的空间，可在任何现有的 space 工具前添加 `{screen}:` 前缀。例如，将 `md:space-x-8` 类添加到元素中，就可以在中等屏幕尺寸及以上的情况下使用 `space-x-8` 工具。
+要在特定的断点处控制元素之间的空间，可在任何现有的 space 功能类前添加 `{screen}:` 前缀。例如，将 `md:space-x-8` 类添加到元素中，就可以在中等屏幕尺寸及以上的情况下使用 `space-x-8` 功能类。
 
 ```html
 <div class="flex space-x-2 **md:space-x-8**">

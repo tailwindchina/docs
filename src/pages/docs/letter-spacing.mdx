@@ -2,7 +2,7 @@
 # title: "Letter Spacing"
 title: "字母间距"
 # description: "Utilities for controlling the tracking (letter spacing) of an element."
-description: "用于控制元素的字距（字母间距）的工具。"
+description: "用于控制元素的字距（字母间距）的功能类。"
 features:
   responsive: true
   customizable: true
@@ -19,7 +19,7 @@ export const classes = { plugin }
 ## 用法
 
 <!-- Control the letter spacing of an element using the `tracking-{size}` utilities. -->
-使用 `tracking-{size}` 工具控制元素的字母间距。
+使用 `tracking-{size}` 功能类控制元素的字母间距。
 
 ```html lightBlue
 <template preview>
@@ -61,7 +61,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the letter spacing of an element at a specific breakpoint, add a `{screen}:` prefix to any existing letter spacing utility. For example, use `md:tracking-wide` to apply the `tracking-wide` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的字母间距，请在任何现有的字母间距工具类前添加 `{screen}:` 前缀。例如，使用 `md:tracking-wide` 来仅在中等大小及以上的屏幕应用 `tracking-wide` 工具。
+要在特定的断点处控制元素的字母间距，请在任何现有的字母间距功能类前添加 `{screen}:` 前缀。例如，使用 `md:tracking-wide` 来仅在中等大小及以上的屏幕应用 `tracking-wide` 功能类。
 
 ```html
 <p class="tracking-tight **md:tracking-wide** ...">The quick brown fox jumped over the lazy dog.</p>
@@ -75,7 +75,7 @@ export const classes = { plugin }
 ### Letter Spacings
 
 <!-- By default Tailwind provides six tracking utilities. You can change, add, or remove these by editing the `theme.letterSpacing` section of your Tailwind config. -->
-默认情况下，Tailwind 提供了六个字距工具。您可以通过编辑您的 Tailwind 配置中的 `theme.letterSpacing` 部分来改变、添加或删除这些工具。
+默认情况下，Tailwind 提供了六个字距功能类。您可以通过编辑您的 Tailwind 配置中的 `theme.letterSpacing` 部分来改变、添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js

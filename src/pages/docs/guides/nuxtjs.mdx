@@ -1,6 +1,8 @@
 ---
-title: "Install Tailwind CSS with Nuxt.js"
-description: "Setting up Tailwind CSS in a Nuxt.js project."
+# title: "Install Tailwind CSS with Nuxt.js"
+title: "在 Nuxt.js 中安装 Tailwind CSS"
+# description: "Setting up Tailwind CSS in a Nuxt.js project."
+description: "在 Nuxt.js 工程中配置 Tailwind CSS。"
 tool: Nuxt.js
 ---
 
@@ -11,8 +13,8 @@ reference:
   link: https://nuxtjs.org/guides/get-started/installation#using-create-nuxt-app
 script: npx create-nuxt-app
 disclaimer: >
-  **Do not choose "Tailwind CSS" when prompted to select your "UI Framework"**.
-  This will cause conflicts that prevent you from being able to install Tailwind CSS v2.0 due to the `@nuxtjs/tailwindcss` module depending on an old version of Tailwind.
+  **当提示您选择" UI 框架"时，请不要选择 "Tailwind CSS"**。
+  这将导致冲突，使您无法安装 Tailwind CSS v2.0，因为`@nuxtjs/tailwindcss` 模块依赖旧版本的 Tailwind。
 ```
 
 ---
@@ -28,7 +30,8 @@ dependencies:
   - '@nuxtjs/tailwindcss'
 ```
 
-Add the `@nuxtjs/tailwindcss` module to the `buildModules` section of your `nuxt.config.js` file:
+<!-- Add the `@nuxtjs/tailwindcss` module to the `buildModules` section of your `nuxt.config.js` file: -->
+将 `@nuxtjs/tailwindcss` 模块添加到您的 `nuxt.config.js` 文件的 `buildModules` 部分。
 
 ```js
 // nuxt.config.js

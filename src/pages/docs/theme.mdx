@@ -7,7 +7,7 @@ description: 为您的项目定制默认主题。
 import { TipGood, TipBad } from '@/components/Tip'
 import { ThemeReference } from '@/components/ThemeReference'
 
-The `theme` section of your `tailwind.config.js` file is where you define your project's color palette, type scale, fonts, breakpoints, border radius values, and more.
+<!-- The `theme` section of your `tailwind.config.js` file is where you define your project's color palette, type scale, fonts, breakpoints, border radius values, and more. -->
 在`tailwind.config.js` 文件的 `theme` 部分，您可以定义您项目的调色板、类型比例、字体、断点、边框半径值等。
 
 ```js
@@ -53,16 +53,16 @@ module.exports = {
 ## 主题结构
 
 <!-- The `theme` object contains keys for `screens`, `colors`, and `spacing`, as well as a key for each customizable [core plugin](/docs/configuration#core-plugins). -->
-`theme` 对象包含 `screens`、`colors` 和 `spacing` 的键，以及每一个可定制的 [核心插件](/docs/configuration#core-plugins) 的键。
+`theme` 对象包含 `screens`、`colors` 和 `spacing` 的键，以及每一个可定制的[核心插件](/docs/configuration#core-plugins)的键。
 
 
 <!-- See the [theme configuration reference](#configuration-reference) or the [default theme](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) for a complete list of theme options. -->
-请参阅 [主题配置参考](#configuration-reference) 或 [默认主题] (https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) 获取完整的主题选项列表。
+请参阅 [主题配置参考](#configuration-reference)或[默认主题](https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js#L7) 获取完整的主题选项列表。
 
 ### 屏幕
 
 <!-- The `screens` key allows you to customize the responsive breakpoints in your project. -->
-`screens`键允许您自定义项目中的响应断点。
+`screens` 键允许您自定义项目中的响应断点。
 
 ```js
 // tailwind.config.js
@@ -217,7 +217,7 @@ module.exports = {
 ## 定制默认主体
 
 <!-- Out of the box, your project will automatically inherit the values from [the default theme configuration](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5). If you would like to customize the default theme, you have a few different options depending on your goals. -->
-开箱即用，您的项目将自动继承 [默认主题配置] (https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5)中的值。如果您想自定义默认主题，您有几个不同的选项，取决于您的目标。
+开箱即用，您的项目将自动继承[默认主题配置](https://github.com/tailwindlabs/tailwindcss/blob/v1/stubs/defaultConfig.stub.js#L5)中的值。如果您想自定义默认主题，您有几个不同的选项，取决于您的目标。
 
 ### 扩展默认主题
 
@@ -432,6 +432,6 @@ module.exports = {
 除了 `screens`、`colors` 和 `spacing`， `theme` 对象中的所有的键都映射到 Tailwind 的一个 [核心插件](/docs/configuration#core-plugins)。由于许多插件负责的 CSS 属性只接受一组静态的值（例如 `float`），所以请注意，不是每个插件在 `theme` 对象中都有一个对应的键。
 
 <!-- All of these keys are also available under the `theme.extend` key to enable [extending the default theme](#extending-the-default-theme). -->
-所有这些键在 `theme.extend` 键下也是可用的，用来启用 [扩展默认主题](#extending-the-default-theme)。
+所有这些键在 `theme.extend` 键下也是可用的，用来启用 [扩展默认主题](#-5)。
 
 <ThemeReference />

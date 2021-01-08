@@ -2,7 +2,7 @@
 # title: "Padding"
 title: "内边距"
 # description: "Utilities for controlling an element's padding."
-description: "控制元素内边距的工具"
+description: "控制元素内边距的功能类"
 features:
   responsive: true
   customizable: true
@@ -24,7 +24,7 @@ export const classes = {
 ## 为单侧添加内边距
 
 <!-- Control the padding on one side of an element using the `p{t|r|b|l}-{size}` utilities. -->
-使用 `p{t|r|b|l}-{size}` 工具控制元素一侧的内边距。
+使用 `p{t|r|b|l}-{size}` 功能类控制元素一侧的内边距。
 
 <!-- For example, `pt-6` would add `1.5rem` of padding to the top of an element, `pr-4` would add `1rem` of padding to the right of an element, `pb-8` would add `2rem` of padding to the bottom of an element, and `pl-2` would add `0.5rem` of padding to the left of an element. -->
 例如，`pt-6` 将在元素顶部增加 `1.5rem` 的内边距，`pr-4` 将在元素右侧增加 `1rem` 的内边距，`pb-8`  将在元素底部增加 `2rem` 的内边距，`pl-2` 将在元素左侧增加 `0.5rem`的内边距。
@@ -101,7 +101,7 @@ export const classes = {
 ## 为所有边添加内边距
 
 <!-- Control the padding on all sides of an element using the `p-{size}` utilities. -->
-使用 `p-{size}` 工具控制元素四个边的内边距。
+使用 `p-{size}` 功能类控制元素四个边的内边距。
 
 ```html fuchsia
 <template preview>
@@ -121,7 +121,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control the padding of an element at a specific breakpoint, add a `{screen}:` prefix to any existing padding utility. For example, adding the class `md:py-8` to an element would apply the `py-8` utility at medium screen sizes and above. -->
-要在特定的断点处控制元素的内边距，请在任何现有的 padding 工具前添加 `{screen}:` 前缀。例如，将 `md:py-8` 类添加到一个元素中，就可以在中等及以上屏幕尺寸的情况下应用 `py-8` 功能。
+要在特定的断点处控制元素的内边距，请在任何现有的 padding 功能类前添加 `{screen}:` 前缀。例如，将 `md:py-8` 类添加到一个元素中，就可以在中等及以上屏幕尺寸的情况下应用 `py-8` 功能。
 
 ```html
 <div class="**md:py-8** ...">
@@ -140,7 +140,7 @@ export const classes = {
 ### 内边距比例
 
 <!-- By default Tailwind provides 19 fixed padding utilities for each side and axis. -->
-默认情况下，Tailwind 为每个边和轴提供了 19 个固定的内边距工具。
+默认情况下，Tailwind 为每个边和轴提供了 19 个固定的内边距功能类。
 
 <!-- If you'd like to customize these values for padding, margin, width, and height all at once, use the `theme.spacing` section of your `tailwind.config.js` file. -->
 如果您想一次性自定义 padding、margin、width 和 height 的值，请使用您的 `tailwind.config.js` 文件中的 `theme.spacing` 部分。

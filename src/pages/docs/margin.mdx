@@ -2,7 +2,7 @@
 # title: "Margin"
 title: "外边距"
 # description: "Utilities for controlling an element's margin."
-description: "控制元素外边距的工具"
+description: "控制元素外边距的功能类"
 features:
   responsive: true
   customizable: true
@@ -24,7 +24,7 @@ export const classes = {
 ## 为单侧添加外边距
 
 <!-- Control the margin on one side of an element using the `m{t|r|b|l}-{size}` utilities. -->
-使用 `m{t|r|b|l}-{size}` 工具控制元素一侧的外边距。
+使用 `m{t|r|b|l}-{size}` 功能类控制元素一侧的外边距。
 
 <!-- For example, `mt-6` would add `1.5rem` of margin to the top of an element, `mr-4` would add `1rem` of margin to the right of an element, `mb-8` would add `2rem` of margin to the bottom of an element, and `ml-2` would add `0.5rem` of margin to the left of an element. -->
 例如，`mt-6` 将在元素顶部增加 `1.5rem` 的外边距，`mr-4` 将在元素右侧增加 `1rem` 的外边距，`mb-8` 将在元素底部增加 `2rem` 的外边距，`ml-2` 将在元素左侧增加 `0.5rem` 的外边距。
@@ -61,7 +61,7 @@ export const classes = {
 ## 添加水平方向的外边距
 
 <!-- Control the horizontal margin of an element using the `mx-{size}` utilities. -->
-使用 `mx-{size}` 工具控制元素水平方向的外边距。
+使用 `mx-{size}` 功能类控制元素水平方向的外边距。
 
 ```html purple
 <template preview>
@@ -79,7 +79,7 @@ export const classes = {
 ## 添加垂直方向的外边距
 
 <!-- Control the vertical margin of an element using the `my-{size}` utilities. -->
-使用 `my-{size}` 工具控制元素垂直方向的外边距。
+使用 `my-{size}` 功能类控制元素垂直方向的外边距。
 
 ```html emerald
 <template preview>
@@ -97,7 +97,7 @@ export const classes = {
 ## 为四个边添加外边距
 
 <!-- Control the margin on all sides of an element using the `m-{size}` utilities. -->
-使用 `m-{size}` 工具控制元素四个边的外边距。
+使用 `m-{size}` 功能类控制元素四个边的外边距。
 
 ```html lightBlue
 <template preview>
@@ -115,7 +115,7 @@ export const classes = {
 ## 负外边距
 
 <!-- Control the negative margin of an element using the `-m{side?}-{size}` utilities. -->
-使用 `-m{side?}-{size}` 工具控制元素的负外边距。
+使用 `-m{side?}-{size}` 功能类控制元素的负外边距。
 
 ```html fuchsia
 <template preview>
@@ -139,7 +139,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control the margin of an element at a specific breakpoint, add a `{screen}:` prefix to any existing margin utility. For example, adding the class `md:my-8` to an element would apply the `my-8` utility at medium screen sizes and above. -->
-要在特定的断点处控制元素的外边距，请在任何现有的 margin 工具前添加 `{screen}:` 前缀。例如，将 `md:my-8` 类添加到一个元素中，就可以在中等及以上屏幕尺寸的情况下应用 `my-8` 功能。
+要在特定的断点处控制元素的外边距，请在任何现有的 margin 功能类前添加 `{screen}:` 前缀。例如，将 `md:my-8` 类添加到一个元素中，就可以在中等及以上屏幕尺寸的情况下应用 `my-8` 功能。
 
 ```html
 <div class="mt-8 **md:my-8**">
@@ -159,7 +159,7 @@ export const classes = {
 ### 外边距比例
 
 <!-- By default Tailwind provides 20 margin utilities for each side and axis. -->
-默认情况下，Tailwind 为每个边和轴提供了 20 个固定的外边距工具。
+默认情况下，Tailwind 为每个边和轴提供了 20 个固定的外边距功能类。
 
 <!-- If you'd like to customize these values for padding, margin, width, and height all at once, use the `theme.spacing` section of your `tailwind.config.js` file. -->
 如果您想一次性自定义 padding、margin、width 和 height 的值，请使用您的 `tailwind.config.js` 文件中的 `theme.spacing` 部分。

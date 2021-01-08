@@ -1,7 +1,7 @@
 ---
 title: "字体平滑度"
 # description: "Utilities for controlling the font smoothing of an element."
-description: "用来控制字体平滑度的工具"
+description: "用来控制字体平滑度的功能类"
 features:
   responsive: true
   customizable: false
@@ -18,7 +18,7 @@ export const classes = { plugin }
 ## Subpixel Antialiasing
 
 <!-- Use the `subpixel-antialiased` utility to render text using subpixel antialiasing. -->
-使用 `subpixel-antialiased` 工具以使用 subpixel antialiasing 来渲染文本。
+使用 `subpixel-antialiased` 功能类以使用 subpixel antialiasing 来渲染文本。
 
 ```html lightBlue
 <template preview>
@@ -45,7 +45,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the font smoothing of an element at a specific breakpoint, add a `{screen}:` prefix to any existing font smoothing utility. For example, use `md:antialiased` to apply the `antialiased` utility at only medium screen sizes and above. -->
-要在特定的断点处控制一个元素的字体平滑度，可以在任何现有的字体平滑度工具前添加一个 `{screen}:` 前缀。例如，使用 `md:antialiased` 来仅在中等及以上尺寸屏幕上应用 `antialiased` 工具。
+要在特定的断点处控制一个元素的字体平滑度，可以在任何现有的字体平滑度功能类前添加一个 `{screen}:` 前缀。例如，使用 `md:antialiased` 来仅在中等及以上尺寸屏幕上应用 `antialiased` 功能类。
 
 ```html
 <p class="antialiased sm:subpixel-antialiased **md:antialiased** ...">

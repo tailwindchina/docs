@@ -1,7 +1,7 @@
 ---
 title: "最大宽度"
 # description: "Utilities for setting the maximum width of an element"
-description: "用来设置元素最大宽度的工具"
+description: "用来设置元素最大宽度的功能类"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/maxWidth'
@@ -17,7 +17,7 @@ export const classes = {
 ## 使用方法
 
 <!-- Set the maximum width of an element using the `max-w-{size}` utilities. -->
-使用 `max-w-{size}` 工具设置元素的最大宽度。
+使用 `max-w-{size}` 功能类设置元素的最大宽度。
 
 ```html emerald
 <template preview>
@@ -56,7 +56,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control the max-width of an element at a specific breakpoint, add a `{screen}:` prefix to any existing max-width utility. -->
-要在特定的断点处控制元素的最大宽度，请在任何现有的最大宽度工具前添加 `{screen}:` 前缀。
+要在特定的断点处控制元素的最大宽度，请在任何现有的最大宽度功能类前添加 `{screen}:` 前缀。
 
 ```html
 <div class="max-w-sm **md:max-w-lg** ...">

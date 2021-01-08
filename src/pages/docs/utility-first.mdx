@@ -106,12 +106,12 @@ import { CodeSample } from '@/components/CodeSample'
 
 在上面的示例中，我们使用了：
 
-- 使用 Tailwind 的 [flexbox](/docs/display#flex) 和 [padding](/docs/padding) 功能类 (`flex`, `flex-shrink-0`, and `p-6`) 来控制整体的卡片布局
-- 使用 [max-width](/docs/max-width) 和 [margin](/docs/margin) 功能类 (`max-w-sm` and `mx-auto`) 来设置卡片的宽度和水平居中
-- 使用 [background color](/docs/background-color), [border radius](/docs/border-radius), 和 [box-shadow](/docs/box-shadow) 功能类 (`bg-white`, `rounded-xl`, and `shadow-md`) 设置卡片的外观样式
+- 使用 Tailwind 的 [flexbox](/docs/display#flex) 和 [padding](/docs/padding) 功能类 (`flex`, `flex-shrink-0`, 和 `p-6`) 来控制整体的卡片布局
+- 使用 [max-width](/docs/max-width) 和 [margin](/docs/margin) 功能类 (`max-w-sm` 和 `mx-auto`) 来设置卡片的宽度和水平居中
+- 使用 [background color](/docs/background-color), [border radius](/docs/border-radius), 和 [box-shadow](/docs/box-shadow) 功能类 (`bg-white`, `rounded-xl`, 和 `shadow-md`) 设置卡片的外观样式
 - 使用 [width](/docs/width) 和 [height](/docs/height) 功能类 (`w-12` and `h-12`) 来设置 logo 图片的大小
 - 使用 [space-between](/docs/space) 功能类 (`space-x-4`) 来处理 logo 和文本之间的间距
-- 使用 [font size](/docs/font-size), [text color](/docs/text-color), 和 [font-weight](/docs/font-weight) 功能类 (`text-xl`, `text-black`, `font-medium`, etc.) 给卡片文字设置样式
+- 使用 [font size](/docs/font-size)，[text color](/docs/text-color)，和 [font-weight](/docs/font-weight) 功能类 (`text-xl`，`text-black`，`font-medium` 等等) 给卡片文字设置样式
 
 这种方法使我们无需编写一行自定义的CSS即可实现一个完全定制的组件设计。
 
@@ -119,11 +119,11 @@ import { CodeSample } from '@/components/CodeSample'
 
 但是，一旦您以这种方式实际构建了一些东西，您就会很快注意到一些真正重要的优点：
 
-- **您没有为了给类命名而浪费精力**. 不需要仅仅为了设置一些样式而额外添加一些像 `sidebar-inner-wrapper` 这样愚蠢的类名，不必再为了一个 flex 容器的完美抽象命名而倍受折磨。
-- **您的 CSS 停止增长**. 使用传统方法，每次添加新功能时 CSS 文件都会变大。使用功能类，所有内容都是可重用的，因此您几乎不需要编写新的CSS。
-- **更改会更安全**. CSS 是全局性的，您永远不知道当您进行更改时会破坏掉什么。您 HTML 中的类是本地的，因此您可以更改它们而不必担心其他问题。
+- **您没有为了给类命名而浪费精力**。 不需要仅仅为了设置一些样式而额外添加一些像 `sidebar-inner-wrapper` 这样愚蠢的类名，不必再为了一个 flex 容器的完美抽象命名而倍受折磨。
+- **您的 CSS 停止增长**。 使用传统方法，每次添加新功能时 CSS 文件都会变大。使用功能类，所有内容都是可重用的，因此您几乎不需要编写新的CSS。
+- **更改会更安全**。 CSS 是全局性的，您永远不知道当您进行更改时会破坏掉什么。您 HTML 中的类是本地的，因此您可以更改它们而不必担心其他问题。
 
-当您意识到在 HTML 中使用预定义的工具类是多么的富有成效时，以任何其他方式工作都感觉像是折磨。
+当您意识到在 HTML 中使用预定义的功能类是多么的富有成效时，以任何其他方式工作都感觉像是折磨。
 
 ---
 
@@ -190,7 +190,7 @@ import { CodeSample } from '@/components/CodeSample'
 </template>
 ```
 
-You can also use Tailwind's `@apply` feature to create CSS abstractions around common utility patterns.
+<!-- You can also use Tailwind's `@apply` feature to create CSS abstractions around common utility patterns. -->
 您也可以使用 Tailwind 的 `@apply` 功能创建抽象的 CSS 类。
 
 ```html emerald
@@ -230,4 +230,4 @@ You can also use Tailwind's `@apply` feature to create CSS abstractions around c
 - [Building a Scalable CSS Architecture](https://blog.algolia.com/redesigning-our-docs-part-4-building-a-scalable-css-architecture/) by Sarah Dayan of Algolia
 - [Diana Mounter on using utility classes at GitHub](http://www.fullstackradio.com/75), a podcast interview
 
-For even more, check out [The Case for Atomic/Utility-First CSS](https://johnpolacek.github.io/the-case-for-atomic-css/), curated by [John Polacek](https://twitter.com/johnpolacek).
+查看 [John Polacek](https://twitter.com/johnpolacek) 策划的 [The Case for Atomic/Utility-First CSS](https://johnpolacek.github.io/the-case-for-atomic-css/) 了解更多信息.

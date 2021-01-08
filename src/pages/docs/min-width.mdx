@@ -1,7 +1,7 @@
 ---
 title: "最小宽度"
 # description: "Utilities for setting the minimum width of an element"
-description: "用来设置元素最小宽度的工具"
+description: "用来设置元素最小宽度的功能类"
 features:
   responsive: true
   customizable: true
@@ -18,7 +18,7 @@ export const classes = { plugin }
 ## 使用方法
 
 <!-- Set the minimum width of an element using the `min-w-0` or `min-w-full` utilities. -->
-使用 `min-w-0` 或 `min-w-full` 工具设置元素的最小宽度。
+使用 `min-w-0` 或 `min-w-full` 功能类设置元素的最小宽度。
 
 ```html indigo
 <template preview>
@@ -37,7 +37,7 @@ export const classes = { plugin }
 ## 响应式
 
 <!-- To control the min-width of an element at a specific breakpoint, add a `{screen}:` prefix to any existing min-width utility. -->
-要在特定的断点处控制元素的最小宽度，请在任何现有的最小宽度工具前添加 `{screen}:` 前缀。
+要在特定的断点处控制元素的最小宽度，请在任何现有的最小宽度功能类前添加 `{screen}:` 前缀。
 
 ```html
 <div class="w-24 min-w-full **md:min-w-0** ...">

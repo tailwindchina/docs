@@ -1,6 +1,8 @@
 ---
-title: "Install Tailwind CSS with Create React App"
-description: "Setting up Tailwind CSS in a Create React App project."
+# title: "Install Tailwind CSS with Create React App"
+title: "在 Create React App 中安装 Tailwind CSS"
+# description: "Setting up Tailwind CSS in a Create React App project."
+description: "在Create React App项目中配置 Tailwind CSS。"
 tool: Create React App
 ---
 
@@ -17,15 +19,18 @@ script: npx create-react-app
 version: compat-7
 ```
 
-### Install and configure CRACO
+<!-- ### Install and configure CRACO -->
+### 安装和配置 CRACO
 
-Since Create React App doesn't let you override the PostCSS configuration natively, we also need to install [CRACO](https://github.com/gsoft-inc/craco) to be able to configure Tailwind:
+<!-- Since Create React App doesn't let you override the PostCSS configuration natively, we also need to install [CRACO](https://github.com/gsoft-inc/craco) to be able to configure Tailwind: -->
+由于 Create React App 不能让您覆盖原生的 PostCSS 配置，所以我们还需要安装[ CRACO ](https://github.com/gsoft-inc/craco)才能配置 Tailwind。
 
 ```shell
 npm install @craco/craco
 ```
 
-Once it's installed, update your `scripts` in your `package.json` file to use `craco` instead of `react-scripts` for all scripts except `eject`:
+<!-- Once it's installed, update your `scripts` in your `package.json` file to use `craco` instead of `react-scripts` for all scripts except `eject`: -->
+安装完毕后，更新 `package.json` 文件中的 `scripts`，将 `eject` 以外的所有脚本都用 `craco` 代替 `react-scripts`。
 
 ```diff-json
   {
@@ -42,7 +47,8 @@ Once it's installed, update your `scripts` in your `package.json` file to use `c
   }
 ```
 
-Next, create a `craco.config.js` at the root of our project and add the `tailwindcss` and `autoprefixer` as PostCSS plugins:
+<!-- Next, create a `craco.config.js` at the root of our project and add the `tailwindcss` and `autoprefixer` as PostCSS plugins: -->
+接下来，在项目根部创建一个 `craco.config.js`，并添加 `tailwindcss` 和 `autoprefixer `作为 PostCSS 插件。
 
 ```js
 // craco.config.js
@@ -58,7 +64,8 @@ module.exports = {
 }
 ```
 
-If you're planning to use any other PostCSS plugins, you should read our documentation on [using PostCSS as your preprocessor](/docs/using-with-preprocessors) for more details about the best way to order them alongside Tailwind.
+<!-- If you're planning to use any other PostCSS plugins, you should read our documentation on [using PostCSS as your preprocessor](/docs/using-with-preprocessors) for more details about the best way to order them alongside Tailwind. -->
+如果您计划使用任何其他 PostCSS 插件，您应该阅读我们的文档[使用 PostCSS 作为您的预处理器](/docs/using-with-preprocessors)，以获得更多关于集成它们和 Tailwind 的最佳方式的细节。
 
 ```preval configuration
 postcss: false
@@ -73,7 +80,8 @@ purge:
 file: ./src/index.css
 ```
 
-Finally, ensure your CSS file is being imported in your `./src/index.js` file:
+<!-- Finally, ensure your CSS file is being imported in your `./src/index.js` file: -->
+最后，确保您的 CSS 文件被导入到您的 `./src/index.js` 文件中。
 
 ```diff-js
   // src/index.js
