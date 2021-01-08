@@ -173,7 +173,7 @@ function TopLevelNav() {
           </>
         }
       >
-        文档
+        中文文档
       </TopLevelLink>
       <TopLevelLink
         href="https://tailwindui.com/components?utm_source=tailwindcss&utm_medium=navigation"

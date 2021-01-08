@@ -331,7 +331,7 @@ export default function DocsLandingPage() {
 DocsLandingPage.layoutProps = {
   meta: {
     // title: 'Documentation',
-    title: '文档',
+    title: '中文文档',
   },
   Layout: DocumentationLayout,
 }
