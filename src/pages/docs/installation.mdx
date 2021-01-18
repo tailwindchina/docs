@@ -116,7 +116,7 @@ module.exports = {
 ### 包含 Tailwind 到您的 CSS 中
 
 <!-- Create a CSS file if you don't already have one, and use the `@tailwind` directive to inject Tailwind's `base`, `components`, and `utilities` styles: -->
-如果您尚未创建一个 CSS 文件，请使用 @tailwind 指令注入 Tailwind 的基础 (base)，组件 (components) 和实用程序 (utilities) 样式：
+如果您尚未创建一个 CSS 文件，请使用 @tailwind 指令注入 Tailwind 的基础 (base)，组件 (components) 和功能 (utilities) 样式：
 
 ```css
 /* ./your-css-folder/styles.css */
@@ -178,7 +178,7 @@ When building for production, be sure to configure the `purge` option to remove 
 <!-- Read our separate guide on [optimizing for production](/docs/optimizing-for-production) to learn more about tree-shaking unused styles for best performance.
 
 If you're integrating Tailwind with a tool that relies on an older version of PostCSS, you may see an error like this when trying to build your CSS: -->
-阅读我们有关[优化生产](/docs/optimizing-for-production)的单独指南，以了解有关摇树优化未使用样式以获得最佳性能的更多信息。
+阅读我们有关[优化生产](/docs/optimizing-for-production)的单独指南，以了解有关 tree-shaking 优化未使用样式以获得最佳性能的更多信息。
 
 如果您将 Tailwind 与依赖于较旧版本 PostCSS 的工具集成在一起，则在尝试构建 CSS 时可能会看到如下错误：
 
@@ -197,7 +197,7 @@ Error: PostCSS plugin tailwindcss requires PostCSS 8.
 <!-- For simple projects or just giving Tailwind a spin, you can use the Tailwind CLI tool to generate your CSS without configuring PostCSS or even installing Tailwind as a dependency if you don't want to.
 
 Use `npx` which is a tool that is automatically installed alongside `npm` to generate a fully compiled Tailwind CSS file: -->
-对于简单的项目或只是给玩玩 Tailwind，您可以使用 Tailwind CLI 工具生成 CSS，而无需配置 PostCSS 或甚至不需要安装 Tailwind 作为依赖项。
+对于简单的项目或只是体验一下 Tailwind，您可以使用 Tailwind CLI 工具生成 CSS，而无需配置 PostCSS 或甚至不需要安装 Tailwind 作为依赖项。
 
 使用 `npx` 这个工具，它会与 `npm` 一起自动安装，以生成完全编译的 Tailwind CSS 文件：
 
@@ -332,7 +332,7 @@ NODE_ENV=production npx tailwindcss-cli@latest build ./src/tailwind.css -o ./dis
   <ListItemBad>您不能使用任何 <a href="/docs/functions-and-directives">指令，</a> 如： <code>@apply</code>， <code>@variants</code> 等等</ListItemBad>
   <ListItemBad>您无法启用更多的变体，如： <a href="/docs/hover-focus-and-other-states#group-focus"><code>group-focus</code></a></ListItemBad>
   <ListItemBad>您无法下载第三方的插件</ListItemBad>
-  <ListItemBad>您无法摇树优化未使用到的 Styles</ListItemBad>
+  <ListItemBad>您无法 tree-shake 未使用到的 Styles</ListItemBad>
 </List>
 
 <!-- To get the most out of Tailwind, you really should [install it as a PostCSS plugin](#installing-tailwind-as-a-post-css-plugin). -->

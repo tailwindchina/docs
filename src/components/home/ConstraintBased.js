@@ -201,7 +201,7 @@ export function ConstraintBased() {
         {/*  system.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          功能类能帮助您在系统的约束内工作，而不是用杂乱的值填写样式表。它们使得在与颜色选择、间距、排版、阴影以及所有其它的组成一个优秀的设计系统的内容保持一致性变得容易。
+          功能类可以帮助你在系统的约束下工作，而不是在你的样式表中堆满任意的值。它们可以让你轻松地在颜色选择、间距、排版、阴影以及其他一切构成一个精心设计的系统的元素上保持一致。
         </Paragraph>
         <Link href="/docs/utility-first" className="text-purple-600 hover:text-purple-800">
           了解更多 -&gt;
