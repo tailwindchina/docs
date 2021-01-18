@@ -240,7 +240,7 @@ function createPrevals({ tool: pageTool = error('UNKNOWN') } = {}) {
       let information =
         outdatedVersions.length > 0
           ? `${joinAsSpeech(outdatedVersions)} ${
-              outdatedVersions.length === 1 ? "已经不" : "已经不"
+              outdatedVersions.length === 1 ? "尚未" : "尚未"
             }支持 PostCSS 8${
               soon ? " _(但它很快就会支持)_" : ''
             }，所以您需要安装[ Tailwind CSS v2.0 PostCSS 7 兼容性版本](/docs/installation#post-css-7)。`
