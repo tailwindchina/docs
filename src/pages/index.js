@@ -81,7 +81,7 @@ export default function Home() {
           property="og:title"
           content="Tailwind CSS - 无需离开您的HTML，即可快速建立现代网站。"
         />
-        <title>Tailwind CSS - 无需离开您的HTML，即可快速建立现代网站。</title>
+        <title>Tailwind CSS 中文文档 - 无需离开您的HTML，即可快速建立现代网站。</title>
       </Head>
       <header className="relative z-10 max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <div className="px-4 sm:px-6 md:px-8 mb-14 sm:mb-20 xl:mb-8">
