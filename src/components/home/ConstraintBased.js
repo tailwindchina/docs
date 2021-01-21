@@ -192,7 +192,7 @@ export function ConstraintBased() {
           基于约束
         </Caption>
         <BigText className="mb-8">
-          <Widont>您设计系统的API。</Widont>
+          <Widont>设计系统的API。</Widont>
         </BigText>
         {/*<Paragraph className="mb-6">*/}
         {/*  Utility classes help you work within the constraints of a system instead of littering your*/}
@@ -201,7 +201,7 @@ export function ConstraintBased() {
         {/*  system.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          功能类可以帮助你在系统的约束下工作，而不是在你的样式表中堆满任意的值。它们可以让你轻松地在颜色选择、间距、排版、阴影以及其他一切构成一个精心设计的系统的元素上保持一致。
+          功能类可以帮助您在系统的约束下工作，而不是在您的样式表中堆满任意的值。它们可以让您轻松地在颜色选择、间距、排版、阴影以及其他一切构成一个精心设计的系统的元素上保持一致。
         </Paragraph>
         <Link href="/docs/utility-first" className="text-purple-600 hover:text-purple-800">
           了解更多 -&gt;

@@ -154,9 +154,9 @@ export function StateVariants() {
         {/*  fancy states we invented ourselves like <InlineCode>group-hover</InlineCode>.*/}
         {/*</Paragraph>*/}
         <Paragraph className="mb-6">
-          想要设置 hover 样式吗？在您想要添加的类前面添加 <InlineCode>hover:</InlineCode>。可以这样使用的状态还有 <InlineCode>focus</InlineCode>,{' '}
-          <InlineCode>active</InlineCode>, <InlineCode>disabled</InlineCode>,{' '}
-          <InlineCode>focus-within</InlineCode>, <InlineCode>focus-visible</InlineCode> , 甚至还有像 <InlineCode>group-hover</InlineCode> 这样的我们自己发明的复杂的状态。
+          想要设置 hover 样式吗？在您想要添加的类前面添加 <InlineCode>hover:</InlineCode>。可以这样使用的状态还有 <InlineCode>focus</InlineCode>、{' '}
+          <InlineCode>active</InlineCode>、<InlineCode>disabled</InlineCode>、{' '}
+          <InlineCode>focus-within</InlineCode>、<InlineCode>focus-visible</InlineCode>、甚至还有像 <InlineCode>group-hover</InlineCode> 这样的我们自己创造的复杂的状态。
         </Paragraph>
         <Link
           href="/docs/hover-focus-and-other-states"
