@@ -21,9 +21,9 @@ export function VariantEnabledList({ variant }) {
       <p>
         <strong>
           {/*By default, the <code>{variant}</code> variant is not enabled for any core plugins*/}
-          默认情况下，任何核心插件都没有启用该 <code>{variant}</code> 变体
+          默认情况下，所有核心插件都没有启用该 <code>{variant}</code> 变体
         </strong>
-        .
+        。
       </p>
     )
   }
