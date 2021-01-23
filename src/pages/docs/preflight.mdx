@@ -57,7 +57,7 @@ pre {
 ```
 
 <!-- This makes it harder to accidentally rely on margin values applied by the user-agent stylesheet that are not part of your spacing scale. -->
-这会让这种情况事更难发生：不小心地依赖了用户代理（user-agent）样式表的边距值，而这些边距值并不属于您的间距比例的一部分。
+这样做是为了这种情况事更难发生：不小心地依赖了用户代理（user-agent）样式表的边距值，而这些边距值并不属于您间距比例的一部分。
 
 ---
 
@@ -86,10 +86,10 @@ h6 {
 <!-- - **It helps you avoid accidentally deviating from your type scale**. By default, the browsers assigns sizes to headings that don't exist in Tailwind's default type scale, and aren't guaranteed to exist in your own type scale. -->
 - **它可以帮助您避免不小心地偏离了您的字形比例（type scale）**。 默认情况下，浏览器会为在 Tailwind 默认字形比例（type scale）中不存在的标题分配大小，并且不能保证这个大小会存在于您自己的字形比例（type scale）中。
 <!-- - **In UI development, headings should often be visually de-emphasized**. Making headings unstyled by default means any styling you apply to headings happens consciously and deliberately. -->
-- **在用户界面（ UI ） 开发中，通常应该降低对标题在视觉上强调**。 默认情况下，将标题设置为无样式意味着您对标题使用的任何样式都会是有意识地和谨慎地进行的。
+- **在用户界面（ UI ） 开发中，不应该经常在视觉上强调标题**。 默认情况下，将标题设置为无样式意味着您对标题使用的任何样式都会是有意识和谨慎地进行的。
 
 <!-- You can always add default header styles to your project by [adding your own base styles](/docs/adding-base-styles). -->
-您始终可以通过以下方式将默认标题样式添加到项目中 [添加您自己的基本样式](/docs/adding-base-styles)。
+您始终可以将默认标题样式添加到项目中，请参考 [添加您自己的基本样式](/docs/adding-base-styles)。
 
 <!-- If you'd like to selectively introduce sensible default heading styles into article-style parts of a page, we recommend the [@tailwindcss/typography plugin](/docs/typography-plugin/). -->
 如果您想选择性地引入实用的默认标题样式到文章类型的页面中，我们建议 [@tailwindcss/typography plugin](/docs/typography-plugin/)。
@@ -164,10 +164,10 @@ object {
 ---
 
 <!-- ## Border styles are reset globally -->
-## 边框样式已经被全局地重置
+## 边框样式已被全局地重置
 
 <!-- In order to make it easy to add a border by simply adding the `border` class, Tailwind overrides the default border styles for all elements with the following rules: -->
-为了能简单地通过添加 `border` 类就容易地添加边框，Tailwind 使用了以下规则覆盖了所有元素的默认边框样式：
+为了能简单地通过添加 `border` 类就能添加边框，Tailwind 使用了以下规则覆盖了所有元素的默认边框样式：
 
 ```css
 *,
@@ -180,7 +180,7 @@ object {
 ```
 
 <!-- Since the `border` class only sets the `border-width` property, this reset ensures that adding that class always adds a solid 1px border using your configured default border color. -->
-由于 `border` 类仅设置了 `border-width` 属性，因此这个重置可确保使用上述的类会始终添加一条实心的 1px 边框，边框的颜色是您配置的默认边框颜色。
+由于 `border` 类仅设置了 `border-width` 属性，因此这个重置可确保使用上述类后都会始终添加一条实心的 1px 边框，边框的颜色是您配置的默认边框颜色。
 
 <!-- This can cause some unexpected results when integrating certain third-party libraries, like [Google maps](https://github.com/tailwindlabs/tailwindcss/issues/484) for example. -->
 集成某些第三方库时，这可能会导致某些意外结果, 比如 [Google maps](https://github.com/tailwindlabs/tailwindcss/issues/484)。
@@ -197,12 +197,12 @@ object {
 ---
 
 <!-- ## Buttons have a default outline -->
-## 按钮会默认有轮廓
+## 按钮默认有轮廓
 
 <!-- To ensure that we provide accessible styles out of the box, we made sure
 that buttons have a default outline. You can of course override this by
 applying `focus:ring` or similar utilities to your buttons. -->
-为保证我们可以提供开箱即用的样式，我们确保了按钮都具有默认的轮廓。您当然可以覆盖它，通过使用 `focus:ring` 或类似的功能类应用到您的按钮中。
+为保证我们可以提供开箱即用的样式，我们确保了按钮都具有默认的轮廓。您可以通过使用 `focus:ring` 或类似的功能类应用到您的按钮中来覆盖它。
 
 
 ```css
