@@ -13,7 +13,7 @@ import stats from '@/utils/stats'
 ## <Heading hidden>概览</Heading>
 
 <!-- <p>Using the default configuration, the development build of Tailwind CSS is {stats.default.original} uncompressed, {stats.default.gzipped} minified and compressed with <a href="https://www.gnu.org/software/gzip/">Gzip</a>, and {stats.default.brotlified} when compressed with <a href="https://github.com/google/brotli">Brotli</a>.</p> -->
-<p>使用默认配置，TailwindCSS 的开发版本是{stats.default.original}未压缩，{stats.default.gzipped}用<a href="https://www.gnu.org/software/gzip/">Gzip</a>进行压缩，{stats.default.brotlified}用<a href="https://github.com/google/brotli">Brotli</a>进行压缩。</p>
+<p>使用默认配置，TailwindCSS 的开发版本体积是未压缩时 {stats.default.original}，用 <a href="https://www.gnu.org/software/gzip/">Gzip</a> 进行压缩后 {stats.default.gzipped}，用 <a href="https://github.com/google/brotli">Brotli</a> 压缩后 {stats.default.brotlified}。</p>
 
 <table>
   <thead>
@@ -47,16 +47,16 @@ For example, Tailwind generates margin utilities for every size in your spacing 
 
 为了使开发经验尽可能的富有成效，Tailwind 为您生成了成千上万的功能类，其中大部分您可能不会真正使用。
 
-把 Tailwind 想象成一个巨大的乐高盒子--您把它倾倒在地板上，建造您想建造的东西，然后当您完成后，您把所有您不用的碎片放回盒子里。
+把 Tailwind 想象成一个巨大的乐高盒子--您把它倾倒在地板上，建造您想建造的东西，然后当您完成后，您把所有不用的碎片放回盒子里。
 
-例如，Tailwind 为您的间距尺度中的每一个尺寸，为您可能想要应用边距的元素的每一个侧面，在您的项目中使用的每一个断点生成边距实用程序。这导致了数以百计的不同组合，这些组合都是重要的，但不可能都是需要的。
+例如，Tailwind 为您的间距尺度中的每一个尺寸，为您可能想要应用边距的元素的每一个侧面，在您的项目中使用的每一个断点生成边距功能类。这导致了数以百计的不同组合，这些组合都是重要的，但不可能都是需要的。
 
 **当构建生产时，您应该总是使用 Tailwind 的 `purge` 选项来 tree-shake 优化未使用的样式，并优化您的最终构建大小。**当使用 Tailwind 删除未使用的样式时，很难最终得到超过 10kb 的压缩 CSS。
 
 ## 编写可清除的 HTML
 
 <!-- Before getting started with the `purge` feature, it's important to understand how it works and build the correct mental model to make sure you never accidentally remove important styles when building for production. -->
-在开始使用 `Purge` 功能之前，重要的是要了解它是如何工作的，并建立正确的心理模型，以确保您在为生产构建时永远不会意外地删除重要的样式。
+在开始使用 `purge` 功能之前，重要的是要了解它是如何工作的，并建立正确的心理模型，以确保您在为生产构建时永远不会意外地删除重要的样式。
 
 [PurgeCSS](https://purgecss.com/)_(我们在引擎下使用的库)_在寻找 HTML 中的类的方式上故意非常幼稚。它并不试图解析您的 HTML 并查找类的属性，也不动态执行您的 JavaScript --它只是在整个文件中查找符合这个正则表达式的任何字符串。
 
