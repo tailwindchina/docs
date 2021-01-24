@@ -10,7 +10,7 @@ export function DocumentationLayout(props) {
 
   return (
     <>
-      <Title suffix={router.pathname === '/' ? undefined : 'Tailwind CSS'}>
+      <Title suffix={router.pathname === '/' ? undefined : 'Tailwind CSS 中文文档'}>
         {props.layoutProps.meta.metaTitle || props.layoutProps.meta.title}
       </Title>
       <Head>

@@ -41,7 +41,7 @@ export default class Document extends NextDocument {
           <meta name="theme-color" content="#ffffff" />
           <meta name="description" content="Tailwind CSS 是一个功能类优先的 CSS 框架，它由 Adam Wathan 创建。本站提供 Tailwind CSS 官方文档中文翻译致力于为广大国内开发者提供准确的中文文档，助力开发者掌握并使用这一框架。" />
           <meta name="keywords" content="Tailwind CSS, CSS 框架, CSS framework, Tailwind CSS 中国, Tailwind CSS 中文文档, Tailwind CSS 代码,Tailwind CSS 入门" />
-          <meta name="author" content="TailwindCSS中文网"></meta>
+          <meta name="author" content="TailwindCSS 中文网"></meta>
           <meta name="google-site-verification" content="K6lmDHP95YNtBrmzbE8A5HivIoXC9kPq47XvdBM3jVY" />
         </Head>
         <body>
