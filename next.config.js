@@ -24,9 +24,11 @@ const fallbackDefaultExports = {
   'src/pages/course/**/*': ['@/layouts/VideoLayout', 'VideoLayout'],
 }
 
+const basePath = '/tailwindcss'
+
 module.exports = withBundleAnalyzer({
   pageExtensions: ['js', 'jsx', 'mdx'],
-  basePath: '/tailwindcss',
+  basePath: basePath,
   experimental: {
     modern: true,
   },
@@ -44,7 +46,7 @@ module.exports = withBundleAnalyzer({
         {
           loader: 'file-loader',
           options: {
-            publicPath: '/_next',
+            publicPath: basePath +  '/_next',
             name: 'static/media/[name].[hash].[ext]',
           },
         },
@@ -58,7 +60,7 @@ module.exports = withBundleAnalyzer({
         {
           loader: 'file-loader',
           options: {
-            publicPath: '/_next',
+            publicPath: basePath + '/_next',
             name: 'static/media/[name].[hash].[ext]',
           },
         },
