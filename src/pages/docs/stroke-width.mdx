@@ -2,7 +2,7 @@
 # title: "Stroke Width"
 title: "线条厚度"
 # description: "Utilities for styling the stroke width of SVG elements."
-description: "用于风格化 SVG元素 的 Stroke Width 的功能类。"
+description: "用于设置 SVG 元素线条厚度(Stroke Width)的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/strokeWidth'
@@ -17,9 +17,9 @@ export const classes = { plugin }
 <!-- Use the `stroke-{width}` utilities to set the stroke width of an SVG. -->
 
 <!-- Useful for styling icon sets like [Heroicons](http://heroicons.com/) that are drawn entirely with strokes. -->
-使用 `stroke-{width}` 功能类来设置 SVG 的 stroke width。
+使用 `stroke-{width}` 功能类来设置 SVG 的线条厚度。
 
-对于像 [Heroicons](http://heroicons.com/) 这样完全用 strokes 绘制的图标集来说很有用。
+对于像 [Heroicons](http://heroicons.com/) 这样完全用线条(strokes)绘制的图标集来说很有用。
 
 ```html emerald
 <template preview>
@@ -68,7 +68,7 @@ export const classes = { plugin }
 ## 自定义
 
 <!-- Control which stroke-width utilities Tailwind generates by customizing the `theme.strokeWidth` section in your `tailwind.config.js` file: -->
-通过在您的 `tailwind.config.js` 文件中自定义 `theme.strokeWidth` 部分来控制 Tailwind 产生的 stroke width。
+通过在您的 `tailwind.config.js` 文件中自定义 `theme.strokeWidth` 部分来控制 Tailwind 产生的线条宽度。
 
 ```diff-js
   // tailwind.config.js
