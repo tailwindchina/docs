@@ -86,7 +86,7 @@ export const classes = (
 ## 响应式变体
 
 <!-- The `container` class also includes responsive variants like `md:container` by default that allow you to make something behave like a container at only a certain breakpoint and up: -->
-`container` 类还包括响应的变体，比如默认的 `md:container`，它允许您让某些东西只在某个断点及以上表现得像一个容器。
+`container` 类还包括响应式变体，比如默认的 `md:container`，它允许您让某些东西只在某个断点及以上表现得像一个容器：
 
 ```html
 <!-- Full-width fluid until the `lg` breakpoint, then lock to container -->
@@ -102,7 +102,7 @@ export const classes = (
 ### 默认居中
 
 <!-- To center containers by default, set the `center` option to `true` in the `theme.container` section of your config file: -->
-为了使容器在默认情况下居中，在配置文件的 `theme.container` 部分将 `center` 选项设置为 `true` 。
+为了使容器在默认情况下居中，在配置文件的 `theme.container` 部分将 `center` 选项设置为 `true`：
 
 ```js
 // tailwind.config.js
@@ -119,7 +119,7 @@ module.exports = {
 ### 水平内边距
 
 <!-- To add horizontal padding by default, specify the amount of padding you'd like using the `padding` option in the `theme.container` section of your config file: -->
-要默认添加水平内边距，请在配置文件的 `theme.container` 部分使用 `padding` 选项指定您想要的内边距大小。
+要默认添加水平内边距，请在配置文件的 `theme.container` 部分使用 `padding` 选项指定您想要的内边距大小：
 
 ```js
 // tailwind.config.js
@@ -133,7 +133,7 @@ module.exports = {
 ```
 
 <!-- If you want to specify a different padding amount for each breakpoint, use an object to provide a `default` value and any breakpoint-specific overrides: -->
-如果您想为每个断点指定不同的内边距大小，可以使用一个对象来提供 `default` 值和任何根据断点指定的覆盖。
+如果您想为每个断点指定不同的内边距大小，可以使用一个对象来提供 `default` 值和任何根据断点指定的覆盖：
 
 ```js
 // tailwind.config.js
@@ -156,7 +156,7 @@ module.exports = {
 ### 禁用响应式变体
 
 <!-- If you'd like to disable the responsive variants, you can do so using by setting `container` to an empty array in the `variants` section of your `tailwind.config.js` file: -->
-如果您想禁用响应式变体，您可以在您的 `tailwind.config.js` 文件的 `variants` 部分将 `container` 设置为一个空数组。
+如果您想禁用响应式变体，您可以在您的 `tailwind.config.js` 文件的 `variants` 部分将 `container` 设置为一个空数组：
 
 ```diff-js
   // tailwind.config.js
@@ -172,7 +172,7 @@ module.exports = {
 ### 完全禁用
 
 <!-- If you don't plan to use the `container` class in your project, you can disable it entirely by setting the `container` property to `false` in the `corePlugins` section of your config file: -->
-如果您不打算在您的项目中使用 `container` 类，您可以通过在配置文件的 `corePlugins` 部分将 `container` 属性设置为 `false` 来完全禁用它。
+如果您不打算在您的项目中使用 `container` 类，您可以通过在配置文件的 `corePlugins` 部分将 `container` 属性设置为 `false` 来完全禁用它：
 
 ```diff-js
   // tailwind.config.js
