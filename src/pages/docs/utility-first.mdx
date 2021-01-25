@@ -1,5 +1,5 @@
 ---
-title: 功能优先
+title: 功能类优先
 description: 在一组受约束的原始功能类的基础上构建复杂的组件。
 ---
 
@@ -113,7 +113,7 @@ import { CodeSample } from '@/components/CodeSample'
 - 使用 [space-between](/docs/space) 功能类 (`space-x-4`) 来处理 logo 和文本之间的间距
 - 使用 [font size](/docs/font-size)，[text color](/docs/text-color)，和 [font-weight](/docs/font-weight) 功能类 (`text-xl`，`text-black`，`font-medium` 等等) 给卡片文字设置样式
 
-这种方法使我们无需编写一行自定义的CSS即可实现一个完全定制的组件设计。
+这种方法使我们无需编写一行自定义的 CSS 即可实现一个完全定制的组件设计。
 
 我知道您在想："这太繁琐了，真是一团糟！" 您是对的，这有点丑陋。实际上，当您第一次看到它时，几乎不可能认为这是一个好主意--您必须实际尝试一下。
 
@@ -134,8 +134,8 @@ import { CodeSample } from '@/components/CodeSample'
 但是使用功能类比内联样式具有一些重要的优点：
 
 - **基于约束的设计**. 使用内联样式, 每个值都是一个魔术数字。 使用功能类, 您是从预定义的[设计系统](/docs/theme)中选择样式，这使得构建统一的UI变得更加容易。
-- **响应式的设计**. 在内联样式中您不能使用媒体查询, 但您可以使用 Tailwind 的 [响应式功能类](/docs/responsive-design) 非常容易的构建完全响应式的界面。
-- **Hover, focus, 以及其它状态**. 内联样式无法设置 hover 或者 focus 这样的状态, 但 Tailwind 的 [状态变体](/docs/hover-focus-and-other-states) 使用功能类可以非常容易的为这些状态设置样式。
+- **响应式的设计**. 在内联样式中您不能使用媒体查询, 但您可以使用 Tailwind 的[响应式功能类](/docs/responsive-design)非常容易的构建完全响应式的界面。
+- **Hover, focus, 以及其它状态**. 内联样式无法设置 hover 或者 focus 这样的状态, 但 Tailwind 的[状态变体](/docs/hover-focus-and-other-states)使用功能类可以非常容易的为这些状态设置样式。
 
 该组件完全响应，并包括具有 hover 和 focus 样式的按钮，完全由功能类构建：
 
@@ -179,7 +179,7 @@ import { CodeSample } from '@/components/CodeSample'
 
 在使用功能优先的方式时，最大的可维护性问题是管理通用的可重复使用的功能类组合。
 
-通过 [提取组件](/docs/extracting-components)（通常做为模板片断或者组件）， 可以轻松解决此问题。
+通过[提取组件](/docs/extracting-components)（通常做为模板片断或者组件），可以轻松解决此问题。
 
 ```html
 <!-- PrimaryButton.vue -->
@@ -222,7 +222,7 @@ import { CodeSample } from '@/components/CodeSample'
 </style>
 ```
 
-除此之外，维护功能优先的 CSS 项目比维护大型 CSS 代码库要容易得多，因为 HTML 比 CSS 维护容易得多。诸如 GitHub，Heroku，Kickstarter，Twitch，Segment等大型公司都在使用这种方法，且取得巨大成功。
+除此之外，维护功能优先的 CSS 项目比维护大型 CSS 代码库要容易得多，因为 HTML 比 CSS 维护容易得多。诸如 GitHub，Heroku，Kickstarter，Twitch，Segment 等大型公司都在使用这种方法，且取得巨大成功。
 
 如果您想了解其他人使用此方法的经验，请查看以下资源：
 
@@ -230,4 +230,4 @@ import { CodeSample } from '@/components/CodeSample'
 - [Building a Scalable CSS Architecture](https://blog.algolia.com/redesigning-our-docs-part-4-building-a-scalable-css-architecture/) by Sarah Dayan of Algolia
 - [Diana Mounter on using utility classes at GitHub](http://www.fullstackradio.com/75), a podcast interview
 
-查看 [John Polacek](https://twitter.com/johnpolacek) 策划的 [The Case for Atomic/Utility-First CSS](https://johnpolacek.github.io/the-case-for-atomic-css/) 了解更多信息.
+查看 [John Polacek](https://twitter.com/johnpolacek) 策划的 [The Case for Atomic/Utility-First CSS](https://johnpolacek.github.io/the-case-for-atomic-css/) 了解更多信息。
