@@ -6,10 +6,10 @@ description: 使用 Tailwind CSS 在深色模式下为您的网站设置样式�
 ## <Heading hidden>基础用法</Heading>
 
 <!-- Now that dark mode is a first-class feature of many operating systems, it's becoming more and more common to design a dark version of your website to go along with the default design. -->
-现在深色功能是很多操作系统的首要功能，因此与默认设计同时设计一个深色模式已变得越来越普遍。
+现在深色模式是很多操作系统的首要功能，设计一个深色版的网站来配合默认的设计变得越来越普遍。
 
 <!-- To make this as easy as possible, Tailwind includes a `dark` variant that lets you style your site differently when dark mode is enabled: -->
-为了使此操作尽可能简单，Tailwind 包含一个 `dark` 变体，当启用深色模式时，您可以为您的网站设置不同的样式。
+为了使此操作尽可能简单，Tailwind 包含一个 `dark` 变体，当启用深色模式时，您可以为您的网站设置不同的样式：
 
 ```html
 <div class="bg-white **dark:bg-gray-800**">
@@ -37,7 +37,7 @@ module.exports = {
 <!-- Now whenever dark mode is enabled on the user's operating system, `dark:{class}` classes will take precedence over unprefixed classes.
 The `media` strategy uses the `prefers-color-scheme` media feature under the hood, but if you'd like to support toggling dark mode manually,
 you can also [use the 'class' strategy](#toggling-dark-mode-manually) for more control. -->
-现在，只要用户的操作系统开启了深色模式，`dark:{class}` 类离将优先于无前缀的类。`media` 策略在底层使用 `prefers-color-scheme` 媒体功能，但是，如果您想支持手动切换深色模式，您也可以 [使用 'class' 策略](#-3) 进行更多控制。
+现在，只要用户的操作系统开启了深色模式，`dark:{class}` 类将优先于无前缀的类。`media` 策略在底层使用 `prefers-color-scheme` 媒体功能，但是，如果您想支持手动切换深色模式，您也可以 [使用 'class' 策略](#-3) 进行更多控制。
 
 <!-- By default, when `darkMode` is enabled `dark` variants are only generated for color-related classes, which includes text color, background color, border color, gradients, and placeholder color. -->
 默认情况下，当 `darkMode` 启用时，只会为颜色相关的类生成 `dark` 变体，包括文本颜色、背景颜色、边框颜色、渐变色以及占位符颜色。
@@ -80,7 +80,7 @@ module.exports = {
 ```
 
 <!-- By default, the `dark` variant is enabled for `backgroundColor`, `borderColor`, `gradientColorStops`, `placeholderColor`, and `textColor`. -->
-默认情况下，`dark` 变体只对 `backgroundColor`, `borderColor`, `gradientColorStops`, `placeholderColor`, 和 `textColor` 有效。
+默认情况下，`dark` 变体只对 `backgroundColor`、`borderColor`、`gradientColorStops`、`placeholderColor` 和 `textColor` 启用。
 
 ---
 
