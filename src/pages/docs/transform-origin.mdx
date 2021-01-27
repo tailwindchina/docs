@@ -2,7 +2,7 @@
 # title: "Transform Origin"
 title: "变换原点"
 # description: "Utilities for specifying the origin for an element's transformations."
-description: "用于指定元素转换的源头的功能类。"
+description: "用于指定元素变换源点的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transformOrigin'
@@ -16,7 +16,7 @@ export const classes = { plugin }
 Specify an element's transform origin using the `origin-{keyword}` utilities. -->
 ## 用途
 
-使用 `origin-{keyword}` 功能指定元素的变换源。
+使用 `origin-{keyword}` 功能指定元素的变换源点。
 
 ```html indigo
 <template preview>
@@ -46,7 +46,7 @@ Specify an element's transform origin using the `origin-{keyword}` utilities. --
 ## 响应式
 
 <!-- To control the transform-origin of an element at a specific breakpoint, add a `{screen}:` prefix to any existing transform-origin utility. For example, use `md:origin-top` to apply the `origin-top` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的转换原点，请在任何现有的转换原点功能中添加 `{screen}:` 前缀。例如，使用 `md:origin-top` 来应用 `origin-top` 功能在中等尺寸以上的屏幕上。
+要在特定的断点处控制元素的变换原点，请在任何现有的变换原点功能中添加 `{screen}:` 前缀。例如，使用 `md:origin-top` 来应用 `origin-top` 功能在中等尺寸以上的屏幕上。
 
 ```html
 <img class="origin-center **md:origin-top** ...">
@@ -62,7 +62,7 @@ Specify an element's transform origin using the `origin-{keyword}` utilities. --
 
 <!-- By default Tailwind provides transform-origin utilities for all of the built-in browser keyword options. You change, add, or remove these by customizing the `transformOrigin` section of your Tailwind theme config. -->
 
-默认情况下，Tailwind 为所有内置的浏览器关键字选项提供了转换来源的功能。您可以通过定制您的 Tailwind 主题配置的 `transformOrigin` 部分来改变，添加或删除这些。
+默认情况下，Tailwind 为所有内置的浏览器关键字选项提供了变换源点的功能。您可以通过定制您的 Tailwind 主题配置的 `transformOrigin` 部分来改变，添加或删除这些。
 
 ```diff-js
   // tailwind.config.js
