@@ -2,7 +2,7 @@
 # title: "Rotate"
 title: "旋转"
 # description: "Utilities for rotating elements with transform."
-description: "用于旋转元素的转换功能。"
+description: "用于旋转元素的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/rotate'
@@ -15,7 +15,7 @@ export const classes = { plugin }
 ## 使用
 
 <!-- Rotate an element by first enabling transforms with the `transform` utility, then specifying the rotation angle using the `rotate-{angle}` utilities. -->
-首先使用 `transform` 功能启用转换，然后使用 `rotate-{angle}` 功能指定旋转角度来旋转一个元素。
+首先使用 `transform` 功能类启用变换，然后使用 `rotate-{angle}` 功能类指定旋转角度来旋转一个元素。
 
 ```html lightBlue
 <template preview>
@@ -42,13 +42,13 @@ export const classes = { plugin }
 ```
 
 <!-- Note that because Tailwind implements transforms using [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), **the transform utilities are not supported in older browsers like IE11**. If you need transforms for your project and need to support older browsers, [add your own utilities](/docs/adding-new-utilities) or other custom CSS. -->
-请注意，因为 Tailwind 使用[CSS 自定义属性](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)来实现转换，**转换功能不支持旧的浏览器，如 IE11**。如果您的项目需要转换，并且需要支持旧的浏览器，[添加您自己的功能](/docs/adding-new-utilities)或其他自定义 CSS。
+请注意，因为 Tailwind 使用[ CSS 自定义属性](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)来实现变换，**变换功能不支持旧的浏览器，如 IE11**。如果您的项目需要变换，并且需要支持旧的浏览器，[添加您自己的功能类](/docs/adding-new-utilities)或其他自定义 CSS。
 
 <!-- ## Responsive -->
 ## 响应式
 
 <!-- To control the rotation of an element at a specific breakpoint, add a `{screen}:` prefix to any existing rotate utility. For example, use `md:rotate-90` to apply the `rotate-90` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的旋转，请在任何现有的旋转功能中添加 `{screen}:` 前缀。例如，使用 `md:rotate-90` 来应用 `rotate-90` 功能在中等尺寸以上的屏幕上。
+要在特定的断点处控制元素的旋转，请在任何现有的旋转功能类中添加 `{screen}:` 前缀。例如，使用 `md:rotate-90` 来应用 `rotate-90` 功能类在中等尺寸以上的屏幕上。
 
 ```html
 <div class="transform rotate-45 **md:rotate-90**"></div>
@@ -63,7 +63,7 @@ export const classes = { plugin }
 ### Rotate scale
 
 <!-- By default Tailwind provides seven general purpose rotate utilities. You change, add, or remove these by editing the `theme.rotate` section of your Tailwind config. -->
-默认情况下，Tailwind 提供了七个通用的旋转功能。您可以通过编辑您的 Tailwind 配置的 `theme.rotate` 部分来改变，添加或删除这些功能。
+默认情况下，Tailwind 提供了七个通用的旋转功能类。您可以通过编辑您的 Tailwind 配置的 `theme.rotate` 部分来改变，添加或删除这些功能类。
 
 ```diff-js
   // tailwind.config.js
