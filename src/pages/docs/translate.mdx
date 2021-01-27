@@ -2,7 +2,7 @@
 # title: "Translate"
 title: "平移"
 # description: "Utilities for translating elements with transform."
-description: "变换元素的功能类。"
+description: "平移元素的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/translate'
@@ -19,7 +19,7 @@ export const classes = {
 ## 使用
 
 <!-- Translate an element by first enabling transforms with the `transform` utility, then specifying the translate direction and distance using the `translate-x-{amount}` and `translate-y-{amount}` utilities. -->
-变换一个元素时，首先要使用 `transform` 功能启用 transforms，然后使用 `translate-x-{amount}` 和 `translate-y-{amount}` 功能指定变换方向和距离。
+平移一个元素时，首先要使用 `transform` 功能类启用变换，然后使用 `translate-x-{amount}` 和 `translate-y-{amount}` 功能类指定平移方向和距离。
 
 ```html purple
 <template preview>
@@ -48,7 +48,7 @@ export const classes = {
 ## 响应式
 
 <!-- To control the translation of an element at a specific breakpoint, add a `{screen}:` prefix to any existing translate utility. For example, use `md:translate-x-8` to apply the `translate-x-8` utility at only medium screen sizes and above. -->
-要在特定的断点处控制元素的变换，可在任何现有的变换功能中添加 `{screen}:` 前缀。例如，使用 `md:translate-x-8` 来应用 `translate-x-8` 功能，只在中等大小的屏幕上使用。
+要在特定的断点处控制元素的变换，可在任何现有的变换功能类中添加 `{screen}:` 前缀。例如，使用 `md:translate-x-8` 来应用 `translate-x-8` 功能，只在中等大小的屏幕上使用。
 
 ```html
 <img class="transform translate-x-2 **md:translate-x-8** ...">
@@ -65,7 +65,7 @@ export const classes = {
 <!-- By default Tailwind provides fixed value translate utilities that match our [spacing scale](/docs/customizing-spacing), as well as 50% and 100% variations for translating relative to the element's size. -->
 
 <!-- You can customize the global spacing scale in the `theme.spacing` or `theme.extend.spacing` sections of your `tailwind.config.js` file: -->
-默认情况下，Tailwind 提供了固定值的变换功能，它与我们的[ spacing scale ](/docs/customizing-spacing)相匹配，以及相对于元素大小的 50% 和 100% 的变换变化。
+默认情况下，Tailwind 提供了固定值的平移功能类，它与我们的[ spacing scale ](/docs/customizing-spacing)相匹配，以及相对于元素大小的 50% 和 100% 的平移变化。
 
 您可以在您的 `tailwind.config.js` 文件中的 `theme.spacing` 或 `theme.extend.spacing` 部分自定义全局间距尺度。
 
@@ -85,7 +85,7 @@ export const classes = {
 ```
 
 <!-- To customize the translate scale separately, use the `theme.translate` section of your `tailwind.config.js` file. -->
-要单独定制变换比例，请使用您的 `tailwind.config.js` 文件中的 `theme.translate` 部分。
+要单独定制平移比例，请使用您的 `tailwind.config.js` 文件中的 `theme.translate` 部分。
 
 ```diff-js
   // tailwind.config.js
