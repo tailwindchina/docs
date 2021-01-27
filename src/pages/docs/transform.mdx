@@ -2,7 +2,7 @@
 # title: "Transform"
 title: "变换"
 # description: "Utilities for controlling transform behaviour."
-description: "用于控制转换行为的功能类。"
+description: "用于控制变换行为的功能类。"
 ---
 
 import plugin from 'tailwindcss/lib/plugins/transform'
@@ -11,10 +11,10 @@ import { Disabling } from '@/components/Disabling'
 
 export const classes = { plugin }
 
-## Transform
+## 启用变换
 
 <!-- To enable transformations you have to add the `transform` utility. -->
-要启用 transformations，您必须添加` transform` 功能。
+要启用变换，您必须添加 `transform` 功能类。
 
 ```html amber
 <template preview>
@@ -45,16 +45,16 @@ export const classes = { plugin }
 A lot of transformations can be executed on the GPU instead of the CPU. This enables better performance. You can use the `transform-gpu` utility to enable GPU Acceleration. -->
 ## 硬件加速
 
-很多转换可以在 GPU 上执行，而不是在 CPU 上执行。这样可以获得更好的性能。您可以使用 `transform-gpu` 功能来启用 GPU 加速。
+很多变换可以在 GPU 上执行，而不是在 CPU 上执行。这样可以获得更好的性能。您可以使用 `transform-gpu` 功能来启用 GPU 加速。
 
 ```html
 <div class="**transform-gpu** scale-150 ..."></div>
 ```
 
-## None
+## 禁用变换
 
 <!-- If you want to disable transformations, then you can use the `transform-none` utility. -->
-如果您想禁用转换，那么您可以使用 `transform-none` 功能。
+如果您想禁用变换，那么您可以使用 `transform-none` 功能。
 
 ```html
 <div class="transform rotate-45 **lg:transform-none** ..."></div>
@@ -64,7 +64,7 @@ A lot of transformations can be executed on the GPU instead of the CPU. This ena
 ## 响应式
 
 <!-- To enable or disable transforms at a specific breakpoint, add a `{screen}:` prefix to any of the transform utilities. For example, use `md:transform` to apply the `transform` utility at only medium screen sizes and above. -->
-要在特定的断点处启用或禁用转换，请在任何转换功能类中添加 `{screen}:` 前缀。例如，使用` md:transform` 来应用 `transform` 功能类在中等大小的屏幕和更大的屏幕上。
+要在特定的断点处启用或禁用变换，请在任何变换功能类中添加 `{screen}:` 前缀。例如，使用` md:transform` 来应用 `transform` 功能类在中等大小的屏幕和更大的屏幕上。
 
 ```html
 <img class="transform **sm:transform-gpu md:transform-none** ...">
