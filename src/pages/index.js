@@ -143,7 +143,7 @@ export default function Home() {
               <Paragraph className="max-w-4xl mx-auto mb-6">
                 我曾经写过{' '}
                 <a
-                  href="https://tailwindchina.com/translations/CSS%E5%8A%9F%E8%83%BD%E7%B1%BB%E4%B8%8E%E5%85%B3%E6%B3%A8%E7%82%B9%E5%88%86%E7%A6%BB.html"
+                  href="https://tailwindchina.com/translations/css-utility-classes-and-separation-of-concerns.html"
                   className="text-light-blue-600 font-semibold"
                   style={{
                     boxShadow:
