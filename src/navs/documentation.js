@@ -54,7 +54,7 @@ export const documentationNav = {
     pages['visibility'],
     pages['z-index'],
   ],
-  '盒模型': [
+  '弹性布局': [
     pages['flex-direction'],
     pages['flex-wrap'],
     pages['flex'],
@@ -62,7 +62,7 @@ export const documentationNav = {
     pages['flex-shrink'],
     pages['order'],
   ],
-  '网格': [
+  '网格布局': [
     pages['grid-template-columns'],
     pages['grid-column'],
     pages['grid-template-rows'],
